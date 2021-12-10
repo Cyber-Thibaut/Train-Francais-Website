@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico"
+    />
+    <link
+      rel="mask-icon"
+      type=""
+      href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg"
+      color="#111"
+    />
+    <link rel="canonical" href="https://codepen.io/mimikos/pen/QMjjzy" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Bellefair"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
+    <style class="INLINE_PEN_STYLESHEET_ID">
+      .main-content {
+        overflow: hidden;
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column;
+
+        height: 100vh;
+
+        background: linear-gradient(
+          to right,
+          rgba(36, 31, 31, 1) 0%,
+          rgba(36, 31, 31, 1) 32%,
+          rgba(74, 71, 70, 1) 100%
+        );
+        color: #fff;
+        text-align: center;
+      }
+
+      .vignette {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        box-shadow: inset 0px 0px 150px 20px black;
+        mix-blend-mode: multiply;
+        -webkit-animation: vignette-anim 3s infinite; /* Safari 4+ */
+        -moz-animation: vignette-anim 3s infinite; /* Fx 5+ */
+        -o-animation: vignette-anim 3s infinite; /* Opera 12+ */
+        animation: vignette-anim 3s infinite; /* IE 10+, Fx 29+ */
+      }
+
+      .noise {
+        z-index: 100;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        pointer-events: none;
+        opacity: 0.15;
+      }
+
+      .line {
+        position: absolute;
+        height: 100%;
+        width: 1px;
+        opacity: 0.1;
+        background-color: #000;
+      }
+
+      .titleCont {
+        position: relative;
+      }
+
+      .main-title {
+        padding: 0.3em 1em 0.25em;
+        font-weight: 400;
+        font-size: 40px;
+        color: white;
+        font-family: "Bellefair", serif;
+        position: relative;
+        line-height: 1.3;
+        white-spacing: ;
+      }
+
+      .overTitle {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .dot {
+        width: 3px;
+        height: 2px;
+        background-color: white;
+        position: absolute;
+        opacity: 0.3;
+      }
+
+      @-webkit-keyframes vignette-anim {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.7;
+        }
+      }
+      @-moz-keyframes vignette-anim {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.7;
+        }
+      }
+      @-o-keyframes vignette-anim {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.7;
+        }
+      }
+      @keyframes vignette-anim {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.7;
+        }
+      }
+    </style>
+    <script src="https://static.codepen.io/assets/editor/iframe/iframeConsoleRunner-dc0d50e60903d6825042d06159a8d5ac69a6c0e9bcef91e3380b17617061ce0f.js"></script>
+    <script src="https://static.codepen.io/assets/editor/iframe/iframeRefreshCSS-9a987901e00d6923a532b8e149a50c27b38cffc6a3aa17d7e455fd14fc8778fe.js"></script>
+    <script src="https://static.codepen.io/assets/editor/iframe/iframeRuntimeErrors-29f059e28a3c6d3878960591ef98b1e303c1fe1935197dae7797c017a3ca1e82.js"></script>
+  </head>
+  <body>
+    <main role="main" class="main-content" id="main-content">
+      <div class="titleCont">
+        <h1 class="main-title" id="main-title">
+          Train Français
+        </h1>
+      </div>
+      <canvas id="noise" class="noise"></canvas>
+      <div class="vignette"></div>
+    </main>
+    <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-30d18ea41045577cdb11c797602d08e0b9c2fa407c8b81058b1c422053ad8041.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+    <script src="https://codepen.io/mimikos/pen/GvpJYQ.js"></script>
+    <script src="https://codepen.io/mimikos/pen/rzOOgG.js"></script>
+    <script id="INLINE_PEN_JS_ID">
+      //# sourceURL=pen.js
+    </script>
+  </body>
+</html>

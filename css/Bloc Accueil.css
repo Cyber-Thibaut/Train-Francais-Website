@@ -1,0 +1,47 @@
+.container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+body {
+  background-color: #111845;
+}
+
+.background-img1 {
+  background-image: url(images/fond-projecteur.jpg);
+  height: auto;
+  width: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #2a3cad;
+  border-radius: 4px;
+  box-shadow: 0px 0px 5px #2a3cad;
+  position: relative;
+}
+.background-img2 {
+  background-image: url(images/Accueil1.jpeg);
+  height: auto;
+  width: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #2a3cad;
+  border-radius: 4px;
+  box-shadow: 0px 0px 5px #2a3cad;
+  position: relative;
+}
+.background-img3 {
+  background-image: url(images/Accueil3.jpeg);
+  height: auto;
+  width: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #2a3cad;
+  border-radius: 4px;
+  box-shadow: 0px 0px 5px #2a3cad;
+  position: relative;
+}
