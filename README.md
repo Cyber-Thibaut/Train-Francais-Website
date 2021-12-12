@@ -1,4 +1,8 @@
-# Au cine pas cher
+# Train Français Compagny
+
+## INFORMATION IMPORTANTE
+
+Cette compagnie est fictive. Elle est reliée au jeu Train Empire (http://train-empire.com)
 
 ## Qui sommes nous?
 
