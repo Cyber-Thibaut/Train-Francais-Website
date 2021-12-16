@@ -3,6 +3,7 @@
 	<link rel="shortcut icon" type="image/x-icon" href="images/Logo.jpeg" />
 <link rel="mask-icon" type="" href="images/Logo.jpeg" color="#111" />
 	<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Train Français</title>
@@ -19,10 +20,63 @@
 	<link rel="stylesheet" href="css/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
 	<link rel="stylesheet" href="css/style.css">
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	</head>
-	<body>
-		
+  <style>
+  .accordion {
+    background-color: #eee;
+    
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+  }
+  
+  .active, .accordion:hover {
+    background-color: #00aad400;
+  }
+  
+  .accordion:after {
+    content: '\002193';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\002191";
+  }
+  
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.8s ease-out;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Create two equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  </style>  
+</head>
 	<div class="colorlib-loader"></div>
 
 	<div id="page">
@@ -39,10 +93,11 @@
 										<li><a href="contact.html">Contact</a></li>
 										<li><a href="Qui sommes nous.html">Qui sommes nous ?</a></li>
 										<li><a href="Nos services.html">Nos services</a></li>
-										<li><a href="Problème.html">Un Problème?</a></li>
+                    <li><a href="Problème.html">Un Problème?</a></li>
 									</ul>
 								</li>
-								<li><a href="Reservation.html">Réservation voyage</a></li>
+                <li><a href="Reservation.html">Réservation voyage</a></li>
+                
                 <li><a href="infotraffic.html">Nos Info Trafic</a></li>
                 <li><a href="audepartdenosgares.html">Au départ de nos gares</a></li>
 								<li class="has-dropdown active">
@@ -78,84 +133,90 @@
 				</div>
 			</div>
     </section>
-
-    <div class="colorlib-work">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="work-flex">
-                <div class="half animate-box">
-                  <div class="row no-gutters">
-                    <div class="col-md-12 no-gutters">
-                      <h1>Au départ de Lyon Perrache</h1>
-                      <iframe src="https://mylines.fr/embed/?auth=4ef1191fcad3fd8fca595469626f5f6c796f6e&from=11&style=IENA" width="1200" height="675"></iframe> 
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <button class="accordion"><h2>Lyon Perrache</h2></button>
+    <div class="panel">
+      <div class="row">
+      <div class="column" style="background-color:#aaa;">
+        <h2>Départs</h2>
+        <p><iframe src="https://mylines.fr/embed/?auth=4ef1191fcad3fd8fca595469626f5f6c796f6e&from=11&style=IENA" width="900" height="250"></iframe></p>
       </div>
-      <br></br>
-		<div class="colorlib-work">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="work-flex">
-							<div class="half animate-box">
-								<div class="row no-gutters">
-									<div class="col-md-12 no-gutters">
-                    <h1>Au départ de Paris Gare de Lyon
-                    <iframe src="https://mylines.fr/embed/?auth=4ef1191fcad3fd8fca595469626f5f6c796f6e&from=5&style=IENA" width="1200" height="675"></iframe> 
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+      <div class="column" style="background-color:#bbb;">
+        <h2>Arrivées</h2>
+        <iframe src="https://mylines.fr/embed/?auth=4ef1191fcad3fd8fca595469626f5f6c796f6e&to=11&style=IENA" width="900" height="250"></iframe>
+      </div>
     </div>
-    <br></br>
-    <div class="colorlib-work">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="work-flex">
-                <div class="half animate-box">
-                  <div class="row no-gutters">
-                    <div class="col-md-12 no-gutters">
-                      <h1>Au départ de Bordeaux St-Jean</h1>
-                      <iframe src="https://mylines.fr/embed/?auth=4ef1191fcad3fd8fca595469626f5f6c796f6e&from=1&style=IENA" width="1200" height="675"></iframe> 
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    </div>
+    
+    <button class="accordion"><h2>Paris Gare de Lyon</h2></button>
+    <div class="panel">
+      <div class="row">
+      <div class="column" style="background-color:#aaa;">
+        <h2>Départs</h2>
+        <p><iframe src="https://mylines.fr/embed/?auth=4ef1191fcad3fd8fca595469626f5f6c796f6e&from=5&style=IENA" width="900" height="250"></iframe></p>
       </div>
-      <br></br>
-      <div class="colorlib-work">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="work-flex">
-                  <div class="half animate-box">
-                    <div class="row no-gutters">
-                      <div class="col-md-12 no-gutters">
-                        <h1>Au départ de Toulouse Matabiau</h1>
-                        <iframe src="https://mylines.fr/embed/?auth=4ef1191fcad3fd8fca595469626f5f6c796f6e&from=10&style=IENA" width="1200" height="675"></iframe> 
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <br></br>
-    <br></br><br></br>
+      <div class="column" style="background-color:#bbb;">
+        <h2>Arrivées</h2>
+        <iframe src="https://mylines.fr/embed/?auth=4ef1191fcad3fd8fca595469626f5f6c796f6e&to=5&style=IENA" width="900" height="250"></iframe>
+      </div>
+    </div>
+    </div>
+    
+    <button class="accordion"><h2>Toulouse-Matabiau</h2></button>
+    <div class="panel">
+      <div class="row">
+      <div class="column" style="background-color:#aaa;">
+        <h2>Départs</h2>
+        <p><iframe src="https://mylines.fr/embed/?auth=4ef1191fcad3fd8fca595469626f5f6c796f6e&from=10&style=IENA" width="900" height="250"></iframe></p>
+      </div>
+      <div class="column" style="background-color:#bbb;">
+        <h2>Arrivées</h2>
+        <iframe src="https://mylines.fr/embed/?auth=4ef1191fcad3fd8fca595469626f5f6c796f6e&to=10&style=IENA" width="900" height="250"></iframe>
+      </div>
+    </div>
+    </div>
+    <button class="accordion"><h2>Bordeau St-Jean</h2></button>
+    <div class="panel">
+      <div class="row">
+      <div class="column" style="background-color:#aaa;">
+        <h2>Départs</h2>
+        <p><iframe src="https://mylines.fr/embed/?auth=4ef1191fcad3fd8fca595469626f5f6c796f6e&from=1&style=IENA" width="900" height="250"></iframe></p>
+      </div>
+      <div class="column" style="background-color:#bbb;">
+        <h2>Arrivées</h2>
+        <iframe src="https://mylines.fr/embed/?auth=4ef1191fcad3fd8fca595469626f5f6c796f6e&to=1&style=IENA" width="900" height="250"></iframe>
+      </div>
+    </div>
+    </div>
+    <button class="accordion"><h2>Vénissieux</h2></button>
+    <div class="panel">
+      <div class="row">
+      <div class="column" style="background-color:#aaa;">
+        <h2>Départs</h2>
+        <p><iframe src="https://mylines.fr/embed/?auth=4ef1191fcad3fd8fca595469626f5f6c796f6e&from=353&style=IENA" width="900" height="250"></iframe></p>
+      </div>
+      <div class="column" style="background-color:#bbb;">
+        <h2>Arrivées</h2>
+        <iframe src="https://mylines.fr/embed/?auth=4ef1191fcad3fd8fca595469626f5f6c796f6e&to=353&style=IENA" width="900" height="250"></iframe>
+      </div>
+    </div>
+    </div>
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
+      });
+    }
+    </script>
+    
     <footer id="colorlib-footer">
         <div class="container">
           <div class="row row-pb-md">
