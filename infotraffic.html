@@ -20,7 +20,57 @@
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<script src="js/modernizr-2.6.2.min.js"></script>
-	</head>
+	<style>		
+		/* Style the tab */
+		.tab {
+			overflow: hidden;
+			border: 1px solid #ccc;
+			background-color: #f1f1f1;
+		}
+		
+		/* Style the buttons inside the tab */
+		.tab button {
+			background-color: inherit;
+			float: left;
+			border: none;
+			outline: none;
+			cursor: pointer;
+			padding: 14px 16px;
+			transition: 0.3s;
+			font-size: 17px;
+		}
+		
+		/* Change background color of buttons on hover */
+		.tab button:hover {
+			background-color: #ddd;
+		}
+		
+		/* Create an active/current tablink class */
+		.tab button.active {
+			background-color: #ccc;
+		}
+		
+		/* Style the tab content */
+		.tabcontent {
+			display: none;
+			padding: 6px 12px;
+			-webkit-animation: fadeEffect 1s;
+			animation: fadeEffect 1s;
+			border: 1px solid #ccc;
+			border-top: none;
+		}
+		/* Fade in tabs */
+		@-webkit-keyframes fadeEffect {
+			from {opacity: 0;}
+			to {opacity: 1;}
+		}
+		
+		@keyframes fadeEffect {
+			from {opacity: 0;}
+			to {opacity: 1;}
+		}
+	</style>	
+</head>
 	<body>
 		
 	<div class="colorlib-loader"></div>
@@ -78,121 +128,133 @@
 				</div>
 			</div>
 		</section>
-
-		<div class="colorlib-work">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="work-flex">
-							<div class="half animate-box">
-								<div class="row no-gutters">
-									<div class="col-md-12 col-md-push-12 no-gutters">
-										<a href="#" class="work-img" style="background-image: url(images/FGV.jpg);"></a>
-									</div>
-								</div>
-							</div>
-							<div class="half animate-box">
-								<div class="row no-gutters">
-									<div class="col-md-12 col-md-pull-12 no-gutters">
-										<div class="display-t desc">
-											<div class="display-tc">
-												<h2>FGV</a></h2>
-												<p>✅ Aucun incident à signaler</p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-md-12">
-						<div class="work-flex">
-              <div class="half animate-box">
-								<div class="row no-gutters">
-									<div class="col-md-12 no-gutters">
-										<a href="#" class="work-img" style="background-image: url(images/LiO.jpg);"></a>
-									</div>
-								</div>
-							</div>
-							<div class="half animate-box">
-									<div class="row no-gutters">
-										<div class="col-md-12 no-gutters">
-											<div class="display-t desc">
-												<div class="display-tc">
-													<h2>LiO</a></h2>
-													<p>✅ Aucun incident à signaler</p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>	
-						</div>
-					</div>
-
-					<div class="col-md-12">
-						<div class="work-flex">
-							<div class="half animate-box">
-								<div class="row no-gutters">
-									<div class="col-md-12 col-md-push-12 no-gutters">
-										<a href="#" class="work-img" style="background-image: url(images/TERAuRA.jpg);"></a>
-									</div>
-								</div>
-							</div>
-							<div class="half animate-box">
-								<div class="row no-gutters">
-									<div class="col-md-12 col-md-pull-12 no-gutters">
-										<div class="display-t desc">
-											<div class="display-tc">
-												<h2>TER AuRA</a></h2>
-												<p>✅ Aucun incident à signaler</p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-md-12">
-						<div class="work-flex">
-              
-              <div class="half animate-box">
-								<div class="row no-gutters">
-									<div class="col-md-12 no-gutters">
-										<a href="#" class="work-img" style="background-image: url(images/RER.jpg);"></a>
-									</div>
-								</div>
-							</div>
-							<div class="half animate-box">
-									<div class="row no-gutters">
-										<div class="col-md-12 no-gutters">
-											<div class="display-t desc">
-												<div class="display-tc">
-													<h2>RER</h2>
-													<p>✅ Aucun incident à signaler</p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-						</div>
-					</div>
-				</div>
+		
+    <script>
+			function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+		</script>
+		<center><h2>FGV</h2></center>
+		<div class="tab">
+				<button class="tablinks" onclick="openCity(event, 'Nord-Ouest')" id="defaultOpen">FGV Nord-Ouest</button>
+				<button class="tablinks" onclick="openCity(event, 'Nord-Est')">FGV Nord-Est</button>
+				<button class="tablinks" onclick="openCity(event, 'Centre')">FGV Centre</button>
+				<button class="tablinks" onclick="openCity(event, 'Sud')">FGV SUD</button>
+				<button class="tablinks" onclick="openCity(event, 'Sud-Est')">FGV Sud-Est</button>
+				<button class="tablinks" onclick="openCity(event, 'Sud-Ouest')">FGV Sud-Ouest</button>
 			</div>
-		</div>
+			<div id="Nord-Ouest" class="tabcontent">
+				<h3>FGV Nord-Ouest</h3>
+				<p>✅ Aucun incident à signaler</p>
+			</div>
+			<div id="Nord-Est" class="tabcontent">
+				<h3>FGV Nord-Est</h3>
+				<p>✅ Aucun incident à signaler</p>
+			</div>
+			<div id="Centre" class="tabcontent">
+				<h3>FGV Nord-Centre</h3>
+				<p>✅ Aucun incident à signaler</p>
+			</div>
+			<div id="Sud" class="tabcontent">
+				<h3>FGV Sud</h3>
+				<p>✅ Aucun incident à signaler</p>
+			</div>
+			<div id="Sud-Ouest" class="tabcontent">
+				<h3>FGV Sud-Ouest</h3>
+				<p>✅ Aucun incident à signaler</p>
+			</div>
+			<div id="Sud-Est" class="tabcontent">
+				<h3>FGV Sud-Est</h3>
+				<p>✅ Aucun incident à signaler</p>
+			</div>
+			<br>
+		<center><h2>RER</h2></center>
+			<div class="tab">
+					<button class="tablinks" onclick="openCity(event, 'A')" id="defaultOpen">RER A</button>
+					<button class="tablinks" onclick="openCity(event, 'B')">RER B</button>
+					<button class="tablinks" onclick="openCity(event, 'C')">RER C</button>
+					<button class="tablinks" onclick="openCity(event, 'D')">RER D</button>
+					<button class="tablinks" onclick="openCity(event, 'E')">RER E</button>
+					<button class="tablinks" onclick="openCity(event, 'T4')">Tramway T4</button>
+				</div>
+				<div id="A" class="tabcontent">
+					<h3>RER A</h3>
+					<p>✅ Aucun incident à signaler</p>
+				</div>
+				<div id="B" class="tabcontent">
+					<h3>RER B</h3>
+					<p>✅ Aucun incident à signaler</p>
+				</div>
+				<div id="C" class="tabcontent">
+					<h3>RER C</h3>
+					<p>✅ Aucun incident à signaler</p>
+				</div>
+				<div id="D" class="tabcontent">
+					<h3>RER D</h3>
+					<p>✅ Aucun incident à signaler</p>
+				</div>
+				<div id="E" class="tabcontent">
+					<h3>RER E</h3>
+					<p>✅ Aucun incident à signaler</p>
+				</div>
+				<div id="T4" class="tabcontent">
+					<h3>Tramway T4</h3>
+					<p>✅ Aucun incident à signaler</p>
+				</div>
+				<br>
+			<center><h2>Train Français Marchandise</h2></center>
+			<div class="tab">
+					<button class="tablinks" onclick="openCity(event, 'Fret')" id="defaultOpen">Fret</button>
+					<button class="tablinks" onclick="openCity(event, 'Poste')">La Poste Fret</button>
+					<button class="tablinks" onclick="openCity(event, 'Primeurs')">Le Train des Primeurs</button>
+				</div>
+				<div id="Fret" class="tabcontent">
+					<h3>Fret</h3>
+					<p>✅ Aucun incident à signaler</p>
+				</div>
+				<div id="Poste" class="tabcontent">
+					<h3>La Poste Fret</h3>
+					<p>✅ Aucun incident à signaler</p>
+				</div>
+				<div id="Primeurs" class="tabcontent">
+					<h3>Le Train des Primeurs</h3>
+					<p>✅ Aucun incident à signaler</p>
+				</div>
+				<br>
+				<center><h2>Train Français Région</h2></center>
+				<div class="tab">
+						<button class="tablinks" onclick="openCity(event, 'LiO')" id="defaultOpen">LiO</button>
+						<button class="tablinks" onclick="openCity(event, 'AuRA')">TER AuRA</button>
+					</div>
+					<div id="LiO" class="tabcontent">
+						<h3>LiO</h3>
+						<p>✅ Aucun incident à signaler</p>
+					</div>
+					<div id="AuRA" class="tabcontent">
+						<h3>TER AuRA</h3>
+						<p>✅ Aucun incident à signaler</p>
+					</div>
     <footer id="colorlib-footer">
         <div class="container">
           <div class="row row-pb-md">
             <div class="col-md-3 colorlib-widget">
               <h4>A propos de nous...</h4>
-              <p>Rapide, efficace et honnête, Train Français est devenue une Société de transport réputé. Notre équipe est prête à répondre à toutes les demandes, et gère chaque projet avec le professionnalisme attendu par nos clients. Nous souhaitons que nos clients soient satisfaits de notre travail. C'est pourquoi nous continuons de communiquer avec eux tout au long du projet.</p>
+              <p>Rapide, efficace et honnête, Train Français est devenue une société de transport réputée. Notre équipe est prête à répondre à toutes les demandes, et gère chaque projet avec le professionnalisme attendu par nos clients. Nous souhaitons que nos clients soient satisfaits de notre travail. C'est pourquoi nous continuons de communiquer avec eux tout au long du projet.</p>
               <p>
                 <ul class="colorlib-social-icons">
                   <li><a href="https://twitter.com/cine_pas_cher"><i class="icon-twitter"></i></a></li>
                   <li><a href="#"><i class="icon-facebook"></i></a></li>
                   <li><a href="#"><i class="icon-instagram"></i></a></li>
-                  
                 </ul>
               </p>
             </div>
