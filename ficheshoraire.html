@@ -12,24 +12,74 @@
 
   gtag('config', 'G-ENZ4JWSEQV');
 </script>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Train Français</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-	<meta name="author" content="" />
-	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400" rel="stylesheet">
-	<link rel="stylesheet" href="css/animate.css">
-	<link rel="stylesheet" href="css/icomoon.css">
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/magnific-popup.css">
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
-	<link rel="stylesheet" href="css/style.css">
-	
-	<script src="js/modernizr-2.6.2.min.js"></script>
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	 <meta charset="utf-8">
+	 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	 <title>Train Français</title>
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	 <meta name="description" content="" />
+	 <meta name="keywords" content="" />
+	 <meta name="author" content="" />
+	 <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600" rel="stylesheet">
+	 <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400" rel="stylesheet">
+	 <link rel="stylesheet" href="css/animate.css">
+	 <link rel="stylesheet" href="css/icomoon.css">
+	 <link rel="stylesheet" href="css/bootstrap.css">
+	 <link rel="stylesheet" href="css/magnific-popup.css">
+	 <link rel="stylesheet" href="css/owl.carousel.min.css">
+	 <link rel="stylesheet" href="css/owl.theme.default.min.css">
+	 <link rel="stylesheet" href="css/style.css">
+	 <script src="js/modernizr-2.6.2.min.js"></script>
+	 <style>		
+		 /* Style the tab */
+		 .tab {
+			 overflow: hidden;
+			 border: 1px solid #ccc;
+			 background-color: #f1f1f1;
+		 }
+		 
+		 /* Style the buttons inside the tab */
+		 .tab button {
+			 background-color: inherit;
+			 float: left;
+			 border: none;
+			 outline: none;
+			 cursor: pointer;
+			 padding: 14px 16px;
+			 transition: 0.3s;
+			 font-size: 17px;
+		 }
+		 
+		 /* Change background color of buttons on hover */
+		 .tab button:hover {
+			 background-color: #ddd;
+		 }
+		 
+		 /* Create an active/current tablink class */
+		 .tab button.active {
+			 background-color: #ccc;
+		 }
+		 
+		 /* Style the tab content */
+		 .tabcontent {
+			 display: none;
+			 padding: 6px 12px;
+			 -webkit-animation: fadeEffect 1s;
+			 animation: fadeEffect 1s;
+			 border: 1px solid #ccc;
+			 border-top: none;
+		 }
+		 /* Fade in tabs */
+		 @-webkit-keyframes fadeEffect {
+			 from {opacity: 0;}
+			 to {opacity: 1;}
+		 }
+		 
+		 @keyframes fadeEffect {
+			 from {opacity: 0;}
+			 to {opacity: 1;}
+		 }
+	 </style>
 	</head>
 	<body>
 		
@@ -52,8 +102,9 @@
 												<li><a href="Problème.html">Un Problème?</a></li>
 											</ul>
 										</li>
-										<li><a href="Reservation.html">Réservation voyage</a></li>
+										<li><a href="ficheshoraire.html">Nos fiches Horaires</a></li>
 										<li><a href="infotraffic.html">Nos Info Trafic</a></li>
+										<li><a href="https://mylines.fr/home?company=Train%20Fran%C3%A7ais">Réserver un trajet</a></li>
 										<li><a href="audepartdenosgares.html">Au départ de nos gares</a></li>
 										<li class="has-dropdown active">
 											<a href="Langue.html">Langues</a>
@@ -81,7 +132,7 @@
 							<div class="animate-box">
 								<div class="container">
 								<div class="title">Train Français</div>
-								<h2>Oups une voie de garage....</h2>
+								<h2>Nos Fiches Horaires</h2>
 							</div>
 						</div>
 					</div>
@@ -95,14 +146,55 @@
 						<div class="col-md-12 col-md-offset-0">
 							<div class="animate-box">
 								<div class="container">
-								<img src="https://snfocos.org/wp-content/uploads/2020/09/Voie-de-garage.jpg">
-
+								<img src="images/attention.gif"/>
+								<h2><strong>ATTENTION !</strong> Les fiches horaires sont en cours de réalisation. Pour + d'information <a href="https://mylines.fr/home?company=Train%20Fran%C3%A7ais" target="_blank">cliquez ici</a></h2>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-
+		</section>
+		<script>
+				function openCity(evt, cityName) {
+		var i, tabcontent, tablinks;
+		tabcontent = document.getElementsByClassName("tabcontent");
+		for (i = 0; i < tabcontent.length; i++) {
+			tabcontent[i].style.display = "none";
+		}
+		tablinks = document.getElementsByClassName("tablinks");
+		for (i = 0; i < tablinks.length; i++) {
+			tablinks[i].className = tablinks[i].className.replace(" active", "");
+		}
+		document.getElementById(cityName).style.display = "block";
+		evt.currentTarget.className += " active";
+	}
+			</script>
+			<div class="tab">
+					<button class="tablinks" onclick="openCity(event, 'LPBo')" id="defaultOpen">Lyon Perrache <-> Bordeaux St-Jean</button>
+					<button class="tablinks" onclick="openCity(event, 'LPBE')">Lyon Perrache <-> Bonn</button>
+					<button class="tablinks" onclick="openCity(event, 'IF')">Irun <-> Frankfurt</button>
+					<button class="tablinks" onclick="openCity(event, 'MPGL')">Marseilles St-Charles <-> Paris Gare de Lyon</button>
+				</div>
+				<div id="LPBo" class="tabcontent">
+					<h3>Lyon Perrache <-> Bordeaux St-Jean</h3>
+					<p><embed src="files/Lyon bordeaux.pdf" type="application/pdf" width="100%" height="100%" />
+						Ajout en cours</p>
+				</div>
+				<div id="LPBE" class="tabcontent">
+					<h3>Lyon Perrache <-> Bonn</h3>
+					<b>Ajout en cours</b>
+					<p><img src="images/chargement.gif"/></p>
+				</div>
+				<div id="IF" class="tabcontent">
+					<h3>Irun <-> Frankfurt</h3>
+					<b>Ajout en cours</b>
+					<p><img src="images/chargement.gif"/></p>
+				</div>
+				<div id="MPGL" class="tabcontent">
+					<h3>FGV Sud</h3>
+					<b>Ajout en cours</b>
+					<p><img src="images/chargement.gif"/></p>
+				</div>
 			<footer id="colorlib-footer">
 					<div class="container">
 						<div class="row row-pb-md">
@@ -111,7 +203,7 @@
 								<p>Rapide, efficace et honnête, Train Français est devenue une société de transport réputée. Notre équipe est prête à répondre à toutes les demandes, et gère chaque projet avec le professionnalisme attendu par nos clients. Nous souhaitons que nos clients soient satisfaits de notre travail. C'est pourquoi nous continuons de communiquer avec eux tout au long du projet.</p>
 								<p>
 									<ul class="colorlib-social-icons">
-										<li><a href="https://twitter.com/cine_pas_cher"><i class="icon-twitter"></i></a></li>
+										<li><a href="#"><i class="icon-twitter"></i></a></li>
 										<li><a href="#"><i class="icon-facebook"></i></a></li>
 										<li><a href="#"><i class="icon-instagram"></i></a></li>
 										
