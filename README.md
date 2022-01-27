@@ -1,4 +1,5 @@
-# Train Français Compagny ![image](https://user-images.githubusercontent.com/59665309/151394733-37a4e05a-5b4d-4f2e-ba8a-d9abf6bf056e.png)
+![image](images/bannière.jpg)
+# Train Français Compagny
 
 ## INFORMATION IMPORTANTE
 
