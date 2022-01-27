@@ -1,4 +1,4 @@
-# Train Français Compagny ![image](images/bannière.jpg)
+# Train Français Compagny ![image](images/Logo.jpeg)
 
 ## INFORMATION IMPORTANTE
 
