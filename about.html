@@ -1,640 +1,775 @@
-<!doctype html>
-<html class="no-js" lang="zxx">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Transportation HTML-5 Template </title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="manifest" href="site.webmanifest">
-		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+<!DOCTYPE html>
+<html lang="en">
 
-		<!-- CSS here -->
-            <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-            <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-            <link rel="stylesheet" href="assets/css/slicknav.css">
-            <link rel="stylesheet" href="assets/css/flaticon.css">
-            <link rel="stylesheet" href="assets/css/animate.min.css">
-            <link rel="stylesheet" href="assets/css/magnific-popup.css">
-            <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-            <link rel="stylesheet" href="assets/css/themify-icons.css">
-            <link rel="stylesheet" href="assets/css/slick.css">
-            <link rel="stylesheet" href="assets/css/nice-select.css">
-            <link rel="stylesheet" href="assets/css/style.css">
-   </head>
+	<head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="description" content="">
+	    <meta name="author" content="">
 
-   <body>
-    <!--? Preloader Start -->
-    <div id="preloader-active">
-        <div class="preloader d-flex align-items-center justify-content-center">
-            <div class="preloader-inner position-relative">
-                <div class="preloader-circle"></div>
-                <div class="preloader-img pere-text">
-                    <img src="assets/img/logo/loder.jpg" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Preloader Start -->
-    <header>
-        <!-- Header Start -->
-       <div class="header-area">
-            <div class="main-header ">
-                <div class="header-top d-none d-lg-block">
-                   <div class="container">
-                       <div class="col-xl-12">
-                            <div class="row d-flex justify-content-between align-items-center">
-                                <div class="header-info-left">
-                                    <ul>     
-                                        <li>Phone: +99 (0) 101 0000 888</li>
-                                        <li>Email: noreply@yourdomain.com</li>
-                                    </ul>
-                                </div>
-                                <div class="header-info-right">
-                                    <ul class="header-social">    
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                       <li> <a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                       </div>
-                   </div>
-                </div>
-               <div class="header-bottom  header-sticky">
-                    <div class="container">
-                        <div class="row align-items-center">
-                            <!-- Logo -->
-                            <div class="col-xl-2 col-lg-2">
-                                <div class="logo">
-                                    <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-xl-10 col-lg-10">
-                                <div class="menu-wrapper  d-flex align-items-center justify-content-end">
-                                    <!-- Main-menu -->
-                                    <div class="main-menu d-none d-lg-block">
-                                        <nav> 
-                                            <ul id="navigation">                                                                                          
-                                                <li><a href="index.html">Home</a></li>
-                                                <li><a href="about.html">About</a></li>
-                                                <li><a href="services.html">Services</a></li>
-                                                <li><a href="blog.html">Blog</a>
-                                                    <ul class="submenu">
-                                                        <li><a href="blog.html">Blog</a></li>
-                                                       <li><a href="blog_details.html">Blog Details</a></li>
-                                                        <li><a href="elements.html">Element</a></li>
+	    <title>Unship</title>
+	    <!-- Web Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+	    <!-- Bootstrap Core CSS -->
+	    <link href="css/bootstrap.min.css" rel="stylesheet">
+	    <!-- Flaticon CSS -->
+	    <link href="fonts/flaticon/flaticon.css" rel="stylesheet">
+	    <!-- font-awesome CSS -->
+	    <link href="css/font-awesome.min.css" rel="stylesheet">
+	    <!-- Offcanvas CSS -->
+	    <link href="css/hippo-off-canvas.css" rel="stylesheet">
+	    <!-- animate CSS -->
+	    <link href="css/animate.css" rel="stylesheet">
+	    <!-- language CSS -->
+	    <link href="css/language-select.css" rel="stylesheet">
+	    <!-- owl.carousel CSS -->
+	    <link href="owl.carousel/assets/owl.carousel.css" rel="stylesheet">
+		<!-- magnific-popup -->
+    	<link href="css/magnific-popup.css" rel="stylesheet">
+    	<!-- Main menu -->
+    	<link href="css/menu.css" rel="stylesheet">
+    	<!-- Template Common Styles -->
+    	<link href="css/template.css" rel="stylesheet">
+	    <!-- Custom CSS -->
+	    <link href="css/style.css" rel="stylesheet">
+	    <!-- Responsive CSS -->
+	    <link href="css/responsive.css" rel="stylesheet">
+
+	    <script src="js/vendor/modernizr-2.8.1.min.js"></script>
+	    <!-- HTML5 Shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	    <!--[if lt IE 9]>
+		    <script src="js/vendor/html5shim.js"></script>
+		    <script src="js/vendor/respond.min.js"></script>
+	    <![endif]-->
+	</head>
+
+
+	<body id="page-top">
+		<div id="st-container" class="st-container">
+    		<div class="st-pusher">
+    			<div class="st-content">
+				  	<header class="header">
+				  		<nav class="top-bar">
+				  			<div class="overlay-bg">
+					  			<div class="container">
+					  				<div class="row">
+					  					<div class="col-sm-6 col-xs-12">
+						  					<div class="call-to-action">
+						  						<ul class="list-inline">
+						  							<li><a href="#"><i class="fa fa-phone"></i> 1-800-987-654</a></li>
+						  							<li><a href="#"><i class="fa fa-envelope"></i> admin@domain.com</a></li>
+						  						</ul>
+						  					</div><!-- /.call-to-action -->
+					  					</div><!-- /.col-sm-6 -->
+					  					<div class="col-sm-6 hidden-xs">
+						  					<div class="topbar-right">
+							  					<div class="lang-support pull-right">
+													<select class="cs-select cs-skin-elastic">
+														<option value="" disabled selected>Language</option>
+														<option value="united-kingdom" data-class="flag-uk">English</option>
+														<option value="france" data-class="flag-france">French</option>
+														<option value="spain" data-class="flag-spain">Spanish</option>
+														<option value="south-africa" data-class="flag-bd">Bengali</option>
+													</select>
+												</div>
+
+						  						<ul class="social-links list-inline pull-right">
+						  							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+						  							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+						  							<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+						  							<li><a href="#"><i class="fa fa-tumblr"></i></a></li>
+						  						</ul>
+						  					</div><!-- /.social-links -->
+					  					</div><!-- /.col-sm-6 -->
+					  				</div><!-- /.row -->
+					  			</div><!-- /.container -->
+				  			</div><!-- /.overlay-bg -->
+				  		</nav><!-- /.top-bar -->
+						<div id="search">
+						    <button type="button" class="close">×</button>
+						    <form>
+						        <input type="search" value="" placeholder="type keyword(s) here" />
+						        <button type="submit" class="btn btn-primary">Search</button>
+						    </form>
+						</div>
+
+						<nav class="navbar navbar-default" role="navigation">
+							<div class="container mainnav">
+								<div class="navbar-header">
+									<h1 class="logo"><a class="navbar-brand" href="index.html"><img src="img/logo.png" alt=""></a></h1>
+
+									<!-- offcanvas-trigger -->
+			                        <button type="button" class="navbar-toggle collapsed pull-right" >
+			                          <span class="sr-only">Toggle navigation</span>
+			                          <i class="fa fa-bars"></i>
+			                        </button>
+
+								</div>
+
+								<!-- Collect the nav links, forms, and other content for toggling -->
+								<div class="collapse navbar-collapse navbar-collapse">
+
+
+
+					                <span class="search-button pull-right"><a href="#search"><i class="fa fa-search"></i></a></span>
+
+									<ul class="nav navbar-nav navbar-right">
+										<!-- Home -->
+                                        <li class="dropdown"><a href="index.html">Home <span class="fa fa-angle-down"></span></a>
+                                            <!-- submenu-wrapper -->
+                                            <div class="submenu-wrapper">
+                                                <div class="submenu-inner">
+                                                    <ul class="dropdown-menu">
+                                                    	<li><a href="index2.html">Home2</a></li>
                                                     </ul>
-                                                </li>
-                                                <li><a href="contact.html">Contact</a></li>
-                                            </ul>
-                                        </nav>
-                                    </div>
-                                    <!-- Header-btn -->
-                                    <div class="header-right-btn d-none d-lg-block ml-20">
-                                        <a href="contact.html" class="btn header-btn">Get A Qoue</a>
-                                    </div>
-                                </div>
-                            </div> 
-                            <!-- Mobile Menu -->
-                            <div class="col-12">
-                                <div class="mobile_menu d-block d-lg-none"></div>
-                            </div>
-                        </div>
-                    </div>
-               </div>
-            </div>
-       </div>
-        <!-- Header End -->
-    </header>
-    <main>
-        <!--? slider Area Start-->
-        <div class="slider-area ">
-            <div class="single-slider hero-overly slider-height2 d-flex align-items-center" data-background="assets/img/hero/about.jpg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="hero-cap">
-                                <h2>About us</h2>
-                                <nav aria-label="breadcrumb">
-                                    <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                        <li class="breadcrumb-item"><a href="#">About</a></li> 
-                                    </ol>
-                                </nav>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- slider Area End-->
-        <!--? About Area Start -->
-        <div class="about-low-area section-padding30">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-md-12">
-                        <div class="about-caption mb-50">
-                            <!-- Section Tittle -->
-                            <div class="section-tittle mb-35">
-                                <span>About Our Company</span>
-                                <h2>Safe Logistic & Transport  Solutions That Saves our Valuable Time!</h2>
-                            </div>
-                            <p>Brook presents your services with flexible, convenient and cdpose layouts. You can select your favorite layouts & elements for cular ts with unlimited ustomization possibilities. Pixel-perfect replication of the designers is intended.</p>
-                            <p>Brook presents your services with flexible, convefnient and chient anipurpose layouts. You can select your favorite layouts.</p>
-                            <a href="about.html" class="btn">More About Us</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-12">
-                        <!-- about-img -->
-                        <div class="about-img ">
-                            <div class="about-font-img">
-                                <img src="assets/img/gallery/about2.png" alt="">
-                            </div>
-                            <div class="about-back-img d-none d-lg-block">
-                                <img src="assets/img/gallery/about1.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- About Area End -->
-        <!--? contact-form start -->
-        <section class="contact-form-area section-bg  pt-115 pb-120 fix" data-background="assets/img/gallery/section_bg02.jpg">
-            <div class="container">
-                <div class="row justify-content-end">
-                    <!-- Contact wrapper -->
-                    <div class="col-xl-8 col-lg-9">
-                        <div class="contact-form-wrapper">
-                            <!-- From tittle -->
-                            <div class="row">
-                               <div class="col-lg-12">
-                                    <!-- Section Tittle -->
-                                    <div class="section-tittle mb-50">
-                                        <span>Get a Qote For Free</span>
-                                        <h2>Request a Free Quote</h2>
-                                        <p>Brook presents your services with flexible, convenient and cdpose layouts. You can select your favorite layouts & elements for.</p>
-                                    </div>
-                               </div>
-                            </div>
-                            <!-- form -->
-                            <form action="#" class="contact-form">
-                                <div class="row ">
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="input-form">
-                                            <input type="text" placeholder="Name">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="input-form">
-                                            <input type="text" placeholder="Email">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="input-form">
-                                            <input type="text" placeholder="Contact Number">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="select-items">
-                                            <select name="select" id="select1">
-                                                <option value="">Freight Type</option>
-                                                <option value="">Catagories One</option>
-                                                <option value="">Catagories Two</option>
-                                                <option value="">Catagories Three</option>
-                                                <option value="">Catagories Four</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="input-form">
-                                            <input type="text" placeholder="City of Departure">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6">
-                                        <div class="input-form">
-                                            <input type="text" placeholder="Incoterms">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6">
-                                        <div class="input-form">
-                                            <input type="text" placeholder="Weight">
-                                        </div>
-                                    </div>
-                                    <!-- Height Width length -->
-                                    <div class="col-lg-4 col-md-6 col-sm-6">
-                                        <div class="input-form">
-                                            <input type="text" placeholder="Height">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6">
-                                        <div class="input-form">
-                                            <input type="text" placeholder="Width">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6">
-                                        <div class="input-form">
-                                            <input type="text" placeholder="length">
-                                        </div>
-                                    </div>
-                                    <!-- Radio Button -->
-                                    <div class="col-lg-12">
-                                        <div class="radio-wrapper mb-30 mt-15">
-                                            <label>Extra services:</label>
-                                            <div class="select-radio">
-                                                <div class="radio">
-                                                    <input id="radio-1" name="radio" type="radio" checked="">
-                                                    <label for="radio-1" class="radio-label">Freight</label>
-                                                </div>
-                                                <div class="radio">
-                                                    <input id="radio-2" name="radio" type="radio">
-                                                    <label for="radio-2" class="radio-label">Express Delivery</label>
-                                                </div>
-                                                <div class="radio">
-                                                    <input id="radio-4" name="radio" type="radio">
-                                                    <label for="radio-4" class="radio-label">Insurance</label>
-                                                </div>
-                                                <div class="radio">
-                                                    <input id="radio-5" name="radio" type="radio">
-                                                    <label for="radio-5" class="radio-label">Packaging</label>
                                                 </div>
                                             </div>
-                                        </div> 
-                                    </div>
-                                    <!-- Button -->
-                                    <div class="col-lg-12">
-                                        <button name="submit" class="submit-btn">Request a Quote</button>
-                                    </div>
-                                </div>
-                            </form>	
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- contact-form end -->
-        <!--Team Ara Start -->
-        <div class="team-area section-padding30">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="cl-xl-7 col-lg-8 col-md-10">
-                        <!-- Section Tittle -->
-                        <div class="section-tittle text-center mb-70">
-                            <span>Our Team Mambers</span>
-                            <h2>What We Can Do For You</h2>
-                        </div> 
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-4 col-sm-6">
-                        <div class="single-team mb-30 text-center">
-                            <div class="team-img">
-                                <img src="assets/img/gallery/team1.png" alt="">
-                                <div class="team-caption">
-                                    <h3><a href="#">Mancherwan Kolin</a></h3>
-                                    <p>Health agent</p>
-                                    <!-- Blog Social -->
-                                    <div class="team-social">
-                                        <ul>
-                                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fas fa-globe"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                             </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6">
-                        <div class="single-team mb-30 text-center">
-                            <div class="team-img">
-                                <img src="assets/img/gallery/team2.png" alt="">
-                                <div class="team-caption">
-                                    <h3><a href="#">Mancherwan Kolin</a></h3>
-                                    <p>Health agent</p>
-                                    <!-- Blog Social -->
-                                    <div class="team-social">
-                                        <ul>
-                                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fas fa-globe"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                             </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6">
-                        <div class="single-team mb-30 text-center">
-                            <div class="team-img">
-                                <img src="assets/img/gallery/team3.png" alt="">
-                                <div class="team-caption">
-                                    <h3><a href="#">Mancherwan Kolin</a></h3>
-                                    <p>Health agent</p>
-                                    <!-- Blog Social -->
-                                    <div class="team-social">
-                                        <ul>
-                                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fas fa-globe"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Team Ara End -->
-        <!--? Testimonial Start -->
-        <div class="testimonial-area testimonial-padding section-bg" data-background="assets/img/gallery/section_bg04.jpg">
-            <div class="container">
-                <div class="row justify-content-between">
-                    <div class="col-xl-7 col-lg-7">
-                        <!-- Section Tittle -->
-                        <div class="section-tittle section-tittle2 mb-25">
-                            <span>Clients Testimonials</span>
-                            <h2>What Our Clients Say!</h2>
-                        </div> 
-                        <div class="h1-testimonial-active mb-70">
-                            <!-- Single Testimonial -->
-                            <div class="single-testimonial ">
-                                <!-- Testimonial Content -->
-                                <div class="testimonial-caption ">
-                                    <div class="testimonial-top-cap">
-                                        <p>Srem ipsum adolor dfsit amet, consectetur adipiscing elit, sed dox beiusmod tempor incci didunt ut labore et dolore magna aliqua. Quis cipsucm suspendisse ultrices gravida. Risus commodo vivercra maecenas accumsan lac.</p>
-                                    </div>
-                                    <!-- founder -->
-                                    <div class="testimonial-founder d-flex align-items-center">
-                                        <div class="founder-img">
-                                            <img src="assets/img/gallery/Homepage_testi.png" alt="">
-                                        </div>
-                                        <div class="founder-text">
-                                            <span>Jhaon smith</span>
-                                            <p>Creative designer</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Single Testimonial -->
-                            <div class="single-testimonial ">
-                                <!-- Testimonial Content -->
-                                <div class="testimonial-caption ">
-                                    <div class="testimonial-top-cap">
-                                        <p>Srem ipsum adolor dfsit amet, consectetur adipiscing elit, sed dox beiusmod tempor incci didunt ut labore et dolore magna aliqua. Quis cipsucm suspendisse ultrices gravida. Risus commodo vivercra maecenas accumsan lac.</p>
-                                    </div>
-                                    <!-- founder -->
-                                    <div class="testimonial-founder d-flex align-items-center">
-                                        <div class="founder-img">
-                                            <img src="assets/img/gallery/Homepage_testi.png" alt="">
-                                        </div>
-                                        <div class="founder-text">
-                                            <span>Jhaon smith</span>
-                                            <p>Creative designer</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Form Start -->
-                    <div class="col-xl-4 col-lg-5 col-md-8">
-                        <div class="testimonial-form text-center">
-                            <h3>Always listening, always understanding.</h3>
-                            <input type="text" placeholder="Incoterms">
-                            <button name="submit" class="submit-btn">Request a Quote</button>
-                        </div>
-                    </div>
-                    <!-- Form End -->
-                </div>
-            </div>
-        </div>
-        <!-- Testimonial End -->
-         <!--? Blog Area Start -->
-         <div class="home-blog-area section-padding30">
-            <div class="container">
-                <!-- Section Tittle -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="section-tittle text-center mb-70">
-                            <span>Our Recent news</span>
-                            <h2>Tourist Blog</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="home-blog-single mb-30">
-                            <div class="blog-img-cap">
-                                <div class="blog-img">
-                                    <img src="assets/img/gallery/blog01.png" alt="">
-                                </div>
-                            </div>
-                            <div class="blog-caption">
-                                <div class="blog-date text-center">
-                                    <span>27</span>
-                                    <p>SEP</p>
-                                </div>
-                                <div class="blog-cap">
-                                    <ul>
-                                        <li><a href="#"><i class="ti-user"></i> Jessica Temphers</a></li>
-                                        <li><a href="#"><i class="ti-comment-alt"></i> 12</a></li>
-                                    </ul>
-                                    <h3><a href="blog_details.html">Here’s what you should know before.</a></h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="home-blog-single mb-30">
-                            <div class="blog-img-cap">
-                                <div class="blog-img">
-                                    <img src="assets/img/gallery/blog1.png" alt="">
-                                </div>
-                            </div>
-                            <div class="blog-caption">
-                                <div class="blog-date text-center">
-                                    <span>27</span>
-                                    <p>SEP</p>
-                                </div>
-                                <div class="blog-cap">
-                                    <ul>
-                                        <li><a href="#"><i class="ti-user"></i> Jessica Temphers</a></li>
-                                        <li><a href="#"><i class="ti-comment-alt"></i> 12</a></li>
-                                    </ul>
-                                     <h3><a href="blog_details.html">Here’s what you should know before.</a></h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="home-blog-single mb-30">
-                            <div class="blog-img-cap">
-                                <div class="blog-img">
-                                    <img src="assets/img/gallery/blog02.png" alt="">
-                                </div>
-                            </div>
-                            <div class="blog-caption">
-                                <div class="blog-date text-center">
-                                    <span>27</span>
-                                    <p>SEP</p>
-                                </div>
-                                <div class="blog-cap">
-                                    <ul>
-                                        <li><a href="#"><i class="ti-user"></i> Jessica Temphers</a></li>
-                                        <li><a href="#"><i class="ti-comment-alt"></i> 12</a></li>
-                                    </ul>
-                                     <h3><a href="blog_details.html">Here’s what you should know before.</a></h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Blog Area End -->
-    </main>
-    <footer>
-        <!--? Footer Start-->
-        <div class="footer-area footer-bg">
-           <div class="container">
-                <div class="footer-top footer-padding">
-                    <!-- footer Heading -->
-                    <div class="footer-heading">
-                        <div class="row justify-content-between">
-                            <div class="col-xl-6 col-lg-8 col-md-8">
-                                <div class="wantToWork-caption wantToWork-caption2">
-                                    <h2>We Understand The Importance Approaching Each Work!</h2>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-4">
-                                <span class="contact-number f-right">+ 1 212-683-9756</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Footer Menu -->
-                    <div class="row d-flex justify-content-between">
-                        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
-                            <div class="single-footer-caption mb-50">
-                                <div class="footer-tittle">
-                                    <h4>COMPANY</h4>
-                                    <ul>
-                                        <li><a href="#">About Us</a></li>
-                                        <li><a href="#">Company</a></li>
-                                        <li><a href="#"> Press & Blog</a></li>
-                                        <li><a href="#"> Privacy Policy</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-                            <div class="single-footer-caption mb-50">
-                                <div class="footer-tittle">
-                                    <h4>Open hour</h4>
-                                    <ul>
-                                        <li><a href="#">Monday 11am-7pm</a></li>
-                                        <li><a href="#"> Tuesday-Friday 11am-8pm</a></li>
-                                        <li><a href="#"> Saturday 10am-6pm</a></li>
-                                        <li><a href="#"> Sunday 11am-6pm</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                            <div class="single-footer-caption mb-50">
-                                <div class="footer-tittle">
-                                    <h4>RESOURCES</h4>
-                                    <ul>
-                                        <li><a href="#">Home Insurance</a></li>
-                                        <li><a href="#">Travel Insurance</a></li>
-                                        <li><a href="#"> Car Insurance</a></li>
-                                        <li><a href="#"> Business Insurance</a></li>
-                                        <li><a href="#"> Heal Insurance</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6">
-                            <div class="single-footer-caption mb-50">
-                                <!-- logo -->
-                                <div class="footer-logo">
-                                    <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
-                                </div>
-                                <div class="footer-tittle">
-                                    <div class="footer-pera">
-                                        <p class="info1">GThe trade war currently ensuing between te US anfd several natxions around thdhe globe, most fiercely with.</p>
-                                    </div>
-                                </div>
-                                <!-- Footer Social -->
-                                <div class="footer-social ">
-                                    <a href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a>
-                                    <a href=""><i class="fab fa-twitter"></i></a>
-                                    <a href="#"><i class="fas fa-globe"></i></a>
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Footer Bottom -->
-                <div class="footer-bottom">
-                    <div class="row d-flex align-items-center">
-                        <div class="col-lg-12">
-                            <div class="footer-copy-right text-center">
-                                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-           </div>
-        </div>
-        <!-- Footer End-->
-    </footer>
-    <!-- Scroll Up -->
-    <div id="back-top" >
-        <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
-    </div>
+                                            <!-- /submenu-wrapper -->
+                                        </li>
+                                        <!-- /Home -->
 
-    <!-- JS here -->
-		<!-- All JS Custom Plugins Link Here here -->
-        <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
-		<!-- Jquery, Popper, Bootstrap -->
-		<script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
-        <script src="./assets/js/popper.min.js"></script>
-        <script src="./assets/js/bootstrap.min.js"></script>
-	    <!-- Jquery Mobile Menu -->
-        <script src="./assets/js/jquery.slicknav.min.js"></script>
+                                        <!-- Pages -->
+                                        <li class="dropdown active"><a href="#">Pages <span class="fa fa-angle-down"></span></a>
+                                            <!-- submenu-wrapper -->
+                                            <div class="submenu-wrapper">
+                                                <div class="submenu-inner">
+                                                    <ul class="dropdown-menu">
+                                                    	<li class="active"><a href="about.html">About</a></li>
+                                                        <li><a href="service.html">Service</a></li>
+                                                        <li><a href="our-people.html">Our people</a></li>
+                                                        <li><a href="career.html">Career</a></li>
+                                                        <li><a href="faq.html">FAQ Page</a></li>
+                                                        <li><a href="typography.html">Typography</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <!-- /submenu-wrapper -->
+                                        </li>
+                                        <!-- /Pages -->
 
-		<!-- Jquery Slick , Owl-Carousel Plugins -->
-        <script src="./assets/js/owl.carousel.min.js"></script>
-        <script src="./assets/js/slick.min.js"></script>
-		<!-- One Page, Animated-HeadLin -->
-        <script src="./assets/js/wow.min.js"></script>
-		<script src="./assets/js/animated.headline.js"></script>
-        <script src="./assets/js/jquery.magnific-popup.js"></script>
+                                        <!-- Services -->
+                                        <li class="dropdown"><a href="#">Services <span class="fa fa-angle-down"></span></a>
+                                            <!-- submenu-wrapper -->
+                                            <div class="submenu-wrapper">
+                                                <div class="submenu-inner">
+                                                    <ul class="dropdown-menu">
+                                                    	<li><a href="air.html">Air transportation</a></li>
+                                                        <li><a href="marine.html">Marine transportation</a></li>
+                                                        <li><a href="moving.html">Moving & storage</a></li>
+                                                        <li><a href="shipping.html">Shipping & operations</a></li>
+                                                        <li><a href="transportation.html">Transportation logistics</a></li>
+                                                        <li><a href="trucking.html">Trucking</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <!-- /submenu-wrapper -->
+                                        </li>
+                                        <!-- MEGA MENU -->
+											<li class="dropdown mega-fw has-megamenu"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Features <span class="fa fa-angle-down"></span></a>
+												<!-- megamenu-wrapper -->
+												<div class="submenu-wrapper megamenu-wrapper">
+													<div class="submenu-inner megamenu-inner">
+													
+														<ul class="dropdown-menu">
+															<li>
+																<div class="mega-content">
+																	<div class="row">
+																	
+																		<div class="col-sm-3 mega-col">
+																			<ul>
+																				<li class="dropdown-header">Features</li>
+																				<li><a href="#">100% Responsive</a></li>
+																				<li><a href="#">Animations</a></li>
+																				<li><a href="#">Bootstrap 3+</a></li>
+																				<li><a href="#">Valid Markups</a></li>
+																				<li><a href="#">Mega Menu</a></li>
+																				<li><a href="#">Free Supports And Update</a></li>
+																			</ul>
+																		</div><!-- /.col -->
+																		
+																		
+																		<div class="col-sm-3 mega-col">
+																			<ul>
+																				<li class="dropdown-header">Pages</li>
+																				<li><a href="about.html">About</a></li>
+						                                                        <li><a href="service.html">Service</a></li>
+						                                                        <li><a href="our-people.html">Our people</a></li>
+						                                                        <li><a href="career.html">Career</a></li>
+						                                                        <li><a href="faq.html">FAQ Page</a></li>
+						                                                        <li><a href="typography.html">Typography</a></li>
+																			</ul>
+																		</div><!-- /.col-->
 
-		<!-- Nice-select, sticky -->
-        <script src="./assets/js/jquery.nice-select.min.js"></script>
-		<script src="./assets/js/jquery.sticky.js"></script>
-        
-        <!-- contact js -->
-        <script src="./assets/js/contact.js"></script>
-        <script src="./assets/js/jquery.form.js"></script>
-        <script src="./assets/js/jquery.validate.min.js"></script>
-        <script src="./assets/js/mail-script.js"></script>
-        <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
-        
-		<!-- Jquery Plugins, main Jquery -->	
-        <script src="./assets/js/plugins.js"></script>
-        <script src="./assets/js/main.js"></script>
-        
-    </body>
+
+																		<div class="col-sm-3 mega-col">
+																			<ul>
+																				<li class="dropdown-header">Services</li>
+																				<li><a href="air.html">Air transportation</a></li>
+						                                                        <li><a href="marine.html">Marine transportation</a></li>
+						                                                        <li><a href="moving.html">Moving & storage</a></li>
+						                                                        <li><a href="shipping.html">Shipping & operations</a></li>
+						                                                        <li><a href="transportation.html">Transportation logistics</a></li>
+						                                                        <li><a href="trucking.html">Trucking</a></li>
+																			</ul>
+																		</div><!-- /.col-->
+
+
+																		<div class="col-sm-3 mega-col">
+																			<ul>
+																				<li class="dropdown-header">Typography</li>
+																				<li><a href="#">Bootstrap grids</a></li>
+																				<li><a href="#">Google fonts</a></li>
+																				<li><a href="#">Fontawesome icons</a></li>
+																				<li><a href="#">Flat icons</a></li>
+																				<li><a href="#">Tabs</a></li>
+																				<li><a href="#">Button elements</a></li>
+																			</ul>
+																		</div><!-- /.col -->	
+																	</div><!-- /.row -->
+																</div><!-- /.mega-content -->
+															</li>
+														</ul><!-- /.dropdown menu -->
+													</div><!-- /.megamenu-inner -->
+												</div> <!-- /.megamenu-wrapper -->
+											</li> <!-- /MEGA MENU -->
+                                        <!-- /Pages -->
+										<!-- Blog -->
+                                        <li class="dropdown"><a href="#">Blog <span class="fa fa-angle-down"></span></a>
+                                            <!-- submenu-wrapper -->
+                                            <div class="submenu-wrapper">
+                                                <div class="submenu-inner">
+                                                    <ul class="dropdown-menu">
+                                                    	<li><a href="blog.html">Standard blog</a></li>
+                                                        <li><a href="blog-single.html">Single blog</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <!-- /submenu-wrapper -->
+                                        </li>
+										<li><a href="contact.html">Contact</a></li>
+									</ul>
+								</div><!-- /.navbar-collapse -->
+							</div><!-- /.container -->
+						</nav>
+					</header>
+
+					<section class="page-title-section">
+						<div class="container">
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="page-header-wrap">
+										<div class="page-header">
+									   		<h1>About us</h1>
+									   	</div>
+									   <ol class="breadcrumb">
+										  <li><a href="#">Home</a></li>
+										  <li class="active">About</li>
+										</ol>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+
+					<!-- about-intro-section -->
+					<section class="about-intro-section">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-7">
+									<div class="about-intro">
+										<h2>Welcome to Transport</h2>
+
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio cupiditate temporibus sunt. Accusantium obcaecati, exercitationem enim cupiditate placeat tempora. Quod dolor unde at? Libero doloremque voluptas, cum, cupiditate minima magnam. dolor sit amet, consectetur adipisicing elit. Distinctio cupiditate. dolor sit amet, consectetur adipisicing elit. Distinctio cupiditate. cupiditate. dolor sit amet, consectetur adipisicing elit.</p>
+
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio cupiditate temporibus sunt. Accusantium obcaecati, exercitationem enim cupiditate placeat tempora. Quod dolor unde at? Libero doloremque voluptas, cum, cupiditate minima magnam. dolor sit amet, consectetur adipisicing elit. Distinctio cupiditate. dolor sit amet, consectetur adipisicing elit. Distinctio cupiditate.</p>
+										
+										<div class="company-in-number">
+											<div class="row">
+										        <div class="col-xs-4 branch clearfix">
+										          <i class="flaticon-international34"></i>
+
+										          <div class="number-info">
+													<strong><span class="timer">60</span></strong>
+										          	<span class="facts-description">Branch Office</span>
+										          </div>
+										          
+										        </div> <!-- /.col-sm-3 -->
+
+										        <div class="col-xs-4 employee clearfix">
+										          <i class="flaticon-logistics31"></i>
+
+										          <div class="number-info">
+													<strong><span class="timer">3000</span></strong>
+										          	<span class="facts-description">Employees</span>
+										          </div>
+										        </div><!-- /.col-sm-3 -->
+
+										        <div class="col-xs-4 delivery clearfix">
+										          <i class="flaticon-logistics20"></i>
+
+										          <div class="number-info">
+													<strong><span class="timer">5000</span></strong>
+										          	<span class="facts-description">Delivery every year</span>
+										          </div>
+										        </div><!-- /.col-sm-3 -->
+									      	</div>
+										</div>
+									</div><!-- /.about-intro -->
+								</div><!-- /.col-md-7 -->
+								<div class="col-md-5"></div>
+							</div><!-- /.row -->
+						</div><!-- /.container -->
+					</section>
+					<!-- /.about-intro-section -->
+
+					<!--history-section -->
+					<section class="history-section">
+						<div class="container">
+							<h2>Our History</h2>
+							<p>Quickly e-enable fully tested opportunities and cross-unit interfaces. Quickly empower unique human capital before timely quality vectors. Interactively<br> deploy strategic results after cooperative opportunities. Enthusiastically envisioneer frictionless scenarios without market-driven architectures.<br> Seamlessly strategize excellent materials whereas competitive channels.</p>
+
+
+							<div class="history-timeline">
+								<div id="historyCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+								  <!-- Indicators -->
+								  <ol class="carousel-indicators">
+								    <li data-target="#historyCarousel" data-slide-to="0" class="active"></li>
+								    <li data-target="#historyCarousel" data-slide-to="1"></li>
+								    <li data-target="#historyCarousel" data-slide-to="2"></li>
+								  </ol>
+
+								  <!-- Wrapper for slides -->
+								  	<div class="carousel-inner">
+									    <div class="item active">
+											<div class="history-year text-center">
+												<span class="year">1990</span>
+												<span class="title">Established</span>
+											</div>
+										    <div class="history-info">
+										      <h3>Completely parallel task corporate supply chains without business benefits.</h3>
+
+										      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus explicabo ut veniam, beatae a reprehenderit deserunt excepturi nostrum fugit placeat omnis adipisci consequuntur ipsam eligendi, vitae animi tenetur corporis minus? beatae a reprehenderit deserunt excepturi nostrum fugit placeat omnis. reprehenderit deserunt excepturi nostrum fugit placeat omnis adipisci consequuntur ipsam corporis.</p>
+
+										      <p>Consectetur adipisicing elit. Natus explicabo ut veniam, beatae a reprehenderit deserunt excepturi nostrum fugit placeat omnis adipisci consequuntur ipsam eligendi, vitae animi tenetur corporis minus? beatae a reprehenderit deserunt excepturi nostrum fugit placeat omnis. reprehenderit deserunt excepturi nostrum fugit placeat omnis adipisci consequuntur ipsam eligendi, vitae animi tenetur corporis.</p>
+										    </div>
+									    </div><!-- /.item -->
+									    <div class="item">
+											<div class="history-year text-center">
+												<span class="year">1995</span>
+												<span class="title">Established</span>
+											</div>
+										    <div class="history-info">
+										      <h3>Completely parallel task corporate supply chains without business benefits.</h3>
+
+										      <p>Reprehenderit deserunt excepturi nostrum fugit orem ipsum dolor sit amet, consectetur adipisicing elit. Natus explicabo ut veniam, beatae a placeat omnis adipisci consequuntur ipsam eligendi, vitae animi tenetur corporis minus? beatae a reprehenderit deserunt excepturi nostrum fugit placeat omnis. reprehenderit deserunt excepturi nostrum fugit placeat omnis adipisci consequuntur ipsam corporis.</p>
+
+										      <p>Natus explicabo ut veniam. Consectetur adipisicing elit. beatae a reprehenderit deserunt excepturi nostrum fugit placeat omnis adipisci consequuntur ipsam eligendi, vitae animi tenetur corporis minus? beatae a reprehenderit deserunt excepturi nostrum fugit placeat omnis. reprehenderit deserunt excepturi nostrum fugit placeat omnis adipisci consequuntur ipsam eligendi, vitae animi tenetur corporis.</p>
+										    </div>
+									    </div><!-- /.item -->
+
+									    <div class="item">
+											<div class="history-year text-center">
+												<span class="year">1999</span>
+												<span class="title">Established</span>
+											</div>
+										    <div class="history-info">
+										      <h3>Completely parallel task corporate supply chains without business benefits.</h3>
+
+										      <p>Excepturi nostrum fugit enderit deserunt excepturi nostrum fugit orem ipsum dolor sit amet, consectetur adipisicing elit. Natus explicabo ut veniam, beatae a placeat omnis adipisci consequuntur ipsam eligendi, vitae animi tenetur corporis minus? beatae a reprehenderit deserunt  placeat omnis. reprehenderit deserunt excepturi nostrum fugit placeat omnis adipisci consequuntur ipsam corporis.</p>
+
+										      <p>Beatae a reprehenderit explicabo ut veniam. Consectetur adipisicing elit. deserunt excepturi nostrum fugit placeat omnis adipisci consequuntur ipsam eligendi, vitae animi tenetur corporis minus? beatae a reprehenderit deserunt excepturi nostrum fugit placeat omnis. reprehenderit deserunt excepturi nostrum fugit placeat omnis adipisci consequuntur ipsam eligendi, vitae animi tenetur corporis.</p>
+										    </div>
+									    </div><!-- /.item -->
+
+								  	</div><!-- /.carousel-inner -->
+								</div><!-- /.carousel -->
+							</div><!-- /.history-timeline -->
+						</div><!-- /.container -->
+					</section>
+					<!--/.history-section -->
+
+
+					<!--mission-section -->
+					<section class="mission-section section-padding">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-4">
+									<div class="our-values">
+										<h3>Our Values</h3>
+										<p>Intrinsicly unleash viral opportunities whereas multidisciplinary leadership skills. Authoritatively deliver turnkey web-readiness vis-a-vis backward-compatible intellectual capital. Enthusiastically seize ethical outsourcing rather than 24/365 web-readiness.</p> 
+
+										<p><strong>Enthusiastically:</strong>  formulate long-term high-impact niche markets after business infomediaries.</p> 
+
+										<p><strong>Intrinsicly:</strong>  architect cross-media outsourcing for equity invested e-business.</p>
+									</div>
+								</div><!-- /.col-md-4 -->
+								<div class="col-md-4">
+									<div class="our-mission">
+										<h3>Our Mission</h3>
+										<p>Intrinsicly unleash viral opportunities whereas multidisciplinary leadership skills. Authoritatively deliver turnkey web-readiness vis-a-vis backward</p> 
+
+										<p>Intrinsicly unleash viral opportunities whereas multidisciplinary leadership skills. Authoritatively deliver turnkey web-readiness vis-a-vis backward</p> 
+
+										<p>Intrinsicly unleash viral opportunities whereas multidisciplinary leadership skills. Authoritatively deliver turnkey web-readiness vis-a-vis backward</p>
+									</div>
+								</div><!-- /.col-md-4 -->
+								<div class="col-md-4">
+									<div class="our-values">
+										<h3>Our Vission</h3>
+										<p>Intrinsicly unleash viral opportunities whereas multidisciplinary leadership skills. Authoritatively deliver turnkey web-readiness vis-a-vis backward-compatible intellectual capital. Enthusiastically seize ethical outsourcing rather than 24/365 web-readiness. Enthusiastically formulate long-term high-impact niche markets after business infomediaries.</p> 
+
+										<p>Intrinsicly unleash viral opportunities whereas multidisciplinary leadership skills. Authoritatively deliver turnkey web-readiness vis-a-vis backward</p>
+									</div>
+								</div><!-- /.col-md-4 -->
+							</div><!-- /.row -->
+						</div><!-- /.container -->
+					</section>
+					<!--/.history-section -->
+
+
+					<!--annual-report-section -->
+					<section class="annual-report-section">
+						<div class="container">
+							<div class="text-center">
+								<h2 class="section-title">Annual Financial Report</h2>
+								<span class="section-sub">1990 to 2015 Annual report are available for download</span>
+							</div>
+							<div class="annual-report-carousel">
+								<div id="reportCarousel" class="carousel slide" data-ride="carousel">
+								  <!-- Indicators -->
+								  <ol class="carousel-indicators">
+								    <li data-target="#reportCarousel" data-slide-to="0" class="active"></li>
+								    <li data-target="#reportCarousel" data-slide-to="1"></li>
+								    <li data-target="#reportCarousel" data-slide-to="2"></li>
+								  </ol>
+
+								  <!-- Wrapper for slides -->
+								  <div class="carousel-inner">
+								    <div class="item active">
+										<div class="annual-report clearfix">
+											<div class="report-thumb">
+												<img src="img/annual-thumb.jpg" alt="">
+											</div>
+											<div class="report-info">
+												<h3>Annual Report 2015</h3>
+												<p>Rapidiously actualize multidisciplinary collaboration and idea-sharing whereas installed base action items. Credibly plagiarize tactical outsourcing for progressive products. Quickly redefine corporate strategic theme areas through premium paradigms. Monotonectally promote fully researched schemas whereas process-centric e-business. Holisticly enable bleeding-edge e-services and cross-platform architectures.</p>
+
+												<p>Holisticly maintain web-enabled mindshare vis-a-vis open-source experiences. Objectively exploit cross functional quality vectors vis-a-vis interactive resources. Monotonectally architect professional schemas whereas high-quality materials. Compellingly synthesize reliable initiatives with value-added technologies. Progressively syndicate ethical portals rather than technically sound opportunities.</p>
+
+												<a href="#" class="btn btn-primary">Download Report <i class="fa fa-download"></i></a>
+											</div>
+										</div><!-- /.annual-report -->
+								    </div><!--/.item -->
+								    <div class="item">
+										<div class="annual-report clearfix">
+											<div class="report-thumb">
+												<img src="img/annual-thumb.jpg" alt="">
+											</div>
+											<div class="report-info">
+												<h3>Annual Report 2015</h3>
+												<p>Rapidiously actualize multidisciplinary collaboration and idea-sharing whereas installed base action items. Credibly plagiarize tactical outsourcing for progressive products. Quickly redefine corporate strategic theme areas through premium paradigms. Monotonectally promote fully researched schemas whereas process-centric e-business. Holisticly enable bleeding-edge e-services and cross-platform architectures.</p>
+
+												<p>Holisticly maintain web-enabled mindshare vis-a-vis open-source experiences. Objectively exploit cross functional quality vectors vis-a-vis interactive resources. Monotonectally architect professional schemas whereas high-quality materials. Compellingly synthesize reliable initiatives with value-added technologies. Progressively syndicate ethical portals rather than technically sound opportunities.</p>
+												<a href="#" class="btn btn-primary">Download Report <i class="fa fa-download"></i></a>
+											</div>
+										</div><!-- /.annual-report -->
+								    </div><!--/.item -->
+								    <div class="item">
+										<div class="annual-report clearfix">
+											<div class="report-thumb">
+												<img src="img/annual-thumb.jpg" alt="">
+											</div>
+											<div class="report-info">
+												<h3>Annual Report 2015</h3>
+												<p>Rapidiously actualize multidisciplinary collaboration and idea-sharing whereas installed base action items. Credibly plagiarize tactical outsourcing for progressive products. Quickly redefine corporate strategic theme areas through premium paradigms. Monotonectally promote fully researched schemas whereas process-centric e-business. Holisticly enable bleeding-edge e-services and cross-platform architectures.</p>
+
+												<p>Holisticly maintain web-enabled mindshare vis-a-vis open-source experiences. Objectively exploit cross functional quality vectors vis-a-vis interactive resources. Monotonectally architect professional schemas whereas high-quality materials. Compellingly synthesize reliable initiatives with value-added technologies. Progressively syndicate ethical portals rather than technically sound opportunities.</p>
+												<a href="#" class="btn btn-primary">Download Report <i class="fa fa-download"></i></a>
+											</div>
+										</div><!-- /.annual-report -->
+								    </div><!--/.item -->
+								  </div><!-- /.carousel-inne -->
+								</div><!--/.carousel -->
+							</div><!-- /.annual-report-carousel -->
+						</div><!--/.container -->
+					</section>
+					<!--/.annual-report-section -->
+
+
+			        <!-- cta start -->
+			        <section class="cta-section">
+			        	<div class="container text-center">
+			        		<a data-toggle="modal" data-target="#quoteModal" href="#" class="btn btn-primary quote-btn">Get a Quote</a>
+
+							<!-- Modal -->
+							<div class="modal fade" id="quoteModal" tabindex="-1" role="dialog" aria-labelledby="quoteModalLabel" aria-hidden="true">
+							  <div class="modal-dialog modal-lg">
+							    <div class="modal-content">
+							      <div class="modal-header">
+							        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							        <h4 class="modal-title" id="quoteModalLabel">Request a rate for the shipping of your goods.</h4>
+							      </div>
+							      <div class="modal-body">
+									<form id="contactForm" action="sendemail.php" method="POST">
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group">
+												    <label for="name">Name</label>
+												    <input id="name" name="name" type="text" class="form-control"  required="" placeholder="">
+												</div>
+											</div>
+											<div class="col-md-6">
+											  <div class="form-group">
+											    <label for="company">Company Name</label>
+											    <input id="company" name="company" type="text" class="form-control" placeholder="">
+											  </div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-6">
+											  <div class="form-group">
+											    <label for="phone">Phone Number</label>
+											    <input id="phone" name="phone" type="text" class="form-control" placeholder="">
+											  </div>
+											</div>
+											<div class="col-md-6">
+											  <div class="form-group">
+											    <label for="email">Email address</label>
+											    <input id="email" name="email" type="email" class="form-control" required="" placeholder="">
+											  </div>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="col-md-6">
+											  <div class="form-group">
+											    <label for="city">City Name</label>
+											    <input id="city" name="city" type="text" class="form-control" placeholder="">
+											  </div>
+											</div>
+											<div class="col-md-6">
+											  <div class="form-group">
+											    <label for="subject">Subject</label>
+											    <input id="subject" name="subject" type="text" class="form-control" required="" placeholder="">
+											  </div>
+											</div>
+										</div>
+										<div class="form-group text-area">
+											<label for="message">Your Message</label>
+											<textarea id="message" name="message" class="form-control" rows="6" required="" placeholder=""></textarea>
+										</div>
+
+										<button type="submit" class="btn btn-primary">Send Message</button>
+									</form>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+
+			        	</div><!-- /.container -->
+			        </section><!-- /.cta-section -->
+			        <!-- cta end -->
+
+			        <!-- footer-widget-section start -->
+			        <section class="footer-widget-section section-padding">
+			        	<div class="container">
+			        		<div class="row">
+			        			<div class="col-md-3 col-md-offset-1 col-sm-4">
+			        				<div class="footer-widget">
+			        					<h3>Place &amp; Contact</h3>
+
+										<address>
+										  384 Maple Circle<br>
+										  Simi Valley, Nevada 47424<br>
+
+										  <!-- Google Map Modal Trigger -->
+										  <button type="button" class="modal-map" data-toggle="modal" data-target="#cssMapModal">Location  Map</button>
+
+										  <span class="tel">(554) 616-9926</span>
+										</address>
+
+
+										<!-- Modal -->
+										<div class="modal fade" id="cssMapModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+										  <div class="modal-dialog modal-lg">
+										    <div class="modal-content">
+										      <div class="modal-header">
+										        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+										        <h4 class="modal-title" id="myModalLabel">Our Location</h4>
+										      </div>
+										      <div class="modal-body">
+
+											    <div id="googleMap"></div>
+											    
+										      </div>
+										    </div><!-- /.modal-content -->
+										  </div><!-- /.modal-dialog -->
+										</div><!-- End Modal -->
+			        				</div><!-- /.footer-widget -->
+			        			</div><!-- /.col-md-4 -->
+
+			        			<div class="col-md-3 col-sm-4">
+			        				<div class="footer-widget">
+			        					<h3>About Transport</h3>
+
+			        					<ul>
+                                        	<li><a href="about.html">About</a></li>
+                                            <li><a href="service.html">Service</a></li>
+                                            <li><a href="our-people.html">Our people</a></li>
+                                            <li><a href="career.html">Career</a></li>
+                                            <li><a href="faq.html">FAQ Page</a></li>
+                                        </ul>
+			        				</div><!-- /.footer-widget -->
+			        			</div><!-- /.col-md-4 -->
+
+			        			<div class="col-md-4 col-sm-4">
+			        				<div class="footer-widget">
+			        					<h3>Stay in Touch</h3>
+			        					<p>Enter your email address to receive news &amp; offers from us</p>
+
+										<form class="newsletter-form">
+											<div class="form-group">
+												<label class="sr-only" for="InputEmail1">Email address</label>
+												<input type="email" class="form-control" id="InputEmail1" placeholder="Your email address">
+												<button type="submit" class="">Send &nbsp;<i class="fa fa-angle-right"></i></button>
+											</div>
+										</form>		        				
+									</div><!-- /.footer-widget -->
+			        			</div><!-- /.col-md-4 -->
+			        		</div><!-- /.row -->
+			        	</div><!-- /.container -->
+			        </section><!-- /.cta-section -->
+			        <!-- footer-widget-section end -->
+
+			        <!-- copyright-section start -->
+			        <footer class="copyright-section">
+			        	<div class="container text-center">
+			        		<div class="footer-menu">
+			        			<ul>
+			        				<li><a href="#">Privacy &amp; Cookies</a></li>
+			        				<li><a href="#">Terms &amp; Conditions</a></li>
+			        				<li><a href="#">Accessibility</a></li>
+			        			</ul>
+			        		</div>
+
+			        		<div class="copyright-info">
+			        			<span>Copyright © 2015 Unship. All Rights Reserved. Designed by <a href="https://uicookies.com">uiCookies</a><br> Proudly powered by <a href="http://www.w3schools.com/html/html5_intro.asp">HTML5</a> and <a href="getbootstrap.com">Bootstrap3</a></span>
+			        		</div>
+			        	</div><!-- /.container -->
+			        </footer>
+			        <!-- copyright-section end -->
+				</div> <!-- .st-content -->
+    		</div> <!-- .st-pusher -->
+
+	    	<!-- OFFCANVAS MENU -->
+	    	<div class="offcanvas-menu offcanvas-effect">
+	    		<div class="offcanvas-wrap">
+			        <div class="off-canvas-header">
+			        	<button type="button" class="close" aria-hidden="true" data-toggle="offcanvas" id="off-canvas-close-btn">&times;</button>
+			        </div>
+			        <ul id ="offcanvasMenu" class="list-unstyled visible-xs visible-sm">
+			            <li><a href="index.html">Home<span class="sr-only">(current)</span></a></li>
+			            <li>
+			            	<a href="#">Pages</a>
+			            	<ul>
+								<li class="active"><a href="about.html">About</a></li>
+							    <li><a href="service.html">Service</a></li>
+							    <li><a href="our-people.html">Our people</a></li>
+							    <li><a href="career.html">Career</a></li>
+							    <li><a href="faq.html">FAQ Page</a></li>
+							    <li><a href="typography.html">Typography</a></li>
+							</ul>
+
+			            </li>
+			            <li>
+			            	<a href="#">Services</a>
+			            	<ul>
+								<li><a href="air.html">Air transportation</a></li>
+								<li><a href="marine.html">Marine transportation</a></li>
+								<li><a href="moving.html">Moving &amp; storage</a></li>
+								<li><a href="shipping.html">Shipping &amp; operations</a></li>
+								<li><a href="transportation.html">Transportation logistics</a></li>
+								<li><a href="trucking.html">Trucking</a></li>
+							</ul>
+
+			            </li>
+			            <li>
+			            	<a href="#">Blog</a>
+							<ul>
+			            		<li>
+			            			<a href="blog.html">Standard blog</a>
+			            		</li>
+			            		<li>
+			            			<a href="blog-single.html">Single blog</a>
+			            		</li>
+			            	</ul>
+			            </li>
+			            <li><a href="contact.html">Contact</a></li>
+			            <li><a href="typography.html">Typography</a></li>
+			        </ul>
+			        <div class="offcanvas-widgets hidden-sm hidden-xs">
+				        <div id="twitterWidget">
+							<h2>Tweeter feed</h2>				    	
+							<div class="twitter-widget"></div>
+						</div>
+						<div class="newsletter-widget">
+							<h2>Stay in Touch</h2>
+							<p>Enter your email address to receive news &amp; offers from us</p>
+
+							<form class="newsletter-form">
+								<div class="form-group">
+									<label class="sr-only" for="InputEmail1">Email address</label>
+									<input type="email" class="form-control" id="InputEmail2" placeholder="Your email address">
+									<button type="submit" class="btn">Send &nbsp;<i class="fa fa-angle-right"></i></button>
+								</div>
+							</form>		
+							       				
+						</div><!-- newsletter-widget -->
+					</div>
+
+				</div>
+	      	</div><!-- .offcanvas-menu -->
+		</div><!-- /st-container -->
+
+
+		<!-- Preloader -->
+		<div id="preloader">
+			<div id="status">
+				<div class="status-mes"></div>
+			</div>
+		</div>
+
+
+		<!-- jQuery -->
+	    <script src="js/jquery.js"></script>
+	    <!-- Bootstrap Core JavaScript -->
+	    <script src="js/bootstrap.min.js"></script>
+	    <!-- owl.carousel -->
+	    <script src="owl.carousel/owl.carousel.min.js"></script>
+	    <!-- Magnific-popup -->
+		<script src="js/jquery.magnific-popup.min.js"></script>
+		<!-- Offcanvas Menu -->
+		<script src="js/hippo-offcanvas.js"></script>
+		<!-- inview -->
+		<script src="js/jquery.inview.min.js"></script>
+		<!-- stellar -->
+		<script src="js/jquery.stellar.js"></script>
+		<!-- countTo -->
+		<script src="js/jquery.countTo.js"></script>
+		<!-- classie -->
+		<script src="js/classie.js"></script>
+		<!-- selectFx -->
+		<script src="js/selectFx.js"></script>
+		<!-- sticky kit -->
+		<script src="js/jquery.sticky-kit.min.js"></script>
+	    <!-- GOGLE MAP -->
+	    <script src="https://maps.googleapis.com/maps/api/js"></script>
+	    <!--TWITTER FETCHER-->
+	    <script src="js/twitterFetcher_min.js"></script>
+	    <!-- Custom Script -->
+	    <script src="js/scripts.js"></script>
+	</body>
 </html>

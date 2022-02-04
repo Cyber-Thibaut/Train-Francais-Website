@@ -9,7 +9,7 @@
 	    <meta name="author" content="">
 
 	    <title>Unship</title>
-	    <!-- Web Fonts -->
+	   	<!-- Web Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
 	    <!-- Bootstrap Core CSS -->
 	    <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -55,6 +55,7 @@
 				  			<div class="overlay-bg">
 					  			<div class="container">
 					  				<div class="row">
+					  					
 					  					<div class="col-sm-6 col-xs-12">
 						  					<div class="call-to-action">
 						  						<ul class="list-inline">
@@ -84,11 +85,12 @@
 						  						</ul>
 						  					</div><!-- /.social-links -->
 					  					</div><!-- /.col-sm-6 -->
+						  				
 					  				</div><!-- /.row -->
 					  			</div><!-- /.container -->
 				  			</div><!-- /.overlay-bg -->
 				  		</nav><!-- /.top-bar -->
-						
+
 						<div id="search">
 						    <button type="button" class="close">×</button>
 						    <form>
@@ -133,13 +135,13 @@
                                         <!-- /Home -->
 
                                         <!-- Pages -->
-                                        <li class="dropdown"><a href="#">Pages <span class="fa fa-angle-down"></span></a>
+                                        <li class="dropdown active"><a href="#">Pages <span class="fa fa-angle-down"></span></a>
                                             <!-- submenu-wrapper -->
                                             <div class="submenu-wrapper">
                                                 <div class="submenu-inner">
                                                     <ul class="dropdown-menu">
                                                     	<li><a href="about.html">About</a></li>
-                                                        <li><a href="service.html">Service</a></li>
+                                                        <li class="active"><a href="service.html">Service</a></li>
                                                         <li><a href="our-people.html">Our people</a></li>
                                                         <li><a href="career.html">Career</a></li>
                                                         <li><a href="faq.html">FAQ Page</a></li>
@@ -250,7 +252,7 @@
                                             </div>
                                             <!-- /submenu-wrapper -->
                                         </li>
-										<li class="active"><a href="contact.html">Contact</a></li>
+										<li><a href="contact.html">Contact</a></li>
 									</ul>
 								</div><!-- /.navbar-collapse -->
 							</div><!-- /.container -->
@@ -259,137 +261,144 @@
 
 					<section class="page-title-section">
 						<div class="container">
-							<div class="page-header-wrap">
-								<div class="page-header">
-							   		<h1>Contact us</h1>
-							   	</div>
-							   <ol class="breadcrumb">
-								  <li><a href="#">Home</a></li>
-								  <li class="active">Contact</li>
-								</ol>
-							</div>
-						</div>
-					</section>
-
-
-					<section class="contact-info-section">
-						<div class="container">
-							<div class="text-center">
-								<h2 class="section-title">Get in Touch</h2>
-								<span class="section-sub">We Are Ready to Help You 24/7</span>
-							</div>
-
-							<div class="row content-row">
-
-								<div class="col-md-7">
-									<div class="contact-map">
-										<h3>Contact Form</h3>
-										<form id="mainContact" action="sendemail.php" method="POST">
-											<div class="form-group">
-											    <label for="name">Name</label>
-											    <input name="name" type="text" class="form-control"  required="" placeholder="">
-											</div>
-										  	<div class="form-group">
-										    	<label for="email">Email address</label>
-										    	<input name="email" type="email" class="form-control" required="" placeholder="">
-										  	</div>
-
-											<div class="row">
-												<div class="col-md-6">
-												  <div class="form-group">
-												    <label for="subject">Subject</label>
-												    <input name="subject" type="text" class="form-control" required="" placeholder="">
-												  </div>
-												</div>
-												<div class="col-md-6">
-												  <div class="form-group">
-												    <label for="phone">Phone Number</label>
-												    <input name="phone" type="text" class="form-control" placeholder="">
-												  </div>
-												</div>
-											</div>
-											<div class="form-group text-area">
-												<label for="message">Your Message</label>
-												<textarea name="message" class="form-control" rows="6" required="" placeholder=""></textarea>
-											</div>
-
-											<button type="submit" class="btn btn-primary">Send Message</button>
-										</form>
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="page-header-wrap">
+										<div class="page-header">
+									   		<h1>Our Services</h1>
+									   	</div>
+									   <ol class="breadcrumb">
+										  <li><a href="#">Home</a></li>
+										  <li class="active">Services</li>
+										</ol>
 									</div>
 								</div>
-
-								<div class="col-md-5">
-									<div class="contact-info">
-										<h3>Head Office</h3>
-
-										<address>
-											384 Maple Circle<br>
-											Simi Valley, Nevada 47424<br>
-											Phone : +12 30 456789<br>
-											Email : yourname@transport.com<br>
-										</address>
-									</div><!-- /.contact-info -->
-
-									<div class="contact-map">
-										<h3>Location Map</h3>
-
-										<div id="contactMap"></div>
-									</div><!-- /.contact-info -->
-
-
-								</div>
 							</div>
 						</div>
 					</section>
 
-					<section class="other-office-address">
+					<section class="service-page-contents section-padding">
 						<div class="container">
-							<h2>World Wide Offices</h2>
+							<div class="row">
+								<div class="col-xs-12 col-sm-6">
+									<div class="service-featured-thumbs">
+										<div class="service-thumb">
+											<a href="img/service/zoom1.jpg" class="img-link">
+												<img class="img-responsive" src="img/service/sv1.jpg" alt="service">
+											</a>
 
+										</div>
+										<div class="row">
+											<div class="col-xs-12 col-sm-6">
+												<div class="service-thumb">
+													<a href="img/service/sv2.jpg" class="img-link">
+														<img class="img-responsive" src="img/service/sv2.jpg" alt="service">
+													</a>
+												</div>
+											</div>											
+											<div class="col-xs-12 col-sm-6">
+												<div class="service-thumb">
+													<a href="img/service/zoom3.jpg" class="img-link">
+														<img class="img-responsive" src="img/service/sv3.jpg" alt="service">
+													</a>
+												</div>
+											</div>
+										</div><!-- /.row -->
+									</div><!-- /.service-featured-thumbs -->
+									
+								</div><!-- /.col -->
 
-							<div class="row content-row">
-								<div class="col-md-4">
-									<div class="contact-info">
-										<h3>United States Office</h3>
+								<div class="col-xs-12 col-sm-6">
+									<div class="service-featured-content">
+										<h2>Uniquaely productivate plug imperatives.</h2>
+										<p>Appropriately integrate proactive content before effective models. Quickly enable just in time scenarios after turnkey mindshare. Proactively pursue best-of-breed e-markets and stand-alone markets. Globally harness resource maximizing sources without backend communities. Proactively harness 24/7 growth strategies before accurate deliverables.</p>
+										<br>
+										<p>Credibly procrastinate team building infomediaries and bleeding-edge meta-services. Interactively syndicate proactive innovation rather than sustainable technologies. Proactively envisioneer integrated bandwidth after open-source methods of empowerment.</p>
+									</div>
+									
+								</div><!-- /.col -->
+							</div><!-- /.row -->
 
-										<address>
-											384 Maple Circle<br>
-											Simi Valley, Nevada 47424<br>
-											Phone : +12 30 456789<br>
-											Email : yourname@transport.com<br>
-										</address>
-									</div><!-- /.contact-info -->
-								</div><!-- /.col-md-4 -->
+							<div class="service-blocks">
+								<div class="row">
+									<div class="col-sm-4">
+										<div class="service-block clearfix">
+											<div class="service-icon">
+												<i class="flaticon-logistics16"></i>
+											</div>
+											<div class="service-content">		
+												<h3><a href="air.html">Air transportation</a></h3>
+												<p>Dynamically leverage existing synergistic systems whereas future-proof sources Synergistically formulate</p>
+											</div>
+										</div><!-- /.service-block -->
+									</div><!-- /.col-sm-4 -->
+									<div class="col-sm-4">
+										<div class="service-block clearfix">
+											<div class="service-icon">
+												<i class="flaticon-platform12"></i>
+											</div>
+											<div class="service-content">		
+												<h3><a href="marine.html">Marine transportation</a></h3>
+												<p>Distinctively parallel task backward-compatible innovation and ubiquitous methodologies. Quickly create</p>
+											</div>
+										</div><!-- /.service-block -->
+									</div><!-- /.col-sm-4 -->
+									<div class="col-sm-4">
+										<div class="service-block clearfix">
+											<div class="service-icon">
+												<i class="flaticon-package27"></i>
+											</div>
+											<div class="service-content">		
+												<h3><a href="trucking.html">Trucking</a></h3>
+												<p>Uniquely supply collaborative schemas via fully researched metrics. Credibly exploit</p>
+											</div>
+										</div><!-- /.service-block -->
+									</div><!-- /.col-sm-4 -->
+								</div><!-- /.row -->
+								<div class="row">
+									<div class="col-sm-4">
+										<div class="service-block clearfix">
+											<div class="service-icon">
+												<i class="flaticon-logistics18"></i>
+											</div>
+											<div class="service-content">		
+												<h3><a href="moving.html">Moving & storage</a></h3>
+												<p>Authoritatively reconceptualize client-based e-services after high-quality strategic theme areas.</p>
+												
+											</div>
+										</div><!-- /.service-block -->
+									</div><!-- /.col-sm-4 -->
+									<div class="col-sm-4">
+										<div class="service-block clearfix">
+											<div class="service-icon">
+												<i class="flaticon-logistics42"></i>
+											</div>
+											<div class="service-content">		
+												<h3><a href="shipping.html">Shipping & operations</a></h3>
+												<p> Enthusiastically extend effective information and technically sound collaboration and idea-sharing. </p>
+												
+											</div>
+										</div><!-- /.service-block -->
+									</div><!-- /.col-sm-4 -->
+									<div class="col-sm-4">
+										<div class="service-block clearfix">
+											<div class="service-icon">
+												<i class="flaticon-callcenter"></i>
+											</div>
+											<div class="service-content">		
+												<h3><a href="transportation.html">Transportation logistics</a></h3>
+												<p>Holisticly synergize maintain able intell ectual capital viral interfaces capital synergize maintain. </p>
+												
+											</div>
+										</div><!-- /.service-block -->
+									</div><!-- /.col-sm-4 -->
+								</div><!-- /.row -->
+							</div><!-- /.service-blocks -->
+						</div><!-- /.container -->
 
-								<div class="col-md-4">
-									<div class="contact-info">
-										<h3>United Kingdom Office</h3>
-
-										<address>
-											384 Maple Circle<br>
-											Simi Valley, Nevada 47424<br>
-											Phone : +12 30 456789<br>
-											Email : yourname@transport.com<br>
-										</address>
-									</div><!-- /.contact-info -->
-								</div><!-- /.col-md-4 -->
-
-								<div class="col-md-4">
-									<div class="contact-info">
-										<h3>Bangladesh Office</h3>
-
-										<address>
-											House# 687-689, Road# 10<br>
-											Mirpur DOHS, Dhaka 1216<br>
-											Phone : +12 30 456789<br>
-											Email : yourname@transport.com<br>
-										</address>
-									</div><!-- /.contact-info -->
-								</div><!-- /.col-md-4 -->
-							</div>
-						</div>
 					</section>
 
+					
 
 			        <!-- cta start -->
 			        <section class="cta-section">
@@ -568,7 +577,7 @@
 			            	<a href="#">Pages</a>
 			            	<ul>
 								<li><a href="about.html">About</a></li>
-							    <li><a href="service.html">Service</a></li>
+							    <li class="active"><a href="service.html">Service</a></li>
 							    <li><a href="our-people.html">Our people</a></li>
 							    <li><a href="career.html">Career</a></li>
 							    <li><a href="faq.html">FAQ Page</a></li>
@@ -599,7 +608,7 @@
 			            		</li>
 			            	</ul>
 			            </li>
-			            <li class="active"><a href="contact.html">Contact</a></li>
+			            <li><a href="contact.html">Contact</a></li>
 			            <li><a href="typography.html">Typography</a></li>
 			        </ul>
 			        <div class="offcanvas-widgets hidden-sm hidden-xs">
@@ -663,6 +672,5 @@
 	    <script src="js/twitterFetcher_min.js"></script>
 	    <!-- Custom Script -->
 	    <script src="js/scripts.js"></script>
-	    
 	</body>
 </html>

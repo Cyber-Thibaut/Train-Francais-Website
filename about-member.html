@@ -9,7 +9,7 @@
 	    <meta name="author" content="">
 
 	    <title>Unship</title>
-	    <!-- Web Fonts -->
+	   	<!-- Web Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
 	    <!-- Bootstrap Core CSS -->
 	    <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -55,6 +55,7 @@
 				  			<div class="overlay-bg">
 					  			<div class="container">
 					  				<div class="row">
+					  					
 					  					<div class="col-sm-6 col-xs-12">
 						  					<div class="call-to-action">
 						  						<ul class="list-inline">
@@ -84,11 +85,12 @@
 						  						</ul>
 						  					</div><!-- /.social-links -->
 					  					</div><!-- /.col-sm-6 -->
+						  				
 					  				</div><!-- /.row -->
 					  			</div><!-- /.container -->
 				  			</div><!-- /.overlay-bg -->
 				  		</nav><!-- /.top-bar -->
-						
+
 						<div id="search">
 						    <button type="button" class="close">×</button>
 						    <form>
@@ -133,14 +135,14 @@
                                         <!-- /Home -->
 
                                         <!-- Pages -->
-                                        <li class="dropdown"><a href="#">Pages <span class="fa fa-angle-down"></span></a>
+                                        <li class="dropdown active"><a href="#">Pages <span class="fa fa-angle-down"></span></a>
                                             <!-- submenu-wrapper -->
                                             <div class="submenu-wrapper">
                                                 <div class="submenu-inner">
                                                     <ul class="dropdown-menu">
                                                     	<li><a href="about.html">About</a></li>
                                                         <li><a href="service.html">Service</a></li>
-                                                        <li><a href="our-people.html">Our people</a></li>
+                                                        <li class="active"><a href="our-people.html">Our people</a></li>
                                                         <li><a href="career.html">Career</a></li>
                                                         <li><a href="faq.html">FAQ Page</a></li>
                                                         <li><a href="typography.html">Typography</a></li>
@@ -250,7 +252,7 @@
                                             </div>
                                             <!-- /submenu-wrapper -->
                                         </li>
-										<li class="active"><a href="contact.html">Contact</a></li>
+										<li><a href="contact.html">Contact</a></li>
 									</ul>
 								</div><!-- /.navbar-collapse -->
 							</div><!-- /.container -->
@@ -259,137 +261,77 @@
 
 					<section class="page-title-section">
 						<div class="container">
-							<div class="page-header-wrap">
-								<div class="page-header">
-							   		<h1>Contact us</h1>
-							   	</div>
-							   <ol class="breadcrumb">
-								  <li><a href="#">Home</a></li>
-								  <li class="active">Contact</li>
-								</ol>
-							</div>
-						</div>
-					</section>
-
-
-					<section class="contact-info-section">
-						<div class="container">
-							<div class="text-center">
-								<h2 class="section-title">Get in Touch</h2>
-								<span class="section-sub">We Are Ready to Help You 24/7</span>
-							</div>
-
-							<div class="row content-row">
-
-								<div class="col-md-7">
-									<div class="contact-map">
-										<h3>Contact Form</h3>
-										<form id="mainContact" action="sendemail.php" method="POST">
-											<div class="form-group">
-											    <label for="name">Name</label>
-											    <input name="name" type="text" class="form-control"  required="" placeholder="">
-											</div>
-										  	<div class="form-group">
-										    	<label for="email">Email address</label>
-										    	<input name="email" type="email" class="form-control" required="" placeholder="">
-										  	</div>
-
-											<div class="row">
-												<div class="col-md-6">
-												  <div class="form-group">
-												    <label for="subject">Subject</label>
-												    <input name="subject" type="text" class="form-control" required="" placeholder="">
-												  </div>
-												</div>
-												<div class="col-md-6">
-												  <div class="form-group">
-												    <label for="phone">Phone Number</label>
-												    <input name="phone" type="text" class="form-control" placeholder="">
-												  </div>
-												</div>
-											</div>
-											<div class="form-group text-area">
-												<label for="message">Your Message</label>
-												<textarea name="message" class="form-control" rows="6" required="" placeholder=""></textarea>
-											</div>
-
-											<button type="submit" class="btn btn-primary">Send Message</button>
-										</form>
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="page-header-wrap">
+										<div class="page-header">
+									   		<h1>Member Info</h1>
+									   	</div>
+									   <ol class="breadcrumb">
+										  <li><a href="#">Home</a></li>
+										  <li class="active">Bobby Webb</li>
+										</ol>
 									</div>
 								</div>
-
-								<div class="col-md-5">
-									<div class="contact-info">
-										<h3>Head Office</h3>
-
-										<address>
-											384 Maple Circle<br>
-											Simi Valley, Nevada 47424<br>
-											Phone : +12 30 456789<br>
-											Email : yourname@transport.com<br>
-										</address>
-									</div><!-- /.contact-info -->
-
-									<div class="contact-map">
-										<h3>Location Map</h3>
-
-										<div id="contactMap"></div>
-									</div><!-- /.contact-info -->
-
-
-								</div>
 							</div>
 						</div>
 					</section>
+				    
+				   <section class="about-member">
+					   	<div class="container">
+							<div class="content-wrapper">
+								<section class="about-us-wrapper">
+									<div class="row"> 
+										<div class="col-md-8">
+											<h2>About Bobby Webb</h2>
+											<p>Nam et libero rhoncus, pellentesque elit ac, condimentum lorem. Cras rutrum odio sem, in dictum lacus mollis sed. Mauris suscipit dignissim ante, nec blandit diam hendrerit quis. Pellentesque congue, mauris a ultrices auctor, lorem nunc aliquam quam, ut sagittis justo ligula vitae metus. Vivamus sed nulla sed dui lacinia mollis vitae ut orci. Aenean tristique viverra ligula, at convallis enim faucibus nec. Mauris at malesuada diam. Nam sit amet neque quis diam molestie suscipit. Vivamus tempor vehicula neque quis tincidunt. Integer ac euismod augue.</p>
+											<p>Suspendisse molestie, massa a blandit cursus, est urna egestas dui, in aliquet risus enim sed leo. Ut at dignissim mauris. Ut pharetra augue velit, in sollicitudin metus rutrum eget. Nunc eget aliquam ipsum, ut scelerisque arcu. Mauris ultrices ante vel augue scelerisque, vitae bibendum enim elementum. Aenean at pretium quam. Maecenas lobortis condimentum enim, quis tempus nunc vestibulum vitae.Praesent eget justo turpis. Aliquam sollicitudin consequat ligula, et euismod ipsum luctus id. Integer sagittisl pharetra nulla, eget pulvinar eros laoreet vel.</p>
+											<br>
+											<h2>Early Life</h2>
+											<p>Suspendisse molestie, massa a blandit cursus, est urna egestas dui, in aliquet risus enim sed leo. Ut at dignissim mauris. Ut pharetra augue velit, in sollicitudin metus rutrum eget. Nunc eget aliquam ipsum, ut scelerisque arcu. Mauris ultrices ante vel augue scelerisque, vitae bibendum enim elementum. Aenean at pretium quam. Maecenas lobortis condimentum enim, quis tempus nunc vestibulum vitae. In quis facilisis magna, ut vestibulum erat. Curabitur tempor sodales eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius eu eros in pretium. Praesent eget justo turpis. Aliquam sollicitudin consequat ligula, et euismod ipsum luctus id. Integer sagittisl pharetra nulla, eget.</p>
+											<br>
+											<h2>Work Experience</h2>
+											<p>Suspendisse molestie, massa a blandit cursus, est urna egestas dui, in aliquet risus enim sed leo. Ut at dignissim mauris. Ut pharetra augue velit, in sollicitudin metus rutrum eget. Nunc eget aliquam ipsum, ut scelerisque arcu. Mauris ultrices ante vel augue scelerisque, vitae bibendum enim elementum. Aenean at pretium quam. Maecenas lobortis condimentum enim, quis tempus nunc vestibulum vitae.</p>
 
-					<section class="other-office-address">
-						<div class="container">
-							<h2>World Wide Offices</h2>
+										</div><!-- /.col-md-8 -->
 
+										<div class="col-md-4">
+											<div class="info-in-short">
+												<img class="img-responsive" src="img/team/tm1.jpg" alt="">
+												<div class="member-info">
+													Born: 19th May, 1979<br> 
+													Height: 175 c.m<br> 
+													Experience: 5 years<br> 
+													Hobbies: Fishing, Driving, Reading<br> 
+													Nationality: American
+												</div>
 
-							<div class="row content-row">
-								<div class="col-md-4">
-									<div class="contact-info">
-										<h3>United States Office</h3>
+												<div class="info-address">
+													<h2>Contact Info:</h2>
+													<address>
+														Email: <a href="mailto:email@me.com">email@me.com</a><br> 
+														Phone:+124 09467 335<br>
+														Website: <a href="#">Example.com</a><br>
+														Box 564, Disneyland<br> 
+														USA
+													</address>
+													<div class="social-share">
+														<ul class="list-inline social-links">
+															<li><a title="Facebook" href="#" target="_blank"><i style="" class="fa fa-facebook "></i></a></li>
+															<li><a title="Twitter" href="#" target="_blank"><i style="" class="fa fa-twitter "></i></a></li>
+															<li><a title="Linkedin" href="#" target="_blank"><i style="" class="fa fa-linkedin "></i></a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div><!-- /.col-md-4 -->
+									</div><!-- /.row -->
+								</section><!-- /.about-us-wrapper -->
+							</div><!-- /.content-wrapper -->
+						</div><!-- /.container -->
+				   </section>
 
-										<address>
-											384 Maple Circle<br>
-											Simi Valley, Nevada 47424<br>
-											Phone : +12 30 456789<br>
-											Email : yourname@transport.com<br>
-										</address>
-									</div><!-- /.contact-info -->
-								</div><!-- /.col-md-4 -->
-
-								<div class="col-md-4">
-									<div class="contact-info">
-										<h3>United Kingdom Office</h3>
-
-										<address>
-											384 Maple Circle<br>
-											Simi Valley, Nevada 47424<br>
-											Phone : +12 30 456789<br>
-											Email : yourname@transport.com<br>
-										</address>
-									</div><!-- /.contact-info -->
-								</div><!-- /.col-md-4 -->
-
-								<div class="col-md-4">
-									<div class="contact-info">
-										<h3>Bangladesh Office</h3>
-
-										<address>
-											House# 687-689, Road# 10<br>
-											Mirpur DOHS, Dhaka 1216<br>
-											Phone : +12 30 456789<br>
-											Email : yourname@transport.com<br>
-										</address>
-									</div><!-- /.contact-info -->
-								</div><!-- /.col-md-4 -->
-							</div>
-						</div>
-					</section>
-
+					
 
 			        <!-- cta start -->
 			        <section class="cta-section">
@@ -569,7 +511,7 @@
 			            	<ul>
 								<li><a href="about.html">About</a></li>
 							    <li><a href="service.html">Service</a></li>
-							    <li><a href="our-people.html">Our people</a></li>
+							    <li class="active"><a href="our-people.html">Our people</a></li>
 							    <li><a href="career.html">Career</a></li>
 							    <li><a href="faq.html">FAQ Page</a></li>
 							    <li><a href="typography.html">Typography</a></li>
@@ -599,7 +541,7 @@
 			            		</li>
 			            	</ul>
 			            </li>
-			            <li class="active"><a href="contact.html">Contact</a></li>
+			            <li><a href="contact.html">Contact</a></li>
 			            <li><a href="typography.html">Typography</a></li>
 			        </ul>
 			        <div class="offcanvas-widgets hidden-sm hidden-xs">
@@ -663,6 +605,5 @@
 	    <script src="js/twitterFetcher_min.js"></script>
 	    <!-- Custom Script -->
 	    <script src="js/scripts.js"></script>
-	    
 	</body>
 </html>

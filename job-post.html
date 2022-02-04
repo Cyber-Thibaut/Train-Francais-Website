@@ -9,7 +9,7 @@
 	    <meta name="author" content="">
 
 	    <title>Unship</title>
-	    <!-- Web Fonts -->
+	   	<!-- Web Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
 	    <!-- Bootstrap Core CSS -->
 	    <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -55,6 +55,7 @@
 				  			<div class="overlay-bg">
 					  			<div class="container">
 					  				<div class="row">
+					  					
 					  					<div class="col-sm-6 col-xs-12">
 						  					<div class="call-to-action">
 						  						<ul class="list-inline">
@@ -84,6 +85,7 @@
 						  						</ul>
 						  					</div><!-- /.social-links -->
 					  					</div><!-- /.col-sm-6 -->
+						  				
 					  				</div><!-- /.row -->
 					  			</div><!-- /.container -->
 				  			</div><!-- /.overlay-bg -->
@@ -133,7 +135,7 @@
                                         <!-- /Home -->
 
                                         <!-- Pages -->
-                                        <li class="dropdown"><a href="#">Pages <span class="fa fa-angle-down"></span></a>
+                                        <li class="dropdown active"><a href="#">Pages <span class="fa fa-angle-down"></span></a>
                                             <!-- submenu-wrapper -->
                                             <div class="submenu-wrapper">
                                                 <div class="submenu-inner">
@@ -141,7 +143,7 @@
                                                     	<li><a href="about.html">About</a></li>
                                                         <li><a href="service.html">Service</a></li>
                                                         <li><a href="our-people.html">Our people</a></li>
-                                                        <li><a href="career.html">Career</a></li>
+                                                        <li class="active"><a href="career.html">Career</a></li>
                                                         <li><a href="faq.html">FAQ Page</a></li>
                                                         <li><a href="typography.html">Typography</a></li>
                                                     </ul>
@@ -250,7 +252,7 @@
                                             </div>
                                             <!-- /submenu-wrapper -->
                                         </li>
-										<li class="active"><a href="contact.html">Contact</a></li>
+										<li><a href="contact.html">Contact</a></li>
 									</ul>
 								</div><!-- /.navbar-collapse -->
 							</div><!-- /.container -->
@@ -259,137 +261,98 @@
 
 					<section class="page-title-section">
 						<div class="container">
-							<div class="page-header-wrap">
-								<div class="page-header">
-							   		<h1>Contact us</h1>
-							   	</div>
-							   <ol class="breadcrumb">
-								  <li><a href="#">Home</a></li>
-								  <li class="active">Contact</li>
-								</ol>
-							</div>
-						</div>
-					</section>
-
-
-					<section class="contact-info-section">
-						<div class="container">
-							<div class="text-center">
-								<h2 class="section-title">Get in Touch</h2>
-								<span class="section-sub">We Are Ready to Help You 24/7</span>
-							</div>
-
-							<div class="row content-row">
-
-								<div class="col-md-7">
-									<div class="contact-map">
-										<h3>Contact Form</h3>
-										<form id="mainContact" action="sendemail.php" method="POST">
-											<div class="form-group">
-											    <label for="name">Name</label>
-											    <input name="name" type="text" class="form-control"  required="" placeholder="">
-											</div>
-										  	<div class="form-group">
-										    	<label for="email">Email address</label>
-										    	<input name="email" type="email" class="form-control" required="" placeholder="">
-										  	</div>
-
-											<div class="row">
-												<div class="col-md-6">
-												  <div class="form-group">
-												    <label for="subject">Subject</label>
-												    <input name="subject" type="text" class="form-control" required="" placeholder="">
-												  </div>
-												</div>
-												<div class="col-md-6">
-												  <div class="form-group">
-												    <label for="phone">Phone Number</label>
-												    <input name="phone" type="text" class="form-control" placeholder="">
-												  </div>
-												</div>
-											</div>
-											<div class="form-group text-area">
-												<label for="message">Your Message</label>
-												<textarea name="message" class="form-control" rows="6" required="" placeholder=""></textarea>
-											</div>
-
-											<button type="submit" class="btn btn-primary">Send Message</button>
-										</form>
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="page-header-wrap">
+										<div class="page-header">
+									   		<h1>Job Post</h1>
+									   	</div>
+									   <ol class="breadcrumb">
+										  <li><a href="#">Home</a></li>
+										  <li class="active">Career</li>
+										</ol>
 									</div>
 								</div>
-
-								<div class="col-md-5">
-									<div class="contact-info">
-										<h3>Head Office</h3>
-
-										<address>
-											384 Maple Circle<br>
-											Simi Valley, Nevada 47424<br>
-											Phone : +12 30 456789<br>
-											Email : yourname@transport.com<br>
-										</address>
-									</div><!-- /.contact-info -->
-
-									<div class="contact-map">
-										<h3>Location Map</h3>
-
-										<div id="contactMap"></div>
-									</div><!-- /.contact-info -->
-
-
-								</div>
 							</div>
 						</div>
 					</section>
 
-					<section class="other-office-address">
+					<!-- job-post -->
+					<section class="job-post">
 						<div class="container">
-							<h2>World Wide Offices</h2>
-
-
-							<div class="row content-row">
-								<div class="col-md-4">
-									<div class="contact-info">
-										<h3>United States Office</h3>
-
-										<address>
-											384 Maple Circle<br>
-											Simi Valley, Nevada 47424<br>
-											Phone : +12 30 456789<br>
-											Email : yourname@transport.com<br>
-										</address>
-									</div><!-- /.contact-info -->
-								</div><!-- /.col-md-4 -->
-
-								<div class="col-md-4">
-									<div class="contact-info">
-										<h3>United Kingdom Office</h3>
-
-										<address>
-											384 Maple Circle<br>
-											Simi Valley, Nevada 47424<br>
-											Phone : +12 30 456789<br>
-											Email : yourname@transport.com<br>
-										</address>
-									</div><!-- /.contact-info -->
-								</div><!-- /.col-md-4 -->
-
-								<div class="col-md-4">
-									<div class="contact-info">
-										<h3>Bangladesh Office</h3>
-
-										<address>
-											House# 687-689, Road# 10<br>
-											Mirpur DOHS, Dhaka 1216<br>
-											Phone : +12 30 456789<br>
-											Email : yourname@transport.com<br>
-										</address>
-									</div><!-- /.contact-info -->
-								</div><!-- /.col-md-4 -->
-							</div>
-						</div>
+							<div class="job-page-wrapper">
+								<div class="row">
+									<div class="col-md-12">
+										<div class="job-details">
+											<dl>
+												<dt>No. of Vacancies</dt>
+												<dd>02</dd>
+											</dl>
+											<br>
+											<dl>
+												<dt>Job Description / Responsibility</dt>
+												<dd>Design website layout/ templates with excellent design sense for international market.</dd>
+												<dd>Design production-level website layout/templates. Slice the layout into HTML (valid xhtml) pages with required Flash, CSS.</dd>
+												<dd>You will be responsible for slicing PSD designs that will be provided and code the CSS/ XHTML/ DHTML for integration for the development team.</dd>
+												<dd>Must know Plugins Development and modification.</dd>
+												<dd>Highly proficient in HTML, HTML5. XHTML, CSS3, PSD to HTML Conversion, JavaScript, AJAX, jQuery, JSON and Responsive Layout with Object Oriented Programming</dd>
+												<dd>Understanding of web security and performance issues.</dd>
+												<dd>Should be an EXPERT on code optimization for different browsers.</dd>
+											</dl>
+											<br>
+											<dl>
+												<dt>Job Nature</dt>
+												<dd>Full-time</dd>
+											</dl>
+											<br>
+											<dl>
+												<dt>Educational Requirements</dt>
+												<dd>Bachelor degree in computer science and engineering.</dd>
+											</dl>
+											<br>
+											<dl>
+												<dt>Experience Requirements</dt>
+												<dd>1 to 2 year(s)</dd>
+												<dd>The applicants should have experience in the following area(s): System Engineer (Telecommunication Network), System Engineer (Computer Network &amp; System)</dd>
+												<dd>The applicants should have experience in the following business area(s): Software Companies</dd>
+											</dl>
+											<br>
+											<dl>
+												<dt>Additional Job Requirements</dt>
+												<dd>Age 25 to 32 year(s)</dd>
+												<dd>Experience with LINQ and Entity Framework</dd>
+												<dd>Practical experience in working with RDBMS, database functions, views, procedures etc. for SQL Server 2008 database</dd>
+												<dd>Coordinate with team members on project related technical issues</dd>
+												<dd>Self-motivated, detail oriented and organized</dd>
+											</dl>
+											<br>
+											<dl>
+												<dt>Additional Job Requirements</dt>
+												<dd>Experience with LINQ and Entity Framework</dd>
+												<dd>Practical experience in working with RDBMS, database functions, views, procedures etc. for SQL Server 2008 database</dd>
+												<dd>Coordinate with team members on project related technical issues</dd>
+												<dd>Self-motivated, detail oriented and organized</dd>
+											</dl>
+											<br>
+											<dl>
+												<dt>Salary Range</dt>
+												<dd>Negotiable</dd>
+											</dl>
+											<br>
+											<dl>
+												<dt>Other Benefits</dt>
+												<dd>As per Company Policy</dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+							</div><!-- /.job-page-wrapper -->
+						</div><!-- /.container -->
+						
 					</section>
+					<!-- /job-post -->
 
+				    
 
 			        <!-- cta start -->
 			        <section class="cta-section">
@@ -570,7 +533,7 @@
 								<li><a href="about.html">About</a></li>
 							    <li><a href="service.html">Service</a></li>
 							    <li><a href="our-people.html">Our people</a></li>
-							    <li><a href="career.html">Career</a></li>
+							    <li class="active"><a href="career.html">Career</a></li>
 							    <li><a href="faq.html">FAQ Page</a></li>
 							    <li><a href="typography.html">Typography</a></li>
 							</ul>
@@ -599,7 +562,7 @@
 			            		</li>
 			            	</ul>
 			            </li>
-			            <li class="active"><a href="contact.html">Contact</a></li>
+			            <li><a href="contact.html">Contact</a></li>
 			            <li><a href="typography.html">Typography</a></li>
 			        </ul>
 			        <div class="offcanvas-widgets hidden-sm hidden-xs">
@@ -663,6 +626,5 @@
 	    <script src="js/twitterFetcher_min.js"></script>
 	    <!-- Custom Script -->
 	    <script src="js/scripts.js"></script>
-	    
 	</body>
 </html>
