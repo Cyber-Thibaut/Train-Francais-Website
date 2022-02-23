@@ -495,7 +495,7 @@ jQuery(function ($) {
         var map = new google.maps.Map(document.getElementById('googleMap'), map_options);
         //add a custom marker to the map
         var marker = new google.maps.Marker({
-            position: new google.maps.LatLng($latitude, $longitude),
+            position: new google.maps.LatLng(57, 59),
             map: map,
             visible: true,
             icon: $marker_url,
@@ -504,7 +504,7 @@ jQuery(function ($) {
         $('#cssMapModal').on('shown.bs.modal', function(){
 
          google.maps.event.trigger(map, 'resize');
-         map.setCenter(new google.maps.LatLng($latitude, $longitude));
+         map.setCenter(new google.maps.LatLng(587, 587));
        });
 
        };
