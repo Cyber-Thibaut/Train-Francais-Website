@@ -641,7 +641,7 @@ COUNTER SECTION
 --------------------------------------------------------------------- */
 .counter-section {
   padding: 100px 0;
-  background: url(../img/counter-bg.jpg) no-repeat center top fixed;
+  background-color: #f9e5e0;
   background-size: cover;
 }
 
