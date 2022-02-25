@@ -1,4 +1,4 @@
-![image](img/images/bannière.jpg)
+![image](img/intro-bg3.jpg)
 # Train Français Compagny
 
 ## INFORMATION IMPORTANTE
