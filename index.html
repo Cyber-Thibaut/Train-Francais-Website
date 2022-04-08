@@ -1,235 +1,634 @@
-<!DOCTYPE HTML>
-<html>
-	<link rel="shortcut icon" type="image/x-icon" href="images/Logo.jpeg" />
-	<link rel="mask-icon" type="" href="images/Logo.jpeg" color="#111" />
+<!DOCTYPE html>
+<html lang="fr">
+
 	<head>
-			<script>
-					window.axeptioSettings = {
-						clientId: "61f1463a3f0c8c62913e3284",
-						cookiesVersion: "train français-fr",
-					};
-					 
-					(function(d, s) {
-						var t = d.getElementsByTagName(s)[0], e = d.createElement(s);
-						e.async = true; e.src = "//static.axept.io/sdk.js";
-						t.parentNode.insertBefore(e, t);
-					})(document, "script");
-					</script>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ENZ4JWSEQV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="theme-color" content="#ff0000" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="twitter:card" content="https://train-francais.vercel.app/img/index.png" />
+		<meta name="twitter:title" content="Train Français" />
+		<meta name="twitter:description" content="Train Français, une compagnie du jeu Train Empire" />
+		<meta name="twitter:image" content="https://train-francais.vercel.app/img/index.png" />
+		<meta property="og:type" content="object" />
+		<meta property="og:url" content="https://train-francais.vercel.app" />
+		<meta property="og:title" content="Train Français" />
+		<meta property="og:description" content="Train Français, une compagnie du jeu Train Empire" />
+		<meta property="og:image" content="https://train-francais.vercel.app/img/index.png" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="600" />
+		<meta name="description" content="Train Français, une compagnie du jeu Train Empire (http://train-empire.com) Bienvenu sur notre réseau !">
+	    <meta name="author" content="">
+		<link rel="shortcut icon" href="img/favicon.png" type="">
 
-  gtag('config', 'G-ENZ4JWSEQV');
-</script>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Train Français</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Train Français, une compagnie du jeu Train Empire (http://train-empire.com)" />
-	<meta name="keywords" content="" />
-	<meta name="author" content="Tibo pour Train Français" />
-
-	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400" rel="stylesheet">
-	<link rel="stylesheet" href="css/Accueil.css">
-	
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
-
-	<!-- Magnific Popup -->
-	<link rel="stylesheet" href="css/magnific-popup.css">
-
-	<!-- Owl Carousel -->
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
-
-	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/style.css">
-
-	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
+	    <title>Train Français</title>
+	    <!-- Web Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+        <!-- Bootstrap Core CSS -->
+	    <link href="css/bootstrap.min.css" rel="stylesheet">
+	    <!-- Flaticon CSS -->
+	    <link href="fonts/flaticon/flaticon.css" rel="stylesheet">
+	    <!-- font-awesome CSS -->
+	    <link href="css/font-awesome.min.css" rel="stylesheet">
+	    <!-- Offcanvas CSS -->
+	    <link href="css/hippo-off-canvas.css" rel="stylesheet">
+	    <!-- animate CSS -->
+	    <link href="css/animate.css" rel="stylesheet">
+	    <!-- language CSS -->
+	    <link href="css/language-select.css" rel="stylesheet">
+	    <!-- owl.carousel CSS -->
+	    <link href="owl.carousel/assets/owl.carousel.css" rel="stylesheet">
+		<!-- magnific-popup -->
+    	<link href="css/magnific-popup.css" rel="stylesheet">
+    	<!-- Main menu -->
+    	<link href="css/menu.css" rel="stylesheet">
+    	<!-- Template Common Styles -->
+    	<link href="css/template.css" rel="stylesheet">
+	    <!-- Custom CSS -->
+	    <link href="css/style.css" rel="stylesheet">
+	    <!-- Responsive CSS -->
+	    <link href="css/responsive.css" rel="stylesheet">
+	    <script src="js/vendor/modernizr-2.8.1.min.js"></script>
+	    <!-- HTML5 Shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	    <!--[if lt IE 9]>
+		    <script src="js/vendor/html5shim.js"></script>
+		    <script src="js/vendor/respond.min.js"></script>
+	    <![endif]-->
 	</head>
-	<body>
-	
-	<div class="colorlib-loader"></div>
 
-	<div id="page">
-			<nav class="colorlib-nav" role="navigation">
-					<div class="top-menu">
-						<div class="container">
+
+	<body id="page-top">
+		<div id="st-container" class="st-container">
+		    <div class="st-pusher">
+	        	<div class="st-content">
+				  	<header class="header">
+				  		<nav class="top-bar">
+				  			<div class="overlay-bg">
+					  			<div class="container">
+					  				<div class="row">
+					  					
+					  					<div class="col-sm-6 col-xs-12">
+						  					<div class="call-to-action">
+						  						<ul class="list-inline">
+                                                    <li><a href="mailto:train-francais@protonmail.com"><i class="fa fa-envelope"></i>train-francais@protonmail.com</a></li>
+						  						</ul>
+						  					</div><!-- /.call-to-action -->
+					  					</div><!-- /.col-sm-6 -->
+					  				</div><!-- /.row -->
+					  			</div><!-- /.container -->
+				  			</div><!-- /.overlay-bg -->
+				  		</nav><!-- /.top-bar -->
+						  <a href="index.html"><img src="img/logo.png"></a>
+						  <nav class="navbar navbar-default" role="navigation">
+							<div class="container mainnav">
+								<div class="navbar-header">
+									<a class="navbar-brand" href="index.html"> </a>
+									<!-- offcanvas-trigger -->
+			                        <button type="button" class="navbar-toggle collapsed pull-right" >
+										<span class="sr-only">Toggle navigation</span>
+										<i class="fa fa-bars"></i>
+									  </button>
+								</div>
+								<div class="collapse navbar-collapse navbar-collapse">
+									<ul class="nav navbar-nav navbar-right">
+                                        <!-- /Home -->
+                                        <li class="dropdown"><a>Home <span class="fa fa-angle-down"></span></a>
+					<!-- submenu-wrapper -->
+                                            <div class="submenu-wrapper">
+                                                <div class="submenu-inner">
+                                                    <ul class="dropdown-menu">
+							<li><a href="index.html">Home</a>
+                                                    	<li><a href="about.html">About</a></li>															
+														<li><a href="faq.html">FAQ</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <!-- /submenu-wrapper -->
+										</li>
+                                        <!-- /Home -->
+                                        <!-- Services -->
+                                        <li class="dropdown"><a>Informations sur nos lignes<span class="fa fa-angle-down"></span></a>
+                                            <!-- submenu-wrapper -->
+                                            <div class="submenu-wrapper">
+                                                <div class="submenu-inner">
+                                                    <ul class="dropdown-menu">
+                                                    	<li><a href="fgv.html">France à Grande Vitesse</a></li>
+                                                        <li><a href="ICE.html">ICEurope</a></li>
+                                                        <li><a href="tfm.html">Train Français Marchandise</a></li>
+                                                        <li><a href="région.html">France Région</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <!-- /submenu-wrapper -->
+                                        </li>
+                                        <li class="dropdown"><a>Au départ de nos gares principales<span class="fa fa-angle-down"></span></a>
+                                            <!-- submenu-wrapper -->
+                                            <div class="submenu-wrapper">
+                                                <div class="submenu-inner">
+                                                    <ul class="dropdown-menu">
+                                                    	<li><a href="départ.html#LP">Lyon Perrache</a></li>
+														<li><a href="départ.html#bsj">Bordeaux St-Jean</a></li>
+														<li><a href="départ.html#PGL">Paris Gare de Lyon</a></li>
+														<li><a href="départ.html#TPN">Torino Porto Nova</a></li>
+														<li><a href="départ.html#tm">Toulouse Matabiau</a></li>
+														<li><a href="départ.html#V">Vénissieux</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <!-- /submenu-wrapper -->
+                                        </li>
+										<li><a href="plan.html">Plan de nos Lignes</a></li>
+									</ul>
+								</div><!-- /.navbar-collapse -->
+							</div><!-- /.container -->
+						</nav>
+					</header>
+                    <div id="main-carousel" class="carousel slide hero-slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#main-carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#main-carousel" data-slide-to="1"></li>
+                        </ol>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img src="img/intro-bg.jpg">
+                                <!--Slide Image-->
+                                <div class="container">
+                                    <div class="carousel-caption">
+                                        <h2 color='white' class="animated lightSpeedIn"><mark>Voyagez avec nous Aujourd'hui !</mark></h2>
+                                        <h1 class="animated lightSpeedIn"><mark>Nos équipes vous<br></br> attendent avec<br></br>impatience <br></br>!</mark></h1>
+                                    </div>
+                                    <!--.carousel-caption-->
+                                </div>
+                                <!--.container-->
+                            </div>
+                            <!--.item-->
+                            <div class="item">
+                                <img src="img/intro-bg3.jpg">
+                                <!--Slide Image-->
+				    <div class="container">
+                                    <div class="carousel-caption">
+                                    </div>
+                                    <!--.carousel-caption-->
+                                </div>
+                                <!--.container-->
+                            </div>
+                            <!--.item-->
+                        </div>
+                        <!--.carousel-inner-->
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#main-carousel" role="button" data-slide="prev">
+                            <i class="fa fa-angle-left" aria-hidden="true"></i>
+                            <span class="sr-only">Précédent</span>
+                        </a>
+                        <a class="right carousel-control" href="#main-carousel" role="button" data-slide="next">
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            <span class="sr-only">Suivant</span>
+                        </a>
+                    </div>
+                    <!-- #main-carousel-->
+			        <!-- services start -->
+					<section class="service-home section-padding">
+			            <div class="container text-center">
+			              <div class="row">
+			                <div class="col-xs-12">
+			                  <h2 class="section-title">Nos Services</h2>
+			                </div>
+			              </div> <!-- /.row -->
+
+			              <div class="row content-row">
+			              	<div class="col-sm-4">
+			              		<div class="service">
+				              		<div class="service-thumb-home">
+				              			<a><img src="img/chargement.gif" alt=""></a>
+				              		</div>
+				              		
+				              		<h3>Transport & Logistique</h3>
+				              		<p>Depuis sa création, Train Français est l'un des noms les plus fiables du secteur. Engagez-nous pour ce service, et constatez par vous-même que nous répondons aux besoins et attentes de chaque client.</p>
+				              	
+			              		</div>
+			              	</div><!-- /.col-sm-4 -->
+
+			              	<div class="col-sm-4">
+			              		<div class="service">
+				              		<div class="service-thumb-home">
+				              			<a><img src="img/frigo.png" alt=""></a>
+				              		</div>
+				              		<h3>Transport réfrigéré</h3>
+				              		<p>Nous avons l'expérience et les compétences nécessaires pour effectuer pratiquement tous les types de travaux qui nous sont confiés. Avec Train Français, nos clients savent exactement à quoi s'attendre : du professionnalisme, de l'efficacité et des résultats exceptionnels.</p>
+				              		
+			              		</div>
+
+			              	</div><!-- /.col-sm-4 -->
+
+			              	<div class="col-sm-4">
+			              		<div class="service">
+				              		<div class="service-thumb-home">
+				              			<a><img src="img/france.png" alt=""></a>
+				              		</div>
+				              		<h3>Transports régionaux et internationaux</h3>
+				              		<p>Train Français s’engage à remplir sa mission, et à réaliser ce service avec soin. Vous pouvez compter sur nous pour nous montrer professionnels, ponctuels et efficaces, et pour nous assurer votre satisfaction à chaque étape du processus.</p>
+				              		
+			              	   </div>
+			              	</div><!-- /.col-sm-4 -->
+			              </div> <!-- /.row -->
+			            </div><!-- /.container -->
+			        </section>
+			        <!-- services end -->
+
+
+			        <!-- why-us-setion start -->
+			        <section class="why-us-setion section-padding">
+			        	<div class="container">
+			              <div class="row text-center">
+			                <div class="col-xs-12">
+			                  <h2 class="section-title">Pourquoi nous choisir nous ?</h2>
+			                  <span class="section-sub">Voici quelques raisons ^^</span>
+			                </div>
+			              </div> <!-- /.row -->
+
+			              <div class="row content-row">
+			              	<div class="col-md-12">
+								<div class="css-tab" role="tabpanel">
+
+								  <!-- Nav tabs -->
+								  <ul class="nav nav-tabs" role="tablist">
+								    <li role="presentation" class="active"><a href="#secure" aria-controls="secure" role="tab" data-toggle="tab"><i class="flaticon-logistics15"></i>Matériel neuf & propre</a></li>
+								    <li role="presentation"><a href="#trackable" aria-controls="trackable" role="tab" data-toggle="tab"><i class="flaticon-logistics18"></i>Traçabilité lors du trajet</a></li>
+								    <li role="presentation"><a href="#fast" aria-controls="fast" role="tab" data-toggle="tab"><i class="flaticon-logistics16"></i>Rapide</a></li>
+								    <li role="presentation"><a href="#reliable" aria-controls="reliable" role="tab" data-toggle="tab"><i class="flaticon-broken43"></i>Reconnu</a></li>
+								  </ul>
+
+								  <!-- Tab panes -->
+								  <div class="tab-content">
+								    <div role="tabpanel" class="tab-pane active fade in" id="secure">
+									    <div class="css-tab-content">
+										    <div class="row">
+										    	<div class="col-md-6">
+										    		<img src="img/secure.png" alt="">
+										    	</div><!-- /.col-md-6 -->
+
+										    	<div class="col-md-6 content-text">
+											    	<h3>Un matériel à la pointe de la technologie</h3>
+
+											    	<p>Nous nous efforçons avec les constructeurs de vous proposer du matériel récent et toujours dans une propreté irréprochable</p> 
+										    	</div><!-- /.col-md-6 -->
+										    </div><!-- /.row -->
+									    </div><!-- /.css-tab-content -->
+								    </div>
+								    <div role="tabpanel" class="tab-pane fade" id="trackable">
+									    <div class="css-tab-content">
+										    <div class="row">
+										    	<div class="col-md-6">
+										    		<img src="img/track.png" alt="">
+										    	</div><!-- /.col-md-6 -->
+
+										    	<div class="col-md-6 content-text">
+											    	<h3>Garanti sans intermédiaire</h3>
+
+											    	<p>Lorsque vous nous confiez une marchandise, vous savez quelle vous sera remise en parfait état à son arrivée.</p> 
+
+													<p>Nous avons fait le choix de ne pas travailler avec des intermédiaires pour vous garantir une qualité professionelle. De plus vous pouvez suivre le train et votre marchandise à distance</p>
+										    	</div><!-- /.col-md-6 -->
+										    </div><!-- /.row -->
+									    </div><!-- /.css-tab-content -->
+								    </div>
+								    <div role="tabpanel" class="tab-pane fade" id="fast">
+									    <div class="css-tab-content">
+										    <div class="row">
+										    	<div class="col-md-6">
+										    		<img src="img/fast.png" alt="">
+										    	</div><!-- /.col-md-6 -->
+
+										    	<div class="col-md-6 content-text">
+											    	<h3>Rapide</h3>
+
+											    	<p>Grâce à l'absence d'intermédiaires nous sommes les maîtres du délais ce qui nous permet de réaliser un service très rapide et professionel.</p> 
+										    	</div><!-- /.col-md-6 -->
+										    </div><!-- /.row -->
+									    </div><!-- /.css-tab-content -->
+								    </div>
+								    <div role="tabpanel" class="tab-pane fade" id="reliable">
+									    <div class="css-tab-content">
+										    <div class="row">
+										    	<div class="col-md-6">
+										    		<img src="img/reliable.png" alt="">
+										    	</div><!-- /.col-md-6 -->
+
+										    	<div class="col-md-6 content-text">
+											    	<h3>Satisfait OU remboursé</h3>
+
+											    	<p>Depuis notre création il n'y à jamais aucun incident impactant nos engagements. C'est pourquoi nous nous engageons à vous remboruser la prestation si vous n'êtes pas satisfait</p> 
+
+													<p>De plus, nos méthodes de travail très méthodiques nous permettent d'assurer la casse lors du trajet.</p>
+										    	</div><!-- /.col-md-6 -->
+										    </div><!-- /.row -->
+									    </div><!-- /.css-tab-content -->
+								    </div>
+								  </div>
+								</div><!-- /.css-tab -->
+			              	</div><!-- /.col-md-12 -->
+			              </div><!-- /.row -->
+
+			        	</div><!-- /.container -->
+			        </section>
+			        <!-- why-us-setion end -->
+
+			        <!-- testimonial-section start -->
+					<section class="testimonial-section section-padding">
+			            <div class="container text-center">
+			              <div class="row">
+			                <div class="col-xs-12">
+			                  <h2 class="section-title">Nous sommes reconnus par</h2>
+			                  <span class="section-sub">Depuis notre création, les entreprises nous faisant confiances n'ont céssés d'être de plus en plus nombreuse. Voici la liste non-exaustive de cells-ci. Quand la votre apparaitera-t-elle ?</span>
+			                </div>
+			              </div> <!-- /.row -->
+
+			              <div class="row row-content">
+			              	<div class="col-md-12">
+								<div id="testimonial-carousel" class="carousel slide" data-ride="carousel">
+								  <!-- Indicators -->
+								  <ol class="carousel-indicators">
+								    <li data-target="#testimonial-carousel" data-slide-to="0" class="active"></li>
+								    <li data-target="#testimonial-carousel" data-slide-to="1"></li>
+								    <li data-target="#testimonial-carousel" data-slide-to="2"></li>
+								  </ol>
+
+								  <!-- Wrapper for slides -->
+								  <div class="carousel-inner" role="listbox">
+								    <div class="item active">
+								    	<div class="testimonial-content">
+								    		<p>Progressively architect prospective imperatives through competitive communities. Professionally productize user<br> friendly networks with out-of-the-box mindshare. Energistically incubate functionalized best practices after 24/365<br> information. Dramatically restore end-to-end strategic theme areas.</p>
+								    		<span class="client-title">- Deanna Lewis -</span>
+								    	</div><!-- /.testimonial-content -->
+								    </div>
+								    <div class="item">
+								    	<div class="testimonial-content">
+								    		<p>Progressively architect prospective imperatives through competitive communities. Professionally productize user<br> friendly networks with out-of-the-box mindshare. Energistically incubate functionalized best practices after 24/365<br> information. Dramatically restore end-to-end strategic theme areas.</p>
+								    		<span class="client-title">- Deanna Lewis -</span>
+								    	</div><!-- /.testimonial-content -->
+								    </div>
+								    <div class="item">
+								    	<div class="testimonial-content">
+								    		<p>Progressively architect prospective imperatives through competitive communities. Professionally productize user<br> friendly networks with out-of-the-box mindshare. Energistically incubate functionalized best practices after 24/365<br> information. Dramatically restore end-to-end strategic theme areas.</p>
+								    		<span class="client-title">- Deanna Lewis -</span>
+								    	</div><!-- /.testimonial-content -->
+								    </div>
+								  </div>
+								</div><!-- /.carousel -->
+			              	</div><!-- /.col-md-12 -->
+			              </div><!-- /.row -->
+
+			              <hr>
+
+			              <div class="partner-section">
+				              <div class="row row-content">
+				              	<div class="col-md-12">
+									<div class="owl-carousel partner-carousel">
+									    <div class="item">
+									    	<a href="#"><img src="img/partner/p1.jpg" alt=""></a>
+									    </div>
+									    <div class="item">
+									    	<a href="#"><img src="img/partner/p2.jpg" alt=""></a>
+									    </div>
+									    <div class="item">
+									    	<a href="#"><img src="img/partner/p3.jpg" alt=""></a>
+									    </div>
+									    <div class="item">
+									    	<a href="#"><img src="img/partner/p4.jpg" alt=""></a>
+									    </div>
+									    <div class="item">
+									    	<a href="#"><img src="img/partner/p5.jpg" alt=""></a>
+									    </div>
+									    <div class="item">
+									    	<a href="#"><img src="img/partner/p1.jpg" alt=""></a>
+									    </div>
+									    <div class="item">
+									    	<a href="#"><img src="img/partner/p2.jpg" alt=""></a>
+									    </div>
+									    <div class="item">
+									    	<a href="#"><img src="img/partner/p3.jpg" alt=""></a>
+									    </div>
+									    <div class="item">
+									    	<a href="#"><img src="img/partner/p4.jpg" alt=""></a>
+									    </div>
+									</div>
+
+
+							        <div class="partner-carousel-navigation">
+							            <a class="prev"><i class="fa fa-angle-left"></i></a>
+							            <a class="next"><i class="fa fa-angle-right"></i></a>
+							        </div><!-- /.partner-carousel-navigation -->
+
+
+				              	</div><!-- /.col-md-12 -->
+				              </div><!-- /.row -->
+			              </div><!-- /.partner-section -->
+			            </div><!-- /.container -->
+			        </section>
+			        <!-- testimonial-section end -->
+
+			        <!-- counter start -->
+			        <section class="counter-section" data-stellar-background-ratio="0.5">
+			        	<div class="container">
 							<div class="row">
-								
-								<div class="col-md-10 text-right menu-1">
-									<ul>
-										<li class="has-dropdown active">
-											<a href="index.html">Home</a>
-											<ul class="dropdown">
-												<li><a href="contact.html">Contact</a></li>
-												<li><a href="Qui sommes nous.html">Qui sommes nous ?</a></li>
-												<li><a href="Nos services.html">Nos services</a></li>
-												<li><a href="Problème.html">Un Problème?</a></li>
-											</ul>
-										</li>
-										<li><a href="ficheshoraire.html">Nos Fiches Horaires</a></li>
-										<li><a href="infotraffic.html">Nos Info Trafic</a></li>
-										<li><a href="https://mylines.fr/home?company=Train%20Fran%C3%A7ais">Réserver un trajet</a></li>
-										<li><a href="audepartdenosgares.html">Au départ de nos gares</a></li>
-										<li class="has-dropdown active">
-											<a href="Langue.html">Langues</a>
-											<ul class="dropdown">
-												<li><a href="Langue.html">Anglais</a></li>
-												<li><a href="Langue.html">Allemand</a></li>
-												<li><a href="Langue.html">Portugais</a></li>
-												<li><a href="Langue.html">Japonais</a></li>
-												<li><a href="Langue.html">Chinois</a></li>
-											</ul>
-										</li>
+						        <div class="col-sm-4 col-xs-12">
+						          <div class="counter-block">
+						          	<span class="count-description flaticon-boat" style="color:#FF0000"><strong class="timer" style="color:#FF0000">41567370</strong>Clients heureux après leur voyage avec nous</span>
+						          </div>
+						        </div> 
+						       <div class="col-sm-4 col-xs-12">
+						          <div class="counter-block">
+						          	<span class="count-description flaticon-international" style="color:#FF0000"><strong class="timer" style="color:#FF0000">2</strong>Projets en cours de réalisation</span>
+						          </div>
+						        </div> 
+						       <div class="col-sm-4 col-xs-12">
+						          <div class="counter-block">
+						          	<span class="count-description flaticon-compass" style="color:#FF0000"><strong class="timer" style="color:#FF0000">60</strong>rames en service pour vous servire</span>
+						          </div>
+						        </div> 
+								<div class="col-sm-4 col-xs-12">
+						          <div class="counter-block">
+						          	<span class="count-description flaticon-compass" style="color:#FF0000"><strong class="timer" style="color:#FF0000">500</strong>employés pour vous servir</span>
+						          </div>
+						        </div> 
+					      	</div> <!-- /.row -->
+			        	</div><!-- /.container -->
+			        </section><!-- /.counter-section -->
+			        <!-- counter end -->
+			        <!-- footer-widget-section start -->
+			        <section class="footer-widget-section section-padding">
+			        	<div class="container">
+			        		<div class="row">
+			        			<div class="col-md-3 col-md-offset-1 col-sm-4">
+			        				<div class="footer-widget">
+			        					<h3>Place &amp; Contact</h3>
+
+										<address>
+										  14, cours de Verdun<br>
+										  69002 Lyon<br>
+
+										  <!-- Google Map Modal Trigger -->
+										  <button type="button" class="modal-map" data-toggle="modal" data-target="#cssMapModal">Location  Map</button>
+										</address>
+
+
+										<!-- Modal -->
+										<div class="modal fade" id="cssMapModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+										  <div class="modal-dialog modal-lg">
+										    <div class="modal-content">
+										      <div class="modal-header">
+										        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+										        <h4 class="modal-title" id="myModalLabel">Our Location</h4>
+										      </div>
+										      <div class="modal-body">
+
+														<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2784.1303794465844!2d4.8236481159683695!3d45.74853207910533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ebb4c09ab051%3A0x32e14f503a1b4769!2sLyon%20Perrache!5e0!3m2!1sfr!2sfr!4v1645624274490!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+											    
+										      </div>
+										    </div><!-- /.modal-content -->
+										  </div><!-- /.modal-dialog -->
+										</div><!-- End Modal -->
+			        				</div><!-- /.footer-widget -->
+			        			</div><!-- /.col-md-4 -->
+
+			        			<div class="col-md-3 col-sm-4">
+									
+			        				<div class="footer-widget">
+			        					<h3>About Transport</h3>
+
+			        					<ul>
+                                        	<li><a href="about.html">About</a></li>
+                                            <li><a href="faq.html">FAQ Page</a></li>
+                                        </ul>
+			        				</div><!-- /.footer-widget -->
+			        			</div><!-- /.col-md-4 -->
+							<div class="col-md-3 col-sm-5">
+								<a class="twitter-timeline" data-lang="fr" data-height="300" href="https://twitter.com/FrancaisTrain?ref_src=twsrc%5Etfw">Tweets by FrancaisTrain</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+							</div>
+			        		</div><!-- /.row -->
+			        	</div><!-- /.container -->
+			        </section><!-- /.cta-section -->
+			        <!-- footer-widget-section end -->
+
+			        <!-- copyright-section start -->
+			        <footer class="copyright-section">
+			        	<div class="container text-center">
+			        		<div class="copyright-info">
+			        			<span>Copyright &copy; 2020-<script>document.write(new Date().getFullYear());</script> All rights reserved | Ce site a été fait avec ❤️ par Thibaut pour <a href="Index.html" target="_blank">Train Français Compagny</a><h1 class="logo"><img src="img/logo.png" alt=""></a></h1>
+			        		</div>
+			        	</div><!-- /.container -->
+			        </footer>
+			        <!-- copyright-section end -->
+	    		</div> <!-- .st-content -->
+		    </div> <!-- .st-pusher -->
+			
+			<!-- OFF CANVAS MENU -->
+	    	<div class="offcanvas-menu offcanvas-effect">
+				<a><img src="img/logo.png" alt=""></a>	
+	    		<div class="offcanvas-wrap">
+			        <div class="off-canvas-header">
+			        	<button type="button" class="close" aria-hidden="true" data-toggle="offcanvas" id="off-canvas-close-btn">&times;</button>
+			        </div>
+			        <ul id ="offcanvasMenu" class="list-unstyled visible-xs visible-sm">
+			            <li class="dropdown"><a href="index.html">Home <span class="fa fa-angle-down"></span></a>
+							<!-- submenu-wrapper -->
+							<div class="submenu-wrapper">
+								<div class="submenu-inner">
+									<ul class="dropdown-menu">
+										<li><a href="about.html">About</a></li>
+										<li><a href="faq.html">FAQ Page</a></li>
 									</ul>
 								</div>
 							</div>
-						</div>
-					</div>
-				</nav>
-
-		<section id="home" class="video-hero" style="height: 100%; text-center; background-image: url(images/chargement.gif);  background-size:cover; background-position: center center;background-attachment:fixed;" data-section="home">
-		<div class="overlay"></div>
-			<div class="display-t display-t2 text-center">
-				<div class="display-tc display-tc2">
-					<div class="container">
-						<div class="col-md-12 col-md-offset-0">
-							<div class="animate-box">
-								<div class="container">
-								<br><br><br>
-								<div class="title">Train Français</div>
-								<h2>L'avenir est sur les rails</h2><br>
+							<!-- /submenu-wrapper -->
+						</li>
+						<!-- /Home -->
+						<!-- Services -->
+						<li class="dropdown"><a>Informations Trafic<span class="fa fa-angle-down"></span></a>
+							<!-- submenu-wrapper -->
+							<div class="submenu-wrapper">
+								<div class="submenu-inner">
+									<ul class="dropdown-menu">
+										<li><a href="fgv.html">France à Grande Vitesse</a></li>
+										<li><a href="ICE.html">ICEurope</a></li>
+										<li><a href="tfm.html">Train Français Marchandise</a></li>
+										<li><a href="région.html">France Région</a></li>
+									</ul>
+								</div>
 							</div>
-						</div>
+							<!-- /submenu-wrapper -->
+						</li>
+						<li class="dropdown"><a>Au départ de nos gares principales<span class="fa fa-angle-down"></span></a>
+							<!-- submenu-wrapper -->
+							<div class="submenu-wrapper">
+								<div class="submenu-inner">
+									<ul class="dropdown-menu">
+										<li><a href="départ.html#LP">Lyon Perrache</a></li>
+										<li><a href="départ.html#bsj">Bordeaux St-Jean</a></li>
+										<li><a href="départ.html#PGL">Paris Gare de Lyon</a></li>
+										<li><a href="départ.html#TPN">Torino Porto Nova</a></li>
+										<li><a href="départ.html#tm">Toulouse Matabiau</a></li>
+										<li><a href="départ.html#V">Vénissieux</a></li>
+									</ul>
+								</div>
+							</div>
+							<!-- /submenu-wrapper -->
+						</li>
+						<!-- /Pages -->
+						<!-- Blog -->
+						<li><a href="faq.html">FAQ </a></li>
+						<li><a href="plan.html">Plan de nos lignes</a></li>
+						<br><center><a href="https://twitter.com/FrancaisTrain?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-lang="fr" data-show-count="false">Follow @FrancaisTrain</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></center>
+                        </ul>
+						<div class="offcanvas-widgets hidden-sm hidden-xs">
+							<div id="twitterWidget">			    	
+								<a class="twitter-timeline" data-lang="fr" href="https://twitter.com/FrancaisTrain?ref_src=twsrc%5Etfw">Tweets by FrancaisTrain</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+							</div>
+						</div>	    
+						</div><!-- newsletter-widget -->
 					</div>
 				</div>
-			</div>
-		</section>
-		<br>
-<br>
-<section id="counts" class="counts  section-bg" >
-	<div class="container">
-		<div class="row no-gutters">
-			<div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
-				<div class="count-box">
-					<i class="bi bi-emoji-smile"></i>
-					<h1><b>16 130 198</b></h1>
-					<p><strong>Clients</strong> heureux après leur voyage avec nous</p>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
-				<div class="count-box">
-					<i class="bi bi-journal-richtext"></i>
-					<h1><b>5<b/></h1>
-					<p><strong>Projets</strong> en cours de réalisation</p>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
-				<div class="count-box">
-					<i class="bi bi-headset"></i>
-					<h1><b>42</b></h1>
-					<p><strong>Rames</strong> en service pour vous servire</p>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
-				<div class="count-box">
-					<i class="bi bi-people"></i>
-					<h1><b>+ de 200</b></h1>
-					<p><strong>Employés</strong> passionés par leur travail</p>
-				</div>
+	      	</div><!-- .offcanvas-menu -->
+		</div><!-- /st-container -->
+
+
+		<!-- Preloader -->
+		<div id="preloader">
+			<div id="status">
+				<div class="status-mes"></div>
 			</div>
 		</div>
-	</div>
-</section>
-<br><br>
-			<section "background-image: url(images/chargement.gif);  background-size:cover; background-position: center center;background-attachment:fixed;" data-section="home">
-				<div class="overlay"></div>
-				<div class="wrapper">
-				<a class="cta" href="infotraffic.html">
-				<span>🚦 Infos Trafic 🚦</span>
-				<span>
-					<svg width="66px" height="43px" viewBox="0 0 66 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-						<g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-							<path class="one" d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z" fill="#FFFFFF"></path>
-							<path class="two" d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z" fill="#FFFFFF"></path>
-							<path class="three" d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z" fill="#FFFFFF"></path>
-						</g>
-					</svg>
-				</span> 
-				</a>
-				</div>
-				<br>
-				<div class="wrapper">
-					<a class="cta" href="audepartdenosgares.html">
-					<span>🚆 Trains au départ de nos gares 🚆</span>
-					<span>
-						<svg width="66px" height="43px" viewBox="0 0 66 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-							<g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-								<path class="one" d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z" fill="#FFFFFF"></path>
-								<path class="two" d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z" fill="#FFFFFF"></path>
-								<path class="three" d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z" fill="#FFFFFF"></path>
-							</g>
-					</svg>
-					</span> 
-					</a>
-					</div>
-					<br>
-				<div class="wrapper">
-					<a class="cta" href="Nos services.html">
-					<span>🛎️ Nos Services 🛎️</span>
-					<span>
-						<svg width="66px" height="43px" viewBox="0 0 66 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-							<g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-								<path class="one" d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z" fill="#FFFFFF"></path>
-								<path class="two" d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z" fill="#FFFFFF"></path>
-								<path class="three" d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z" fill="#FFFFFF"></path>
-							</g>
-					</svg>
-					</span> 
-					</a>
-					</div>
-		<br>
-		<footer id="colorlib-footer">
-			<div class="copy">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12 text-center">
-							<p>
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Ce site a été fait avec <i class="icon-heart" aria-hidden="true"></i> par Thibaut pour <a href="Index.html" target="_blank">Train Français Compagny</a>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
-	</div>
-	<div class="gototop js-top">
-		<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
-	</div>
-	<script src="js/jquery.min.js"></script>
-	<script src="js/jquery.easing.1.3.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.waypoints.min.js"></script>
-	<script src="js/jquery.stellar.min.js"></script>
-	<script src="js/jquery.mb.YTPlayer.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/magnific-popup-options.js"></script>
-	<script src="js/jquery.countTo.js"></script>
-	<script src="js/main.js"></script>
+
+	    <!-- jQuery -->
+	    <script src="js/jquery.js"></script>
+	    <!-- Bootstrap Core JavaScript -->
+	    <script src="js/bootstrap.min.js"></script>
+	    <!-- owl.carousel -->
+	    <script src="owl.carousel/owl.carousel.min.js"></script>
+	    <!-- Magnific-popup -->
+		<script src="js/jquery.magnific-popup.min.js"></script>
+		<!-- Offcanvas Menu -->
+		<script src="js/hippo-offcanvas.js"></script>
+		<!-- inview -->
+		<script src="js/jquery.inview.min.js"></script>
+		<!-- stellar -->
+		<script src="js/jquery.stellar.js"></script>
+		<!-- countTo -->
+		<script src="js/jquery.countTo.js"></script>
+		<!-- classie -->
+		<script src="js/classie.js"></script>
+		<!-- selectFx -->
+		<script src="js/selectFx.js"></script>
+		<!-- sticky kit -->
+		<script src="js/jquery.sticky-kit.min.js"></script>
+	    <!-- GOGLE MAP -->
+	    <script src="https://maps.googleapis.com/maps/api/js"></script>
+	    <!--TWITTER FETCHER-->
+	    <script src="js/twitterFetcher_min.js"></script>
+	    <!-- Custom Script -->
+	    <script src="js/scripts.js"></script>
 	</body>
 </html>
