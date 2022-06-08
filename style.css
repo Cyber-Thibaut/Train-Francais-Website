@@ -1,47 +1,8 @@
-.buttons{
-  margin:20px 0;
-}
-
-.buttons button{
-  border: none;
-  color: #fff;
-  padding: 0;
-  cursor: pointer;
-  width: 2rem;
-  height: 2rem;
-  overflow: hidden;
-  border-radius: 50%;
-  border: 4px solid #fff;
-  font-size: 0;
-  vertical-align: top;
-}
-
-.buttons button[data-color="red"]{background: #c53b3b;}
-.buttons button[data-color="blue"]{background: #285496;}
-.buttons button[data-color="green"]{background: #2e7532;}
-.buttons button[data-color="orange"]{background: #973900;}
-.buttons button[data-color="black"]{background: #1c1c1c;}
-.buttons button[data-color="grey"]{background: #e6e6e6;}
-
 body {
+
 	font-family: 'Lexend Deca', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+
     Ubuntu, Cantarell, Fira Sans, Droid Sans, 'Helvetica Neue', sans-serif;
-}
-
-.station-1 {
-	
-}
-
-.station-2 {
-	
-}
-
-.station-3 {
-	
-}
-
-.station-4 {
-	
 }
 
 ul {
@@ -75,15 +36,6 @@ svg {
 	height: 28px;
 	overflow: visible;
 	transform: rotate(45deg);
-}
-
-.svg-track-up,
-.svg-track-down {
-	fill: #C51E1E;
-}
-
-.svg-uturn {
-	fill: #000;
 }
 
 .station-text {
