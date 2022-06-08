@@ -1,12 +1,14 @@
 <!doctype html>
+
 <html lang="fr">
+
 <head>
 	<meta charset="utf-8">
 	<title>Lignes</title>
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<Center><h1>Créateur de plan réalisé par SSHI</h1></Center>
+  <h1>Créateur de plan réalisé par SSHI</h1>
 	<div>
 		<ul id="line-container">
 		<li><div class="station-text station-text-1">Gare-Centrale</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><rect class="svg-track-up" x="-4" y="3" width="9" height="4"></rect><rect class="svg-track-down" x="5" y="3" width="9" height="4"></rect><rect class="svg-station-1" x="0.5" y="0.5" rx="4.5" ry="4.5" width="9" height="9"></rect></svg></li>
@@ -28,11 +30,12 @@
 		const colorPicker = document.getElementById('color-picker');
 		const line = document.getElementById('line-container');
 		
-		colorPicker.addEventListener('change', colorChange, false);
+		colorPicker.addEventListener('change', colorLine, false);
+		colorLine();
 		
-		function colorChange(event) {
+		function colorLine() {
 			document.querySelectorAll('.svg-track-up, .svg-track-down').forEach(function(x) {
-				x.style.fill = event.target.value;
+				x.style.fill = colorPicker.value;
 			});
 		}
 		
@@ -75,6 +78,8 @@
 			});
 			
 			line.innerHTML = stations;
+			
+			colorLine();
 		}
     </script>
 </body>
