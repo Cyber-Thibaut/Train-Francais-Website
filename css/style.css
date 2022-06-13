@@ -696,6 +696,12 @@ ABOUT PAGE
   padding: 112px 0;
 }
 
+.aboutbus-intro-section {
+  background: url(../img/blog/bus.jpg) no-repeat;
+  background-size: cover;
+  padding: 112px 0;
+}
+
 .about-intro {
 }
 
