@@ -240,8 +240,8 @@
 									<div class="widget">
 										<h2 class="widget-title">Tarifs</h2>
 										<div class="textwidget">
-											<p>Ticket 1h :</p>
-											<p>Ticket liberté (24h) :</p>
+											<p>Ticket 1h : 1.70 €</p>
+											<p>Ticket liberté (24h) : 5.00€</p>
 										</div>
 									</div><!-- /.widget -->     
 									</div><!-- /.sidebar-wrapper -->
