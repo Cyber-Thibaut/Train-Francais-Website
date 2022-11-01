@@ -80,118 +80,120 @@
 				  		</nav><!-- /.top-bar -->
 						  <center><a href="index.html"><img src="img/logo/Bus Français.png" width="200" height="200"></a></center>
 						  <nav class="navbar navbar-default" role="navigation">
-							<div class="container mainnav">
-								<div class="navbar-header">
-									<a class="navbar-brand" href="index.html"> </a>
-									<!-- offcanvas-trigger -->
-			                        <button type="button" class="navbar-toggle collapsed pull-right" >
-										<span class="sr-only">Toggle navigation</span>
-										<i class="fa fa-bars"></i>
-									  </button>
-								</div>
-								<div class="collapse navbar-collapse navbar-collapse">
-										<ul class="nav navbar-nav navbar-right">
-												<!-- Home -->
-												<li><a href="index.html">Home</a></li>
-												<!-- /Home -->
+                        <div class="container mainnav">
+                            <div class="navbar-header">
+                                <a class="navbar-brand" href="index.html"> </a>
+                                <!-- offcanvas-trigger -->
+                                <button type="button" class="navbar-toggle collapsed pull-right" >
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <i class="fa fa-bars"></i>
+                                  </button>
+                            </div>
+                            <div class="collapse navbar-collapse navbar-collapse">
+                                    <ul class="nav navbar-nav navbar-right">
+                                            <!-- Home -->
+                                            <li><a href="index.html">Home</a></li>
+                                            <!-- /Home -->
 
-												<!-- Pages -->
-												<li class="dropdown"><a>France Avenir <span class="fa fa-angle-down"></span></a>
-														<!-- submenu-wrapper -->
-														<div class="submenu-wrapper">
-																<div class="submenu-inner">
-																		<ul class="dropdown-menu">
-																				<li><a href="about.html">About</a></li>
-																		</ul>
-																</div>
-														</div>
-														<!-- /submenu-wrapper -->
-												</li>
-												<!-- /Pages -->
-												<li class="dropdown"><a>Ski Français <span class="fa fa-angle-down"></span></a>
-													<!-- submenu-wrapper -->
-													<div class="submenu-wrapper">
-															<div class="submenu-inner">
-																	<ul class="dropdown-menu">
-																			<li><a href="ski.html">Notre Station</a></li>
-																	</ul>
-															</div>
-													</div>
-													<!-- /submenu-wrapper -->
-											</li>
-												<!-- Services -->
-												<li class="dropdown"><a>Bus Français <span class="fa fa-angle-down"></span></a>
-														<!-- submenu-wrapper -->
-														<div class="submenu-wrapper">
-																<div class="submenu-inner">
-																		<ul class="dropdown-menu">
-																				<li><a href="actubf.html">Actu</a></li>
-                                        <li class="dropdown-header"><---  Info sur nos lignes  ---></li>
-                                        <li><img src="https://transport-manager.net/assets/img/lignes/L1.png" width="10%" height="10%"><a href="1.html">Gare Centrale <> Campus Alan Turing</a></li>
-																				<li><img src="https://transport-manager.net/assets/img/lignes/L2.png" width="10%" height="10%"><a href="2.html">Gare Centrale <> Aéroport</a></li>
-																				<li><img src="https://transport-manager.net/assets/img/lignes/L3.png" width="10%" height="10%"><a href="3.html">Gare Centrale <> Campus Marthe Gautier</a></li>
-																				<li><img src="https://transport-manager.net/assets/img/lignes/L4.png" width="10%" height="10%"><a href="4.html">Gare Centrale <> Gare de l'Est</a></li>
-																		</ul>
-																</div>
-														</div>
-														<!-- /submenu-wrapper -->
-												</li>
-												<!-- MEGA MENU -->
-														<li class="dropdown mega-fw has-megamenu"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Train Français <span class="fa fa-angle-down"></span></a>
-																<!-- megamenu-wrapper -->
-																<div class="submenu-wrapper megamenu-wrapper">
-																		<div class="submenu-inner megamenu-inner">
-																		
-																				<ul class="dropdown-menu">
-																						<li>
-																								<div class="mega-content">
-																										<div class="row">
-																										
-																												<div class="col-sm-3 mega-col">
-																														<ul>
-																																<li class="dropdown-header">La compagnie</li>
-																																<li><a href="plan.html">Plan de nos lignes</a></li>
-																																<li><a href="faq.html">FAQ</a></li>																														
-<li><a href="resa.html">Réserver votre billet</a></li>
-</ul>
-																												</div><!-- /.col -->
-																												
-																												
-																												<div class="col-sm-3 mega-col">
-																														<ul>
-																																<li class="dropdown-header">Info de nos ligns</li>
-																																<li><a href="fgv.html">France à Grande Vitesse</a></li>
-                                                        <li><a href="ICE.html">ICEurope</a></li>
-                                                        <li><a href="tfm.html">Train Français Marchandise</a></li>
-																												<li><a href="région.html">France Région</a></li>
-																												<li><a href="fgv.html">Lyon - Bordeaux</a></li>
-																														</ul>
-																												</div><!-- /.col-->
+                                            <!-- Pages -->
+                                            <li class="dropdown"><a>France Avenir <span class="fa fa-angle-down"></span></a>
+                                                    <!-- submenu-wrapper -->
+                                                    <div class="submenu-wrapper">
+                                                            <div class="submenu-inner">
+                                                                    <ul class="dropdown-menu">
+                                                                            <li><a href="about.html">About</a></li>
+                                                                    </ul>
+                                                            </div>
+                                                    </div>
+                                                    <!-- /submenu-wrapper -->
+                                            </li>
+                                            <!-- /Pages -->
+                                            <li class="dropdown"><a>Ski Français <span class="fa fa-angle-down"></span></a>
+                                                <!-- submenu-wrapper -->
+                                                <div class="submenu-wrapper">
+                                                        <div class="submenu-inner">
+                                                                <ul class="dropdown-menu">
+                                                                        <li><a href="ski.html">Notre Station</a></li>
+                                                                </ul>
+                                                        </div>
+                                                </div>
+                                                <!-- /submenu-wrapper -->
+                                        </li>
+                                            <!-- Services -->
+                                            <li class="dropdown"><a>Bus Français <span class="fa fa-angle-down"></span></a>
+                                                    <!-- submenu-wrapper -->
+                                                    <div class="submenu-wrapper">
+                                                            <div class="submenu-inner">
+                                                                    <ul class="dropdown-menu">
+                                                                            <li><a href="actubf.html">Actu</a></li>
+                                                                            <li><a href="tarifsbus.html">Nos tarifs</a></li>
+                                                                            <li class="dropdown-header"><---  Info sur nos lignes  ---></li>
+                                                                            <li><a href="1.html"><img src="https://transport-manager.net/assets/img/lignes/L1.png" width="10%" height="10%"> Gare Centrale <> Campus Alan Turing</a></li>
+                                                                            <li><a href="2.html"><img src="https://transport-manager.net/assets/img/lignes/L2.png" width="10%" height="10%"> Gare Centrale <> Aéroport</a></li>
+                                                                            <li><a href="3.html"><img src="https://transport-manager.net/assets/img/lignes/L3.png" width="10%" height="10%"> Gare Centrale <> Campus Marthe Gautier</a></li>
+                                                                            <li><a href="4.html"><img src="https://transport-manager.net/assets/img/lignes/L4.png" width="10%" height="10%"> Gare Centrale <> Gare de l'Est</a></li>
+                                                                    </ul>
+                                                            </div>
+                                                    </div>
+                                                    <!-- /submenu-wrapper -->
+                                            </li>
+                                            <!-- MEGA MENU -->
+                                                    <li class="dropdown mega-fw has-megamenu"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Train Français <span class="fa fa-angle-down"></span></a>
+                                                            <!-- megamenu-wrapper -->
+                                                            <div class="submenu-wrapper megamenu-wrapper">
+                                                                    <div class="submenu-inner megamenu-inner">
+                                                                    
+                                                                            <ul class="dropdown-menu">
+                                                                                    <li>
+                                                                                            <div class="mega-content">
+                                                                                                    <div class="row">
+                                                                                                    
+                                                                                                            <div class="col-sm-3 mega-col">
+                                                                                                                    <ul>
+                                                                                                                            <li class="dropdown-header">La compagnie</li>
+                                                                                                                            <li><a href="plan.html">Plan de nos lignes</a></li>
+                                                                                                                            <li><a href="inventaire.html">Notre Inventaire</a></li>
+                                                                                                                            <li><a href="resa.html">Réserver votre billet</a></li>
+                                                                                                                            <li><a href="faq.html">FAQ</a></li>
+                                                                                                                    </ul>
+                                                                                                            </div><!-- /.col -->
+                                                                                                            
+                                                                                                            
+                                                                                                            <div class="col-sm-3 mega-col">
+                                                                                                                    <ul>
+                                                                                                                            <li class="dropdown-header">Info de nos lignes</li>
+                                                                                                                            <li><a href="fgv.html">France à Grande Vitesse</a></li>
+                                                    <li><a href="ICE.html">ICEurope</a></li>
+                                                    <li><a href="tfm.html">Train Français Marchandise</a></li>
+                                                                                                            <li><a href="région.html">France Région</a></li>
+                                                                                                            <li><a href="fgv.html">Lyon - Bordeaux</a></li>
+                                                                                                                    </ul>
+                                                                                                            </div><!-- /.col-->
 
 
-																												<div class="col-sm-3 mega-col">
-																														<ul>
-																																<li class="dropdown-header">Au départ de nos gares</li>
-																																<li><a href="départ.html#LP">Lyon Perrache</a></li>
-														<li><a href="départ.html#bsj">Bordeaux St-Jean</a></li>
-														<li><a href="départ.html#PGL">Paris Gare de Lyon</a></li>
-														<li><a href="départ.html#TPN">Torino Porto Nova</a></li>
-														<li><a href="départ.html#tm">Toulouse Matabiau</a></li>
-														<li><a href="départ.html#V">Vénissieux</a></li>
-																														</ul>
-																												</div><!-- /.col--> 
-																										</div><!-- /.row -->
-																								</div><!-- /.mega-content -->
-																						</li>
-																				</ul><!-- /.dropdown menu -->
-																		</div><!-- /.megamenu-inner -->
-																</div> <!-- /.megamenu-wrapper -->
-														</li> <!-- /MEGA MENU -->
-												<!-- /Pages -->
-										</ul>
-								</div><!-- /.navbar-collapse -->
-							</div><!-- /.container -->
-						</nav>
+                                                                                                            <div class="col-sm-3 mega-col">
+                                                                                                                    <ul>
+                                                                                                                            <li class="dropdown-header">Au départ de nos gares</li>
+                                                                                                                            <li><a href="départ.html#LP">Lyon Perrache</a></li>
+                                                    <li><a href="départ.html#bsj">Bordeaux St-Jean</a></li>
+                                                    <li><a href="départ.html#PGL">Paris Gare de Lyon</a></li>
+                                                    <li><a href="départ.html#TPN">Torino Porto Nova</a></li>
+                                                    <li><a href="départ.html#tm">Toulouse Matabiau</a></li>
+                                                    <li><a href="départ.html#V">Vénissieux</a></li>
+                                                                                                                    </ul>
+                                                                                                            </div><!-- /.col--> 
+                                                                                                    </div><!-- /.row -->
+                                                                                            </div><!-- /.mega-content -->
+                                                                                    </li>
+                                                                            </ul><!-- /.dropdown menu -->
+                                                                    </div><!-- /.megamenu-inner -->
+                                                            </div> <!-- /.megamenu-wrapper -->
+                                                    </li> <!-- /MEGA MENU -->
+                                            <!-- /Pages -->
+                                    </ul>
+                            </div><!-- /.navbar-collapse -->
+                        </div><!-- /.container -->
+                    </nav>
 					</header>
 
 	                <section class="page-title-section">
