@@ -1,0 +1,19 @@
+.information{
+    background-color: #007bff;
+    color: #00356f;
+}
+
+.future_work, .current_work{
+    background-color: #ffaa56;
+    color: #a96239;
+}
+
+.disrupted{
+    background-color: #ffe206;
+    color: #b28704;
+}
+
+.interupted{
+    background-color: #ff2222;
+    color: #9e1521;
+}
