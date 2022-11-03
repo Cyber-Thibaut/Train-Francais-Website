@@ -1,19 +1,35 @@
 .information{
+<<<<<<< Updated upstream
     background-color: #007bff;
+=======
+    background-color: #def3fd;
+>>>>>>> Stashed changes
     color: #00356f;
 }
 
 .future_work, .current_work{
+<<<<<<< Updated upstream
     background-color: #ffaa56;
+=======
+    background-color: #f0defd;
+>>>>>>> Stashed changes
     color: #a96239;
 }
 
 .disrupted{
+<<<<<<< Updated upstream
     background-color: #ffe206;
+=======
+    background-color: #fcf7de;
+>>>>>>> Stashed changes
     color: #b28704;
 }
 
 .interupted{
+<<<<<<< Updated upstream
     background-color: #ff2222;
+=======
+    background-color: #fddfdf;
+>>>>>>> Stashed changes
     color: #9e1521;
 }
