@@ -176,7 +176,6 @@ const trafic_list = [
         message: 'La pizza du conducteur est arrivée en retard',
         type: 'information',
         force: 1 // Compris entre 0 et 100, plus c'est élevé, plus de chances d'apparaitre
->>>>>>> Stashed changes
     }
 ];
 
