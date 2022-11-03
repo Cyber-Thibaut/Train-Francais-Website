@@ -1,15 +1,10 @@
 
 const trafic_list = [
     {
-<<<<<<< Updated upstream
-        title: 'titre de ton message',
-        message: 'ton message',
-        type: '',
-=======
+
         title: 'Retard',
         message: 'Absence de conducteur',
         type: 'disrupted',
->>>>>>> Stashed changes
         /*
             '' = rien,
             'information' = information
@@ -18,21 +13,6 @@ const trafic_list = [
             'disrupted' = perturbation
             'interupted' = interruption
         */
-<<<<<<< Updated upstream
-        force: 10 // Compris entre 0 et 100, plus c'est élevé, plus de chances d'apparaitre
-    },
-    {
-        title: 'titre du deuxiemme message',
-        message: 'ton message',
-        type: 'disrupted',
-        force: 40 // Compris entre 0 et 100, plus c'est élevé, plus de chances d'apparaitre
-    },
-    {
-        title: 'titre du dernier message',
-        message: 'ton message',
-        type: 'interupted',
-        force: 20 // Compris entre 0 et 100, plus c'est élevé, plus de chances d'apparaitre
-=======
         force: 1 // Compris entre 0 et 100, plus c'est élevé, plus de chances d'apparaitre
     },
     {
@@ -203,22 +183,14 @@ const trafic_list = [
 function printTraficStatus(){
     const el_title =    document.getElementById('trafic_title');
     const el_message =  document.getElementById('trafic_message');
-<<<<<<< Updated upstream
-    const el_force =    document.getElementById('trafic_force');
-=======
     //const el_force =    document.getElementById('trafic_force');
->>>>>>> Stashed changes
     const el_block =    document.getElementById('trafic_block');
 
     const message = getRandomTrafic(trafic_list);
     
     el_title.innerHTML = message.title;
     el_message.innerHTML = message.message;
-<<<<<<< Updated upstream
-    el_force.innerHTML = message.force;
-=======
     //el_force.innerHTML = message.force;
->>>>>>> Stashed changes
 
     el_block.classList.add(message.type);
 }
