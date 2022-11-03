@@ -43,7 +43,7 @@ const trafic_list = [
         title: 'Travaux',
         message: 'Travaux sur la voie je peux pas écraser les ouvriers donc bah tu patiente et TU FERME TA BOUCHE !',
         type: 'current_work',
-        force: 1 // Compris entre 0 et 100, plus c'est élevé, plus de chances d'apparaitre
+        force: 0 // Compris entre 0 et 100, plus c'est élevé, plus de chances d'apparaitre
     },
     {
         title: 'Suspension trafic',
