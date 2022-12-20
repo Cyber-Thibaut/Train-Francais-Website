@@ -622,7 +622,11 @@ SECTION
 
 /*top-bar*/
 .top-bar {
-  background: url(../img/topbar-bg.jpg) no-repeat;
+  background: url(../img/images/Wallpaper.jpg) no-repeat;
+  background-size: cover;
+}
+.top-bar-14 {
+  background: url(../img/blog/14-07.jpg) no-repeat;
   background-size: cover;
 }
 
