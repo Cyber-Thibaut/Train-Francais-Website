@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 	<head>
 	    <meta charset="utf-8">
@@ -20,8 +20,9 @@
 		<meta name="description" content="Train Français, une compagnie du jeu Train Empire (http://train-empire.com) Bienvenu sur notre réseau !">
 	    <meta name="author" content="">
 		<link rel="shortcut icon" href="img/favicon.png" type="">
-	    <title>Train Français - Les départs & Arrrivées en temps réel</title>
-	    	   	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,400italic,700,700italic,900,900italic,500italic' rel='stylesheet' type='text/css'>
+
+	    <title>Train Français - FGV</title>
+	   	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,400italic,700,700italic,900,900italic,500italic' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
      	<!-- Web Fonts -->
      	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
@@ -53,46 +54,19 @@
 
      	<script src="js/vendor/modernizr-2.8.1.min.js"></script>
         <style>
-            .tag {
-            background-color: #eee;
+           	.tag {
+           	background-color: #eee;
             color: rgb(172, 29, 29);
             border-radius: 3px;
             padding: 2px 4px;
             font-size: 12px;
             margin-left: 10px;
             }
-
-            
         </style>
 	</head>
 
 
 	<body id="page-top">
-		<div id="st-container" class="st-container">
-		    <div class="st-pusher">
-	        	<div class="st-content">
-				  	<header class="header">		 
-		<div id="st-container" class="st-container">
-		    <div class="st-pusher">
-	        	<div class="st-content">
-				  	<header class="header">
-				  		<nav class="top-bar">
-				  			<div class="overlay-bg">
-					  			<div class="container">
-					  				<div class="row">
-					  					
-					  					<div class="col-sm-6 col-xs-12">
-						  					<div class="call-to-action">
-						  						<ul class="list-inline">
-                                                    <li><a href="mailto:train-francais@protonmail.com"><i class="fa fa-envelope"></i>train-francais@protonmail.com</a></li>
-						  						</ul>
-						  					</div><!-- /.call-to-action -->
-					  					</div><!-- /.col-sm-6 -->
-					  				</div><!-- /.row -->
-					  			</div><!-- /.container -->
-				  			</div><!-- /.overlay-bg -->
-				  		</nav><!-- /.top-bar -->
-						  <center><a href="index.html"><img src="img/logo/Bus Français.png" width="200" height="200"></a></center><body id="page-top">
 		<div id="st-container" class="st-container">
 		    <div class="st-pusher">
 	        	<div class="st-content">
@@ -132,6 +106,8 @@
                                                             <div class="submenu-inner  submenu-inner-topbottom">
                                                                 <ul class="dropdown-menu">
 																	<li><a href="about.html">About</a></li>
+																	<li><a href="livrées.html">Nos livrées</a></li>
+																	<li><a href="infotrafic.html">Information Trafic</a></li>
 																</ul>
 													    	</div>
 														</div>
@@ -156,6 +132,8 @@
                                                             <div class="submenu-inner  submenu-inner-topbottom">
                                                                 <ul class="dropdown-menu">
 																	<li><a href="actubf.html">Actu</a></li>
+																	<li><a href="infotrafic.html">Information Trafic</a></li>
+																	<li><a href="tarifsbus.html">Nos Tarifs <span class="tag">ATTENTION !</span></a></li>
                                                                     <li class="dropdown-header"><---  Info sur nos lignes  ---></li>
                                                                     <li overflow: hidden; text-overflow: ellipsis; white-space: nowrap;>
                                                                         <a href="1.html">
@@ -181,12 +159,7 @@
                                                                           Gare Centrale <> Gare de l'Est
                                                                         </a>
                                                                       </li>
-                                                                      <li>
-                                                                        <a href="#">
-                                                                          FloTransport
-                                                                          <span class="tag">NOUVEAU !</span>
-                                                                        </a>
-                                                                      </li>                                                                    
+                                                                      <li><a href="infotrafic.html">Information Trafic</a></li>                                                                    
                                                                   </ul>
 															</div>
 														</div>
@@ -198,6 +171,9 @@
                                                         <div class="submenu-inner  submenu-inner-topbottom">
                                                             <ul class="dropdown-menu">
                                                                 <li><a href="plan.html">Plan de nos lignes</a></li>
+																<li><a href="inventaire.html">Notre Inventaire</a></li>
+																<li><a href="infotrafic.html">Information Trafic</a></li>
+																<li><a href="resa.html">Réserver un billet</a></li>
                                                                 <li><a href="faq.html">FAQ</a></li>
                                                             </ul>
                                                         </div>
@@ -230,13 +206,13 @@
                                                     			<li><a href="départ.html#PGL">Paris Gare de Lyon</a></li>
                                                     			<li><a href="départ.html#TPN">Torino Porto Nova</a></li>
                                                     			<li><a href="départ.html#tm">Toulouse Matabiau</a></li>
-                                                    			<li><a href="départ.html#CF">Clermont-Ferrand</a><span class="tag">NOUVEAU !</span></li>
+                                                    			<li><a href="départ.html#CF">Clermont-Ferrand <span class="tag">NOUVEAU !</span></a></li>
                                                             </ul>
                                                         </div>
                                                     </div>
                                                     <!-- /submenu-wrapper -->
                                                 </li>
-                                                <li><a href="franceavenir.html">France Avenir, l'alliance</a><span class="tag">NOUVEAU !</span></li>	
+                                                <li><a href="franceavenir.html">France Avenir, l'alliance <span class="tag">NOUVEAU !</span></a></li>	
 											</ul>
                                         </div><!-- /.navbar-collapse -->
                                 </nav>
@@ -249,152 +225,116 @@
                                 <div class="col-xs-12">
                                     <div class="page-header-wrap">
                                         <div class="page-header">
-									   		<h1>Air transportations</h1>
-									   	</div>
-									   <ol class="breadcrumb">
-										  <li><a href="#">Home</a></li>
-										  <li class="active">Air transportations</li>
+									   		<a><center><img src="img/images/FGV.png" alt=""></center></a>
+											<h2>La France à Grande Vitesse</h2>
+									   </div>
+                                       </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </header>
+				<section class="single-service-wrap">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-9">
+								<div class="single-service-content">
+									<center><h2>Le train, le plus rapide et le plus sûr pour vos déplacements en France.</h2></center>
+									<div id="main-carousel" class="carousel slide hero-slide" data-ride="carousel">
+										<!-- Indicators -->
+										<ol class="carousel-indicators">
+											<li data-target="#main-carousel" data-slide-to="0" class="active"></li>
+											<li data-target="#main-carousel" data-slide-to="1"></li>
+											<li data-target="#main-carousel" data-slide-to="2"></li>
+											<li data-target="#main-carousel" data-slide-to="3"></li>
+											<li data-target="#main-carousel" data-slide-to="4"></li>
 										</ol>
+										<!-- Wrapper for slides -->
+										<div class="carousel-inner" role="listbox">
+											<div class="carousel-inner">
+                                                <div class="item active">
+                                                    <img class="img-responsive" src="https://live.staticflickr.com/65535/52223922276_948fb77617_k.jpg" alt="">
+                                                </div>
+                                                <div class="item">
+                                                    <img class="img-responsive" src="https://live.staticflickr.com/65535/52224419375_ab2e0af342_k.jpg" alt="">
+                                                </div>
+												<div class="item">
+                                                    <img class="img-responsive" src="https://live.staticflickr.com/65535/52223922346_11d8d0a36d_k.jpg" alt="">
+                                                </div>
+												<div class="item">
+                                                    <img class="img-responsive" src="https://live.staticflickr.com/65535/51891427038_3527e9c6d1_k.jpg" alt="">
+                                                </div>
+												<div class="item">
+                                                    <img class="img-responsive" src="https://live.staticflickr.com/65535/51891993860_a42852fc01_k.jpg" alt="">
+                                                </div>
+                                            </div>
+										</div>
+										<!--.carousel-inner-->
+										<!-- Controls -->
+										<a class="left carousel-control" href="#main-carousel" role="button" data-slide="prev">
+											<i class="fa fa-angle-left" aria-hidden="true"></i>
+											<span class="sr-only">Précédent</span>
+										</a>
+										<a class="right carousel-control" href="#main-carousel" role="button" data-slide="next">
+											<i class="fa fa-angle-right" aria-hidden="true"></i>
+											<span class="sr-only">Suivant</span>
+										</a>
 									</div>
 								</div>
+								<br>
+								<blockquote>
+									Train Français offre un service de transport à grande vitesse à travers la France. Notre service FGV offre des trajets rapides et sûrs à des tarifs abordables pour vous permettre de vous rendre facilement à votre destination. Notre flotte de trains modernes et à la pointe de la technologie vous permet de voyager dans le confort et la sécurité. Nous travaillons en étroite collaboration avec nos partenaires pour vous offrir un service optimal et une sécurité optimale. Notre service offre également des tarifs préférentiels, des réservations flexibles et des billets sans frais de changement. Avec Train Français, vous êtes assuré d'arriver à votre destination à temps tout en économisant du temps et de l'argent.
+								</blockquote>
 							</div>
+							
+							<div class="col-sm-3">
+								<div class="sidebar-wrapper">
+									<div class="widget">
+										<h2 class="widget-title">Nos autres compagnies</h2>
+											<div class="download-wrap company">
+												<div class="download-wrap company">
+													<a href="fgv.html">France à Grande Vitesse<span>France</span><i class="fa fa-train"></i></a>
+												</div> <!-- /.download-wrap -->
+												<div class="download-wrap annual">
+													<a href="ICE.html">ICEurope<span>Italie, Espagne, Autriche...</span><i class="fa fa-train"></i></a>
+												</div> <!-- /.download-wrap -->
+												<div class="download-wrap brochure">
+													<a href="ICSuisse.html">ICSuisses<span>Suisse</span><i class="fa fa-train"></i></a>
+												</div> <!-- /.download-wrap -->
+												<div class="download-wrap company">
+													<a href="région.html">France Région<span>France</span><i class="fa fa-train"></i></a>
+												</div> <!-- /.download-wrap -->
+												<div class="download-wrap annual">
+													<a href="tel.html">Train Express Lyonnais<span>Lyon</span><i class="fa fa-train"></i></a>
+												</div> <!-- /.download-wrap -->
+												<div class="download-wrap brochure">
+													<a href="tfm.html">Train Français Marchandise<span>Europe</span><i class="fa fa-pallet"></i></a>
+												</div> <!-- /.download-wrap -->
+											</div><!-- /.widget -->  
+										</div><!-- /.widget -->
+									</div>
+								</div><!-- /.col -->
+							</div>
+							<h1>Informations pratiques</h1>
+							<HR ALIGN=CENTER WIDTH="100%">
+							<h1>Les Services à Bord</h1>
+							<div class="container">
+							<ul class="service-list">
+								<li><img src="https://train-empire.com/fr/images/serv4.png"WIDTH="60" height="60"/> Accès Wi-Fi</li><br>
+								<li><img src="https://train-empire.com/fr/images/serv5.png"WIDTH="60" height="60"/> Écrans d'Information</li><br>
+								<li><img src="https://train-empire.com/fr/images/serv1.png"WIDTH="60" height="60"/> Restauration à la place</li><br>
+								<li><img src="https://train-empire.com/fr/images/serv2.png"WIDTH="60" height="60"/> Prêt de journaux et magazines</li><br>
+								<li><img src="https://train-empire.com/fr/images/resto14.png"WIDTH="60" height="60"/> Restauration Gastronomique</li><br>
+							</ul>
 						</div>
-					</section>
-
-					<!-- Single-Service-Start -->
-					<section class="single-service-contents">
-						<div class="container">
-							<div class="row">
-								<div class="col-md-3 col-sm-5 col-xs-12">
-									<div class="service-sidebar sidebar-wrapper">
-
-									    <div class="widget">
-									        <h2 class="widget-title">Services</h2>
-								            <ul class="service-list">
-                                            	<li class="active"><a href="air.html" class="icon-air">Air transportation</a></li>
-                                                <li><a href="marine.html" class="icon-marine">Marine transportation</a></li>
-                                                <li><a href="moving.html" class="icon-store">Moving &amp; storage</a></li>
-                                                <li><a href="shipping.html" class="icon-shipping">Shipping &amp; operations</a></li>
-                                                <li><a href="transportation.html" class="icon-transportation">Transportation logistics</a></li>
-                                                <li><a href="trucking.html" class="icon-trucking">Trucking</a></li>
-                                            </ul>
-									    </div><!-- /.widget -->
-
-									    <div class="widget">
-									        <div class="download-wrap company">
-									            <a href="#">Company profile <span>Download</span><i class="fa fa-download"></i></a>
-									        </div> <!-- /.download-wrap -->
-									        <div class="download-wrap annual">
-									            <a href="#">Annual Report <span>Download</span><i class="fa fa-download"></i></a>
-									        </div> <!-- /.download-wrap -->
-									        <div class="download-wrap brochure">
-									            <a href="#">Corporate Brochure <span>Download</span><i class="fa fa-download"></i></a>
-									        </div> <!-- /.download-wrap -->
-									    </div><!-- /.widget -->   
-
-									    <div class="widget">
-									        <h2 class="widget-title">Office Hours</h2>
-									        <div class="textwidget">
-									            <p>Monday -
-									            Friday: 9:00 - 18:00<br>
-									            Saturday: 9:00 - 2:00<br>
-									            Holidays: 9:00 - 12:00</p>
-									        </div>
-									    </div><!-- /.widget -->                
-									</div><!-- /.sidebar-wrapper -->
-								</div><!-- /.col -->
-								<div class="col-md-9 col-sm-7 col-xs-12">
-									<div class="single-service-content">
-										<div class="single-service-thumb">
-											<img src="img/service/airthumb.jpg" alt="image"/>
-										</div>
-										<h2>Dynamically leverage existing synergistic systems whereas future-proof sources</h2>
-										<p>Synergistically grow optimal total linkage after best-of-breed channels. Continually redefine B2C methodologies after equity invested channels. Dramatically drive just in time bandwidth rather than enterprise potentialities.Dramatically drive just in time bandwidth rather than enterprise potentialities.Dramatically drive just in time bandwidth.Continually redefine B2C methodologies after equity invested channels. Dramatically drive just in time bandwidth rather than enterprise potentialities.</p><br>
-										<p>Professionally disintermediate future-proof alignments and bleeding-edge infomediaries. Energistically harness interactive applications without transparent functionalities. Quickly facilitate maintainable web-readiness with standards compliant leadership skills. Appropriately create performance based alignments after cooperative methods of empowerment. Compellingly transition bleeding-edge partnerships via covalent communities.</p>
-										<br>
-										<p>Phosfluorescently facilitate low-risk high-yield action items for integrated core competencies. Uniquely strategize market-driven communities and diverse strategic theme areas.</p>
-									</div><!-- /.single-service-content -->
-									
-								</div><!-- /.col -->
-							</div><!-- /.row -->
-						</div><!-- /.container -->
+						<h2>Information Trafic</h2>
+                                        <br>
+                                        Aucun incident à signaler ;)
 					</section>
 					<!-- Single-Service-End-->
-
-
-			        <!-- cta start -->
-			        <section class="cta-section">
-			        	<div class="container text-center">
-			        		<a data-toggle="modal" data-target="#quoteModal" href="#" class="btn btn-primary quote-btn">Get a Quote</a>
-
-							<!-- Modal -->
-							<div class="modal fade" id="quoteModal" tabindex="-1" role="dialog" aria-labelledby="quoteModalLabel" aria-hidden="true">
-							  <div class="modal-dialog modal-lg">
-							    <div class="modal-content">
-							      <div class="modal-header">
-							        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-							        <h4 class="modal-title" id="quoteModalLabel">Request a rate for the shipping of your goods.</h4>
-							      </div>
-							      <div class="modal-body">
-									<form id="contactForm" action="sendemail.php" method="POST">
-										<div class="row">
-											<div class="col-md-6">
-												<div class="form-group">
-												    <label for="name">Name</label>
-												    <input id="name" name="name" type="text" class="form-control"  required="" placeholder="">
-												</div>
-											</div>
-											<div class="col-md-6">
-											  <div class="form-group">
-											    <label for="company">Company Name</label>
-											    <input id="company" name="company" type="text" class="form-control" placeholder="">
-											  </div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-md-6">
-											  <div class="form-group">
-											    <label for="phone">Phone Number</label>
-											    <input id="phone" name="phone" type="text" class="form-control" placeholder="">
-											  </div>
-											</div>
-											<div class="col-md-6">
-											  <div class="form-group">
-											    <label for="email">Email address</label>
-											    <input id="email" name="email" type="email" class="form-control" required="" placeholder="">
-											  </div>
-											</div>
-										</div>
-
-										<div class="row">
-											<div class="col-md-6">
-											  <div class="form-group">
-											    <label for="city">City Name</label>
-											    <input id="city" name="city" type="text" class="form-control" placeholder="">
-											  </div>
-											</div>
-											<div class="col-md-6">
-											  <div class="form-group">
-											    <label for="subject">Subject</label>
-											    <input id="subject" name="subject" type="text" class="form-control" required="" placeholder="">
-											  </div>
-											</div>
-										</div>
-										<div class="form-group text-area">
-											<label for="message">Your Message</label>
-											<textarea id="message" name="message" class="form-control" rows="6" required="" placeholder=""></textarea>
-										</div>
-
-										<button type="submit" class="btn btn-primary">Send Message</button>
-									</form>
-							      </div>
-							    </div>
-							  </div>
-							</div>
-
-			        	</div><!-- /.container -->
-			        </section><!-- /.cta-section -->
-			        <!-- cta end -->
+				
 
 			        <!-- footer-widget-section start -->
 			        <section class="footer-widget-section section-padding">
@@ -465,72 +405,113 @@
 			
 			<!-- OFF CANVAS MENU -->
 	    	<div class="offcanvas-menu offcanvas-effect">
-				<a><img src="img/logo.png" alt=""></a>	
-	    		<div class="offcanvas-wrap">
-			        <div class="off-canvas-header">
-			        	<button type="button" class="close" aria-hidden="true" data-toggle="offcanvas" id="off-canvas-close-btn">&times;</button>
-			        </div>
-			        <ul id ="offcanvasMenu" class="list-unstyled visible-xs visible-sm">
-			            <li class="dropdown"><a href="index.html">Home <span class="fa fa-angle-down"></span></a>
-							<!-- submenu-wrapper -->
-							<div class="submenu-wrapper">
-								<div class="submenu-inner">
-									<ul class="dropdown-menu">
-										<li><a href="about.html">About</a></li>
-										<li><a href="faq.html">FAQ Page</a></li>
-									</ul>
-								</div>
-							</div>
-							<!-- /submenu-wrapper -->
-						</li>
-						<!-- /Home -->
-						<!-- Services -->
-						<li class="dropdown"><a>Informations Trafic<span class="fa fa-angle-down"></span></a>
-							<!-- submenu-wrapper -->
-							<div class="submenu-wrapper">
-								<div class="submenu-inner">
-									<ul class="dropdown-menu">
-										<li><a href="fgv.html">France à Grande Vitesse</a></li>
-										<li><a href="ICE.html">ICEurope</a></li>
-										<li><a href="tfm.html">Train Français Marchandise</a></li>
-										<li><a href="région.html">France Région</a></li>
-									</ul>
-								</div>
-							</div>
-							<!-- /submenu-wrapper -->
-						</li>
-						<li class="dropdown"><a>Au départ de nos gares principales<span class="fa fa-angle-down"></span></a>
-							<!-- submenu-wrapper -->
-							<div class="submenu-wrapper">
-								<div class="submenu-inner">
-									<ul class="dropdown-menu">
-										<li><a href="départ.html#LP">Lyon Perrache</a></li>
-										<li><a href="départ.html#bsj">Bordeaux St-Jean</a></li>
-										<li><a href="départ.html#PGL">Paris Gare de Lyon</a></li>
-										<li><a href="départ.html#TPN">Torino Porto Nova</a></li>
-										<li><a href="départ.html#tm">Toulouse Matabiau</a></li>
-										<li><a href="départ.html#CF">Clermont-Ferrand</a></li>
-									</ul>
-								</div>
-							</div>
-							<!-- /submenu-wrapper -->
-						</li>
-						<!-- /Pages -->
-						<!-- Blog -->
-						<li><a href="faq.html">FAQ </a></li>
-						<li><a href="plan.html">Plan de nos lignes</a></li>
-						<br><center><a href="https://twitter.com/FrancaisTrain?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-lang="fr" data-show-count="false">Follow @FrancaisTrain</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></center>
+                <div class="offcanvas-wrap">
+                    <div class="off-canvas-header">
+                        <button type="button" class="close" aria-hidden="true" data-toggle="offcanvas" id="off-canvas-close-btn">&times;</button>
+                    </div>
+				<a><img src="img/logo/franceavenir.png" alt=""></a>	
+                <ul id ="offcanvasMenu" class="list-unstyled visible-xs visible-sm">
+                    <li class="active"><a href="index.html">Home<span class="sr-only">(current)</span></a></li>
+                    <li>
+                        <a href="#">France Avenir</a>
+                        <ul>
+                            <li><a href="about.html">About</a></li>
+							<li><a href="livrées.html">Nos livrées</a></li>
+							<li><a href="infotrafic.html">Information Trafic</a></li>
                         </ul>
-						<div class="offcanvas-widgets hidden-sm hidden-xs">
-							<div id="twitterWidget">			    	
-								<a class="twitter-timeline" data-lang="fr" href="https://twitter.com/FrancaisTrain?ref_src=twsrc%5Etfw">Tweets by FrancaisTrain</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
-							</div>
-						</div>	    
-						</div><!-- newsletter-widget -->
-					</div>
-				</div>
-	      	</div><!-- .offcanvas-menu -->
-		</div><!-- /st-container -->
+
+                    </li>
+                    <li><a href="#">Ski Français</a>
+                        <ul>
+                            <li><a href="ski.html">Notre Station</a></li>
+                        </ul>
+                    </li>
+					<li><a href="#">Bus Français</a>
+                        <ul>
+                            <li><a href="actubf.html">Actu</a></li>
+																	<li><a href="infotrafic.html">Information Trafic</a></li>
+																	<li><a href="tarifsbus.html">Nos Tarifs <span class="tag">ATTENTION !</span></a></li>
+                                                                    <li class="dropdown-header"><---  Info sur nos lignes  ---></li>
+                                                                    <li overflow: hidden; text-overflow: ellipsis; white-space: nowrap;>
+                                                                        <a href="1.html">
+                                                                          <img src="https://transport-manager.net/assets/img/lignes/L1.png" alt="Gare Centrale <> Campus Cezeaux" width="10%" max-height="10%">
+                                                                          Gare Centrale <> Campus Cezeaux
+                                                                        </a>
+                                                                      </li>
+                                                                      <li>
+                                                                        <a href="2.html">
+                                                                          <img src="https://transport-manager.net/assets/img/lignes/L2.png" alt="Gare Centrale <> Aéroport" width="10%" height="10%">
+                                                                          Gare Centrale <> Aéroport
+                                                                        </a>
+                                                                      </li>
+                                                                      <li overflow: hidden; text-overflow: ellipsis; white-space: nowrap;>
+                                                                        <a href="3.html">
+                                                                          <img src="https://transport-manager.net/assets/img/lignes/L3.png" alt="Gare Centrale <> Campus Marthe Gautier" width="10%" height="10%">
+                                                                          Gare Centrale <> Campus Marthe Gautier
+                                                                        </a>
+                                                                      </li>
+                                                                      <li>
+                                                                        <a href="4.html">
+                                                                          <img src="https://transport-manager.net/assets/img/lignes/L4.png" alt="Gare Centrale <> Gare de l'Est" width="10%" height="10%">
+                                                                          Gare Centrale <> Gare de l'Est
+                                                                        </a>
+                                                                      </li>                                          </li>
+                        </ul>
+                    </li>
+					<li><a href="#">Train Français - Information Pratiques</a>
+                        <ul>
+                            <li><a href="plan.html">Plan de nos lignes</a></li>
+							<li><a href="inventaire.html">Notre Inventaire</a></li>
+							<li><a href="infotrafic.html">Information Trafic</a></li>
+							<li><a href="resa.html">Réserver un billet</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                        </ul>
+                    </li>
+					<li><a href="#">Train Français - Au départ de nos gares</a>
+                        <ul>
+                            <li><a href="départ.html#LP">Lyon Perrache</a></li>
+                                                    			<li><a href="départ.html#bsj">Bordeaux St-Jean</a></li>
+                                                    			<li><a href="départ.html#PGL">Paris Gare de Lyon</a></li>
+                                                    			<li><a href="départ.html#TPN">Torino Porto Nova</a></li>
+                                                    			<li><a href="départ.html#tm">Toulouse Matabiau</a></li>
+                                                    			<li><a href="départ.html#CF">Clermont-Ferrand <span class="tag">NOUVEAU !</span></a></li>
+                        </ul>
+                    </li>
+					<li><a href="#">Informations sur nos lignes</a>
+                        <ul>
+                            <li><a href="fgv.html"><i class="fas fa-train"></i> France à Grande Vitesse</a></li>
+    															<li><a href="ICE.html"><i class="fas fa-train"></i> ICEurope</a></li>
+    															<li><a href="ICSuisse.html"><i class="fas fa-train"></i> ICSuisse</a></li>
+    															<li><a href="région.html"><i class="fas fa-train"></i> France Région</a></li>
+    															<li><a href="tel.html"><i class="fas fa-train"></i> Train Express Lyonnais</a></li>
+    															<li><a href="tfm.html"><i class="fas fa-pallet"></i> Train Français Marchandise</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="franceavenir.html">France Avenir, l'alliance <span class="tag">NOUVEAU !</span></a></li>
+                </ul>
+                <div class="offcanvas-widgets hidden-sm hidden-xs">
+                    <div id="twitterWidget">
+                        <h2>Tweeter feed</h2>                       
+                        <div class="twitter-widget"><a class="twitter-timeline" data-lang="fr" data-height="300" href="https://twitter.com/FrancaisTrain?ref_src=twsrc%5Etfw">Tweets by FrancaisTrain</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+                    </div>
+                    <div class="newsletter-widget">
+                        <h2>Stay in Touch</h2>
+                        <p>Enter your email address to receive news &amp; offers from us</p>
+
+                        <form class="newsletter-form">
+                            <div class="form-group">
+                                <label class="sr-only" for="InputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="InputEmail2" placeholder="Your email address">
+                                <button type="submit" class="btn">Send &nbsp;<i class="fa fa-angle-right"></i></button>
+                            </div>
+                        </form>     
+                                            
+                    </div><!-- newsletter-widget -->
+                </div>
+
+            </div>
+        </div><!-- .offcanvas-menu -->
+    </div><!-- /st-container -->
 
 
 		<!-- Preloader -->
@@ -539,7 +520,6 @@
 				<div class="status-mes"></div>
 			</div>
 		</div>
-
 
 		<!-- jQuery -->
         <script src="js/jquery.js"></script>

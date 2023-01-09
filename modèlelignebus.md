@@ -20,7 +20,7 @@
 		<meta name="description" content="Bus Français, une compagnie du jeu Transport Manager (https://transport-manager.net) Bienvenu sur notre réseau !">
 	    <meta name="author" content="">
 		<link rel="shortcut icon" href="img/logo/Bus Français.png" type="">
-	    <title>Bus Français - Ligne 999</title>
+	    <title>Bus Français - Ligne 1</title>
 	    	   	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,400italic,700,700italic,900,900italic,500italic' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
      	<!-- Web Fonts -->
@@ -71,32 +71,7 @@
 		<div id="st-container" class="st-container">
 		    <div class="st-pusher">
 	        	<div class="st-content">
-				  	<header class="header">		 
-		<div id="st-container" class="st-container">
-		    <div class="st-pusher">
-	        	<div class="st-content">
-				  	<header class="header">
-				  		<nav class="top-bar">
-				  			<div class="overlay-bg">
-					  			<div class="container">
-					  				<div class="row">
-					  					
-					  					<div class="col-sm-6 col-xs-12">
-						  					<div class="call-to-action">
-						  						<ul class="list-inline">
-                                                    <li><a href="mailto:train-francais@protonmail.com"><i class="fa fa-envelope"></i>train-francais@protonmail.com</a></li>
-						  						</ul>
-						  					</div><!-- /.call-to-action -->
-					  					</div><!-- /.col-sm-6 -->
-					  				</div><!-- /.row -->
-					  			</div><!-- /.container -->
-				  			</div><!-- /.overlay-bg -->
-				  		</nav><!-- /.top-bar -->
-						  <center><a href="index.html"><img src="img/logo/Bus Français.png" width="200" height="200"></a></center><body id="page-top">
-		<div id="st-container" class="st-container">
-		    <div class="st-pusher">
-	        	<div class="st-content">
-				  	<header class="header">		 
+				  	<header class="header">	 
 		<div id="st-container" class="st-container">
 		    <div class="st-pusher">
 	        	<div class="st-content">
@@ -132,6 +107,8 @@
                                                             <div class="submenu-inner  submenu-inner-topbottom">
                                                                 <ul class="dropdown-menu">
 																	<li><a href="about.html">About</a></li>
+																	<li><a href="livrées.html">Nos livrées</a></li>
+																	<li><a href="infotrafic.html">Information Trafic</a></li>
 																</ul>
 													    	</div>
 														</div>
@@ -156,6 +133,8 @@
                                                             <div class="submenu-inner  submenu-inner-topbottom">
                                                                 <ul class="dropdown-menu">
 																	<li><a href="actubf.html">Actu</a></li>
+																	<li><a href="infotrafic.html">Information Trafic</a></li>
+																	<li><a href="tarifsbus.html">Nos Tarifs <span class="tag">ATTENTION !</span></a></li>
                                                                     <li class="dropdown-header"><---  Info sur nos lignes  ---></li>
                                                                     <li overflow: hidden; text-overflow: ellipsis; white-space: nowrap;>
                                                                         <a href="1.html">
@@ -181,12 +160,7 @@
                                                                           Gare Centrale <> Gare de l'Est
                                                                         </a>
                                                                       </li>
-                                                                      <li>
-                                                                        <a href="#">
-                                                                          FloTransport
-                                                                          <span class="tag">NOUVEAU !</span>
-                                                                        </a>
-                                                                      </li>                                                                    
+                                                                      <li><a href="infotrafic.html">Information Trafic</a></li>                                                                    
                                                                   </ul>
 															</div>
 														</div>
@@ -198,6 +172,9 @@
                                                         <div class="submenu-inner  submenu-inner-topbottom">
                                                             <ul class="dropdown-menu">
                                                                 <li><a href="plan.html">Plan de nos lignes</a></li>
+																<li><a href="inventaire.html">Notre Inventaire</a></li>
+																<li><a href="infotrafic.html">Information Trafic</a></li>
+																<li><a href="resa.html">Réserver un billet</a></li>
                                                                 <li><a href="faq.html">FAQ</a></li>
                                                             </ul>
                                                         </div>
@@ -230,13 +207,13 @@
                                                     			<li><a href="départ.html#PGL">Paris Gare de Lyon</a></li>
                                                     			<li><a href="départ.html#TPN">Torino Porto Nova</a></li>
                                                     			<li><a href="départ.html#tm">Toulouse Matabiau</a></li>
-                                                    			<li><a href="départ.html#CF">Clermont-Ferrand</a><span class="tag">NOUVEAU !</span></li>
+                                                    			<li><a href="départ.html#CF">Clermont-Ferrand <span class="tag">NOUVEAU !</span></a></li>
                                                             </ul>
                                                         </div>
                                                     </div>
                                                     <!-- /submenu-wrapper -->
                                                 </li>
-                                                <li><a href="franceavenir.html">France Avenir, l'alliance</a><span class="tag">NOUVEAU !</span></li>	
+                                                <li><a href="franceavenir.html">France Avenir, l'alliance <span class="tag">NOUVEAU !</span></a></li>	
 											</ul>
                                         </div><!-- /.navbar-collapse -->
                                 </nav>
@@ -249,7 +226,8 @@
                                 <div class="col-xs-12">
                                     <div class="page-header-wrap">
                                         <div class="page-header">
-												 <h1>Ligne <img src="img/blog/L999.png"> - Canoë Départ <> Canoë Arrivée</h1>
+												 <h1>Ligne <img src="https://transport-manager.net/assets/img/lignes/L1.png"> - Gare Centrale <> Campus Cezeaux</h1>
+												 
 									   </div>
                                        </div>
                                     </div>
@@ -261,64 +239,48 @@
                 </header>
 
 					<!-- Single-Service-Start -->
-					<section class="single-service-contents">
+					<section class="single-service-wrap">
 						<div class="container">
 							<div class="row">
-								<div class="col-md-3 col-sm-5 col-xs-12">
-									<div class="service-sidebar sidebar-wrapper">
+								<div class="col-sm-9">
+									<div class="single-service-content">
+										<div class="single-service-thumb">
+											<img src="https://transport-manager.net/assets/img/lignes/N1_L1_trans1.png" alt="image"/>
+										</div>
+										<h2>Pratique, fiable, abordable.</h2>
+										<p>La ligne de bus 1 relie la gare centrale de Clermont-Ferrand au campus des cezeaux, offrant ainsi aux usagers un moyen pratique et fiable de se déplacer entre les deux points. Le trajet dure environ 25 minutes, avec des arrêts à des points stratégiques tels que le hôtel de région et le CHU. La ligne de bus 1 est un service fiable et sûr et propose des tarifs abordables pour tous les types de voyageurs.</p>				
+									</div><!-- /.single-service-content -->
+									
+								</div><!-- /.col -->
+								<div class="col-sm-3">
+									<div class="sidebar-wrapper">
 
 									    <div class="widget">
 									        <h2 class="widget-title">Nos lignes</h2>
-								            <ul class="service-list">
-																							<li><img src="https://transport-manager.net/assets/img/lignes/L1.png" width="10%" height="10%"><a href="1.html">Gare Centrale <> Campus Cezeaux</a></li>
-																							<li><img src="https://transport-manager.net/assets/img/lignes/L2.png" width="10%" height="10%"><a href="2.html">Gare Centrale <> Aéroport</a></li>
-																							<li><img src="https://transport-manager.net/assets/img/lignes/L3.png" width="10%" height="10%"><a href="3.html">Gare Centrale <> Campus Marthe Gautier</a></li>
-																							<li><img src="https://transport-manager.net/assets/img/lignes/L4.png" width="10%" height="10%"><a href="4.html">Gare Centrale <> Gare de l'Est</a></li>
-                                            </ul>
+								            <div class="widget">
+												<div class="download-wrap company">
+													<a href="2.html">Ligne 2 <span>Gare Centrale <> Aéroport</span><i class="fa fa-bus"></i></a>
+												</div> <!-- /.download-wrap -->
+												<div class="download-wrap annual">
+													<a href="3.html">Ligne 3 <span>Gare Centrale <> Campus Marthe Gautier</span><i class="fa fa-bus"></i></a>
+												</div> <!-- /.download-wrap -->
+												<div class="download-wrap brochure">
+													<a href="4.html">Ligne 4 <span>Gare Centrale <> Gare de l'Est</span><i class="fa fa-bus"></i></a>
+												</div> <!-- /.download-wrap -->
+											</div><!-- /.widget -->  
 									    </div><!-- /.widget -->
-									</div><!-- /.widget -->
-									<div class="widget">
-										<h2 class="widget-title">Nos Fiches Horaire</h2>
-										<div class="download-wrap company">
-											<a href="img/pub/1.png">Vacances Scolaires<span>Download</span><i class="fa fa-download"></i></a>
-										</div> <!-- /.download-wrap -->
-									</div><!-- /.widget -->   
-									<div class="widget">
-										<h2 class="widget-title">Fréquences de passage</h2>
-										<div class="textwidget">
-											<p>Horaires Vacances Scolaires</p>
-										</div>
-									</div><!-- /.widget -->
-									<div class="widget">
-										<h2 class="widget-title">Tarifs</h2>
-										<div class="textwidget">
-											<p>Ticket 1h : 1.70 €</p>
-											<p>Ticket liberté (24h) : 5.00€</p>
-										</div>
-									</div><!-- /.widget -->     
-									</div><!-- /.sidebar-wrapper -->
-								<div class="col-md-9 col-sm-7 col-xs-12">
-									<div class="single-service-content">
-										<div class="single-service-thumb">
-											<img src="https://I.goopics.net/bivb9e.png" alt="image"/>
-										</div>
-										<h2>Informations sur la ligne</h2>
-										<p>La société Canoéau a reçu l'autorisation des autorités de la métropole de Lyon pour proposer des balades en canoé sur le Rhône traversant la métropole les dimanches et jours fériés durant l'été.
-												Le trajet de 13km démarre près du Parc de la Tête d'Or pour se terminer au niveau du musée des Confluences, à proximité de la gare de l'Est (gare Perrache).
-												<b>L'accès à bord se fera uniquement sur présentation d'une réservation de balade Canoéau.</b>
-												La ligne sera en service le <b>Dimanche et les jours fériés</b> du 19 juin au 25 septembre 2022</p><br>
-										<h2>Bus circulants sur la ligne :</h2>
-										<p>Liste non mise à jour en raison des vacances scolaires et du départ en Contrôle Technique de notre matériel durant cette période</p>
-									</div><!-- /.single-service-content -->
-									
+
+									    <div class="widget">
+									        <h2 class="widget-title">Tarifs</h2>
+									        <div class="textwidget">
+									            <p>Ticket 1h : 1.70 €<br>Ticket liberté (24h) : 5.00€</p>
+									        </div>
+									    </div><!-- /.widget -->              
+									</div>
 								</div><!-- /.col -->
 							</div><!-- /.row -->
 						</div><!-- /.container -->
 					</section>
-					<!-- Single-Service-End-->
-
-
-			        
 
 			        <!-- footer-widget-section start -->
 			        <section class="footer-widget-section section-padding">
@@ -396,31 +358,82 @@
 				<a><img src="img/logo/franceavenir.png" alt=""></a>	
                 <ul id ="offcanvasMenu" class="list-unstyled visible-xs visible-sm">
                     <li class="active"><a href="index.html">Home<span class="sr-only">(current)</span></a></li>
-                    <li><a href="about.html">About</a></li>
                     <li>
-                        <a href="#">Services</a>
+                        <a href="#">France Avenir</a>
                         <ul>
-                            <li>
-                                <a href="service.html">Service</a>
-                            </li>
-                            <li>
-                                <a href="service-single.html">Single service</a>
-                            </li>
+                            <li><a href="about.html">About</a></li>
+							<li><a href="livrées.html">Nos livrées</a></li>
+							<li><a href="infotrafic.html">Information Trafic</a></li>
                         </ul>
 
                     </li>
-                    <li><a href="#">Blog</a>
+                    <li><a href="#">Ski Français</a>
                         <ul>
-                            <li>
-                                <a href="blog.html">Blog Standard</a>
-                            </li>
-                            <li>
-                                <a href="blog-single.html">Single blog</a>
-                            </li>
+                            <li><a href="ski.html">Notre Station</a></li>
                         </ul>
                     </li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="typography.html">Typography</a></li>
+					<li><a href="#">Bus Français</a>
+                        <ul>
+                            <li><a href="actubf.html">Actu</a></li>
+																	<li><a href="infotrafic.html">Information Trafic</a></li>
+																	<li><a href="tarifsbus.html">Nos Tarifs <span class="tag">ATTENTION !</span></a></li>
+                                                                    <li class="dropdown-header"><---  Info sur nos lignes  ---></li>
+                                                                    <li overflow: hidden; text-overflow: ellipsis; white-space: nowrap;>
+                                                                        <a href="1.html">
+                                                                          <img src="https://transport-manager.net/assets/img/lignes/L1.png" alt="Gare Centrale <> Campus Cezeaux" width="10%" max-height="10%">
+                                                                          Gare Centrale <> Campus Cezeaux
+                                                                        </a>
+                                                                      </li>
+                                                                      <li>
+                                                                        <a href="2.html">
+                                                                          <img src="https://transport-manager.net/assets/img/lignes/L2.png" alt="Gare Centrale <> Aéroport" width="10%" height="10%">
+                                                                          Gare Centrale <> Aéroport
+                                                                        </a>
+                                                                      </li>
+                                                                      <li overflow: hidden; text-overflow: ellipsis; white-space: nowrap;>
+                                                                        <a href="3.html">
+                                                                          <img src="https://transport-manager.net/assets/img/lignes/L3.png" alt="Gare Centrale <> Campus Marthe Gautier" width="10%" height="10%">
+                                                                          Gare Centrale <> Campus Marthe Gautier
+                                                                        </a>
+                                                                      </li>
+                                                                      <li>
+                                                                        <a href="4.html">
+                                                                          <img src="https://transport-manager.net/assets/img/lignes/L4.png" alt="Gare Centrale <> Gare de l'Est" width="10%" height="10%">
+                                                                          Gare Centrale <> Gare de l'Est
+                                                                        </a>
+                                                                      </li>                                          </li>
+                        </ul>
+                    </li>
+					<li><a href="#">Train Français - Information Pratiques</a>
+                        <ul>
+                            <li><a href="plan.html">Plan de nos lignes</a></li>
+							<li><a href="inventaire.html">Notre Inventaire</a></li>
+							<li><a href="infotrafic.html">Information Trafic</a></li>
+							<li><a href="resa.html">Réserver un billet</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                        </ul>
+                    </li>
+					<li><a href="#">Train Français - Au départ de nos gares</a>
+                        <ul>
+                            <li><a href="départ.html#LP">Lyon Perrache</a></li>
+                                                    			<li><a href="départ.html#bsj">Bordeaux St-Jean</a></li>
+                                                    			<li><a href="départ.html#PGL">Paris Gare de Lyon</a></li>
+                                                    			<li><a href="départ.html#TPN">Torino Porto Nova</a></li>
+                                                    			<li><a href="départ.html#tm">Toulouse Matabiau</a></li>
+                                                    			<li><a href="départ.html#CF">Clermont-Ferrand <span class="tag">NOUVEAU !</span></a></li>
+                        </ul>
+                    </li>
+					<li><a href="#">Informations sur nos lignes</a>
+                        <ul>
+                            <li><a href="fgv.html"><i class="fas fa-train"></i> France à Grande Vitesse</a></li>
+    															<li><a href="ICE.html"><i class="fas fa-train"></i> ICEurope</a></li>
+    															<li><a href="ICSuisse.html"><i class="fas fa-train"></i> ICSuisse</a></li>
+    															<li><a href="région.html"><i class="fas fa-train"></i> France Région</a></li>
+    															<li><a href="tel.html"><i class="fas fa-train"></i> Train Express Lyonnais</a></li>
+    															<li><a href="tfm.html"><i class="fas fa-pallet"></i> Train Français Marchandise</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="franceavenir.html">France Avenir, l'alliance <span class="tag">NOUVEAU !</span></a></li>
                 </ul>
                 <div class="offcanvas-widgets hidden-sm hidden-xs">
                     <div id="twitterWidget">
@@ -453,7 +466,6 @@
 				<div class="status-mes"></div>
 			</div>
 		</div>
-
 
 		<!-- jQuery -->
         <script src="js/jquery.js"></script>
