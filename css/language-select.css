@@ -1,13 +1,7 @@
 /*----------------------------------
-Template Name: Unship
-Description: HTML5 / CSS3 Multi Page
-Version: 1.0
-Author: Cloud Software Solution Ltd.
-------------------------------------
- 
 Default custom select styles */
 
-div.cs-select {
+div.lang-select {
   display: inline-block;
   vertical-align: middle;
   position: relative;
@@ -18,20 +12,18 @@ div.cs-select {
   border-radius: 30px;
   height: 25px;
   line-height: 25px;
-  border: 1px solid rgba(255, 255, 255, 0.23);
 }
 
-.cs-select:focus {
+.lang-select:focus {
   outline: none;
- /* For better accessibility add a style for this in your skin */
-  ;
+ /* For better accessibility add a style for this in your skin */;
 }
 
-.cs-select select {
+.lang-select select {
   display: none;
 }
 
-.cs-select span {
+.lang-select span {
   display: block;
   font-size: 10px;
   font-weight: 300;
@@ -44,15 +36,14 @@ div.cs-select {
   height: 100%;
 }
 
-.cs-select span.cs-placeholder {
+.lang-select span.cs-placeholder {
   position: relative;
-  background: transparent;
+  background: #f7f7f7;
   border: 0;
   border-radius: 30px;
-  color: #fff;
 }
 
-.cs-select span.cs-placeholder:after {
+.lang-select span.cs-placeholder:after {
   content: "\f1ab";
   position: absolute;
   top: -3px;
@@ -66,41 +57,41 @@ div.cs-select {
   font-family: FontAwesome;
 }
 
-.cs-select span.cs-placeholder[data-current="united-kingdom"]:after,
-.cs-select span.cs-placeholder[data-current="france"]:after,
-.cs-select span.cs-placeholder[data-current="spain"]:after,
-.cs-select span.cs-placeholder[data-current="bangladesh"]:after {
+.lang-select span.cs-placeholder[data-current="united-kingdom"]:after,
+.lang-select span.cs-placeholder[data-current="france"]:after,
+.lang-select span.cs-placeholder[data-current="spain"]:after,
+.lang-select span.cs-placeholder[data-current="bangladesh"]:after {
   text-indent: 1000px;
   background-size: 70%!important;
 }
 
-.cs-select span.cs-placeholder[data-current="united-kingdom"]:after {
+.lang-select span.cs-placeholder[data-current="united-kingdom"]:after {
   background: #fff url(../img/flags/united-kingdom.svg) no-repeat center;
 }
 
-.cs-select span.cs-placeholder[data-current="france"]:after {
+.lang-select span.cs-placeholder[data-current="france"]:after {
   background: #fff url(../img/flags/france.svg) no-repeat center;
 }
 
-.cs-select span.cs-placeholder[data-current="spain"]:after {
+.lang-select span.cs-placeholder[data-current="spain"]:after {
   background: #fff url(../img/flags/spain.svg) no-repeat center;
 }
 
-.cs-select span.cs-placeholder[data-current="bangladesh"]:after {
+.lang-select span.cs-placeholder[data-current="bangladesh"]:after {
   background: #fff url(../img/flags/bangladesh.svg) no-repeat center;
 }
 
 /* Placeholder and selected option */
 
 
-.cs-select > span::after,
-.cs-select .cs-selected span::after {
+.lang-select > span::after,
+.lang-select .lang-selected span::after {
   speak: none;
   position: absolute;
   top: 50%;
 }
 
-.cs-select > span::after {
+.lang-select > span::after {
   right: 0;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
@@ -114,64 +105,65 @@ div.cs-active {
 }
 
 /* Options */
-.cs-select .cs-options {
+.lang-select .cs-options {
   position: absolute;
   overflow: hidden;
   width: 100%;
   background: #fff;
   visibility: hidden;
+  margin-top: 5px;
+  border-radius: 4px;
 }
 
-.cs-select.cs-active .cs-options {
+.lang-select.cs-active .cs-options {
   visibility: visible;
-  border-radius: 5px;
 }
 
-.cs-select ul {
+.lang-select ul {
   list-style: none;
   margin: 0;
   padding: 0;
   width: 100%;
 }
 
-.cs-select ul span {
+.lang-select ul span {
   padding: 0 10px;
 }
 
-.cs-select ul li.cs-focus span {
+.lang-select ul li.cs-focus span {
   background-color: #ddd;
 }
 
-.cs-select .cs-options span {
+.lang-select .cs-options span {
   background-repeat: no-repeat;
   background-position: 12px 48%;
   background-size: 15px auto;
   padding: 0 0px 0 35px;
 }
 
-.cs-select .cs-options span:hover,
-.cs-select .cs-options li.cs-focus span,
-.cs-select .cs-options .cs-selected span {
+.lang-select .cs-options span:hover,
+.lang-select .cs-options li.cs-focus span,
+.lang-select .cs-options .cs-selected span {
   color: #1e4c4a;
 }
 
-.cs-select .cs-options .cs-selected span::after {
+.lang-select .cs-options .cs-selected span::after {
   content: '';
 }
 
-.cs-select .cs-options li.flag-uk span {
+.lang-select .cs-options li.flag-uk span {
   background-image: url(../img/flags/united-kingdom.svg);
 }
 
-.cs-select .cs-options li.flag-france span {
+.lang-select .cs-options li.flag-france span {
   background-image: url(../img/flags/france.svg);
 }
 
-.cs-select .cs-options li.flag-spain span {
+.lang-select .cs-options li.flag-spain span {
   background-image: url(../img/flags/spain.svg);
 }
 
-.cs-select .cs-options li.flag-bd span {
+.lang-select .cs-options li.flag-bd span {
   background-image: url(../img/flags/bangladesh.svg);
 }
 

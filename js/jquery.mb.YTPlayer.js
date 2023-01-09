@@ -1025,6 +1025,50 @@ function onYouTubePlayerAPIReady() {
 
 		},
 
+		play: function() {
+				var YTPlayer = this.get( 0 );
+				if( !YTPlayer.isReady ) return;
+				var controls = jQuery( "#controlBar_" + YTPlayer.id );
+				var playBtn = controls.find( ".mb_YTPPlaypause" );
+				playBtn.html( jQuery.mbYTPlayer.controls.pause );
+				YTPlayer.player.playVideo();
+				YTPlayer.wrapper.CSSAnimate( {
+						opacity: YTPlayer.isAlone ? 1 : YTPlayer.opt.opacity
+				}, 2000 );
+				jQuery( YTPlayer.playerEl ).CSSAnimate( {
+						opacity: 1
+				}, 1000 );
+				jQuery( YTPlayer ).css( "background-image", "none" );
+				return this;
+		},
+		/**
+		 *
+		 * @param callback
+		 * @returns {jQuery.mbYTPlayer}
+		 */
+		togglePlay: function( callback ) {
+				var YTPlayer = this.get( 0 );
+				if( YTPlayer.state == 1 ) this.YTPPause();
+				else this.YTPPlay();
+				if( typeof callback == "function" ) {
+						callback( YTPlayer.state );
+				}
+				return this;
+		},
+	
+		/**
+		 *
+		 * @returns {jQuery.mbYTPlayer}
+		 */
+		pause: function() {
+				var YTPlayer = this.get( 0 );
+				var controls = jQuery( "#controlBar_" + YTPlayer.id );
+				var playBtn = controls.find( ".mb_YTPPlaypause" );
+				playBtn.html( jQuery.mbYTPlayer.controls.play );
+				YTPlayer.player.pauseVideo();
+				return this;
+		},
+
 		formatTime      : function (s) {
 			var min = Math.floor(s / 60);
 			var sec = Math.floor(s - (60 * min));
@@ -1107,5 +1151,12 @@ function onYouTubePlayerAPIReady() {
 	jQuery.fn.setYTPVolume = jQuery.mbYTPlayer.setYTPVolume;
 	jQuery.fn.setVideoQuality = jQuery.mbYTPlayer.setVideoQuality;
 	jQuery.fn.manageYTPProgress = jQuery.mbYTPlayer.manageYTPProgress;
+	jQuery.fn.YTPTogglePlay = jQuery.mbYTPlayer.togglePlay;
+	jQuery.fn.YTPPlay = jQuery.mbYTPlayer.play;
+	jQuery.fn.YTPPause = jQuery.mbYTPlayer.pause;
+
+
+
+		
 
 })(jQuery, ytp);

@@ -174,7 +174,7 @@ const trafic_list = [
     {
         title: 'Retard sur la Transversale Sud',
         message: 'La pizza du conducteur est arrivée en retard',
-        type: 'information',
+        type: 'current_work',
         force: 1 // Compris entre 0 et 100, plus c'est élevé, plus de chances d'apparaitre
     }
 ];

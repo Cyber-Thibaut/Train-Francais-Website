@@ -6,13 +6,18 @@ jQuery(function ($) {
      * Preloader
     /* ---------------------------------------------- */
 
-    $(function () {
+    $(window).ready(function() {
         $('#status').fadeOut();
         $('#preloader').delay(200).fadeOut('slow');
-
     });
 
+    /* ---------------------------------------------- /*
+     * Bootstrap Tooltip
+    /* ---------------------------------------------- */
 
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+    });
 
     // -------------------------------------------------------------
     // Sticky Menu
@@ -40,6 +45,46 @@ jQuery(function ($) {
     }());
 
 
+    // -------------------------------------------------------------
+    // Portfolio Carousel
+    // -------------------------------------------------------------
+
+    (function () {
+
+        $('.fleet-carousel').owlCarousel({
+            loop:true,
+            margin:0,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:2
+                },
+                1000:{
+                    items:4
+                }
+            }
+        })
+
+
+        // Navigation
+        var owl = $('.fleet-carousel');
+        owl.owlCarousel();
+
+        // Go to the next item
+        $('.fleet-carousel-navigation .next').on('click', function(){
+            owl.trigger('next.owl.carousel');
+        })
+
+        // Go to the previous item
+        $('.fleet-carousel-navigation .prev').on('click', function(){
+            owl.trigger('prev.owl.carousel', [300]);
+        });
+
+
+    }());
+
 
 
     // -------------------------------------------------------------
@@ -56,7 +101,6 @@ jQuery(function ($) {
 
 
     });
-
 
 
     // -------------------------------------------------------------
@@ -77,8 +121,6 @@ jQuery(function ($) {
         });
 
     });
-
-
 
 
     // -------------------------------------------------------------
@@ -104,7 +146,7 @@ jQuery(function ($) {
     // -------------------------------------------------------------
 
     (function() {
-        [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {
+        [].slice.call( document.querySelectorAll( 'select.lang-select' ) ).forEach( function(el) {
             new SelectFx(el);
         } );
     })();
@@ -114,7 +156,7 @@ jQuery(function ($) {
     // OffCanvas
     // -------------------------------------------------------------
 
-   (function () {
+    (function () {
         $('button.navbar-toggle').HippoOffCanvasMenu({
 
         documentWrapper: '#st-container',
@@ -134,89 +176,6 @@ jQuery(function ($) {
             $(this).toggleClass('open');
         });
     }());
-
-
-
-    // -------------------------------------------------------------
-    // Partner Carousel
-    // -------------------------------------------------------------
-
-    (function () {
-
-        $('.partner-carousel').owlCarousel({
-            loop:true,
-            margin:15,
-            responsive:{
-                0:{
-                    items:2
-                },
-                600:{
-                    items:3
-                },
-                1000:{
-                    items:6
-                }
-            }
-        })
-
-
-        // Navigation
-        var owl = $('.partner-carousel');
-        owl.owlCarousel();
-
-        // Go to the next item
-        $('.partner-carousel-navigation .next').on('click', function() {
-            owl.trigger('next.owl.carousel');
-        })
-
-        // Go to the previous item
-        $('.partner-carousel-navigation .prev').on('click', function(){
-            owl.trigger('prev.owl.carousel', [300]);
-        });
-
-
-    }());
-
-
-
-    //-------------------------------------------------------
-    // counter
-    //-------------------------------------------------------
-    $('.count-description').bind('inview', function(event, visible, visiblePartX, visiblePartY) {
-        if (visible) {
-            $(this).find('.timer').each(function () {
-                var $this = $(this);
-                $({ Counter: 0 }).animate({ Counter: $this.text() }, {
-                    duration: 2000,
-                    easing: 'swing',
-                    step: function () {
-                        $this.text(Math.ceil(this.Counter));
-                    }
-                });
-            });
-            $(this).unbind('inview');
-        }
-    });
-
-
-    //-------------------------------------------------------
-    // about page counter
-    //-------------------------------------------------------
-    $('.company-in-number').bind('inview', function(event, visible, visiblePartX, visiblePartY) {
-        if (visible) {
-            $(this).find('.timer').each(function () {
-                var $this = $(this);
-                $({ Counter: 0 }).animate({ Counter: $this.text() }, {
-                    duration: 2000,
-                    easing: 'swing',
-                    step: function () {
-                        $this.text(Math.ceil(this.Counter));
-                    }
-                });
-            });
-            $(this).unbind('inview');
-        }
-    });
 
 
     // -------------------------------------------------------------
@@ -246,9 +205,6 @@ jQuery(function ($) {
 
     }());
 
-
-
-
     // ------------------------------------------------------------------
     // jQuery for back to Top
     // ------------------------------------------------------------------
@@ -272,30 +228,26 @@ jQuery(function ($) {
 
     }());
 
+	// -----------------------------------------------------------------
+	//STELLAR FOR BACKGROUND SCROLLING
+	// ------------------------------------------------------------------
 
+	$(window).load(function() {
 
-    // -----------------------------------------------------------------
-    //STELLAR FOR BACKGROUND SCROLLING
-    // ------------------------------------------------------------------
+		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 
-    $(window).load(function() {
+		}else {
+		    $.stellar({
+			    horizontalScrolling: false,
+			    responsive: true
+		    });
+		}
 
-        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-
-        }else {
-            $.stellar({
-                horizontalScrolling: false,
-                responsive: true
-            });
-        }
-
-    });
-
+	});
 
     // ----------------------------------------------------------------
     //  Dropdown menu
     // ----------------------------------------------------------------
-
 
     (function () {
 
@@ -339,7 +291,6 @@ jQuery(function ($) {
                 timer = null;
             }
 
-
             timer = setTimeout(function () {
 
                 $(that).removeClass('menu-animating');
@@ -377,11 +328,11 @@ jQuery(function ($) {
 
 
 
-    // -----------------------------------------------------------------
-    //CONTACT FORM
-    // ------------------------------------------------------------------
+	// -----------------------------------------------------------------
+	//CONTACT FORM
+	// ------------------------------------------------------------------
 
-    (function () {
+	(function () {
 
         $('#contactForm').on('submit',function(e){
 
@@ -395,9 +346,11 @@ jQuery(function ($) {
 
             $.post( $action, $data, function( data ) {
 
+                console.log(data);
+
                 if( data.response=='error' ){
 
-                    $this.before( '<div class="alert alert-danger">'+data.message+'</div>' );
+                    $this.before( '<div class="alert alert-warning">'+data.message+'</div>' );
                 }
 
                 if( data.response=='success' ){
@@ -411,109 +364,7 @@ jQuery(function ($) {
         });
     }());
 
-
-
-    // -----------------------------------------------------------------
-    //GOOGLE MAP
-    // ------------------------------------------------------------------
-
-    //set your google maps parameters
-    var $latitude = 48.869319, //If you unable to find latitude and longitude of your address. Please visit http://www.latlong.net/convert-address-to-lat-long.html you can easily generate.
-        $longitude = 2.354261,
-        $map_zoom = 16; /* ZOOM SETTING */
-        //google map custom marker icon
-    var $marker_url = 'img/map-marker.png';
-
-    //we define here the style of the map
-    var style = [{
-        "stylers": [{
-            "hue": "#65d3e3"
-        }, {
-            "saturation": -10
-        }, {
-            "gamma": 2.15
-        }, {
-            "lightness": 12
-        }]
-    }];
-
-    //Contact page map
-
-    (function () {
-
-
-    if ($('#contactMap').length > 0) {
-
-
-         //set google map options
-        var map_options = {
-            center: new google.maps.LatLng($latitude, $longitude),
-            zoom: $map_zoom,
-            panControl: true,
-            zoomControl: true,
-            mapTypeControl: false,
-            streetViewControl: true,
-            mapTypeId: google.maps.MapTypeId.ROADMAP,
-            scrollwheel: false,
-            styles: style,
-        }
-
-        //initialize the map
-        var map = new google.maps.Map(document.getElementById('contactMap'), map_options);
-        //add a custom marker to the map
-
-        var marker = new google.maps.Marker({
-            position: new google.maps.LatLng($latitude, $longitude),
-            map: map,
-            visible: true,
-            icon: $marker_url,
-        });
-    };
-
-    }());
-
-    //Modal map
-    (function () {
-
-
-    if ($('#googleMap').length > 0) {
-
-
-        //set google map options
-        var map_options = {
-            center: new google.maps.LatLng($latitude, $longitude),
-            zoom: $map_zoom,
-            panControl: true,
-            zoomControl: true,
-            mapTypeControl: false,
-            streetViewControl: true,
-            mapTypeId: google.maps.MapTypeId.ROADMAP,
-            scrollwheel: false,
-            styles: style,
-        }
-        //initialize the map
-        var map = new google.maps.Map(document.getElementById('googleMap'), map_options);
-        //add a custom marker to the map
-        var marker = new google.maps.Marker({
-            position: new google.maps.LatLng(57, 59),
-            map: map,
-            visible: true,
-            icon: $marker_url,
-        });
-
-        $('#cssMapModal').on('shown.bs.modal', function(){
-
-         google.maps.event.trigger(map, 'resize');
-         map.setCenter(new google.maps.LatLng(587, 587));
-       });
-
-       };
-
-    }());
-
-
-
-    // Twitter Feed on Footer Widget
+    // Twitter
     (function () {
         var twitterConfig = {
             id: "567185781790228482", //put your Widget ID here
@@ -551,4 +402,52 @@ jQuery(function ($) {
 
         }
     }());
+
+    // Google map
+    if ($('#googleMap').length > 0) {
+
+        //set your google maps parameters
+        var $latitude = 48.869319, //If you unable to find latitude and longitude of your address. Please visit http://www.latlong.net/convert-address-to-lat-long.html you can easily generate.
+            $longitude = 2.354261,
+            $map_zoom = 16; /* ZOOM SETTING */
+
+        //google map custom marker icon
+        var $marker_url = 'img/map-marker.png';
+
+        //we define here the style of the map
+        var style = [{
+            "stylers": [{
+                "hue": "#65d3e3"
+            }, {
+                "saturation": -10
+            }, {
+                "gamma": 2.15
+            }, {
+                "lightness": 12
+            }]
+        }];
+
+        //set google map options
+        var map_options = {
+            center: new google.maps.LatLng($latitude, $longitude),
+            zoom: $map_zoom,
+            panControl: true,
+            zoomControl: true,
+            mapTypeControl: false,
+            streetViewControl: true,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            scrollwheel: false,
+            styles: style,
+        }
+
+
+        //initialize the contact page map
+        var mainMap = new google.maps.Map(document.getElementById('googleMap'), map_options);
+        new google.maps.Marker({
+            position: new google.maps.LatLng($latitude, $longitude),
+            map: mainMap,
+            visible: true,
+            icon: $marker_url,
+        });
+    }
 }); // JQuery end
