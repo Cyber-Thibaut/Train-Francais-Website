@@ -22,9 +22,39 @@ const trafic_list = [
         force: 1 // Compris entre 0 et 100, plus c'est élevé, plus de chances d'apparaitre
     },
     {
+        title: 'Avance',
+        message: "En raison d'un passage par la LGV votre TER aura 1h d'avance",
+        type: 'information',
+        force: 1 // Compris entre 0 et 100, plus c'est élevé, plus de chances d'apparaitre
+    },
+    {
+        title: 'Interruption',
+        message: "En raison d'une partie de Uno entre chèvres sur les voies, votre conducteur doit jouer avec elles pour que vous repartiez.",
+        type: 'interupted',
+        force: 1 // Compris entre 0 et 100, plus c'est élevé, plus de chances d'apparaitre
+    },
+    {
+        title: 'Retard',
+        message: "Suite à une grève votre TGV n'excèdera pas les 50 km/h",
+        type: 'disrupted',
+        force: 1 // Compris entre 0 et 100, plus c'est élevé, plus de chances d'apparaitre
+    },
+    {
+        title: 'Retard',
+        message: "Suite à une grève votre bus n'excédera les 20 km/h",
+        type: 'disrupted',
+        force: 1 // Compris entre 0 et 100, plus c'est élevé, plus de chances d'apparaitre
+    },
+    {
+        title: 'Suspension Trafic',
+        message: "Notre conducteur Marcel (roule Marcel !) est malade à cause d'un aliment pas frais à la cantine",
+        type: 'interupted',
+        force: 1 // Compris entre 0 et 100, plus c'est élevé, plus de chances d'apparaitre
+    },
+    {
         title: 'Retard',
         message: 'Panne Aiguillage',
-        type: 'interupted',
+        type: 'disrupted',
         force: 1 // Compris entre 0 et 100, plus c'est élevé, plus de chances d'apparaitre
     },
     {
