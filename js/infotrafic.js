@@ -88,13 +88,13 @@ const trafic_list = [
         force: 1 // Compris entre 0 et 100, plus c'est élevé, plus de chances d'apparaitre
     },
     {
-        title: 'Suspension traifc',
+        title: 'Suspension trafic',
         message: 'Attente Correspondance',
         type: 'disrupted',
         force: 1 // Compris entre 0 et 100, plus c'est élevé, plus de chances d'apparaitre
     },
     {
-        title: 'Suspension traifc',
+        title: 'Suspension trafic',
         message: 'Intervention Police A Bord',
         type: 'interupted',
         force: 1 // Compris entre 0 et 100, plus c'est élevé, plus de chances d'apparaitre
