@@ -92,7 +92,7 @@
 					  			</div><!-- /.container -->
 				  			</div><!-- /.overlay-bg -->
 				  		</nav><!-- /.top-bar -->
-						  <center><a href="index.html"><img src="img/logo/Bus Français.png" width="200" height="200"></a></center><body id="page-top">
+						  <center><a href="index.html"><img src="img/logo/Transport Clermont Métropole.png" width="200" height="200"></a></center><body id="page-top">
 		<div id="st-container" class="st-container">
 		    <div class="st-pusher">
 	        	<div class="st-content">
@@ -112,7 +112,7 @@
 						  						</ul>
 						  					</div><!-- /.call-to-action -->
 					  					</div><!-- /.col-sm-6 -->
-						  <center><a href="index.html"><img src="img/logo/Bus Français.png" width="200" height="200"></a></center>
+						  <center><a href="index.html"><img src="img/logo/Transport Clermont Métropole.png" width="200" height="200"></a></center>
 						  <nav class="navbar navbar-default" role="navigation">
                             <button type="button" class="navbar-toggle collapsed" >
                                 <span class="sr-only">Toggle navigation</span>
@@ -152,7 +152,7 @@
 													<!-- /submenu-wrapper -->
 											</li>
 												<!-- Services -->
-												<li class="dropdown"><a href="#">Bus Français <span class="fa fa-angle-down"></span></a>
+												<li class="dropdown"><a href="#">Transport Clermont Métropole <span class="fa fa-angle-down"></span></a>
 														<!-- submenu-wrapper -->
 														<div class="submenu-wrapper submenu-wrapper-topbottom">
                                                             <div class="submenu-inner  submenu-inner-topbottom">
