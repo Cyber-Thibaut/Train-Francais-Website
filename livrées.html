@@ -49,6 +49,8 @@
      <link href="css/style.css" rel="stylesheet">
      <!-- Responsive CSS -->
      <link href="css/responsive.css" rel="stylesheet">
+     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css"/>
+
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 
      <script src="js/vendor/modernizr-2.8.1.min.js"></script>
@@ -59,40 +61,34 @@
 }
 
 .tag {
-          background-color: #eee;
-          color: rgb(172, 29, 29);
-          border-radius: 3px;
-          padding: 2px 4px;
-          font-size: 12px;
-          margin-left: 10px;
-          }
-
- 
+background-color: #eee;
+color: rgb(172, 29, 29);
+border-radius: 3px;
+padding: 2px 4px;
+font-size: 12px;
+margin-left: 10px;
+}
+* {
+  box-sizing: border-box;
+}
 
 #myTable {
   border-collapse: collapse;
   width: 100%;
-  border: 1px solid rgb(71, 152, 228);
   font-size: 18px;
   color: #535353;
-  overflow-x: scroll;
 }
 
 #myTable th, #myTable td {
   text-align: left;
   padding: 12px;
   font-weight: bold;
-  overflow-x: scroll;
 }
 
-#myTable tr {
-  border-bottom: 1px solid rgb(192, 26, 26);
-}
 
 #myTable tr.header, #myTable tr:hover {
   background: #58bceb;
   color: #000000;
-  overflow-x: scroll;
 }
 </style>
 </head>
@@ -159,7 +155,7 @@
 													<!-- /submenu-wrapper -->
 											</li>
 												<!-- Services -->
-												<li class="dropdown"><a href="#">Bus Français <span class="fa fa-angle-down"></span></a>
+												<li class="dropdown"><a href="#">Transport Clermont Métropole <span class="fa fa-angle-down"></span></a>
 														<!-- submenu-wrapper -->
 														<div class="submenu-wrapper submenu-wrapper-topbottom">
                                                             <div class="submenu-inner  submenu-inner-topbottom">
@@ -270,7 +266,7 @@
 <center><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Entrez le nom de l'engin 🔎" title="Cherchez un engin 🔎"></center>
 <hr>
 <div class="container">
-<table class="table table-striped" id="myTable">
+<table class="table table-striped" id="myTable" style="height: 100%">
     <thead>
     <tr>
     <th scope=col>Nom</td>
@@ -281,79 +277,79 @@
     <tbody>
         <tr><td>ETR 610 Franco-Italien</td>
         <td>❌</td>
-        <td><img src="livréesperso/ETR610 PAris - Venise avec fond.png"></tr>
+        <td style="height: 100%"><img src="livréesperso/ETR610 PAris - Venise avec fond.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
         <tr><td>SNCF Z 56300 liO</td>
         <td>❌</td>
-        <td><img src="livréesperso\SNCF Z 56300 liO.png"></tr>
+        <td style="height: 100%"><img src="livréesperso\SNCF Z 56300 liO.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
         <tr><td>Régio2N LiO</td>
         <td>❌</td>
-        <td><img src="livréesperso\Regio2N 8c LiO.png"></tr>
+        <td style="height: 100%"><img src="livréesperso\Regio2N 8c LiO.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
         <tr><td>VB2N AuRA 6c</td>
         <td>❌</td>
-        <td><img src="livréesperso\VB2n6c.png"></tr>
+        <td style="height: 100%"><img src="livréesperso\VB2n6c.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
         <tr><td>VB2N AuRA 8c</td>
         <td>❌</td>
-        <td><img src="livréesperso\VB2n8c.png"></tr>
+        <td style="height: 100%"><img src="livréesperso\VB2n8c.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
         <tr><td>Régio2N AuRA</td>
         <td>❌</td>
-        <td><img src="livréesperso\Régio2N - AuRA.png"></tr>
+        <td style="height: 100%"><img src="livréesperso\Régio2N - AuRA.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
         <tr><td>Régio2N Bretagne</td>
         <td>❌</td>
-        <td><img src="livréesperso\Regio2N 8c Bretagne.png"></tr>
+        <td style="height: 100%"><img src="livréesperso\Regio2N 8c Bretagne.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
         <tr><td>BB+BB26000 Spéciale Bordeaux - Lyon</td>
         <td>❌</td>
-        <td><img src="livréesperso\BB_BB26000_Bordeaux_Lyon.png"></tr>
+        <td style="height: 100%"><img src="livréesperso\BB_BB26000_Bordeaux_Lyon.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
         <tr><td>B 84500</td>
         <td>❌</td>
-        <td><img src="livréesperso\B 84500.png"></tr>
+        <td style="height: 100%"><img src="livréesperso\B 84500.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
         <tr><td>TGV FRET</td>
         <td>❌</td>
-        <td><img src="livréesperso\TGV Fret.png"></tr>
+        <td style="height: 100%"><img src="livréesperso\TGV Fret.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
         <tr><td>TGV Ouigo</td>
         <td>❌ - By Alex (Tous droits réservés)</td>
-        <td><img src="livréesperso\Ouigo.png"></tr>
+        <td style="height: 100%"><img src="livréesperso\Ouigo.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
         <tr><td>TGV Réseau Duplex</td>
         <td>❌ - By Alex (Tous droits réservés)</td>
-        <td><img src="livréesperso\TGV Réseau Duplex.png"></tr>
+        <td style="height: 100%"><img src="livréesperso\TGV Réseau Duplex.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
         <tr><td>TGV Euroduplex</td>
         <td>❌</td>
-        <td><img src="livréesperso\TGV EuroDuplex2.png"></tr>
+        <td style="height: 100%"><img src="livréesperso\TGV EuroDuplex2.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
         <tr><td>BB26000</td>
         <td>❌</td>
-        <td><img src="livréesperso\BB26000_Fant_R.png"></tr>
+        <td style="height: 100%"><img src="livréesperso\BB26000_Fant_R.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
         <tr><td>DB BR 147</td>
         <td>❌</td>
-        <td><img src="livréesperso\1798.png"></tr>
+        <td style="height: 100%"><img src="livréesperso\1798.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
         <tr><td>CFF Re 460</td>
         <td>❌</td>
-        <td><img src="livréesperso\1242.png"></tr>
+        <td style="height: 100%"><img src="livréesperso\1242.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
         <tr><td>Corail NG88 B11 (f)</td>
         <td>❌</td>
-        <td><img src="livréesperso\972.png"></tr>
+        <td style="height: 100%"><img src="livréesperso\972.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
         <tr><td>Corail NG88 B7Dx (f)</td>
         <td>❌</td>
-        <td><img src="livréesperso\1632.png"></tr>
+        <td style="height: 100%"><img src="livréesperso\1632.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
         <tr><td>SNCF U 53600 - SNCF U 53700</td>
         <td>❌</td>
-        <td><img src="livréesperso\847.png"></tr>
+        <td style="height: 100%"><img src="livréesperso\847.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
         <tr><td>DB Metropolitan</td>
         <td>❌</td>
-        <td><img src="livréesperso\1812.png"></tr>
+        <td style="height: 100%"><img src="livréesperso\1812.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
         <tr><td>MPL16</td>
         <td>❌</td>
-        <td><img src="livréesperso\MPL16.png"></tr>
+        <td style="height: 100%"><img src="livréesperso\MPL16.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
         <tr><td>SNCF B 85000 Coradia Liner</td>
         <td>❌</td>
-        <td><img src="livréesperso\SNCF B 85000 Coradia Liner.png"></tr>
+        <td style="height: 100%"><img src="livréesperso\SNCF B 85000 Coradia Liner.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
         <tr><td>SNCF Corail VU B6Dux TER Languedoc Roussillon</td>
         <td>❌</td>
-        <td><img src="livréesperso\Corail VU B6Dux Languedoc Roussillon.png"></tr>
+        <td style="height: 100%"><img src="livréesperso\Corail VU B6Dux Languedoc Roussillon.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
         <tr><td>TEL A</td>
         <td>❌</td>
-        <td><img src="livréesperso\SNCF B 84500 TEL A.png"></tr>
+        <td style="height: 100%"><img src="livréesperso\SNCF B 84500 TEL A.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
         <tr><td>TEL B</td>
         <td>❌</td>
-        <td><img src="livréesperso\TEL B train.png"></tr>
+        <td style="height: 100%"><img src="livréesperso\TEL B train.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
         
     
 
@@ -361,25 +357,26 @@
     </table>
 </div>
 <script>
-function myFunction() {
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("myTable");
-  tr = table.getElementsByTagName("tr");
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[0];
-    if (td) {
-      txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }       
+  function myFunction() {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }       
+    }
   }
-}
 </script>
+
 <!-- footer-widget-section start -->
 <section class="footer-widget-section section-padding">
     <div class="container">
@@ -470,7 +467,7 @@ function myFunction() {
               <li><a href="ski.html">Notre Station</a></li>
           </ul>
       </li>
-<li><a href="#">Bus Français</a>
+<li><a href="#">Transport Clermont Métropole</a>
           <ul>
               <li><a href="actubf.html">Actu</a></li>
                     <li><a href="infotrafic.html">Information Trafic</a></li>
