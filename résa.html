@@ -548,7 +548,7 @@
 
         const trainInfo = LIST[ID];
 
-        var img = 'img/logo.png';
+
         var from = trainInfo['from'];
         var to = trainInfo['to']
         var intermediate = trainInfo['intermediate']
@@ -567,7 +567,6 @@
         pdf.text(20, 120, 'Arrivée : ' + arrival);
         pdf.text(20, 130, 'Composition du train : ' + trainset);
         pdf.text(20, 140, 'Prix : ' + price + '€');
-        pdf.addImage(img, 'PNG', 50, 160, 150, 150);
 
         pdf.save('billet.pdf');
         location.reload()
