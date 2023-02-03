@@ -424,7 +424,7 @@
                 let i = 0;
                 let html = '';
                 data.forEach((train) => {
-                    i++;
+                    
                     if (trainTypeFilter === "all") {
                         if (train.type === "f") {
                             html += `<div class='container'>
@@ -438,8 +438,12 @@
                                         <p><strong>Rame:</strong> ${train.trainset}</p>
                                     </div>
                                     <div class='train-prices'>
-                                        <h5>Ce train ne prend pas de voyageurs</h5>
+                                    <div class='train-price-first alert alert-info'>
+                                        <h4><strong>1ère Classe:</strong> ${train.price1}€/t</h4>
+                                        <center><button type='button' class='btn btn-primary first-class train-button' data-toggle='modal'
+                                            data-target='#ticketModal' onclick='ticketSelect(${i}, "1")'>Prendre ce billet</button></center>
                                     </div>
+                                </div>
                                 </div>
                          </div>
                         </div>
@@ -456,15 +460,15 @@
                                     <p><strong>Rame:</strong> ${train.trainset}</p>
                                 </div>
                                 <div class='train-prices'>
-                                    <div class='train-price-first'>
+                                    <div class='train-price-first alert alert-danger'>
                                         <h4><strong>1ère Classe:</strong> ${train.price1}€</h4>
-                                        <button type='button' class='btn btn-primary first-class train-button' data-toggle='modal'
-                                            data-target='#ticketModal' onclick='ticketSelect(${i}, "1")'>Prendre ce billet</button>
+                                        <center><button type='button' class='btn btn-primary first-class train-button' data-toggle='modal'
+                                            data-target='#ticketModal' onclick='ticketSelect(${i}, "1")'>Prendre ce billet</button></center>
                                     </div>
-                                    <div class='train-price-second'>
+                                    <div class='train-price-second alert alert-success'>
                                         <h4><strong>2nde Classe:</strong> ${train.price2}€</h4>
-                                        <button type='button' class='btn btn-primary secon-class train-button' data-toggle='modal'
-                                            data-target='#ticketModal' onclick='ticketSelect(${i}, "2")'>Prendre ce billet</button>
+                                        <center><button type='button' class='btn btn-primary secon-class train-button' data-toggle='modal'
+                                            data-target='#ticketModal' onclick='ticketSelect(${i}, "2")'>Prendre ce billet</button></center>
                                     </div>
                                 </div>
                             </div>
@@ -483,8 +487,12 @@
                                         <p><strong>Rame:</strong> ${train.trainset}</p>
                                     </div>
                                     <div class='train-prices'>
-                                        <h5>Ce train ne prend pas de voyageurs</h5>
+                                    <div class='train-price-first alert alert-info'>
+                                        <h4><strong>1ère Classe:</strong> ${train.price1}€/t</h4>
+                                        <center><button type='button' class='btn btn-primary first-class train-button' data-toggle='modal'
+                                            data-target='#ticketModal' onclick='ticketSelect(${i}, "1")'>Prendre ce billet</button></center>
                                     </div>
+                                </div>
                                 </div>
                          </div>
                         </div>
@@ -501,20 +509,21 @@
                                     <p><strong>Rame:</strong> ${train.trainset}</p>
                                 </div>
                                 <div class='train-prices'>
-                                    <div class='train-price-first'>
+                                    <div class='train-price-first alert alert-danger'>
                                         <h4><strong>1ère Classe:</strong> ${train.price1}€</h4>
-                                        <button type='button' class='btn btn-primary first-class train-button' data-toggle='modal'
-                                            data-target='#ticketModal' onclick='ticketSelect(${i}, "1")'>Prendre ce billet</button>
+                                        <center><button type='button' class='btn btn-primary first-class train-button' data-toggle='modal'
+                                            data-target='#ticketModal' onclick='ticketSelect(${i}, "1")'>Prendre ce billet</button></center>
                                     </div>
-                                    <div class='train-price-second'>
+                                    <div class='train-price-second alert alert-success'>
                                         <h4><strong>2nde Classe:</strong> ${train.price2}€</h4>
-                                        <button type='button' class='btn btn-primary secon-class train-button' data-toggle='modal'
-                                            data-target='#ticketModal' onclick='ticketSelect(${i}, "2")'>Prendre ce billet</button>
+                                        <center><button type='button' class='btn btn-primary secon-class train-button' data-toggle='modal'
+                                            data-target='#ticketModal' onclick='ticketSelect(${i}, "2")'>Prendre ce billet</button></center>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </br>`;
+                    i++;
                 }
                     document.getElementById("results").innerHTML = html;
                 });
