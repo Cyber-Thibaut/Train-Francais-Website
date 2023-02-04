@@ -21,6 +21,7 @@
 		<link rel="shortcut icon" href="img/logo/franceavenir.png" type="">
 
 	    <title>France Avenir</title>
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
       <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,400italic,700,700italic,900,900italic,500italic' rel='stylesheet' type='text/css'>
       <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
      <!-- Web Fonts -->
@@ -56,18 +57,27 @@
      <script src="js/vendor/modernizr-2.8.1.min.js"></script>
 </head>
 <style>
+      .tag-important {
+        background-color: #f44336; /* rouge */
+        color: #fff; /* blanc */
+      border-radius: 3px;
+            padding: 2px 4px;
+            font-size: 12px;
+            margin-left: 10px;
+            }
+  
+      .tag-info {
+        background-color: #2196f3; /* bleu */
+        color: #fff; /* blanc */
+            border-radius: 3px;
+            padding: 2px 4px;
+            font-size: 12px;
+            margin-left: 10px;
+            }
 * {
   box-sizing: border-box;
 }
 
-.tag {
-background-color: #eee;
-color: rgb(172, 29, 29);
-border-radius: 3px;
-padding: 2px 4px;
-font-size: 12px;
-margin-left: 10px;
-}
 * {
   box-sizing: border-box;
 }
@@ -156,18 +166,19 @@ margin-left: 10px;
 											</li>
 												<!-- Services -->
 												<li class="dropdown"><a href="#">Transport Clermont Métropole <span class="fa fa-angle-down"></span></a>
-														<!-- submenu-wrapper -->
-														<div class="submenu-wrapper submenu-wrapper-topbottom">
+														                              <!-- submenu-wrapper -->
+														                              <div class="submenu-wrapper submenu-wrapper-topbottom">
                                                             <div class="submenu-inner  submenu-inner-topbottom">
                                                                 <ul class="dropdown-menu">
-																	<li><a href="actubf.html">Actu</a></li>
-																	<li><a href="infotrafic.html">Information Trafic</a></li>
-																	<li><a href="tarifsbus.html">Nos Tarifs <span class="tag">ATTENTION !</span></a></li>
-                                                                    <li class="dropdown-header"><---  Info sur nos lignes  ---></li>
+																	                                  <li><a href="actubf.html">Actu</a></li>
+																                                    <li><a href="inventaire bus.html">Notre Inventaire</a></li>
+																	                                  <li><a href="infotrafic.html">Information Trafic</a></li>
+																	                                  <li><a href="tarifsbus.html">Nos Tarifs <span class="tag tag-important">MISE A JOUR !</span></a></li>
+                                                                    <li class="dropdown-header"><a><---  Info sur nos lignes  ---></a></li>
                                                                     <li overflow: hidden; text-overflow: ellipsis; white-space: nowrap;>
                                                                         <a href="1.html">
-                                                                          <img src="https://transport-manager.net/assets/img/lignes/L1.png" alt="Gare Centrale <> Campus Cezeaux" width="10%" max-height="10%">
-                                                                          Gare Centrale <> Campus Cezeaux
+                                                                          <img src="https://transport-manager.net/assets/img/lignes/L1.png" alt="Gare Centrale <> Campus Cézeaux" width="10%" max-height="10%">
+                                                                          Gare Centrale <> Campus Cézeaux
                                                                         </a>
                                                                       </li>
                                                                       <li>
@@ -187,11 +198,10 @@ margin-left: 10px;
                                                                           <img src="https://transport-manager.net/assets/img/lignes/L4.png" alt="Gare Centrale <> Gare de l'Est" width="10%" height="10%">
                                                                           Gare Centrale <> Gare de l'Est
                                                                         </a>
-                                                                      </li>
-                                                                      <li><a href="infotrafic.html">Information Trafic</a></li>                                                                    
+                                                                      </li>                  
                                                                   </ul>
-															</div>
-														</div>
+															                              </div>
+														                            </div>
 														<!-- /submenu-wrapper -->
 												</li>
                                                 <li class="dropdown"><a href="#">Train Français - Informations Pratiques <b class="caret"></b></a>
@@ -202,7 +212,7 @@ margin-left: 10px;
                                                                 <li><a href="plan.html">Plan de nos lignes</a></li>
 																<li><a href="inventaire.html">Notre Inventaire</a></li>
 																<li><a href="infotrafic.html">Information Trafic</a></li>
-																<li><a href="resa.html">Réserver un billet</a></li>
+																<li><a href="résa.html">Réserver un billet</a></li>
                                                                 <li><a href="faq.html">FAQ</a></li>
                                                             </ul>
                                                         </div>
@@ -235,13 +245,13 @@ margin-left: 10px;
                                                     			<li><a href="départ.html#PGL">Paris Gare de Lyon</a></li>
                                                     			<li><a href="départ.html#TPN">Torino Porto Nova</a></li>
                                                     			<li><a href="départ.html#tm">Toulouse Matabiau</a></li>
-                                                    			<li><a href="départ.html#CF">Clermont-Ferrand <span class="tag">NOUVEAU !</span></a></li>
+																<li><a href="départ.html#CF">Clermont-Ferrand <span class="tag tag-info">NOUVEAU !</span></a></li>
                                                             </ul>
                                                         </div>
                                                     </div>
                                                     <!-- /submenu-wrapper -->
                                                 </li>
-                                                <li><a href="franceavenir.html">France Avenir, l'alliance <span class="tag">NOUVEAU !</span></a></li>	
+                                                <li><a href="franceavenir.html">France Avenir, l'alliance <span class="tag tag-info">NOUVEAU !</span></a></li>	
 											</ul>
                                         </div><!-- /.navbar-collapse -->
                                 </nav>
@@ -263,98 +273,342 @@ margin-left: 10px;
                     </div>
                 </section>
 <br>
-<center><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Entrez le nom de l'engin 🔎" title="Cherchez un engin 🔎"></center>
+
+<center><h4>Toutes les images sont la propriété de FranceAvenir représentée par Thibaut.</h4></center>
+<center><input class="btn btn-success" type="text" id="myInput" onkeyup="myFunction()" placeholder="Entrez le nom de l'engin 🔎" title="Cherchez un engin 🔎"></center>
 <hr>
 <div class="container">
-<table class="table table-striped" id="myTable" style="height: 100%">
+<table class="table table-striped" id="myTable">
     <thead>
-    <tr>
+    <tr style="height: 100px">
     <th scope=col>Nom</td>
-    <th scope=col>Reproduction/utilisation autorisée</td>
     <th scope=col>Représentation</td>
     </tr>
     </thead>
     <tbody>
-        <tr><td>ETR 610 Franco-Italien</td>
-        <td>❌</td>
-        <td style="height: 100%"><img src="livréesperso/ETR610 PAris - Venise avec fond.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
-        <tr><td>SNCF Z 56300 liO</td>
-        <td>❌</td>
-        <td style="height: 100%"><img src="livréesperso\SNCF Z 56300 liO.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
-        <tr><td>Régio2N LiO</td>
-        <td>❌</td>
-        <td style="height: 100%"><img src="livréesperso\Regio2N 8c LiO.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
-        <tr><td>VB2N AuRA 6c</td>
-        <td>❌</td>
-        <td style="height: 100%"><img src="livréesperso\VB2n6c.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
-        <tr><td>VB2N AuRA 8c</td>
-        <td>❌</td>
-        <td style="height: 100%"><img src="livréesperso\VB2n8c.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
-        <tr><td>Régio2N AuRA</td>
-        <td>❌</td>
-        <td style="height: 100%"><img src="livréesperso\Régio2N - AuRA.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
-        <tr><td>Régio2N Bretagne</td>
-        <td>❌</td>
-        <td style="height: 100%"><img src="livréesperso\Regio2N 8c Bretagne.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
-        <tr><td>BB+BB26000 Spéciale Bordeaux - Lyon</td>
-        <td>❌</td>
-        <td style="height: 100%"><img src="livréesperso\BB_BB26000_Bordeaux_Lyon.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
-        <tr><td>B 84500</td>
-        <td>❌</td>
-        <td style="height: 100%"><img src="livréesperso\B 84500.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
-        <tr><td>TGV FRET</td>
-        <td>❌</td>
-        <td style="height: 100%"><img src="livréesperso\TGV Fret.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
-        <tr><td>TGV Ouigo</td>
-        <td>❌ - By Alex (Tous droits réservés)</td>
-        <td style="height: 100%"><img src="livréesperso\Ouigo.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
-        <tr><td>TGV Réseau Duplex</td>
-        <td>❌ - By Alex (Tous droits réservés)</td>
-        <td style="height: 100%"><img src="livréesperso\TGV Réseau Duplex.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
-        <tr><td>TGV Euroduplex</td>
-        <td>❌</td>
-        <td style="height: 100%"><img src="livréesperso\TGV EuroDuplex2.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
-        <tr><td>BB26000</td>
-        <td>❌</td>
-        <td style="height: 100%"><img src="livréesperso\BB26000_Fant_R.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
-        <tr><td>DB BR 147</td>
-        <td>❌</td>
-        <td style="height: 100%"><img src="livréesperso\1798.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
-        <tr><td>CFF Re 460</td>
-        <td>❌</td>
-        <td style="height: 100%"><img src="livréesperso\1242.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
-        <tr><td>Corail NG88 B11 (f)</td>
-        <td>❌</td>
-        <td style="height: 100%"><img src="livréesperso\972.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
-        <tr><td>Corail NG88 B7Dx (f)</td>
-        <td>❌</td>
-        <td style="height: 100%"><img src="livréesperso\1632.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
-        <tr><td>SNCF U 53600 - SNCF U 53700</td>
-        <td>❌</td>
-        <td style="height: 100%"><img src="livréesperso\847.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
-        <tr><td>DB Metropolitan</td>
-        <td>❌</td>
-        <td style="height: 100%"><img src="livréesperso\1812.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
-        <tr><td>MPL16</td>
-        <td>❌</td>
-        <td style="height: 100%"><img src="livréesperso\MPL16.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
-        <tr><td>SNCF B 85000 Coradia Liner</td>
-        <td>❌</td>
-        <td style="height: 100%"><img src="livréesperso\SNCF B 85000 Coradia Liner.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
-        <tr><td>SNCF Corail VU B6Dux TER Languedoc Roussillon</td>
-        <td>❌</td>
-        <td style="height: 100%"><img src="livréesperso\Corail VU B6Dux Languedoc Roussillon.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
-        <tr><td>TEL A</td>
-        <td>❌</td>
-        <td style="height: 100%"><img src="livréesperso\SNCF B 84500 TEL A.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
-        <tr><td>TEL B</td>
-        <td>❌</td>
-        <td style="height: 100%"><img src="livréesperso\TEL B train.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
-        
-    
+        <tr style="height: 100px"><td>ETR 610 Franco-Italien</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal01').style.display='block'" src="livréesperso/ETR610 PAris - Venise avec fond.png"></tr>
+        <tr style="height: 100px"><td>SNCF Z 56300 liO</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal02').style.display='block'" src="livréesperso\SNCF Z 56300 liO.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>Régio2N LiO</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal03').style.display='block'" src="livréesperso\Regio2N 8c LiO.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>VB2N AuRA 6c</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal04').style.display='block'" src="livréesperso\VB2n6c.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>VB2N AuRA 8c</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal05').style.display='block'" src="livréesperso\VB2n8c.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>Régio2N AuRA</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal06').style.display='block'" src="livréesperso\Régio2N - AuRA.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>Régio2N Bretagne</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal07').style.display='block'" src="livréesperso\Regio2N 8c Bretagne.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>BB+BB26000 Spéciale Bordeaux - Lyon</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal08').style.display='block'" src="livréesperso\BB_BB26000_Bordeaux_Lyon.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>B 84500</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal09').style.display='block'" src="livréesperso\B 84500.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>TGV FRET</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal10').style.display='block'" src="livréesperso\TGV Fret.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>TGV Ouigo</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal11').style.display='block'" src="livréesperso\Ouigo.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>TGV Réseau Duplex</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal12').style.display='block'" src="livréesperso\TGV Réseau Duplex.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>TGV Euroduplex</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal13').style.display='block'" src="livréesperso\TGV EuroDuplex2.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>BB26000</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal14').style.display='block'" src="livréesperso\BB26000_Fant_R.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>DB BR 147</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal15').style.display='block'" src="livréesperso\1798.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>CFF Re 460</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal16').style.display='block'" src="livréesperso\1242.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>Corail NG88 B11 (f)</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal17').style.display='block'" src="livréesperso\972.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>Corail NG88 B7Dx (f)</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal18').style.display='block'" src="livréesperso\1632.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>SNCF U 53600 - SNCF U 53700</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal19').style.display='block'" src="livréesperso\847.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>DB Metropolitan</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal20').style.display='block'" src="livréesperso\1812.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>MPL16</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal21').style.display='block'" src="livréesperso\MPL16.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>SNCF B 85000 Coradia Liner</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal22').style.display='block'" src="livréesperso\SNCF B 85000 Coradia Liner.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>SNCF Corail VU B6Dux TER Languedoc Roussillon</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal23').style.display='block'" src="livréesperso\Corail VU B6Dux Languedoc Roussillon.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>TEL A</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal24').style.display='block'" src="livréesperso\SNCF B 84500 TEL A.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>TEL B</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal25').style.display='block'" src="livréesperso\TEL B train.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>FS ETR 421</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal26').style.display='block'" src="livréesperso\ETR 421.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>FS ETR 521</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal27').style.display='block'" src="livréesperso\ETR 521.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>SNCF BB 22200 TVM</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal28').style.display='block'" src="livréesperso\SNCF BB 22200 TVM.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>DB Ddm915</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal29').style.display='block'" src="livréesperso\DB Ddm915.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>DB Ddm915 IR</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal30').style.display='block'" src="livréesperso\DB Ddm915 IR.png" style="object-fit: cover; object-position: top left; height: 100%;"></td></tr>
+        <tr style="height: 100px"><td>DB Ddm915 Blau</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal31').style.display='block'" src="livréesperso\DB Ddm915 Blau.png" style="object-fit: cover; object-position: top left; height: 100%;"></td></tr>
+        <tr style="height: 100px"><td>DB Ddm915 Autozug</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal32').style.display='block'" src="livréesperso\DB Ddm915 Autozug.png" style="object-fit: cover; object-position: top left; height: 100%;"></td></tr>
 
     </tbody>
     </table>
+    <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>ETR 610 Franco-Italien</h2>
+          <center><img style="height: auto" src="livréesperso/ETR610 PAris - Venise avec fond.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal02" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>SNCF Z 56300 liO</h2>
+          <center><img style="height: auto" src="livréesperso/SNCF Z 56300 liO.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal03" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>Régio2N LiO</h2>
+          <center><img style="height: auto" src="livréesperso\Regio2N 8c LiO.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal04" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>VB2N AuRA 6c</h2>
+          <center><img style="height: auto" src="livréesperso\VB2n6c.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal05" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>VB2N AuRA 8c</h2>
+          <center><img style="height: auto" src="livréesperso\VB2n8c.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal06" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>Régio2N AuRA</h2>
+          <center><img style="height: auto" src="livréesperso\Régio2N - AuRA.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal07" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>Régio2N Bretagne</h2>
+          <center><img style="height: auto" src="livréesperso\Regio2N 8c Bretagne.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal08" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>BB+BB26000 Spéciale Bordeaux - Lyon</h2>
+          <center><img style="height: auto" src="livréesperso\BB_BB26000_Bordeaux_Lyon.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal09" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>B 84500</h2>
+          <center><img style="height: auto" src="livréesperso\B 84500.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal10" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>TGV FRET</h2>
+          <center><img style="height: auto" src="livréesperso\TGV Fret.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal11" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>TGV Ouigo</h2>
+          <center><img style="height: auto" src="livréesperso\Ouigo.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal12" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>TGV Réseau Duplex</h2>
+          <center><img style="height: auto" src="livréesperso\TGV Réseau Duplex.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal13" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>TGV Euroduplex</h2>
+          <center><img style="height: auto" src="livréesperso\TGV EuroDuplex2.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal14" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>BB26000</h2>
+          <center><img style="height: auto" src="livréesperso\BB26000_Fant_R.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal15" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>DB BR 147</h2>
+          <center><img style="height: auto" src="livréesperso\1798.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal16" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>CFF Re 460</h2>
+          <center><img style="height: auto" src="livréesperso\1242.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal17" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>Corail NG88 B11 (f)</h2>
+          <center><img style="height: auto" src="livréesperso\972.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal18" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>Corail NG88 B7Dx (f)</h2>
+          <center><img style="height: auto" src="livréesperso\1632.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal19" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>SNCF U 53600 - SNCF U 53700</h2>
+          <center><img style="height: auto" src="livréesperso\847.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal20" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>DB Metropolitan</h2>
+          <center><img style="height: auto" src="livréesperso\1812.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal21" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>MPL16</h2>
+          <center><img style="height: auto" src="livréesperso\MPL16.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal22" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>SNCF B 85000 Coradia Liner</h2>
+          <center><img style="height: auto" src="livréesperso\SNCF B 85000 Coradia Liner.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal23" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>SNCF Corail VU B6Dux TER Languedoc Roussillon</h2>
+          <center><img style="height: auto" src="livréesperso\Corail VU B6Dux Languedoc Roussillon.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal24" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>TEL A</h2>
+          <center><img style="height: auto" src="livréesperso\SNCF B 84500 TEL A.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal25" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>TEL B</h2>
+          <center><img style="height: auto" src="livréesperso\TEL B train.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal26" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>FS ETR 421</h2>
+          <center><img style="height: auto" src="livréesperso\ETR 421.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal27" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>FS ETR 521</h2>
+          <center><img style="height: auto" src="livréesperso\ETR 521.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal28" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>SNCF BB 22200 TVM</h2>
+          <center><img style="height: auto" src="livréesperso\SNCF BB 22200 TVM.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal29" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>DB Ddm915</h2>
+          <center><img style="height: auto" src="livréesperso\DB Ddm915.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal30" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>DB Ddm915 IR</h2>
+          <center><img style="height: auto" src="livréesperso\DB Ddm915 IR.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal31" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>DB Ddm915 Blau</h2>
+          <center><img style="height: auto" src="livréesperso\DB Ddm915 Blau.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal32" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>DB Ddm915 Autozug</h2>
+          <center><img style="height: auto;object-position: center" src="livréesperso\DB Ddm915 Autozug.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
 </div>
 <script>
   function myFunction() {
@@ -376,6 +630,7 @@ margin-left: 10px;
     }
   }
 </script>
+
 
 <!-- footer-widget-section start -->
 <section class="footer-widget-section section-padding">
@@ -468,67 +723,87 @@ margin-left: 10px;
           </ul>
       </li>
 <li><a href="#">Transport Clermont Métropole</a>
-          <ul>
-              <li><a href="actubf.html">Actu</a></li>
-                    <li><a href="infotrafic.html">Information Trafic</a></li>
-                    <li><a href="tarifsbus.html">Nos Tarifs <span class="tag">ATTENTION !</span></a></li>
-                                                      <li class="dropdown-header"><---  Info sur nos lignes  ---></li>
-                                                      <li overflow: hidden; text-overflow: ellipsis; white-space: nowrap;>
-                                                          <a href="1.html">
-                                                            <img src="https://transport-manager.net/assets/img/lignes/L1.png" alt="Gare Centrale <> Campus Cezeaux" width="10%" max-height="10%">
-                                                            Gare Centrale <> Campus Cezeaux
-                                                          </a>
-                                                        </li>
-                                                        <li>
-                                                          <a href="2.html">
-                                                            <img src="https://transport-manager.net/assets/img/lignes/L2.png" alt="Gare Centrale <> Aéroport" width="10%" height="10%">
-                                                            Gare Centrale <> Aéroport
-                                                          </a>
-                                                        </li>
-                                                        <li overflow: hidden; text-overflow: ellipsis; white-space: nowrap;>
-                                                          <a href="3.html">
-                                                            <img src="https://transport-manager.net/assets/img/lignes/L3.png" alt="Gare Centrale <> Campus Marthe Gautier" width="10%" height="10%">
-                                                            Gare Centrale <> Campus Marthe Gautier
-                                                          </a>
-                                                        </li>
-                                                        <li>
-                                                          <a href="4.html">
-                                                            <img src="https://transport-manager.net/assets/img/lignes/L4.png" alt="Gare Centrale <> Gare de l'Est" width="10%" height="10%">
-                                                            Gare Centrale <> Gare de l'Est
-                                                          </a>
-                                                        </li>                                          </li>
-          </ul>
-      </li>
-<li><a href="#">Train Français - Information Pratiques</a>
-          <ul>
-              <li><a href="plan.html">Plan de nos lignes</a></li>
-<li><a href="inventaire.html">Notre Inventaire</a></li>
-<li><a href="infotrafic.html">Information Trafic</a></li>
-<li><a href="resa.html">Réserver un billet</a></li>
-              <li><a href="faq.html">FAQ</a></li>
-          </ul>
-      </li>
-<li><a href="#">Train Français - Au départ de nos gares</a>
-          <ul>
-              <li><a href="départ.html#LP">Lyon Perrache</a></li>
-                                            <li><a href="départ.html#bsj">Bordeaux St-Jean</a></li>
-                                            <li><a href="départ.html#PGL">Paris Gare de Lyon</a></li>
-                                            <li><a href="départ.html#TPN">Torino Porto Nova</a></li>
-                                            <li><a href="départ.html#tm">Toulouse Matabiau</a></li>
-                                            <li><a href="départ.html#CF">Clermont-Ferrand <span class="tag">NOUVEAU !</span></a></li>
-          </ul>
-      </li>
-<li><a href="#">Informations sur nos lignes</a>
-          <ul>
-              <li><a href="fgv.html"><i class="fas fa-train"></i> France à Grande Vitesse</a></li>
-                    <li><a href="ICE.html"><i class="fas fa-train"></i> ICEurope</a></li>
-                    <li><a href="ICSuisse.html"><i class="fas fa-train"></i> ICSuisse</a></li>
-                    <li><a href="région.html"><i class="fas fa-train"></i> France Région</a></li>
-                    <li><a href="tel.html"><i class="fas fa-train"></i> Train Express Lyonnais</a></li>
-                    <li><a href="tfm.html"><i class="fas fa-pallet"></i> Train Français Marchandise</a></li>
-          </ul>
-      </li>
-      <li><a href="franceavenir.html">France Avenir, l'alliance <span class="tag">NOUVEAU !</span></a></li>
+                        <ul>
+                            <li><a href="actubf.html">Actu</a></li>
+																    <li><a href="inventaire bus.html">Notre Inventaire</a></li>
+																	<li><a href="infotrafic.html">Information Trafic</a></li>
+																	<li><a href="agences.html">Nos agences <span class="tag tag-info">NOUVEAU !</span></a></li>
+																	<li><a href="tarifsbus.html">Nos Tarifs <span class="tag tag-important">MISE A JOUR !</span></a></li>
+                                                                    <li class="dropdown-header"><a><---  Info sur nos lignes  ---></a></li>
+                                                                    <li overflow: hidden; text-overflow: ellipsis; white-space: nowrap;>
+                                                                        <a href="1.html">
+                                                                          <img src="https://transport-manager.net/assets/img/lignes/L1.png" alt="Gare Centrale <> Campus Cézeaux" width="10%" max-height="10%">
+                                                                          Gare Centrale <> Campus Cézeaux
+                                                                        </a>
+                                                                      </li>
+                                                                      <li>
+                                                                        <a href="2.html">
+                                                                          <img src="https://transport-manager.net/assets/img/lignes/L2.png" alt="Gare Centrale <> Aéroport" width="10%" height="10%">
+                                                                          Gare Centrale <> Aéroport
+                                                                        </a>
+                                                                      </li>
+                                                                      <li overflow: hidden; text-overflow: ellipsis; white-space: nowrap;>
+                                                                        <a href="3.html">
+                                                                          <img src="https://transport-manager.net/assets/img/lignes/L3.png" alt="Gare Centrale <> Campus Marthe Gautier" width="10%" height="10%">
+                                                                          Gare Centrale <> Campus Marthe Gautier
+                                                                        </a>
+                                                                      </li>
+                                                                      <li>
+                                                                        <a href="4.html">
+                                                                          <img src="https://transport-manager.net/assets/img/lignes/L4.png" alt="Gare Centrale <> Gare de l'Est" width="10%" height="10%">
+                                                                          Gare Centrale <> Gare de l'Est
+                                                                        </a>
+                                                                      </li> 
+																	  <li>
+                                                                        <a href="5.html">
+                                                                          <img src="https://transport-manager.net/assets/img/lignes/L5.png" alt="Musée d'Art Moderne <> Pôle Luca Pacioli" width="10%" height="10%">
+                                                                          Musée d'Art Moderne <> Pôle Luca Pacioli
+                                                                        </a>
+                                                                      </li> 
+																	  <li>
+                                                                        <a href="6.html">
+                                                                          <img src="https://transport-manager.net/assets/img/lignes/L6.png" alt="Grand Palais <> Campus Maryse Esterle" width="10%" height="10%">
+                                                                          Grand Palais <> Campus Maryse Esterle
+                                                                        </a>
+                                                                      </li> 
+																	  <li>
+                                                                        <a href="7.html">
+                                                                          <img src="https://transport-manager.net/assets/img/lignes/L7.png" alt="Port fluvial <> Grand Palais" width="10%" height="10%">
+                                                                          Port fluvial <> Grand Palais
+                                                                        </a>
+                                                                      </li>                                          </li>
+                        </ul>
+                    </li>
+					<li><a href="#">Train Français - Information Pratiques</a>
+                        <ul>
+                            <li><a href="plan.html">Plan de nos lignes</a></li>
+							<li><a href="inventaire.html">Notre Inventaire</a></li>
+							<li><a href="infotrafic.html">Information Trafic</a></li>
+							<li><a href="résa.html">Réserver un billet</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                        </ul>
+                    </li>
+					<li><a href="#">Train Français - Au départ de nos gares</a>
+                        <ul>
+                            <li><a href="départ.html#LP">Lyon Perrache</a></li>
+                                                    			<li><a href="départ.html#bsj">Bordeaux St-Jean</a></li>
+                                                    			<li><a href="départ.html#PGL">Paris Gare de Lyon</a></li>
+                                                    			<li><a href="départ.html#TPN">Torino Porto Nova</a></li>
+                                                    			<li><a href="départ.html#tm">Toulouse Matabiau</a></li>
+                                                    			<li><a href="départ.html#CF">Clermont-Ferrand <span class="tag tag-info">NOUVEAU !</span></a></li>
+                        </ul>
+                    </li>
+					<li><a href="#">Informations sur nos lignes</a>
+                        <ul>
+                            <li><a href="fgv.html"><i class="fas fa-train"></i> France à Grande Vitesse</a></li>
+    															<li><a href="ICE.html"><i class="fas fa-train"></i> ICEurope</a></li>
+    															<li><a href="ICSuisse.html"><i class="fas fa-train"></i> ICSuisse</a></li>
+    															<li><a href="région.html"><i class="fas fa-train"></i> France Région</a></li>
+    															<li><a href="tel.html"><i class="fas fa-train"></i> Train Express Lyonnais</a></li>
+    															<li><a href="tfm.html"><i class="fas fa-pallet"></i> Train Français Marchandise</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="franceavenir.html">France Avenir, l'alliance <span class="tag tag-info">NOUVEAU !</span></a></li>
   </ul>
   <div class="offcanvas-widgets hidden-sm hidden-xs">
       <div id="twitterWidget">
