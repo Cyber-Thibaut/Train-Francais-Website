@@ -540,7 +540,6 @@
         for (var i = 0; i < 6; i++) {
             reference += possible.charAt(Math.floor(Math.random() * possible.length));
         }
-        var img = document.getElementById('logo');
         const name = document.getElementById('name').value;
         const dob = document.getElementById('dob').value;
         const selectedClass = SERVICE;
@@ -572,7 +571,6 @@
         pdf.text(20, 120, 'Arrivée : ' + arrival);
         pdf.text(20, 130, 'Composition du train : ' + trainset);
         pdf.text(20, 140, 'Prix : ' + price + '€');
-
         pdf.save('billet.pdf');
         location.reload()
     }
