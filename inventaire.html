@@ -57,11 +57,32 @@
    <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
      <script src="js/vendor/modernizr-2.8.1.min.js"></script>
      <style>
-  .img-cell img {
-    height: 100%;
-    object-fit: contain;
-    width: auto;
-  }
+  * {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 18px;
+  color: #535353;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+  font-weight: bold;
+}
+
+
+#myTable tr.header, #myTable tr:hover {
+  background: #58bceb;
+  color: #000000;
+}
 
       .tag-important {
         background-color: #f44336; /* rouge */
@@ -217,22 +238,7 @@
                                                     </div>
                                                     <!-- /submenu-wrapper -->
                                                 </li>
-                                                <li class="dropdown"><a href="#">Train Français - Au départ de nos gares <b class="caret"></b></a>
-                                                    <!-- submenu-wrapper -->
-                                                    <div class="submenu-wrapper submenu-wrapper-topbottom">
-                                                        <div class="submenu-inner  submenu-inner-topbottom">
-                                                            <ul class="dropdown-menu">
-                                                                <li><a href="départ.html#LP">Lyon Perrache</a></li>
-                                                    			<li><a href="départ.html#bsj">Bordeaux St-Jean</a></li>
-                                                    			<li><a href="départ.html#PGL">Paris Gare de Lyon</a></li>
-                                                    			<li><a href="départ.html#TPN">Torino Porto Nova</a></li>
-                                                    			<li><a href="départ.html#tm">Toulouse Matabiau</a></li>
-																<li><a href="départ.html#CF">Clermont-Ferrand <span class="tag tag-info">NOUVEAU !</span></a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <!-- /submenu-wrapper -->
-                                                </li>
+                                                <li><a href="départ.html">Train Français - Au départ de nos gares</a></li>
                                                 <li><a href="franceavenir.html">France Avenir, l'alliance <span class="tag tag-info">NOUVEAU !</span></a></li>	
 											</ul>
                                         </div><!-- /.navbar-collapse -->
@@ -259,7 +265,7 @@
   <div class="container">
     <table id="example" class="display" style="width:100%">
       <thead>
-        <tr>
+        <tr style="height: 100px">
           <th scope=col style="width: 20%;">Nom</th>
           <th scope=col>Quantité</th>
           <th scope=col style="width: 80%;">Image</th>
@@ -281,7 +287,7 @@
         render: (data) => {
           return `<div class="img-cell" style="overflow: auto; height: 100%;"> 
             <img src="${data}" 
-            style="object-fit: cover; object-position: top left; max-height: 100%;"></div>`;
+            style="object-fit: cover; overflow: auto; object-position: top left; height: 100%;"></div>`;
         }
       }
     ]
