@@ -133,8 +133,45 @@
 													</div>
 													<!-- /submenu-wrapper -->
 											</li>
-												<!-- Services -->
-												<li><a href="départ.html">Train Français - Au départ de nos gares</a></li>
+												<li class="dropdown"><a href="#">Transport Clermont Métropole <span class="fa fa-angle-down"></span></a>
+														                              <!-- submenu-wrapper -->
+														                              <div class="submenu-wrapper submenu-wrapper-topbottom">
+                                                            <div class="submenu-inner  submenu-inner-topbottom">
+                                                                <ul class="dropdown-menu">
+																	                                  <li><a href="actubf.html">Actu</a></li>
+																                                    <li><a href="inventaire bus.html">Notre Inventaire</a></li>
+																	                                  <li><a href="infotrafic.html">Information Trafic</a></li>
+																	                                  <li><a href="tarifsbus.html">Nos Tarifs <span class="tag tag-important">MISE A JOUR !</span></a></li>
+                                                                    <li class="dropdown-header"><a><---  Info sur nos lignes  ---></a></li>
+                                                                    <li overflow: hidden; text-overflow: ellipsis; white-space: nowrap;>
+                                                                        <a href="1.html">
+                                                                          <img src="https://transport-manager.net/assets/img/lignes/L1.png" alt="Gare Centrale <> Campus Cézeaux" width="10%" max-height="10%">
+                                                                          Gare Centrale <> Campus Cézeaux
+                                                                        </a>
+                                                                      </li>
+                                                                      <li>
+                                                                        <a href="2.html">
+                                                                          <img src="https://transport-manager.net/assets/img/lignes/L2.png" alt="Gare Centrale <> Aéroport" width="10%" height="10%">
+                                                                          Gare Centrale <> Aéroport
+                                                                        </a>
+                                                                      </li>
+                                                                      <li overflow: hidden; text-overflow: ellipsis; white-space: nowrap;>
+                                                                        <a href="3.html">
+                                                                          <img src="https://transport-manager.net/assets/img/lignes/L3.png" alt="Gare Centrale <> Campus Marthe Gautier" width="10%" height="10%">
+                                                                          Gare Centrale <> Campus Marthe Gautier
+                                                                        </a>
+                                                                      </li>
+                                                                      <li>
+                                                                        <a href="4.html">
+                                                                          <img src="https://transport-manager.net/assets/img/lignes/L4.png" alt="Gare Centrale <> Gare de l'Est" width="10%" height="10%">
+                                                                          Gare Centrale <> Gare de l'Est
+                                                                        </a>
+                                                                      </li>                  
+                                                                  </ul>
+															                              </div>
+														                            </div>
+														<!-- /submenu-wrapper -->
+												</li>
                                                 <li class="dropdown"><a href="#">Train Français - Informations Pratiques <b class="caret"></b></a>
                                                     <!-- submenu-wrapper -->
                                                     <div class="submenu-wrapper submenu-wrapper-topbottom">
@@ -199,7 +236,7 @@
 								<div class="col-sm-9">
 									<div class="single-service-content">
 										<div class="single-service-thumb">
-											<img src="https://transport-manager.net/assets/img/lignes/N1_L1_trans1.png" alt="image"/>
+											<img src="https://transport-manager.net/assets/img/lignes/N1_L1_trans2.png" alt="image"/>
 										</div>
 										<h2>Pratique, fiable, abordable.</h2>
 										<p>La ligne de bus 1 relie la gare centrale de Clermont-Ferrand au campus des Cézeaux, offrant ainsi aux usagers un moyen pratique et fiable de se déplacer entre les deux points. Le trajet dure environ 25 minutes, avec des arrêts à des points stratégiques tels que le hôtel de région et le CHU. La ligne de bus 1 est un service fiable et sûr et propose des tarifs abordables pour tous les types de voyageurs.</p>				
