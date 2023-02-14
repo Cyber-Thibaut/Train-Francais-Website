@@ -158,15 +158,17 @@
 													</div>
 													<!-- /submenu-wrapper -->
 											</li>
+												<!-- Services -->
 												<li class="dropdown"><a href="#">Transport Clermont Métropole <span class="fa fa-angle-down"></span></a>
-														                              <!-- submenu-wrapper -->
-														                              <div class="submenu-wrapper submenu-wrapper-topbottom">
+														<!-- submenu-wrapper -->
+														<div class="submenu-wrapper submenu-wrapper-topbottom">
                                                             <div class="submenu-inner  submenu-inner-topbottom">
                                                                 <ul class="dropdown-menu">
-																	                                  <li><a href="actubf.html">Actu</a></li>
-																                                    <li><a href="inventaire bus.html">Notre Inventaire</a></li>
-																	                                  <li><a href="infotrafic.html">Information Trafic</a></li>
-																	                                  <li><a href="tarifsbus.html">Nos Tarifs <span class="tag tag-important">MISE A JOUR !</span></a></li>
+																	<li><a href="actubf.html">Actu</a></li>
+																    <li><a href="inventaire bus.html">Notre Inventaire</a></li>
+																	<li><a href="infotrafic.html">Information Trafic</a></li>
+																	<li><a href="agences.html"><img src="img/logo/info.png" alt="Gare Centrale <> Campus Cézeaux" width="10%" max-height="10%"> Nos agences <span class="tag tag-info">NOUVEAU !</span></a></li>
+																	<li><a href="tarifsbus.html"><img src="img/logo/tarifs.png" alt="Gare Centrale <> Campus Cézeaux" width="10%" max-height="10%"> Nos Tarifs <span class="tag tag-important">MISE A JOUR !</span></a></li>
                                                                     <li class="dropdown-header"><a><---  Info sur nos lignes  ---></a></li>
                                                                     <li overflow: hidden; text-overflow: ellipsis; white-space: nowrap;>
 																				<a href="1.html">
@@ -209,10 +211,10 @@
 																				  <img src="img/logo/7.png" alt="Port fluvial <> Grand Palais" width="10%" height="10%">
 																				  Port fluvial <> Grand Palais
 																				</a>
-																			  </li>                  
+																			  </li>                                                                   
                                                                   </ul>
-															                              </div>
-														                            </div>
+															</div>
+														</div>
 														<!-- /submenu-wrapper -->
 												</li>
                                                 <li class="dropdown"><a href="#">Train Français - Informations Pratiques <b class="caret"></b></a>
