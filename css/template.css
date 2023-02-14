@@ -78,6 +78,7 @@ GENERAL
 ----------------------------------------------------- */
 img {
   max-width: 100%;
+  border-radius: 5px 5px 0 0;
 }
 
 hr {
@@ -207,7 +208,7 @@ Bootstrap Modal
 }
 
 .modal-content {
-  border-radius: 0;
+  border-radius: 5px 5px 0 0;
   background: #f8f7f7;
   padding: 30px;
   border: 0;

@@ -82,6 +82,124 @@
             font-size: 12px;
             margin-left: 10px;
             }
+			:root {
+  --surface-color: #fff;
+  --curve: 40;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: #fef8f8;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 4rem 5vw;
+  padding: 0;
+  list-style-type: none;
+}
+
+.card {
+  position: relative;
+  display: block;
+  height: 100%;  
+  border-radius: calc(var(--curve) * 1px);
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.card__image {      
+  width: 100%;
+  height: auto;
+}
+
+.card__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;      
+  border-radius: calc(var(--curve) * 1px);    
+  background-color: var(--surface-color);      
+  transform: translateY(100%);
+  transition: .2s ease-in-out;
+}
+
+.card:hover .card__overlay {
+  transform: translateY(0);
+}
+
+.card__header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  padding: 2em;
+  border-radius: calc(var(--curve) * 1px) 0 0 0;    
+  background-color: var(--surface-color);
+  transform: translateY(-100%);
+  transition: .2s ease-in-out;
+}
+
+.card__arc {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  bottom: 100%;
+  right: 0;      
+  z-index: 1;
+}
+
+.card__arc path {
+  fill: var(--surface-color);
+  d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+}       
+
+.card:hover .card__header {
+  transform: translateY(0);
+}
+
+.card__thumb {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;      
+  border-radius: 50%;      
+}
+
+.card__title {
+  font-size: 1em;
+  margin: 0 0 .3em;
+  color: #6A515E;
+}
+
+.card__tagline {
+  display: block;
+  margin: 1em 0;
+  font-family: "MockFlowFont";  
+  font-size: .8em; 
+  color: #D7BDCA;  
+}
+
+.card__status {
+  font-size: .8em;
+  color: #D7BDCA;
+}
+
+.card__description {
+  padding: 0 2em 2em;
+  margin: 0;
+  color: #FB5924;  
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}    
         </style>
 
 
@@ -278,8 +396,132 @@
 							  <a href="train-empire.com/" target="_blank">
 								<button type="button" class="btn btn-danger">Rejoinde l'Alliance</button>
 							  </a></div></center>
-							</section>
-							  
+							</section><br>
+							<section class="team-member">
+							<div class="container">
+								<h2>Les membres fondateurs de l'alliance</h2>
+								<ul class="cards">
+									<li>
+									  <a href="https://sites.google.com/view/flotransport/accueil?authuser=1" class="card">
+										<img src="https://lh6.googleusercontent.com/JD8OzK6-qD9xrEy5tKjKlFTOGB6rRP5j8NMMzhtTCtdl8mT7wv_NUpYv7utUrjkVLHs7CbE47pmdeZNIWvVHD3U=w16383" class="card__image" alt="" />
+										<div class="card__overlay">
+										  <div class="card__header">
+											<svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
+											<div class="card__header-text">
+											  <h2 class="card__title">FloTransport</h2>
+											</div>
+										  </div>
+										  <p class="card__description">Co-Directeur & Co-Fondateur</p>
+										</div>
+									  </a>      
+									</li>
+									<li>
+									  <a href="index.html" class="card">
+										<img src="img/logo.png" class="card__image" alt="" />
+										<div class="card__overlay">        
+										  <div class="card__header">
+											<svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
+											<div class="card__header-text">
+											  <h3 class="card__title">Train Français</h3>
+											</div>
+										  </div>
+										  <p class="card__description">Co-Directeur & Co-Fondateur</p>
+										</div>
+									  </a>
+									</li>    
+								  </ul>
+							  </div>
+
+							  <div class="container">
+								<h2>Les membres de l'alliance</h2>
+								<ul class="cards">
+									<li>
+										<a href="https://mylines.fr/trafic?company=SNCV" class="card">
+										  <img src="img/logo/logofma.png" class="card__image" alt="" />
+										  <div class="card__overlay">        
+											<div class="card__header">
+											  <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
+											  <div class="card__header-text">
+												<h3 class="card__title">SNCV</h3>
+											  </div>
+											</div>
+											<p class="card__description">Membre</p>
+										  </div>
+										</a>
+									  </li>
+									<li>
+									  <a href="https://mylines.fr/home?company=Trans%20Nat" class="card">
+										<img src="https://cdn.discordapp.com/attachments/1070036635955253309/1074766259004133407/image.png" class="card__image" alt="" />
+										<div class="card__overlay">
+										  <div class="card__header">
+											<svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
+											<div class="card__header-text">
+											  <h3 class="card__title">Trans Nat</h3>
+											</div>
+										  </div>
+										  <p class="card__description">Membre</p>
+										</div>
+									  </a>      
+									</li>
+									<li>
+									  <a href="https://mylines.fr/home?company=ethanthansport" class="card">
+										<img src="https://cdn.discordapp.com/attachments/1070036635955253309/1074767042621755563/Sans_titre_1.png" class="card__image" alt="" />
+										<div class="card__overlay">        
+										  <div class="card__header">
+											<svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
+											<div class="card__header-text">
+											  <h3 class="card__title">EthanTransport</h3>
+											</div>
+										  </div>
+										  <p class="card__description">Membre</p>
+										</div>
+									  </a>
+									</li>  
+									<li>
+										<a href="https://mylines.fr/home?company=Eurotrain" class="card">
+										  <img src="https://mylines.fr/image?serv=Logo_lite&company=Eurotrain&v=20230214" class="card__image" alt="" />
+										  <div class="card__overlay">        
+											<div class="card__header">
+											  <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
+											  <div class="card__header-text">
+												<h3 class="card__title">Eurotrain</h3>
+											  </div>
+											</div>
+											<p class="card__description">Membre</p>
+										  </div>
+										</a>
+									  </li> 
+									  <li>
+										<a href="https://mylines.fr/home?company=R%20Mobilit%C3%A9" class="card">
+										  <img src="https://mylines.fr/image?serv=Logo_lite&company=R%20Mobilit%C3%A9&v=20230214" class="card__image" alt="" />
+										  <div class="card__overlay">        
+											<div class="card__header">
+											  <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
+											  <div class="card__header-text">
+												<h3 class="card__title">R Mobilité</h3>
+											  </div>
+											</div>
+											<p class="card__description">Membre</p>
+										  </div>
+										</a>
+									  </li> 
+									  <li>
+										<a href="" class="card">
+										  <img src="https://mylines.fr/image?serv=HelloRail&company=Train%20Fran%C3%A7ais" class="card__image" alt="" />
+										  <div class="card__overlay">        
+											<div class="card__header">
+											  <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
+											  <div class="card__header-text">
+												<h3 class="card__title">HelloRail</h3>
+											  </div>
+											</div>
+											<p class="card__description">Membre</p>
+										  </div>
+										</a>
+									  </li>    
+								  </ul>
+							  </div>
+							 </section> 
 							  
 							
 			

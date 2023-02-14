@@ -222,7 +222,7 @@ DROPDOWN CSS
 ---------------------------------------------------------------------*/
 .dropdown-menu {
   border: 0;
-  border-radius: 0;
+  border-radius: 5px 5px 0 0;
   position: relative;
   display: block;
   float: none;
@@ -234,6 +234,7 @@ DROPDOWN CSS
 
 .nav.navbar-nav li ul.dropdown-menu li a {
   padding: 8px 20px;
+  border-radius: 5px 5px 0 0;
   font-weight: 500;
   line-height: 20px;
   color: #343434;
@@ -245,6 +246,7 @@ DROPDOWN CSS
 .nav.navbar-nav li ul.dropdown-menu li a:focus {
   color: #fff;
   background-color: #1a8ae1;
+  border-radius: 5px 5px 0 0;
 }
 
 .dropdown-menu>.active>a, 
@@ -252,6 +254,7 @@ DROPDOWN CSS
 .dropdown-menu>.active>a:focus {
   color: #fff !important;
   background-color: #1a8ae1;
+  border-radius: 5px 5px 0 0;
 }
 
 /* 2nd label caret */
@@ -261,6 +264,7 @@ DROPDOWN CSS
   border-top: 4px solid transparent;
   border-bottom: 4px solid transparent;
   border-left: 4px solid;
+  border-radius: 5px 5px 0 0;
   top: 15px;
 }
 
@@ -269,6 +273,7 @@ DROPDOWN CSS
 .nav .open>a:focus {
   background-color: #1a8ae1;
   color: #fff !important;
+  border-radius: 5px 5px 0 0;
 }
 
 
@@ -279,6 +284,7 @@ DROPDOWN CSS
 li.dropdown > .submenu-wrapper {
   position: absolute;
   display: block;
+  border-radius: 5px 5px 0 0;
   left: 0;
   z-index: 999;
   pointer-events: none;
@@ -291,12 +297,14 @@ li.dropdown > .submenu-wrapper {
 
 li.dropdown > .submenu-wrapper.no-pointer-events {
   display: none;
+  border-radius: 5px 5px 0 0;
 }
 
 li.dropdown > .submenu-wrapper > .submenu-inner {
   margin-top: -2px;
   opacity: 0;
   filter: alpha(opacity=0);
+  border-radius: 5px 5px 0 0;
  /* For IE8 and earlier */
   -webkit-transform: translateY(-100%);
   -moz-transform: translateY(-100%);

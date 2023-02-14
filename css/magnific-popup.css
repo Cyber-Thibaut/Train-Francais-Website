@@ -256,6 +256,7 @@ img.mfp-img {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 40px 0 40px;
+  border-radius: 5px 5px 0 0;
   margin: 0 auto; }
 
 /* The shadow behind the image */
