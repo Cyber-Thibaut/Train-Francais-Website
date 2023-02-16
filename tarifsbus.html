@@ -5,7 +5,37 @@
   <title>Tarifs Transport Clermont Métropole</title>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css'><link rel="stylesheet" href="./body.css">
-
+<style>
+.demo10{background:#C0BFBF;padding:30px 0}
+.pricingTable10{text-align:center}
+.pricingTable10 .pricingTable-header{padding:30px 0;background:#4d4d4d;position:relative;transition:all .3s ease 0s}
+.pricingTable10:hover .pricingTable-header{background:#0096DE}
+.pricingTable10 .pricingTable-header:after,.pricingTable10 .pricingTable-header:before{content:"";width:16px;height:16px;border-radius:50%;border:1px solid #d9d9d8;position:absolute;bottom:12px}
+.pricingTable10 .pricingTable-header:before{left:40px}
+.pricingTable10 .pricingTable-header:after{right:40px}
+.pricingTable10 .heading{font-size:20px;color:#fff;text-transform:uppercase;letter-spacing:2px;margin-top:0}
+.pricingTable10 .price-value{display:inline-block;position:relative;font-size:55px;font-weight:700;color:#0096DE;transition:all .3s ease 0s}
+.pricingTable10:hover .price-value{color:#fff}
+.pricingTable10 .currency{font-size:30px;font-weight:700;position:absolute;top:6px;left:-19px}
+.pricingTable10 .month{font-size:16px;color:#fff;position:absolute;bottom:15px;right:-30px;text-transform:uppercase}
+.pricingTable10 .pricing-content{padding-top:50px;background:#fff;position:relative}
+.pricingTable10 .pricing-content:after,.pricingTable10 .pricing-content:before{content:"";width:16px;height:16px;border-radius:50%;border:1px solid #7c7c7c;position:absolute;top:12px}
+.pricingTable10 .pricing-content:before{left:40px}
+.pricingTable10 .pricing-content:after{right:40px}
+.pricingTable10 .pricing-content ul{padding:0 20px;margin:0;list-style:none}
+.pricingTable10 .pricing-content ul:after,.pricingTable10 .pricing-content ul:before{content:"";width:8px;height:46px;border-radius:3px;background:linear-gradient(to bottom,#818282 50%,#727373 50%);position:absolute;top:-22px;z-index:1;box-shadow:0 0 5px #707070;transition:all .3s ease 0s}
+.pricingTable10:hover .pricing-content ul:after,.pricingTable10:hover .pricing-content ul:before{background:linear-gradient(to bottom,#40c4db 50%,#0096DE 50%)}
+.pricingTable10 .pricing-content ul:before{left:44px}
+.pricingTable10 .pricing-content ul:after{right:44px}
+.pricingTable10 .pricing-content ul li{font-size:15px;font-weight:700;color:#777473;padding:10px 0;border-bottom:1px solid #d9d9d8}
+.pricingTable10 .pricing-content ul li:last-child{border-bottom:none}
+.pricingTable10 .read{display:inline-block;font-size:16px;color:#fff;text-transform:uppercase;background:#d9d9d8;padding:8px 25px;margin:30px 0;transition:all .3s ease 0s}
+.pricingTable10 .read:hover{text-decoration:none}
+.pricingTable10:hover .read{background:#0096DE}
+@media screen and (max-width:990px){.pricingTable10{margin-bottom:25px}
+}
+/* Credit to https://bootsnipp.com/snippets/92erW */
+</style>
 </head>
 
 <body>
@@ -51,82 +81,79 @@
     </div>
   </div>
   <hr>
-  <div class="row">
-    <div class="col-sm-4 col-md-4 pricing-column-wrapper">
-         <div class="pricing-column">
-              <div class="pricing-price-row">
-                <div class="pricing-price-wrapper">
-                  <div class="pricing-price">
-                    <div class="pricing-cost">1.70€</div>
-                    <div class="time">Par heure</div>
-                  </div>
+  <div class="demo10">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="pricingTable10">
+                    <div class="pricingTable-header">
+                        <h3 class="heading">TCM-Pass 1h</h3>
+                        <span class="price-value">
+                            <span class="currency">€</span> 1.70
+                            <span class="month">/h</span>
+                        </span>
+                    </div>
+                    <div class="pricing-content">
+                        <ul>
+                            <li class="pricing-row">Correspondances et trajet aller-retour autorisés</li>
+                            <li class="pricing-row">Validation obligatoire lors de la montée dans un véhicule</li>
+                            <li class="pricing-row">15 minutes supplémentaires par validation</li>
+                            <li class="pricing-row strike">24h à partir de la première validation jusqu’à la fermeture du réseau</li>
+                            <li class="pricing-row strike">Achetable en ligne</li>
+                            <li><img src="img/1h.png" width="100%" height="100%" alt="" /></li>
+                        </ul>
+                        <a href="agences.html" class="read">Acheter</a>
+                    </div>
                 </div>
-              </div>
-              <div class="pricing-row-title">
-                <div class="pricing_row_title">TCM-Pass 1h</div>
-              </div>
-              <figure class="pricing-row">Correspondances et trajet aller-retour autorisés</figure>
-              <figure class="pricing-row"><b>Validation obligatoire lors de la montée dans un véhicule</b></figure>
-              <figure class="pricing-row">15 minutes supplémentaires par validation</figure>
-              <figure class="pricing-row strike">24h à partir de la première validation jusqu’à la fermeture du réseau</figure>
-              <figure class="pricing-row strike">Achetable en ligne</figure>
-              <div class="pricing-footer">
-                <div class="gem-button-container gem-button-position-center"><a href="#" class="gem-button gem-green">Commander</a></div>
-              </div>
             </div>
-    </div>
-    <div class="col-sm-4 col-md-4 pricing-column-wrapper">
-       <div class="pricing-column">
-              <div class="pricing-price-row">
-                <div class="pricing-price-wrapper">
-                  <div class="pricing-price">
-                    <div class="pricing-cost">5.00€</div>
-                    <div class="time">Par jour</div>
-                  </div>
+            <div class="col-sm-4">
+                <div class="pricingTable10">
+                    <div class="pricingTable-header">
+                        <h3 class="heading">TCM-Pass Liberté (24h)</h3>
+                        <span class="price-value">
+                            <span class="currency">€</span> 5
+                            <span class="month">/j</span>
+                        </span>
+                    </div>
+                    <div class="pricing-content">
+                        <ul>
+                          <li class="pricing-row">Correspondances et trajet aller-retour autorisés</li>
+                          <li class="pricing-row">Validation obligatoire lors de la montée dans un véhicule</li>
+                          <li class="pricing-row">15 minutes supplémentaires par validation</li>
+                          <li class="pricing-row">24h à partir de la première validation jusqu’à la fermeture du réseau</li>
+                          <li class="pricing-row strike">Achetable en ligne</li>
+                          <li><img src="img/24h.png" width="100%" height="100%" alt="" /></li>
+                        </ul>
+                        <a href="agences.html" class="read">Acheter</a>
+                    </div>
                 </div>
-              </div>
-              <div class="pricing-row-title">
-                <div class="pricing_row_title">TCM-Pass Liberté (24h)</div>
-              </div>
-              <figure class="pricing-row">Correspondances et trajet aller-retour autorisés</figure>
-              <figure class="pricing-row"><b>Validation obligatoire lors de la montée dans un véhicule</b></figure>
-              <figure class="pricing-row">15 minutes supplémentaires par validation</figure>
-              <figure class="pricing-row">24h à partir de la première validation jusqu’à la fermeture du réseau</figure>
-              <figure class="pricing-row strike">Achetable en ligne</figure>
-              <div class="pricing-footer">
-                <div class="gem-button-container gem-button-position-center"><a class="gem-button gem-purpel">Commander</a></div>
-              </div>
             </div>
-    </div>
-    <div class="col-sm-4 col-md-4 pricing-column-wrapper">
-      <div class="pricing-column">
-              <div class="pricing-price-row">
-                <div class="pricing-price-wrapper">
-                  <div class="pricing-price">
-                    <div class="pricing-cost">59.00€</div>
-                    <div class="time">Par mois</div>
-                  </div>
+         
+            <div class="col-sm-4">
+                <div class="pricingTable10">
+                    <div class="pricingTable-header">
+                        <h3 class="heading">TCM-Pass Illimité</h3>
+                        <span class="price-value">
+                            <span class="currency">€</span> 59   
+                            <span class="month">  /m</span>
+                        </span>
+                    </div>
+                    <div class="pricing-content">
+                        <ul>
+                          <li class="pricing-row">Correspondances et trajet aller-retour autorisés</li>
+                          <li class="pricing-row">Validation obligatoire lors de la montée dans un véhicule</li>
+                          <li class="pricing-row">15 minutes supplémentaires par validation</li>
+                          <li class="pricing-row">24h à partir de la première validation jusqu’à la fermeture du réseau</li>
+                          <li class="pricing-row">Achetable en ligne</li>
+                          <li><img src="img/1 mois.png" width="100%" height="100%" alt="" /></li>
+                        </ul>
+                        <a href="agences.html" class="read">Acheter</a>
+                    </div>
                 </div>
-              </div>
-              <div class="pricing-row-title">
-                <div class="pricing_row_title">TCM-Pass Illimité</div>
-              </div>
-              <figure class="pricing-row">Correspondances et trajet aller-retour autorisés</figure>
-              <figure class="pricing-row"><b>Validation obligatoire lors de la montée dans un véhicule</b></figure>
-              <figure class="pricing-row">15 minutes supplémentaires par validation</figure>
-              <figure class="pricing-row">24h à partir de la première validation jusqu’à la fermeture du réseau</figure>
-              <figure class="pricing-row">Achetable en ligne</figure>
-              <div class="pricing-footer">
-                <div class="gem-button-container gem-button-position-center">
-                  <a href="agences.html" class="gem-button gem-orange">Commander</a></div>
-              </div>
             </div>
+        </div>
     </div>
-  </div>
-
- </div>
 </div>
-<!-- partial -->
   
 </body>
 </html>
