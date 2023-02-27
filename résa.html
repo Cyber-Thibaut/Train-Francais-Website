@@ -537,8 +537,17 @@ function ticketSelect(innerID, service) {
     ID = innerID;
 }
 
+
 function generateTicket() {
     const pdf = new jsPDF();
+
+    // Changer la police et la taille du texte
+    pdf.setFont('helvetica');
+    pdf.setFontSize(12);
+
+    pdf.setTextColor(0, 0, 0);
+    pdf.setFillColor(220, 220, 220);
+
     var reference = '';
     var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
     for (var i = 0; i < 6; i++) {
@@ -547,12 +556,19 @@ function generateTicket() {
     const name = document.getElementById('name').value;
     const dob = document.getElementById('dob').value;
     const selectedClass = SERVICE;
+
+    pdf.rect(10, 10, 190, 250);
+    // pdf.rect(10, 10, 190, 50);
+    // pdf.rect(10, 50, 90, 100);
+    pdf.rect(100, 50, 100, 190);
+    // pdf.rect(10, 170, 190, 50);
+    // pdf.rect(10, 220, 190, 50);
     
     pdf.text(20, 20, 'Voici le récapitulatif de votre billet :');
     pdf.text(20, 30, 'Nom : ' + name);
     pdf.text(120, 30, 'Date de naissance : ' + dob);
     pdf.text(20, 40, 'Classe : ' + selectedClass);
-    pdf.text(80, 40, 'REF : ' + reference);
+    pdf.text(120, 40, 'REF : ' + reference);
 
     const trainInfo = LIST[ID];
 
@@ -564,8 +580,13 @@ function generateTicket() {
     var service = trainInfo['service']
     var departure = trainInfo['departure']
     var arrival = trainInfo['arrival']
+    var stoptrain = trainInfo['intermediate'].split(';')
     var trainset = trainInfo['trainset']
     var price = selectedClass == "1" ? trainInfo['price1'] : trainInfo['price2'];
+
+    const start = trainInfo['from'];
+    const end = trainInfo['to'];
+    const allStops = [start].concat(stoptrain).concat([end]);
     
     pdf.text(20, 60, 'Depuis : ' + from);
     pdf.text(20, 70, 'Destination : ' + to);
@@ -575,6 +596,45 @@ function generateTicket() {
     pdf.text(20, 120, 'Arrivée : ' + arrival);
     pdf.text(20, 130, 'Composition du train : ' + trainset);
     pdf.text(20, 140, 'Prix : ' + price + '€');
+
+    // Dessiner le trajet du train et les arrêts intermédiaires
+    // Calcul de la hauteur de la zone de dessin
+    const height = 15 + (allStops.length + 1) * 15;
+
+    // Dessin de la ligne reliant les arrêts intermédiaires
+    pdf.setDrawColor(0, 51, 102);
+    pdf.setLineWidth(0.5);
+    const lineX = 180;
+    const lineY1 = 60;
+    const lineY2 = lineY1 + (allStops.length * 15);
+    pdf.line(lineX, lineY1, lineX, lineY2);
+
+    // Dessin des points pour les arrêts intermédiaires
+    pdf.setFillColor(0, 51, 102);
+    const radius = 3;
+    for (let i = 0; i < allStops.length; i++) {
+    if (allStops[i] !== "direct") {
+        const pointX = lineX;
+        const pointY = lineY1 + ((i + 1) * 15) - radius;
+        pdf.circle(pointX, pointY, radius, 'F');
+    }
+    }
+
+    // Dessin des noms des arrêts intermédiaires
+    pdf.setTextColor(0, 0, 0);
+    pdf.setFontSize(10);
+    for (let i = 0; i < allStops.length; i++) {
+    const textX = lineX - 5;
+    const textY = lineY1 + ((i + 1) * 15) - radius + 1;
+    if (i === 0 || i === allStops.length - 1) {
+        pdf.setFontType("bold");
+        pdf.setTextColor(0, 102, 204);
+    }
+    pdf.text(allStops[i], textX, textY, { align: 'right' });
+    pdf.setFontType("normal");
+    pdf.setTextColor(0, 0, 0);
+    }
+
     pdf.save('billet.pdf');
     location.reload()
 }
