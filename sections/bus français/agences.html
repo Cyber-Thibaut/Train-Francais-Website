@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/apple-icon.png">
+  <link rel="icoan" type="image/png" href="../../assets/img/favicon.png">
+  <title>
+    France Avenir
+  </title>
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+  <!-- Nucleo Icons -->
+  <link href="../../assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="../../assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <!-- CSS Files -->
+  <link id="pagestyle" href="../../assets/css/material-kit.css?v=3.0.4" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+  <style>
+    .tag-important {
+    background-color: #f44336; /* rouge */
+    color: #fff; /* blanc */
+    border-radius: 3px;
+    padding: 2px 4px;
+    font-size: 12px;
+    margin-left: 10px;
+    }
+  
+    .tag-info {
+    background-color: #2196f3; /* bleu */
+    color: #fff; /* blanc */
+    border-radius: 3px;
+    padding: 2px 4px;
+    font-size: 12px;
+    margin-left: 10px;
+    }
+    .card.card-background .full-background {
+  background-position: 50%;
+  background-size: cover;
+  margin-bottom: 30px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 0.75rem;
+  background-repeat: no-repeat;
+}
+  </style>
+</head>
+
+<body class="modals-sections">
+  <!-- Navbar Light -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+    <div class="container">
+      <a class="navbar-brand" href="../../../index.html">
+        France Avenir
+      </a>
+      <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon mt-2">
+          <span class="navbar-toggler-bar bar1"></span>
+          <span class="navbar-toggler-bar bar2"></span>
+          <span class="navbar-toggler-bar bar3"></span>
+        </span>
+      </button>
+      <div class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0 ms-lg-12 ps-lg-5" id="navigation">
+        <ul class="navbar-nav navbar-nav-hover ms-auto">
+          <li class="nav-item dropdown dropdown-hover mx-2 ms-lg-5">
+            <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="material-icons opacity-6 me-2 text-md">house</i>
+              France Avenir
+              <img src="../../assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-auto ms-md-2">
+            </a>
+            <div class="dropdown-menu ms-n3 dropdown-menu-animation dropdown-md p-3 border-radius-lg mt-0 mt-lg-3" aria-labelledby="dropdownMenuPages5">
+              <a href="about.html" class="dropdown-item border-radius-md">About</a>
+              <a href="livrées.html" class="dropdown-item border-radius-md">Nos livrées</a>
+              <a href="../../terms.html" class="dropdown-item border-radius-md">CGU</a>
+              <a href="../train-francais/infotrafic.html" class="dropdown-item border-radius-md">Information Trafic</a>
+            </div>
+          </li>
+          <li class="nav-item px-3">
+            <a class="nav-link" href="../../ski.html"><i class="material-icons opacity-6 me-2 text-md">downhill_skiing</i>
+              Ski Français
+            </a>
+          </li>
+          <li class="nav-item dropdown dropdown-hover mx-2">
+            <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuBlocks" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="material-icons opacity-6 me-2 text-md">train</i>
+              Train Français
+              <img src="../../assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-auto ms-md-2">
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-animation dropdown-md dropdown-md-responsive p-3 border-radius-lg mt-0 mt-lg-3" aria-labelledby="dropdownMenuBlocks">
+              <div class="d-none d-lg-block">
+                <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                  <a class="dropdown-item py-2 ps-3 border-radius-md" href="../presentation.html">
+                    <div class="w-100 d-flex align-items-center justify-content-between">
+                      <div>
+                        <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Information Pratique</h6>
+                        <span class="text-sm">Retrouvez toutes nos infos</span>
+                      </div>
+                      <img src="../../assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow">
+                    </div>
+                  </a>
+                  <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="../train-francais/inventaire.html">
+                      Notre Inventaires
+                    </a>
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="../train-francais/infotrafic.html">
+                      info Trafic
+                    </a>
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="../train-francais/résa.html">
+                      Réserver un billet
+                    </a>
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="../../faq.html">
+                      FAQ
+                    </a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                  <a class="dropdown-item py-2 ps-3 border-radius-md" href="../presentation.html">
+                    <div class="w-100 d-flex align-items-center justify-content-between">
+                      <div>
+                        <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Sur nos lignes</h6>
+                        <span class="text-sm">En direct de nos trains, toutes les infos</span>
+                      </div>
+                      <img src="../../assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow">
+                    </div>
+                  </a>
+                  <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="../train-francais/fgv.html"><i class="material-icons opacity-6 me-2 text-md">train</i>
+                      France à Grande Vitesse
+                    </a>
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="../train-francais/ice.html"><i class="material-icons opacity-6 me-2 text-md">train</i>
+                      ICEurope
+                    </a>
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="../train-francais/ics.html"><i class="material-icons opacity-6 me-2 text-md">train</i>
+                      ICSuisse
+                    </a>
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="../train-francais/région.html"><i class="material-icons opacity-6 me-2 text-md">train</i>
+                      France Région
+                    </a>
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="../train-francais/tel.html"><i class="material-icons opacity-6 me-2 text-md">directions_railway_filled</i>
+                      Train Express Lyonnais
+                    </a>
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="../train-francais/tfm.html"><i class="material-icons opacity-6 me-2 text-md">local_shipping</i>
+                      Train Français Marchandise
+                    </a>
+                  </div>
+                </li>
+                <a href="../train-francais/départs.html" class="dropdown-item border-radius-md"><i class="material-icons opacity-6 me-2 text-md">train</i>
+                  Au départ de nos gares
+                </a>
+                <a href="../train-francais/alliance.html" class="dropdown-item border-radius-md"><i class="material-icons opacity-6 me-2 text-md">groups_2</i>
+                  France Avenir, l'alliance <span class="tag tag-info">NOUVEAU !</span>
+                </a>
+              </div>
+            </ul>
+          </li>
+          <li class="nav-item dropdown dropdown-hover mx-2">
+            <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuBlocks" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="material-icons opacity-6 me-2 text-md">directions_bus_filled</i>
+            Transport Clermont Métropole
+              <img src="../../assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-auto ms-md-2">
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-animation dropdown-md dropdown-md-responsive p-3 border-radius-lg mt-0 mt-lg-3" aria-labelledby="dropdownMenuBlocks">
+              <div class="d-none d-lg-block">
+                <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                  <a class="dropdown-item py-2 ps-3 border-radius-md" href="../presentation.html">
+                    <div class="w-100 d-flex align-items-center justify-content-between">
+                      <div>
+                        <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Information Pratique</h6>
+                        <span class="text-sm">Retrouvez toutes nos infos</span>
+                      </div>
+                      <img src="../../assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow">
+                    </div>
+                  </a>
+                <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="../train-francais/infotrafic.html">
+                      ℹ️nfo Trafic
+                    </a>
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="../tarifsbus.html">
+                      Nos Tarifs
+                    </a>
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="agences.html">
+                      Nos Agences
+                    </a>
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="../cartes réducs/mensuel.html">
+                      Prendre son Abonnement
+                    </a>
+                  </div>
+                </li>
+              <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                <a class="dropdown-item py-2 ps-3 border-radius-md" href="./presentation.html">
+                  <div class="w-100 d-flex align-items-center justify-content-between">
+                    <div>
+                      <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Nos Lignes</h6>
+                      <span class="text-sm">En direct de nos bus, toutes les infos</span>
+                    </div>
+                    <img src="../../assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow">
+                  </div>
+                </a>
+                <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
+                  <a class="dropdown-item ps-3 border-radius-md mb-1" href="lignes/1.html">
+                    <img src="1.png" width="10%" max-height="10%">
+                    Gare Centrale <> Campus Cézeaux
+                  </a>
+                  <a class="dropdown-item ps-3 border-radius-md mb-1" href="lignes/2.html">
+                    <img src="2.png"  width="10%" height="10%">
+                    Gare Centrale <> Aéroport
+                  </a>
+                  <a class="dropdown-item ps-3 border-radius-md mb-1" href="lignes/3.html">
+                    <img src="3.png"  width="10%" height="10%">
+                    Gare Centrale <> Campus Marthe Gautier
+                  </a>
+                  <a class="dropdown-item ps-3 border-radius-md mb-1" href="lignes/4.html">
+                    <img src="4.png"  width="10%" height="10%">
+                    Gare Centrale <> Gare de l'Est
+                  </a>
+                  <a class="dropdown-item ps-3 border-radius-md mb-1" href="lignes/5.html">
+                    <img src="5.png"  width="10%" height="10%">
+                    Musée d'Art Moderne <> Pôle Luca Pacioli
+                  </a>
+                  <a class="dropdown-item ps-3 border-radius-md mb-1" href="lignes/6.html">
+                    <img src="6.png"  width="10%" height="10%">
+                    Grand Palais <> Campus Maryse Esterle
+                  </a>
+                  <a class="dropdown-item ps-3 border-radius-md mb-1" href="lignes/7.html">
+                    <img src="7.png"  width="10%" height="10%">
+                    Port fluvial <> Grand Palais
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- End Navbar -->
+  <!-- -------- START HEADER 7 w/ card over right bg image ------- -->
+<header>
+  <div class="page-header min-vh-100">
+    <div class="position-absolute fixed-top ms-auto w-50 h-100 z-index-0 d-none d-sm-none d-md-block" style="background-image: url(https://cdn.discordapp.com/attachments/1062738561939550250/1083165556640845844/IGP25822.jpg); background-size:cover;" loading="lazy"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7 d-flex justify-content-center flex-column">
+          <div class="card card-body blur d-flex justify-content-center shadow-lg p-5 mt-5">
+            <h1>Nos agences, <br>à votre service !</h1>
+            <p class="lead pe-5 me-5">Nous avons cinq agences partout dans la métropole Clermontoise. Elles donnent des informations, des conseils, vendent des tickets, des abonnements et facilitent vos déplacements quotidiens. Nos agents vous aident à choisir le transport adapté à vos besoins et budget. Voyagez en toute sécurité avec Transport Clermont Métropole.</p>
+            <div class="buttons">
+              <a href="#agences"><button type="button" class="btn bg-gradient-primary mt-4">Les découvrir</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- -------- END HEADER 8 w/ card over right bg image ------- -->
+
+
+  
+  <section class="py-5 bg-gray-200" id="agences">
+    <div class="container" >
+      <div class="row">
+        <div class="col-md-8 ms-auto me-auto text-center">
+          <h3>Trouvez l'agence la plus proche de chez vous !</h3>
+        </div>
+      </div>
+      <div class="row mt-lg-5 mt-4">
+        <div class="col-lg-4 col-md-6 mb-5">
+          <div class="card card-background">
+            <div class="full-background" style="background-image: url(https://cdn.discordapp.com/attachments/1062738561939550250/1083322073243471932/IMG_20220725_085858_HDR.jpg); background-position: top left;"></div>
+            <div class="card-body body-left">
+              <div class="content-left text-start">
+                <h2 class="card-title text-white">Agence de la Gare Centrale</h2>
+                <p>
+                  <h6 class="text-white">Services</h6>
+                  Information – Conseils – Ventes – Espace Abonnements
+                  <h6 class="text-white">Heures d’ouvertures</h6>
+                  <li>Du lundi au vendredi de 7h à 21h</li>
+                  <li>Samedi de 8h à 20h</li>
+                  <li>Dimanche et jours fériés de 10h à 17h</li>
+                  <h6 class="text-white">Correspondances</h6>
+                  <a href="lignes/1.html"><img src="1.png" alt="Port fluvial <> Grand Palais" width="10%" height="10%"></a>
+                  <a href="lignes/2.html"><img src="2.png" alt="Port fluvial <> Grand Palais" width="10%" height="10%"></a>
+                  <a href="lignes/3.html"><img src="3.png" alt="Port fluvial <> Grand Palais" width="10%" height="10%"></a>
+                  <a href="lignes/4.html"><img src="4.png" alt="Port fluvial <> Grand Palais" width="10%" height="10%"></a>
+                </p>
+                <div class="author">
+                  <h5><span id="GC"></span></h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-lg-4 col-md-6 mb-5">
+          <div class="card card-background">
+            <div class="full-background" style="background-image: url('https://cdn.discordapp.com/attachments/1062738561939550250/1083322073243471932/IMG_20220725_085858_HDR.jpg'); background-position: top center;"></div>
+            <div class="card-body body-left">
+              <div class="content-left text-start">
+                <h2 class="card-title text-white">Agence de la Gare de l'Ouest</h2>
+                <p>
+                  <h6 class="text-white">Services</h6>
+                  Information – Conseils – Ventes – Espace Abonnements
+                  <h6 class="text-white">Heures d’ouvertures</h6>
+                  <li>Du lundi au vendredi de 9h à 19h</li>
+                  <li>Samedi de 10h à 18h</li>
+                  <li>Fermé le dimanche</li>
+                  <li>Le 1er jour du mois de 7h à 20h</li>
+                  <h6 class="text-white">Correspondances</h6>
+                  <a href="lignes/5.html"><img src="5.png" alt="Port fluvial <> Grand Palais" width="10%" height="10%"></a>
+                  <a href="lignes/7.html"><img src="7.png" alt="Port fluvial <> Grand Palais" width="10%" height="10%"></a>
+                </p>
+                <div class="author">
+                  <h5><span id="GO"></span></h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-lg-4 col-md-6 mb-5">
+          <div class="card card-background">
+            <div class="full-background" style="background-image: url(https://cdn.discordapp.com/attachments/1062738561939550250/1083322073243471932/IMG_20220725_085858_HDR.jpg); background-position: right top;""></div>
+            <div class="card-body body-left">
+              <div class="content-left text-start">
+                <h2 class="card-title text-white">Agence de l'Aéroport</h2>
+                <p>
+                  <h6 class="text-white">Services</h6>
+                  Information – Conseils – Ventes
+                  <h6 class="text-white">Heures d’ouvertures</h6>
+                  <li>Du lundi au vendredi de 7h à 21h</li>
+                  <li>Samedi de 8h à 20h</li>
+                  <li>Dimanche et jours fériés de 10h à 17h</li>
+                  <h6 class="text-white">Correspondances</h6>
+                  <a href="lignes/2.html"><img src="2.png" alt="Port fluvial <> Grand Palais" width="10%" height="10%"></a>
+                </p>
+                <div class="author">
+                  <h5><span id="A"></span></h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-lg-4 col-md-6 mb-5">
+          <div class="card card-background">
+            <div class="full-background" style="background-image: url(https://cdn.discordapp.com/attachments/1038601465410900072/1083317131724202045/IGP2586.JPG); background-position: left;""></div>
+            <div class="card-body body-left">
+              <div class="content-left text-start">
+                <h2 class="card-title text-white">Agence du Campus Marthe Gautier</h2>
+                <p>
+                  <h6 class="text-white">Services</h6>
+                  Information – Conseils – Ventes – Espace Abonnements
+                  <h6 class="text-white">Heures d’ouvertures</h6>
+                  <li>Du lundi au vendredi de 9h à 19h</li>
+                  <li>Samedi de 10h à 18h</li>
+                  <li>Fermé le dimanche</li>
+                  <li>Le 1er jour du mois de 7h à 20h</li>
+                  <h6 class="text-white">Correspondances</h6>
+                  <a href="lignes/3.html"><img src="3.png" alt="Port fluvial <> Grand Palais" width="10%" height="10%"></a>
+                </p>
+                <div class="author">
+                  <h5><span id="CMG"></span></h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-lg-4 col-md-6 mb-5">
+          <div class="card card-background">
+            <div class="full-background" style="background-image: url(https://cdn.discordapp.com/attachments/1038601465410900072/1083317131724202045/IGP2586.JPG); background-position: right;"></div>
+            <div class="card-body body-left">
+              <div class="content-left text-start">
+                <h2 class="card-title text-white">Agence du Campus des Cézeaux</h2>
+                <p>
+                  <h6 class="text-white">Services</h6>
+                  Information – Conseils – Ventes – Espace Abonnements
+                  <h6 class="text-white">Heures d’ouvertures</h6>
+                  <li>Du lundi au vendredi de 9h à 19h</li>
+                  <li>Samedi de 10h à 18h</li>
+                  <li>Fermé le dimanche</li>
+                  <li>Le 1er jour du mois de 7h à 20h</li>
+                  <h6 class="text-white">Correspondances</h6>
+                  <a href="lignes/2.html"><img src="2.png" alt="Port fluvial <> Grand Palais" width="10%" height="10%"></a>
+                </p>
+                <div class="author">
+                  <h5><span id="CC"></span></h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  <script>
+    function pause(ms) 
+    {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+    
+    async function GC() 
+    {
+      while(true) 
+      {
+      await pause(1000);
+      var cejour = new Date();
+      var options = {weekday: "long", year: "numeric", month: "long", day: "2-digit"};
+      var date = cejour.toLocaleDateString("fr-FR", options);
+      var date = date.replace(/(^\w{1})|(\s+\w{1})/g, lettre => lettre.toUpperCase());
+      var heure = cejour.getHours();
+      var day = cejour.getDay();
+      if ((day>=1) && (day <= 5) && (heure >=7) && (heure <20)){var texte = "L'agence est ouverte"; var couleur = "94e2d5";}
+      else if ((day>=1) && (day <= 5) && (heure >=20) && (heure <21)){var texte = "L'agence ferme dans 1h"; var couleur = "f9e2af";}
+      else if ((day == 6) && (heure >=8) && (heure <19)){var texte = "L'agence est ouverte"; var couleur = "94e2d5";}
+      else if ((day == 6) && (heure >=19) && (heure <20)){var texte = "L'agence ferme dans 1h"; var couleur = "f9e2af";}
+      else if ((day == 0) && (heure >=10) && (heure <16)){var texte = "L'agence est ouverte"; var couleur = "94e2d5";}
+      else if ((day == 0) && (heure >=16) && (heure <17)){var texte = "L'agence ferme dans 1h"; var couleur = "f9e2af";}
+      else {var texte = "L'agence est fermée"; var couleur = "f38ba8";}
+    
+      var aficher_heure = date + " " + ("0" + cejour.getHours()).slice(-2) + ":" + ("0" + cejour.getMinutes()).slice(-2) + ":" + ("0" + cejour.getSeconds()).slice(-2);
+      document.getElementById('GC').innerHTML = texte;
+      document.getElementById('GC').style.color = "#"+couleur;
+      }
+    }
+    GC();
+    async function GO() 
+    {
+      while(true) 
+      {
+      await pause(1000);
+      var cejour = new Date();
+      var options = {weekday: "long", year: "numeric", month: "long", day: "2-digit"};
+      var date = cejour.toLocaleDateString("fr-FR", options);
+      var date = date.replace(/(^\w{1})|(\s+\w{1})/g, lettre => lettre.toUpperCase());
+      var heure = cejour.getHours();
+      var day = cejour.getDay();
+      var jour = cejour.getDate();
+      if ((jour == 1) && (heure >=7) && (heure <19)){var texte = "L'agence est ouverte"; var couleur = "94e2d5";}
+      else if ((jour == 1) && (heure >=19) && (heure <20)){var texte = "L'agence ferme dans 1h"; var couleur = "f9e2af";}
+      else if ((day>=1) && (day <= 5) && (heure >=9) && (heure <18)){var texte = "L'agence est ouverte"; var couleur = "94e2d5";}
+      else if ((day>=1) && (day <= 5) && (heure >=18) && (heure <19)){var texte = "L'agence ferme dans 1h"; var couleur = "f9e2af";}
+      else if ((day == 6) && (heure >=10) && (heure <17)){var texte = "L'agence est ouverte"; var couleur = "94e2d5";}
+      else if ((day == 6) && (heure >=17) && (heure <18)){var texte = "L'agence ferme dans 1h"; var couleur = "f9e2af";}
+      else if ((day == 0) && (heure >=10) && (heure <17)){var texte = "L'agence est fermée, reportez vous sur une autre agence de notre réseau"; var couleur = "e9a296";}
+      else {var texte = "L'agence est fermée"; var couleur = "f38ba8";}
+
+      var aficher_heure = date + " " + ("0" + cejour.getHours()).slice(-2) + ":" + ("0" + cejour.getMinutes()).slice(-2) + ":" + ("0" + cejour.getSeconds()).slice(-2);
+      document.getElementById('GO').innerHTML = texte;
+      document.getElementById('GO').style.color = "#"+couleur;
+      }
+    }
+    GO();
+    async function CMG() 
+    {
+      while(true) 
+      {
+      await pause(1000);
+      var cejour = new Date();
+      var options = {weekday: "long", year: "numeric", month: "long", day: "2-digit"};
+      var date = cejour.toLocaleDateString("fr-FR", options);
+      var date = date.replace(/(^\w{1})|(\s+\w{1})/g, lettre => lettre.toUpperCase());
+      var heure = cejour.getHours();
+      var day = cejour.getDay();
+      if ((day>=1) && (day <= 5) && (heure >=7) && (heure <20)){var texte = "L'agence est ouverte"; var couleur = "94e2d5";}
+      else if ((day>=1) && (day <= 5) && (heure >=20) && (heure <21)){var texte = "L'agence ferme dans 1h"; var couleur = "f9e2af";}
+      else if ((day == 6) && (heure >=8) && (heure <19)){var texte = "L'agence est ouverte"; var couleur = "94e2d5";}
+      else if ((day == 6) && (heure >=19) && (heure <20)){var texte = "L'agence ferme dans 1h"; var couleur = "f9e2af";}
+      else if ((day == 0) && (heure >=10) && (heure <16)){var texte = "L'agence est ouverte"; var couleur = "94e2d5";}
+      else if ((day == 0) && (heure >=16) && (heure <17)){var texte = "L'agence ferme dans 1h"; var couleur = "f9e2af";}
+      else {var texte = "L'agence est fermée"; var couleur = "f38ba8";}
+
+      var aficher_heure = date + " " + ("0" + cejour.getHours()).slice(-2) + ":" + ("0" + cejour.getMinutes()).slice(-2) + ":" + ("0" + cejour.getSeconds()).slice(-2);
+      document.getElementById('CMG').innerHTML = texte;
+      document.getElementById('CMG').style.color = "#"+couleur;
+      }
+    }
+    CMG();
+    async function A() 
+    {
+      while(true) 
+      {
+      await pause(1000);
+      var cejour = new Date();
+      var options = {weekday: "long", year: "numeric", month: "long", day: "2-digit"};
+      var date = cejour.toLocaleDateString("fr-FR", options);
+      var date = date.replace(/(^\w{1})|(\s+\w{1})/g, lettre => lettre.toUpperCase());
+      var heure = cejour.getHours();
+      var day = cejour.getDay();
+      if ((day>=1) && (day <= 5) && (heure >=7) && (heure <20)){var texte = "L'agence est ouverte"; var couleur = "94e2d5";}
+      else if ((day>=1) && (day <= 5) && (heure >=20) && (heure <21)){var texte = "L'agence ferme dans 1h"; var couleur = "f9e2af";}
+      else if ((day == "6") && (heure >=8) && (heure <19)){var texte = "L'agence est ouverte"; var couleur = "94e2d5";}
+      else if ((day == 6) && (heure >=19) && (heure <20)){var texte = "L'agence ferme dans 1h"; var couleur = "f9e2af";}
+      else if ((day == 0) && (heure >=10) && (heure <16)){var texte = "L'agence est ouverte"; var couleur = "94e2d5";}
+      else if ((day == 0) && (heure >=16) && (heure <17)){var texte = "L'agence ferme dans 1h"; var couleur = "f9e2af";}
+      else {var texte = "L'agence est fermée"; var couleur = "f38ba8";}
+
+      var aficher_heure = date + " " + ("0" + cejour.getHours()).slice(-2) + ":" + ("0" + cejour.getMinutes()).slice(-2) + ":" + ("0" + cejour.getSeconds()).slice(-2);
+      document.getElementById('A').innerHTML = texte;
+      document.getElementById('A').style.color = "#"+couleur;
+      }
+    }
+    A();
+    async function CC() 
+    {
+      while(true) 
+      {
+      await pause(1000);
+      var cejour = new Date();
+      var options = {weekday: "long", year: "numeric", month: "long", day: "2-digit"};
+      var date = cejour.toLocaleDateString("fr-FR", options);
+      var date = date.replace(/(^\w{1})|(\s+\w{1})/g, lettre => lettre.toUpperCase());
+      var heure = cejour.getHours();
+      var day = cejour.getDay();
+      var jour = cejour.getDate();
+      if ((jour == 1 ) && (heure >=7) && (heure <19)){var texte = "L'agence est ouverte"; var couleur = "94e2d5";}
+      else if ((jour == 1) && (heure >=19) && (heure <20)){var texte = "L'agence ferme dans 1h"; var couleur = "f9e2af";}
+      else if ((day>=1) && (day <= 5) && (heure >=9) && (heure <18)){var texte = "L'agence est ouverte"; var couleur = "94e2d5";}
+      else if ((day>=1) && (day <= 5) && (heure >=18) && (heure <19)){var texte = "L'agence ferme dans 1h"; var couleur = "f9e2af";}
+      else if ((day == 6) && (heure >=10) && (heure <17)){var texte = "L'agence est ouverte"; var couleur = "94e2d5";}
+      else if ((day == 6) && (heure >=17) && (heure <18)){var texte = "L'agence ferme dans 1h"; var couleur = "f9e2af";}
+      else if ((day == 0) && (heure >=10) && (heure <17)){var texte = "L'agence est fermée, reportez vous sur une autre agence de notre réseau"; var couleur = "e9a296";}
+      else {var texte = "L'agence est fermée"; var couleur = "f38ba8";}
+
+      var aficher_heure = date + " " + ("0" + cejour.getHours()).slice(-2) + ":" + ("0" + cejour.getMinutes()).slice(-2) + ":" + ("0" + cejour.getSeconds()).slice(-2);
+      document.getElementById('CC').innerHTML = texte;
+      document.getElementById('CC').style.color = "#"+couleur;
+      }
+    }
+    CC();
+    </script>
+  
+  
+    <!-- -------- START FOOTER 3 w/ COMPANY DESCRIPTION WITH LINKS & SOCIAL ICONS & COPYRIGHT ------- -->
+    <footer class="footer py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mb-4 mx-auto text-center">
+            <a href="lignes/1.html" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">Ligne 1 <i class="fa fa-bus"></i></a>
+            <a href="lignes/2.html" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">Ligne 2 <i class="fa fa-bus"></i></a>
+            <a href="lignes/3.html" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">Ligne 3 <i class="fa fa-bus"></i></a>
+            <a href="lignes/4.html" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">Ligne 4 <i class="fa fa-bus"></i></a>
+            <a href="lignes/5.html" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">Ligne 5 <i class="fa fa-bus"></i></a>
+            <a href="lignes/6.html" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">Ligne 6 <i class="fa fa-bus"></i></a>
+            <a href="lignes/7.html" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">Ligne 7 <i class="fa fa-bus"></i></a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-8 mx-auto text-center mt-1">
+            <p class="mb-0 text-secondary">
+              Copyright © <script>
+                document.write(new Date().getFullYear())
+              </script> France Avenir par Thibaut
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- -------- END FOOTER 3 w/ COMPANY DESCRIPTION WITH LINKS & SOCIAL ICONS & COPYRIGHT ------- -->
+    <!--   Core JS Files   -->
+    <script src="../../assets/js/core/popper.min.js" type="text/javascript"></script>
+    <script src="../../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../../assets/js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="../../assets/js/plugins/prism.min.js"></script>
+    <script src="../../assets/js/plugins/highlight.min.js"></script>
+    <!--  Plugin for Parallax, full documentation here: https://github.com/wagerfield/parallax  -->
+    <script src="../../assets/js/plugins/parallax.min.js"></script>
+    <!-- Control Center for Material UI Kit: parallax effects, scripts for the example pages etc -->
+    <!--  Google Maps Plugin    -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
+    <script src="../../assets/js/material-kit.min.js?v=3.0.4" type="text/javascript"></script>
+  </body>
+  
+  </html>

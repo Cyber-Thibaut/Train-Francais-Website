@@ -1,18 +1,25 @@
-![image](img/intro-bg3.jpg)
-# Train Français Compagny
+# France Avenir
 
-## INFORMATION IMPORTANTE
+France Avenir est un site web qui regroupe trois sociétés différentes : Train Français, Ski Français et Transport Clermont Métropole. Chacune de ces sociétés offre des services différents, mais toutes sont centrées sur le transport et la mobilité en France.
 
-Cette compagnie est fictive. Elle est reliée au jeu Train Empire (http://train-empire.com)
+## Train Français
 
-## Qui sommes nous?
+Train Français est une société de transport ferroviaire qui propose des voyages en train à travers la France. Notre réseau ferroviaire étendu offre des options de voyage pratiques et abordables pour les voyageurs de tous types. Que vous voyagiez pour le travail, les loisirs ou pour rendre visite à votre famille et vos amis, nous avons une option de voyage pour vous.
 
-Rapide, efficace et honnête, Train Français est devenue une Société de transport réputé. Notre équipe est prête à répondre à toutes les demandes, et gère chaque projet avec le professionnalisme attendu par nos clients. Nous souhaitons que nos clients soient satisfaits de notre travail. C'est pourquoi nous continuons de communiquer avec eux tout au long du projet.
+## Ski Français
 
-## Le site
+Ski Français est une entreprise spécialisée dans les activités de sports d'hiver en France. Nous offrons des forfaits de ski pour les stations de ski les plus populaires du pays, ainsi que des cours de ski pour tous les niveaux. Nous proposons également des services de location d'équipements et des transferts depuis les aéroports et les gares.
 
-https://train-francais.vercel.app/
+## Transport Clermont Métropole
 
-## Twitter
+Transport Clermont Métropole est une entreprise de transport urbain qui propose des services de bus et de tramway dans la région de Clermont-Ferrand. Nous travaillons en étroite collaboration avec les autorités locales pour offrir des options de transport durables et efficaces pour les résidents et les visiteurs de la région.
+Comment contribuer
 
-![image](https://user-images.githubusercontent.com/59665309/110777307-466e3b80-8261-11eb-9ccb-959cc3ffb572.png) : https://twitter.com/FrancaisTrain
+Nous sommes ravis d'accueillir les contributions de la communauté GitHub. Si vous souhaitez contribuer au développement du site web France Avenir, veuillez suivre les étapes suivantes :
+
+    Fork ce dépôt
+    Créez une nouvelle branche pour vos modifications (`git checkout -b ma-nouvelle-fonctionnalité`)
+    Faites vos modifications et testez-les
+    Envoyez une demande de fusion vers la branche de test (`dev`)
+
+Nous examinerons votre demande de fusion dès que possible et nous vous remercions de votre contribution à France Avenir !
