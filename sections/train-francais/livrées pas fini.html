@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/apple-icon.png">
+  <link rel="icoan" type="image/png" href="../../assets/img/favicon.png">
+  <title>
+    France Avenir
+  </title>
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+  <!-- Nucleo Icons -->
+  <link href="../../assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="../../assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <!-- CSS Files -->
+  <link id="pagestyle" href="../../assets/css/material-kit.css?v=3.0.4" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css"/>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+  <style>
+    .tag-important {
+      background-color: #f44336; /* rouge */
+      color: #fff; /* blanc */
+    border-radius: 3px;
+          padding: 2px 4px;
+          font-size: 12px;
+          margin-left: 10px;
+          }
+
+    .tag-info {
+      background-color: #2196f3; /* bleu */
+      color: #fff; /* blanc */
+          border-radius: 3px;
+          padding: 2px 4px;
+          font-size: 12px;
+          margin-left: 10px;
+          }
+* {
+box-sizing: border-box;
+}
+
+* {
+box-sizing: border-box;
+}
+
+#myTable {
+border-collapse: collapse;
+width: 100%;
+font-size: 18px;
+color: #535353;
+}
+
+#myTable th, #myTable td {
+text-align: left;
+padding: 12px;
+font-weight: bold;
+}
+
+
+#myTable tr.header, #myTable tr:hover {
+background: #58bceb;
+color: #000000;
+}
+</style>
+</head>
+
+<body class="modals-sections">
+  <!-- Navbar Light -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+    <div class="container">
+      <a class="navbar-brand" href="../../index.html">
+        France Avenir
+      </a>
+      <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon mt-2">
+          <span class="navbar-toggler-bar bar1"></span>
+          <span class="navbar-toggler-bar bar2"></span>
+          <span class="navbar-toggler-bar bar3"></span>
+        </span>
+      </button>
+      <div class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0 ms-lg-12 ps-lg-5" id="navigation">
+        <ul class="navbar-nav navbar-nav-hover ms-auto">
+          <li class="nav-item dropdown dropdown-hover mx-2 ms-lg-5">
+            <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="material-icons opacity-6 me-2 text-md">house</i>
+              France Avenir
+              <img src="../../assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-auto ms-md-2">
+            </a>
+            <div class="dropdown-menu ms-n3 dropdown-menu-animation dropdown-md p-3 border-radius-lg mt-0 mt-lg-3" aria-labelledby="dropdownMenuPages5">
+              <a href="about.html" class="dropdown-item border-radius-md">About</a>
+              <a href="livrées.html" class="dropdown-item border-radius-md">Nos livrées</a>              
+              <a href="../train-francais/infotrafic.html" class="dropdown-item border-radius-md">Information Trafic</a>
+              <a href="../../terms.html" class="dropdown-item border-radius-md">CGU</a>
+            </div>
+          </li>
+          <li class="nav-item px-3">
+            <a class="nav-link" href="../../ski.html"><i class="material-icons opacity-6 me-2 text-md">downhill_skiing</i>
+              Ski Français
+            </a>
+          </li>
+          <li class="nav-item dropdown dropdown-hover mx-2">
+            <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuBlocks" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="material-icons opacity-6 me-2 text-md">train</i>
+              Train Français
+              <img src="../../assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-auto ms-md-2">
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-animation dropdown-md dropdown-md-responsive p-3 border-radius-lg mt-0 mt-lg-3" aria-labelledby="dropdownMenuBlocks">
+              <div class="d-none d-lg-block">
+                <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                  <a class="dropdown-item py-2 ps-3 border-radius-md" href="../presentation.html">
+                    <div class="w-100 d-flex align-items-center justify-content-between">
+                      <div>
+                        <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Information Pratique</h6>
+                        <span class="text-sm">Retrouvez toutes nos infos</span>
+                      </div>
+                      <img src="../../assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow">
+                    </div>
+                  </a>
+                  <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="inventaire.html">
+                      Notre Inventaires
+                    </a>
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="infotrafic.html">
+                      info Trafic
+                    </a>
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="résa.html">
+                      Réserver un billet
+                    </a>
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="../../faq.html">
+                      FAQ
+                    </a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                  <a class="dropdown-item py-2 ps-3 border-radius-md" href="../presentation.html">
+                    <div class="w-100 d-flex align-items-center justify-content-between">
+                      <div>
+                        <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Sur nos lignes</h6>
+                        <span class="text-sm">En direct de nos trains, toutes les infos</span>
+                      </div>
+                      <img src="../../assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow">
+                    </div>
+                  </a>
+                  <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="fgv.html"><i class="material-icons opacity-6 me-2 text-md">train</i>
+                      France à Grande Vitesse
+                    </a>
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="ice.html"><i class="material-icons opacity-6 me-2 text-md">train</i>
+                      ICEurope
+                    </a>
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="ics.html"><i class="material-icons opacity-6 me-2 text-md">train</i>
+                      ICSuisse
+                    </a>
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="région.html"><i class="material-icons opacity-6 me-2 text-md">train</i>
+                      France Région
+                    </a>
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="tel.html"><i class="material-icons opacity-6 me-2 text-md">directions_railway_filled</i>
+                      Train Express Lyonnais
+                    </a>
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="tfm.html"><i class="material-icons opacity-6 me-2 text-md">local_shipping</i>
+                      Train Français Marchandise
+                    </a>
+                  </div>
+                </li>
+                <a href="départs.html" class="dropdown-item border-radius-md"><i class="material-icons opacity-6 me-2 text-md">train</i>
+                  Au départ de nos gares
+                </a>
+                <a href="alliance.html" class="dropdown-item border-radius-md"><i class="material-icons opacity-6 me-2 text-md">groups_2</i>
+                  France Avenir, l'alliance <span class="tag tag-info">NOUVEAU !</span>
+                </a>
+              </div>
+            </ul>
+          </li>
+          <li class="nav-item dropdown dropdown-hover mx-2">
+            <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuBlocks" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="material-icons opacity-6 me-2 text-md">directions_bus_filled</i>
+            Transport Clermont Métropole
+              <img src="../../assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-auto ms-md-2">
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-animation dropdown-md dropdown-md-responsive p-3 border-radius-lg mt-0 mt-lg-3" aria-labelledby="dropdownMenuBlocks">
+              <div class="d-none d-lg-block">
+                <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                  <a class="dropdown-item py-2 ps-3 border-radius-md" href="../presentation.html">
+                    <div class="w-100 d-flex align-items-center justify-content-between">
+                      <div>
+                        <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Information Pratique</h6>
+                        <span class="text-sm">Retrouvez toutes nos infos</span>
+                      </div>
+                      <img src="../../assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow">
+                    </div>
+                  </a>
+                <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="../train-francais/infotrafic.html">
+                      ℹ️nfo Trafic
+                    </a>
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="../bus français/tarifsbus.html">
+                      Nos Tarifs
+                    </a>
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="../bus français/agences.html">
+                      Nos Agences
+                    </a>
+                  </div>
+                </li>
+              <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                <a class="dropdown-item py-2 ps-3 border-radius-md" href="./presentation.html">
+                  <div class="w-100 d-flex align-items-center justify-content-between">
+                    <div>
+                      <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Nos Lignes</h6>
+                      <span class="text-sm">En direct de nos bus, toutes les infos</span>
+                    </div>
+                    <img src="../../assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow">
+                  </div>
+                </a>
+                <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
+                  <a class="dropdown-item ps-3 border-radius-md mb-1" href="../bus français/lignes/1.html">
+                    <img src="../bus français/1.png" width="10%" max-height="10%">
+                    Gare Centrale <> Campus Cézeaux
+                  </a>
+                  <a class="dropdown-item ps-3 border-radius-md mb-1" href="../bus français/lignes/2.html">
+                    <img src="../bus français/2.png"  width="10%" height="10%">
+                    Gare Centrale <> Aéroport
+                  </a>
+                  <a class="dropdown-item ps-3 border-radius-md mb-1" href="../bus français/lignes/3.html">
+                    <img src="../bus français/3.png"  width="10%" height="10%">
+                    Gare Centrale <> Campus Marthe Gautier
+                  </a>
+                  <a class="dropdown-item ps-3 border-radius-md mb-1" href="../bus français/lignes/4.html">
+                    <img src="../bus français/4.png"  width="10%" height="10%">
+                    Gare Centrale <> Gare de l'Est
+                  </a>
+                  <a class="dropdown-item ps-3 border-radius-md mb-1" href="../bus français/lignes/5.html">
+                    <img src="../bus français/5.png"  width="10%" height="10%">
+                    Musée d'Art Moderne <> Pôle Luca Pacioli
+                  </a>
+                  <a class="dropdown-item ps-3 border-radius-md mb-1" href="../bus français/lignes/6.html">
+                    <img src="../bus français/6.png"  width="10%" height="10%">
+                    Grand Palais <> Campus Maryse Esterle
+                  </a>
+                  <a class="dropdown-item ps-3 border-radius-md mb-1" href="../bus français/lignes/7.html">
+                    <img src="../bus français/7.png"  width="10%" height="10%">
+                    Port fluvial <> Grand Palais
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="page-header min-vh-80" style="background-image: url('../../assets/img/intro-bg3.jpg');">
+    <span class="mask bg-gradient-dark opacity-6"></span>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <div class="text-center">
+            <h1 class="text-white">Inventaire</h1>
+            <h3 class="text-white">Train Français</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card card-body shadow-xl mx-3 mx-md-4 mt-n6">
+    <div class="container">
+      <div>
+        
+<center><h4>Toutes les images sont la propriété de FranceAvenir représentée par Thibaut.</h4></center>
+<center><input class="btn btn-success" type="text" id="myInput" onkeyup="myFunction()" placeholder="Entrez le nom de l'engin 🔎" title="Cherchez un engin 🔎"></center>
+<hr>
+<div class="container">
+<table class="display" style="width:100%" id="myTable">
+    <thead>
+    <tr style="height: 100px">
+    <th scope=col>Nom</td>
+    <th scope=col>Représentation</td>
+    </tr>
+    </thead>
+    <tbody>
+        <tr style="height: 100px"><td>ETR 610 Franco-Italien</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal01').style.display='block'" src="livréesperso/ETR610 PAris - Venise avec fond.png"></tr>
+        <tr style="height: 100px"><td>SNCF Z 56300 liO</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal02').style.display='block'" src="livréesperso\SNCF Z 56300 liO.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>Régio2N LiO</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal03').style.display='block'" src="livréesperso\Regio2N 8c LiO.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>VB2N AuRA 6c</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal04').style.display='block'" src="livréesperso\VB2n6c.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>VB2N AuRA 8c</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal05').style.display='block'" src="livréesperso\VB2n8c.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>Régio2N AuRA</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal06').style.display='block'" src="livréesperso\Régio2N - AuRA.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>Régio2N Bretagne</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal07').style.display='block'" src="livréesperso\Regio2N 8c Bretagne.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>BB+BB26000 Spéciale Bordeaux - Lyon</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal08').style.display='block'" src="livréesperso\BB_BB26000_Bordeaux_Lyon.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>B 84500</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal09').style.display='block'" src="livréesperso\B 84500.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>TGV FRET</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal10').style.display='block'" src="livréesperso\TGV Fret.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>TGV Ouigo</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal11').style.display='block'" src="livréesperso\Ouigo.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>TGV Réseau Duplex</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal12').style.display='block'" src="livréesperso\TGV Réseau Duplex.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>TGV Euroduplex</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal13').style.display='block'" src="livréesperso\TGV EuroDuplex2.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>BB26000</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal14').style.display='block'" src="livréesperso\BB26000_Fant_R.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>DB BR 147</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal15').style.display='block'" src="livréesperso\1798.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>CFF Re 460</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal16').style.display='block'" src="livréesperso\1242.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>Corail NG88 B11 (f)</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal17').style.display='block'" src="livréesperso\972.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>Corail NG88 B7Dx (f)</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal18').style.display='block'" src="livréesperso\1632.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>SNCF U 53600 - SNCF U 53700</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal19').style.display='block'" src="livréesperso\847.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>DB Metropolitan</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal20').style.display='block'" src="livréesperso\1812.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>MPL16</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal21').style.display='block'" src="livréesperso\MPL16.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>SNCF B 85000 Coradia Liner</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal22').style.display='block'" src="livréesperso\SNCF B 85000 Coradia Liner.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>SNCF Corail VU B6Dux TER Languedoc Roussillon</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal23').style.display='block'" src="livréesperso\Corail VU B6Dux Languedoc Roussillon.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>TEL A</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal24').style.display='block'" src="livréesperso\SNCF B 84500 TEL A.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>TEL B</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal25').style.display='block'" src="livréesperso\TEL B train.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>FS ETR 421</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal26').style.display='block'" src="livréesperso\ETR 421.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>FS ETR 521</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal27').style.display='block'" src="livréesperso\ETR 521.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>SNCF BB 22200 TVM</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal28').style.display='block'" src="livréesperso\SNCF BB 22200 TVM.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>DB Ddm915</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal29').style.display='block'" src="livréesperso\DB Ddm915.png" style="object-fit: cover; object-position: top left; height: 100%;"></tr>
+        <tr style="height: 100px"><td>DB Ddm915 IR</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal30').style.display='block'" src="livréesperso\DB Ddm915 IR.png" style="object-fit: cover; object-position: top left; height: 100%;"></td></tr>
+        <tr style="height: 100px"><td>DB Ddm915 Blau</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal31').style.display='block'" src="livréesperso\DB Ddm915 Blau.png" style="object-fit: cover; object-position: top left; height: 100%;"></td></tr>
+        <tr style="height: 100px"><td>DB Ddm915 Autozug</td>
+        <td style="height: 100%"><img style="object-fit: cover; object-position: top left; height: 100%;cursor:zoom-in" onclick="document.getElementById('modal32').style.display='block'" src="livréesperso\DB Ddm915 Autozug.png" style="object-fit: cover; object-position: top left; height: 100%;"></td></tr>
+
+    </tbody>
+    </table>
+    <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>ETR 610 Franco-Italien</h2>
+          <center><img style="height: auto" src="livréesperso/ETR610 PAris - Venise avec fond.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal02" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>SNCF Z 56300 liO</h2>
+          <center><img style="height: auto" src="livréesperso/SNCF Z 56300 liO.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal03" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>Régio2N LiO</h2>
+          <center><img style="height: auto" src="livréesperso\Regio2N 8c LiO.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal04" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>VB2N AuRA 6c</h2>
+          <center><img style="height: auto" src="livréesperso\VB2n6c.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal05" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>VB2N AuRA 8c</h2>
+          <center><img style="height: auto" src="livréesperso\VB2n8c.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal06" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>Régio2N AuRA</h2>
+          <center><img style="height: auto" src="livréesperso\Régio2N - AuRA.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal07" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>Régio2N Bretagne</h2>
+          <center><img style="height: auto" src="livréesperso\Regio2N 8c Bretagne.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal08" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>BB+BB26000 Spéciale Bordeaux - Lyon</h2>
+          <center><img style="height: auto" src="livréesperso\BB_BB26000_Bordeaux_Lyon.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal09" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>B 84500</h2>
+          <center><img style="height: auto" src="livréesperso\B 84500.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal10" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>TGV FRET</h2>
+          <center><img style="height: auto" src="livréesperso\TGV Fret.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal11" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>TGV Ouigo</h2>
+          <center><img style="height: auto" src="livréesperso\Ouigo.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal12" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>TGV Réseau Duplex</h2>
+          <center><img style="height: auto" src="livréesperso\TGV Réseau Duplex.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal13" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>TGV Euroduplex</h2>
+          <center><img style="height: auto" src="livréesperso\TGV EuroDuplex2.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal14" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>BB26000</h2>
+          <center><img style="height: auto" src="livréesperso\BB26000_Fant_R.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal15" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>DB BR 147</h2>
+          <center><img style="height: auto" src="livréesperso\1798.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal16" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>CFF Re 460</h2>
+          <center><img style="height: auto" src="livréesperso\1242.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal17" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>Corail NG88 B11 (f)</h2>
+          <center><img style="height: auto" src="livréesperso\972.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal18" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>Corail NG88 B7Dx (f)</h2>
+          <center><img style="height: auto" src="livréesperso\1632.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal19" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>SNCF U 53600 - SNCF U 53700</h2>
+          <center><img style="height: auto" src="livréesperso\847.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal20" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>DB Metropolitan</h2>
+          <center><img style="height: auto" src="livréesperso\1812.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal21" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>MPL16</h2>
+          <center><img style="height: auto" src="livréesperso\MPL16.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal22" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>SNCF B 85000 Coradia Liner</h2>
+          <center><img style="height: auto" src="livréesperso\SNCF B 85000 Coradia Liner.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal23" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>SNCF Corail VU B6Dux TER Languedoc Roussillon</h2>
+          <center><img style="height: auto" src="livréesperso\Corail VU B6Dux Languedoc Roussillon.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal24" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>TEL A</h2>
+          <center><img style="height: auto" src="livréesperso\SNCF B 84500 TEL A.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal25" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>TEL B</h2>
+          <center><img style="height: auto" src="livréesperso\TEL B train.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal26" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>FS ETR 421</h2>
+          <center><img style="height: auto" src="livréesperso\ETR 421.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal27" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>FS ETR 521</h2>
+          <center><img style="height: auto" src="livréesperso\ETR 521.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal28" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>SNCF BB 22200 TVM</h2>
+          <center><img style="height: auto" src="livréesperso\SNCF BB 22200 TVM.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal29" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>DB Ddm915</h2>
+          <center><img style="height: auto" src="livréesperso\DB Ddm915.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal30" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>DB Ddm915 IR</h2>
+          <center><img style="height: auto" src="livréesperso\DB Ddm915 IR.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal31" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>DB Ddm915 Blau</h2>
+          <center><img style="height: auto" src="livréesperso\DB Ddm915 Blau.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+    <div id="modal32" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <h2>DB Ddm915 Autozug</h2>
+          <center><img style="height: auto;object-position: center" src="livréesperso\DB Ddm915 Autozug.png"></center>
+          <p>Tous droits réservés</p>
+      </div>
+    </div>
+</div>
+<script>
+  function myFunction() {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }       
+    }
+  }
+</script>
+      </div>
+    </div>
+  </div>
+  
+
+
+  <footer class="footer py-5 my-9 bg-gradient-dark position-relative overflow-hidden">
+    <img src="https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2013/04/aurora_over_norway/12618886-1-eng-GB/Aurora_over_Norway_pillars.jpg" alt="pattern-lines" class="position-absolute start-0 top-0 w-100 opacity-6">
+    <div class="container position-relative z-index-1">
+      <div class="row">
+        <div class="col-lg-4 me-auto mb-lg-0 mb-4 text-lg-start text-center">
+          <h6 class="text-white font-weight-bolder text-uppercase mb-lg-4 mb-3">France Avenir</h6>
+          <ul class="nav flex-row ms-n3 align-items-center mb-4 mt-sm-0">
+            <li class="nav-item">
+              <a class="nav-link text-white opacity-8" href="https://www.creative-tim.com" target="_blank">
+                FGV
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white opacity-8" href="https://www.creative-tim.com/presentation" target="_blank">
+                TEL
+              </a>
+            </li>
+  
+            <li class="nav-item">
+              <a class="nav-link text-white opacity-8" href="https://www.creative-tim.com/blog" target="_blank">
+                ICEurope
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white opacity-8" href="https://www.creative-tim.com" target="_blank">
+                Au départ de nos Gares
+              </a>
+            </li>
+          </ul>
+          <p class="text-sm text-white opacity-8 mb-0">
+            Copyright © <script>document.write(new Date().getFullYear())</script> France Avenir par Thibaut.
+          </p>
+        </div>
+        <div class="col-lg-6 ms-auto text-lg-end text-center">
+          <p class="mb-5 text-lg text-white font-weight-bold">
+            Le voyage en train est une métaphore de la vie elle-même, avec ses hauts et ses bas, ses détours et ses arrêts, mais toujours avec la possibilité de découvrir de nouveaux horizons
+          </p>
+          <a href="javascript:;" target="_blank" class="text-white me-xl-4 me-4 opacity-8">
+            <span class="fab fa-dribbble"></span>
+          </a>
+          <a href="javascript:;" target="_blank" class="text-white me-xl-4 me-4 opacity-8">
+            <span class="fab fa-twitter"></span>
+          </a>
+          <a href="javascript:;" target="_blank" class="text-white me-xl-4 me-4 opacity-8">
+            <span class="fab fa-pinterest"></span>
+          </a>
+          <a href="javascript:;" target="_blank" class="text-white opacity-8">
+            <span class="fab fa-github"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

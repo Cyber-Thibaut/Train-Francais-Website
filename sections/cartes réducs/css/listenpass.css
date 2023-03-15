@@ -5,12 +5,12 @@
   	var(--clr-green) 213.75deg,
   	var(--clr-blue) 360deg
   );
-  --logo: url("../assets/logo-listenpass.svg");
+  --logo: url("../../../assets/img/TCM-Clair.svg");
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --logo: url("../assets/logo-dark-listenpass.svg");
+    --logo: url("../../../assets/img/TCM-Clair.svg");
   }
 }
 #Home {

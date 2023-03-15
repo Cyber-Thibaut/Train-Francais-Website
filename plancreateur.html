@@ -1,0 +1,88 @@
+<!doctype html>
+
+<html lang="fr">
+
+<head>
+	<meta charset="utf-8">
+	<title>Lignes</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Créateur de plan réalisé par SSHI</h1>
+	<div>
+		<ul id="line-container">
+		<li><div class="station-text station-text-1">Gare-Centrale</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><rect class="svg-track-up" x="-4" y="3" width="9" height="4"></rect><rect class="svg-track-down" x="5" y="3" width="9" height="4"></rect><rect class="svg-station-1" x="0.5" y="0.5" rx="4.5" ry="4.5" width="9" height="9"></rect></svg></li>
+		<li><div class="station-text station-text-2">Grande-Gare</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><rect class="svg-track-up" x="-4" y="3" width="9" height="4"></rect><rect class="svg-track-down" x="5" y="3" width="9" height="4"></rect><rect class="svg-station-2" x="1.5" y="1.5" rx="3.5" ry="3.5" width="7" height="7"></rect></svg></li>
+		<li><div class="station-text station-text-3">Petite-Gare</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><rect class="svg-track-up" x="-4" y="3" width="9" height="4"></rect><rect class="svg-track-down" x="5" y="3" width="9" height="4"></rect><rect class="svg-station-3" x="2.5" y="2.5" rx="2.5" ry="2.5" width="5" height="5"></rect></svg></li>
+		<li><div class="station-text station-text-4">PANG</div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><rect class="svg-track-up" x="-4" y="3" width="9" height="4"></rect><rect class="svg-track-down" x="5" y="3" width="9" height="4"></rect><rect class="svg-station-4" x="2.5" y="2.5" rx="2.5" ry="2.5" width="5" height="5"></rect></svg></li></ul>
+	</div>
+	<br><br><br><br>
+	<p>Exemple :</p>
+	<p>Gare-Centrale#1<br>Grande-Gare#2<br>Petite-Gare#3<br>PANG#4</p>
+	<p><b>ATTENTION</b></p>
+	<p>Le # n'est pas utilisé pour classer les gares mais pour donner la taille de celles-ci. Pour connaître les valeurs et les tailles qui correspondent regardez l'exemple</p>
+	<span>Couleur de ligne : </span>
+	<input id='color-picker' type='color' value='#C51E1E'>
+	<br><br>
+	<textarea id='text-user' cols='40' rows='10'></textarea>
+	<br>
+	<button id='bt-submit' onclick='update()' type='button'>MàJ</button>
+	
+	<script>
+		const colorPicker = document.getElementById('color-picker');
+		const line = document.getElementById('line-container');
+		
+		colorPicker.addEventListener('change', colorLine, false);
+		colorLine();
+		
+		function colorLine() {
+			document.querySelectorAll('.svg-track-up, .svg-track-down').forEach(function(x) {
+				x.style.fill = colorPicker.value;
+			});
+		}
+		
+		function update() {
+			const data = document.getElementById('text-user').value;
+			const dataLines = data.split('\n');
+			let dataLinesSplitTemp = [];
+			let dataLinesSplit = [];
+			dataLines.forEach(x =>  dataLinesSplitTemp.push(x.split('#')));
+			dataLinesSplitTemp.forEach(x => {
+				if (Array.isArray(x) && x.length === 2) {
+					dataLinesSplit.push(x);
+				}
+			});
+			
+			console.log(dataLinesSplit);
+			
+			line.innerHTML = '';
+			
+			let stations = '';
+			
+			dataLinesSplit.forEach(x => {
+				let tempHTML = '<li><div class=\'station-text station-text-' + x[1] + '\'>' + x[0] + '</div><svg xmlns = \'http://www.w3.org/2000/svg\' viewBox=\'0 0 10 10\'><rect class=\'svg-track-up\' x=-4 y=3 width=9 height=4 /><rect class=\'svg-track-down\' x=5 y=3 width=9 height=4 />';
+				switch(x[1]) {
+					case '1':
+						tempHTML += '<rect class=\'svg-station-1\' x = 0.5 y = 0.5 rx = 4.5 ry = 4.5 width = 9 height = 9 />'
+						break;
+					case '2':
+						tempHTML += '<rect class=\'svg-station-2\' x = 1.5 y = 1.5 rx = 3.5 ry = 3.5 width = 7 height = 7 />'
+						break;
+					case '3':
+						tempHTML += '<rect class=\'svg-station-3\' x = 2.5 y = 2.5 rx = 2.5 ry = 2.5 width = 5 height = 5 />'
+						break;
+					case '4':
+						tempHTML += '<rect class=\'svg-station-4\' x = 2.5 y = 2.5 rx = 2.5 ry = 2.5 width = 5 height = 5 />'
+						break;
+				}
+				tempHTML += '</svg></li>';
+				stations += tempHTML;
+			});
+			
+			line.innerHTML = stations;
+			
+			colorLine();
+		}
+    </script>
+</body>
+</html>
