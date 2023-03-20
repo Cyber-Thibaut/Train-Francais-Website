@@ -92,7 +92,7 @@
       margin-top: 10px;
     }
     .train-price-first-voyageur {
-    background-image: url('https://cdn.discordapp.com/attachments/1062738561939550250/1083134077344952351/IGP2338.JPG');
+    background-image: url('../../assets/img/resa1.JPG');
     background-color: rgba(238, 105, 105, 0.7); /* une couleur avec une opacité de 0,7 */
     background-blend-mode: multiply;
     background-size: cover;
@@ -100,14 +100,14 @@
   }
   
   .train-price-second-voyageur {
-    background-image: url('https://cdn.discordapp.com/attachments/1062738561939550250/1083143194067345438/IGP2453.JPG');
+    background-image: url('../../assets/img/resa2.JPG');
     background-color: rgba(0, 153, 255, 0.7); /* une couleur avec une opacité de 0,7 */
     background-blend-mode: multiply;
     background-size: cover;
     background-position: center; /* afficher la partie centrale supérieure de l'image */
   }
   .train-price-fret {
-    background-image: url('https://cdn.discordapp.com/attachments/1062738561939550250/1083146598051229758/IMG_20220805_130449_HDR.jpg');
+    background-image: url('../../assets/img/resa3.JPG');
     background-color: rgba(94, 240, 94, 0.7); /* une couleur avec une opacité de 0,7 */
     background-blend-mode: multiply;
     background-size: cover;
@@ -563,34 +563,35 @@ function filterFunction() {
                             } else if (train.type === "i"){
                               infraCount++;
                             } else if (train.type === "v"){
-                                html += `<div class="container mt-5">
-                                <div class="col-lg-12 mx-auto train-container-voyageur">
-                                  <div class="train-info-voyageur">
-                                    <h4><strong>Depuis</strong> ${train.from} <strong>à destination de</strong> ${train.to}</h4>
-                                    <h5><strong>Intermédiaire:</strong> ${train.intermediate.replace(/;/g, ', ')}</h5>
-                                    <p><strong>Numéro de train:</strong> ${train.name} <strong>Service:</strong> ${train.service}</p>
-                                    <p><strong>Heure de départ:</strong> ${train.departure} <strong>Heure d'arrivée:</strong> ${train.arrival}</p>
-                                    <p><strong>Rame:</strong> ${train.trainset}</p>
-                                  </div>
-                                  <div class="train-prices-voyageur">
-                                    <div class="train-price-first-voyageur ">
+                            html += `<div class="container mt-5">
+                              <div class="col-lg-12 mx-auto train-container-voyageur">
+                                <div class="train-info-voyageur">
+                                  <h4><strong>Depuis</strong> ${train.from} <strong>à destination de</strong> ${train.to}</h4>
+                                  <h5><strong>Intermédiaire:</strong> ${train.intermediate.replace(/;/g, ', ')}</h5>
+                                  <p><strong>Numéro de train:</strong> ${train.name} <strong>Service:</strong> ${train.service}</p>
+                                  <p><strong>Heure de départ:</strong> ${train.departure} <strong>Heure d'arrivée:</strong> ${train.arrival}</p>
+                                  <p><strong>Rame:</strong> ${train.trainset}</p>
+                                </div>
+                                <div class="train-prices-voyageur">
+                                  ${train.price1 === '0,00' ? '<div class="train-price-first-voyageur not-available"><h4><i class="fas fa-exclamation-circle"></i><strong>1ère Classe:</strong> Pas de billets disponibles</h4></div>' :
+                                    `<div class="train-price-first-voyageur">
                                       <h4><strong>1ère Classe:</strong> ${train.price1}€</h4>
                                       <center>
                                         <button type="button" class="btn btn-primary first-class-voyageur train-button" data-bs-toggle="modal" data-bs-target="#ticketModal" onclick="ticketSelect(${i}, '1')">Prendre ce billet</button>
                                       </center>
-                                    </div>
-                                    <div class="train-price-second-voyageur ">
-                                      <h4><strong>2nde Classe:</strong> ${train.price2}€</h4>
-                                      <center>
-                                        <button type="button" class="btn btn-primary secon-class-voyageur train-button" data-bs-toggle="modal" data-bs-target="#ticketModal" onclick="ticketSelect(${i}, '2')">Prendre ce billet</button>
-                                      </center>
-                                    </div>
+                                    </div>`
+                                  }
+                                  <div class="train-price-second-voyageur">
+                                    <h4><strong>2nde Classe:</strong> ${train.price2}€</h4>
+                                    <center>
+                                      <button type="button" class="btn btn-primary secon-class-voyageur train-button" data-bs-toggle="modal" data-bs-target="#ticketModal" onclick="ticketSelect(${i}, '2')">Prendre ce billet</button>
+                                    </center>
                                   </div>
                                 </div>
                               </div>
-                              `;
-                              i++;
-                            }
+                            </div>`;
+                            i++;
+                        }
                             } else if (train.type === "f" && trainTypeFilter === "f") {
                               html += `<div class='container mt-5'>
                                   <div class='col-lg-12 mx-auto card train-container'>
@@ -608,35 +609,37 @@ function filterFunction() {
                                     </div>
                                 </div>
                             </div>`;
-                            } else if (trainTypeFilter === "v" && train.type === trainTypeFilter) {
-                              i++;
-                              html += `<div class="container mt-5">
-                                <div class="col-lg-12 mx-auto train-container-voyageur">
-                                  <div class="train-info-voyageur">
-                                    <h4><strong>Depuis</strong> ${train.from} <strong>à destination de</strong> ${train.to}</h4>
-                                    <h5><strong>Intermédiaire:</strong> ${train.intermediate.replace(/;/g, ', ')}</h5>
-                                    <p><strong>Numéro de train:</strong> ${train.name} <strong>Service:</strong> ${train.service}</p>
-                                    <p><strong>Heure de départ:</strong> ${train.departure} <strong>Heure d'arrivée:</strong> ${train.arrival}</p>
-                                    <p><strong>Rame:</strong> ${train.trainset}</p>
-                                  </div>
-                                  <div class="train-prices-voyageur">
-                                    <div class="train-price-first-voyageur ">
+                          } else if (trainTypeFilter === "v" && train.type === trainTypeFilter) {
+                            html += `<div class="container mt-5">
+                              <div class="col-lg-12 mx-auto train-container-voyageur">
+                                <div class="train-info-voyageur">
+                                  <h4><strong>Depuis</strong> ${train.from} <strong>à destination de</strong> ${train.to}</h4>
+                                  <h5><strong>Intermédiaire:</strong> ${train.intermediate.replace(/;/g, ', ')}</h5>
+                                  <p><strong>Numéro de train:</strong> ${train.name} <strong>Service:</strong> ${train.service}</p>
+                                  <p><strong>Heure de départ:</strong> ${train.departure} <strong>Heure d'arrivée:</strong> ${train.arrival}</p>
+                                  <p><strong>Rame:</strong> ${train.trainset}</p>
+                                </div>
+                                <div class="train-prices-voyageur">
+                                  ${train.price1 === '0,00' ? '<div class="train-price-first-voyageur not-available"><h4><i class="fas fa-exclamation-circle"></i><strong>1ère Classe:</strong> Pas de billets disponibles</h4></div>' :
+                                    `<div class="train-price-first-voyageur">
                                       <h4><strong>1ère Classe:</strong> ${train.price1}€</h4>
                                       <center>
                                         <button type="button" class="btn btn-primary first-class-voyageur train-button" data-bs-toggle="modal" data-bs-target="#ticketModal" onclick="ticketSelect(${i}, '1')">Prendre ce billet</button>
                                       </center>
-                                    </div>
-                                    <div class="train-price-second-voyageur ">
-                                      <h4><strong>2nde Classe:</strong> ${train.price2}€</h4>
-                                      <center>
-                                        <button type="button" class="btn btn-primary secon-class-voyageur train-button" data-bs-toggle="modal" data-bs-target="#ticketModal" onclick="ticketSelect(${i}, '2')">Prendre ce billet</button>
-                                      </center>
-                                    </div>
+                                    </div>`
+                                  }
+                                  <div class="train-price-second-voyageur">
+                                    <h4><strong>2nde Classe:</strong> ${train.price2}€</h4>
+                                    <center>
+                                      <button type="button" class="btn btn-primary secon-class-voyageur train-button" data-bs-toggle="modal" data-bs-target="#ticketModal" onclick="ticketSelect(${i}, '2')">Prendre ce billet</button>
+                                    </center>
                                   </div>
                                 </div>
-                              </div>`;
-                              i++;
+                              </div>
+                            </div>`;
+                            i++;
                         }
+
                         if (infraCount === data.length) {
                         // Si tous les trains sont d'infra, on affiche un message d'information
                         html = `<div class='container mt-5'>

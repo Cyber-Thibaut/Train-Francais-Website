@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/apple-icon.png">
+  <link rel="icoan" type="image/png" href="../../assets/img/favicon.png">
+  <title>
+    France Avenir
+  </title>
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+  <!-- Nucleo Icons -->
+  <link href="../../assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="../../assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <!-- CSS Files -->
+  <link id="pagestyle" href="../../assets/css/material-kit.css?v=3.0.4" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  <style>
+    .tag-important {
+    background-color: #f44336; /* rouge */
+    color: #fff; /* blanc */
+    border-radius: 3px;
+    padding: 2px 4px;
+    font-size: 12px;
+    margin-left: 10px;
+    }
+  
+    .tag-info {
+    background-color: #2196f3; /* bleu */
+    color: #fff; /* blanc */
+    border-radius: 3px;
+    padding: 2px 4px;
+    font-size: 12px;
+    margin-left: 10px;
+    }
+  </style>
+</head>
+
+<body class="modals-sections">
+  <!-- Navbar Light -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+    <div class="container">
+      <a class="navbar-brand" href="../../index.html">
+        France Avenir
+      </a>
+      <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon mt-2">
+          <span class="navbar-toggler-bar bar1"></span>
+          <span class="navbar-toggler-bar bar2"></span>
+          <span class="navbar-toggler-bar bar3"></span>
+        </span>
+      </button>
+      <div class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0 ms-lg-12 ps-lg-5" id="navigation">
+        <ul class="navbar-nav navbar-nav-hover ms-auto">
+          <li class="nav-item dropdown dropdown-hover mx-2 ms-lg-5">
+            <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="material-icons opacity-6 me-2 text-md">house</i>
+              France Avenir
+              <img src="../../assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-auto ms-md-2">
+            </a>
+            <div class="dropdown-menu ms-n3 dropdown-menu-animation dropdown-md p-3 border-radius-lg mt-0 mt-lg-3" aria-labelledby="dropdownMenuPages5">
+              <a href="about.html" class="dropdown-item border-radius-md">About</a>
+              <a href="../../livrées.html" class="dropdown-item border-radius-md">Nos livrées</a>              
+              <a href="../train-francais/infotrafic.html" class="dropdown-item border-radius-md">Information Trafic</a>
+              <a href="../../terms.html" class="dropdown-item border-radius-md">CGU</a>
+            </div>
+          </li>
+          <li class="nav-item px-3">
+            <a class="nav-link" href="../../ski.html"><i class="material-icons opacity-6 me-2 text-md">downhill_skiing</i>
+              Ski Français
+            </a>
+          </li>
+          <li class="nav-item dropdown dropdown-hover mx-2">
+            <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuBlocks" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="material-icons opacity-6 me-2 text-md">train</i>
+              Train Français
+              <img src="../../assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-auto ms-md-2">
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-animation dropdown-md dropdown-md-responsive p-3 border-radius-lg mt-0 mt-lg-3" aria-labelledby="dropdownMenuBlocks">
+              <div class="d-none d-lg-block">
+                <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                  <a class="dropdown-item py-2 ps-3 border-radius-md" href="../presentation.html">
+                    <div class="w-100 d-flex align-items-center justify-content-between">
+                      <div>
+                        <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Information Pratique</h6>
+                        <span class="text-sm">Retrouvez toutes nos infos</span>
+                      </div>
+                      <img src="../../assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow">
+                    </div>
+                  </a>
+                  <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="inventaire.html">
+                      Notre Inventaires
+                    </a>
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="infotrafic.html">
+                      info Trafic
+                    </a>
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="résa.html">
+                      Réserver un billet
+                    </a>
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="../../faq.html">
+                      FAQ
+                    </a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                  <a class="dropdown-item py-2 ps-3 border-radius-md" href="../presentation.html">
+                    <div class="w-100 d-flex align-items-center justify-content-between">
+                      <div>
+                        <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Sur nos lignes</h6>
+                        <span class="text-sm">En direct de nos trains, toutes les infos</span>
+                      </div>
+                      <img src="../../assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow">
+                    </div>
+                  </a>
+                  <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="fgv.html"><i class="material-icons opacity-6 me-2 text-md">train</i>
+                      France à Grande Vitesse
+                    </a>
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="ice.html"><i class="material-icons opacity-6 me-2 text-md">train</i>
+                      ICEurope
+                    </a>
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="ics.html"><i class="material-icons opacity-6 me-2 text-md">train</i>
+                      ICSuisse
+                    </a>
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="région.html"><i class="material-icons opacity-6 me-2 text-md">train</i>
+                      France Région
+                    </a>
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="tel.html"><i class="material-icons opacity-6 me-2 text-md">directions_railway_filled</i>
+                      Train Express Lyonnais
+                    </a>
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="tfm.html"><i class="material-icons opacity-6 me-2 text-md">local_shipping</i>
+                      Train Français Marchandise
+                    </a>
+                  </div>
+                </li>
+                <a href="départs.html" class="dropdown-item border-radius-md"><i class="material-icons opacity-6 me-2 text-md">train</i>
+                  Au départ de nos gares
+                </a>
+                <a href="alliance.html" class="dropdown-item border-radius-md"><i class="material-icons opacity-6 me-2 text-md">groups_2</i>
+                  France Avenir, l'alliance <span class="tag tag-info">NOUVEAU !</span>
+                </a>
+              </div>
+            </ul>
+          </li>
+          <li class="nav-item dropdown dropdown-hover mx-2">
+            <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuBlocks" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="material-icons opacity-6 me-2 text-md">directions_bus_filled</i>
+            Transport Clermont Métropole
+              <img src="../../assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-auto ms-md-2">
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-animation dropdown-md dropdown-md-responsive p-3 border-radius-lg mt-0 mt-lg-3" aria-labelledby="dropdownMenuBlocks">
+              <div class="d-none d-lg-block">
+                <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                  <a class="dropdown-item py-2 ps-3 border-radius-md" href="../presentation.html">
+                    <div class="w-100 d-flex align-items-center justify-content-between">
+                      <div>
+                        <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Information Pratique</h6>
+                        <span class="text-sm">Retrouvez toutes nos infos</span>
+                      </div>
+                      <img src="../../assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow">
+                    </div>
+                  </a>
+                <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="../train-francais/infotrafic.html">
+                      ℹ️nfo Trafic
+                    </a>
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="../bus français/tarifsbus.html">
+                      Nos Tarifs
+                    </a>
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="../bus français/agences.html">
+                      Nos Agences
+                    </a>
+                  </div>
+                </li>
+              <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                <a class="dropdown-item py-2 ps-3 border-radius-md" href="./presentation.html">
+                  <div class="w-100 d-flex align-items-center justify-content-between">
+                    <div>
+                      <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Nos Lignes</h6>
+                      <span class="text-sm">En direct de nos bus, toutes les infos</span>
+                    </div>
+                    <img src="../../assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow">
+                  </div>
+                </a>
+                <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
+                  <a class="dropdown-item ps-3 border-radius-md mb-1" href="../bus français/lignes/1.html">
+                    <img src="../bus français/1.png" width="10%" max-height="10%">
+                    Gare Centrale <> Campus Cézeaux
+                  </a>
+                  <a class="dropdown-item ps-3 border-radius-md mb-1" href="../bus français/lignes/2.html">
+                    <img src="../bus français/2.png"  width="10%" height="10%">
+                    Gare Centrale <> Aéroport
+                  </a>
+                  <a class="dropdown-item ps-3 border-radius-md mb-1" href="../bus français/lignes/3.html">
+                    <img src="../bus français/3.png"  width="10%" height="10%">
+                    Gare Centrale <> Campus Marthe Gautier
+                  </a>
+                  <a class="dropdown-item ps-3 border-radius-md mb-1" href="../bus français/lignes/4.html">
+                    <img src="../bus français/4.png"  width="10%" height="10%">
+                    Gare Centrale <> Gare de l'Est
+                  </a>
+                  <a class="dropdown-item ps-3 border-radius-md mb-1" href="../bus français/lignes/5.html">
+                    <img src="../bus français/5.png"  width="10%" height="10%">
+                    Musée d'Art Moderne <> Pôle Luca Pacioli
+                  </a>
+                  <a class="dropdown-item ps-3 border-radius-md mb-1" href="../bus français/lignes/6.html">
+                    <img src="../bus français/6.png"  width="10%" height="10%">
+                    Grand Palais <> Campus Maryse Esterle
+                  </a>
+                  <a class="dropdown-item ps-3 border-radius-md mb-1" href="../bus français/lignes/7.html">
+                    <img src="../bus français/7.png"  width="10%" height="10%">
+                    Port fluvial <> Grand Palais
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- -------- START HEADER 5 w/ text and illustration ------- -->
+<header>
+  <div class="page-header min-vh-80">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 my-auto">
+          <h1 class="mb-4">Train Français Marchandise</h1>
+        </div>
+        <div class="col-lg-8 ps-5 pe-0">
+          <div class="row mt-3">
+            <div class="col-lg-3 col-6">
+              <img class="w-100 border-radius-lg shadow mt-0 mt-lg-7" src="https://cdn.pixabay.com/photo/2016/04/30/20/32/railway-station-1363771_1280.jpg" alt="flower-1" loading="lazy">
+            </div>
+            <div class="col-lg-3 col-6">
+              <img class="w-100 border-radius-lg shadow" src="https://cdn.pixabay.com/photo/2018/12/09/17/58/wagon-3865373_640.jpg" alt="flower-2" loading="lazy">
+              <img class="w-100 border-radius-lg shadow mt-4" src="https://cdn.pixabay.com/photo/2014/05/03/17/22/goods-station-337142_640.jpg" alt="flower-3" loading="lazy">
+            </div>
+            <div class="col-lg-3 col-6 mb-3">
+              <img class="w-100 border-radius-lg shadow mt-0 mt-lg-5" src="https://cdn.pixabay.com/photo/2019/12/05/20/09/rails-4676007_640.jpg" alt="flower-4" loading="lazy">
+              <img class="w-100 border-radius-lg shadow mt-4" src="logo/TFM.png" alt="flower-5" loading="lazy">
+            </div>
+            <div class="col-lg-3 col-6">
+              <img class="w-100 border-radius-lg shadow mt-3" src="https://cdn.pixabay.com/photo/2013/10/19/15/09/railway-197981_640.jpg" alt="flower-6" loading="lazy">
+              <img class="w-100 border-radius-lg shadow mt-4" src="https://cdn.pixabay.com/photo/2015/11/05/09/57/track-bed-1023970_640.jpg" alt="flower-7" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="card card-body shadow-xl mx-3 mx-md-4 mt-n6">
+  <div class="container">
+    <div class="section text-center">
+      <p>Train Français Marchandise vous offre une solution complète pour acheminer vos marchandises à travers la France et à l'étranger. Notre flotte de trains modernes et fiables assure un transport rapide et sûr de vos marchandises à destination. Nous nous engageons à fournir des services de haute qualité et à satisfaire les besoins de nos clients. Notre objectif est de fournir une solution de transport efficace et économique pour acheminer vos marchandises à destination. Nous travaillons en étroite collaboration avec nos partenaires afin de vous offrir un service optimal et une sécurité optimale. Grâce à nos services, vous pouvez économiser du temps et de l'argent en acheminant vos marchandises à destination en toute sécurité. </p>
+    </div>
+  </div>
+</div>
+
+
+<!-- START Blogs w/ 3 images & quote & text -->
+<section class="py-5">
+  <div class="container">
+    <div class="row">
+        <div class="col-md-6 position-relative">
+          <div class="position-relative ms-md-5 me-md-n5">
+            <div class="blur-shadow-image">
+              <img class="image-left border-radius-lg img-fluid position-relative top-0 end-0 bg-cover" src="../../assets/img/alpsa.png" alt="merc">
+            </div>
+          </div>
+          <!-- Second image on the left side of the article -->
+          <div class="position-absolute bottom-0 ms-n2 me-3 start-0 end-2 d-md-block d-none">
+            <div class="blur-shadow-image">
+              <img class="image-container border-radius-lg img-fluid position-relative bg-cover" src="https://cdn.pixabay.com/photo/2018/10/05/08/46/the-interior-of-the-3725396_640.jpg" alt="steer">
+            </div>
+          </div>
+
+        </div>
+        <div class="col-md-5">
+            <!-- First image on the right side, above the article -->
+            <div class="position-relative ms-n4 mb-5 mt-8 d-md-block d-none">
+              <div class="blur-shadow-image">
+                <img class="image-right border-radius-lg img-fluid position-relative bg-cover" src="https://cdn.pixabay.com/photo/2017/05/23/18/38/peugeot-2338092_640.jpg" alt="biturbo">
+              </div>
+            </div>
+            <br><br><br><br>
+            <h3 class="mb-4">PSA & Train Français</h3>
+            <p>Nous sommes le 10/01/2023, la société Renault en grande perte de vitesse à été rachetée par PSA sont éternel rival Français. Les usines PSA de Possy en région Parisienne viennent de recevoir les plans de ce qui s'appelait Alpine A110 Nouvelle Génération. Pour se détacher de l'image Renault, la direction de PSA à décidé de renommer Alpine. La nouvelle marque se prénomme Alpsa et conserve l'écurie en F1 qui devient donc Alpsa Sport. PSA signe ainsi sont retour en F1 et se positionne donc sur tous les fronts du sport automobile en complément de son écurie Peugeot/Citroën Sport.
+              Lors de la fabrication de la première Alpsa 110, une erreur est commise et les plans de l'ancienne Alpine sont mélangés avec ceux de 308 sport construite dans le même atelier. Lors de l'inauguration de la nouvelle chaîne de montage, personne ne le remarque en dehors du grand patron de PSA, Carlos Tavares, qui décide alors de modifier officiellement les plans pour mélanger les anciens modèles phares des sociétés et ainsi accentuer le rachat. 
+            </p>
+            <p>
+              Cependant les usines de Poissy ne sont pas desservies par un quelconque moyen de transport en dehors de la route. Un appel d'offre est lancé aux sociétés ferroviaires Françaises pour mettre en place des liaisons quotidiennes avec le sud-est et la Suisse. Fort de son expérience, Train Français décide d'engager sa filiale Fret et Infra. En effet, sur son offre, Train Français propose la pose de rails et de quais entre l'usine de Poissy et la LGV pour accélérer les livraisons. Étant seule avec cette offre, Train Français remporta le dossier. Place désormais aux travaux, ils devraient durer jusqu'à l'été, le temps pour Poissy de préparer suffisamment de stock afin d'être prêt à tenir la cadence imposée par le géant du rail.
+              Nous reviendrons prochainement vers vous pour vous détailler les rames qui circuleront sur cet axe stratégique tant pour PSA que pour Train Français. Afin d'éviter le tunnel du RER et risquer de rester coincer dedans avec les véhicules, nous allons construire une voie spécialement pour nous au départ de Paris Gare de Lyon jusqu'à l'usine afin d'être maître du temps du départ jusqu'à l'arrivée sur la LGV.
+            </p>
+        </div>
+    </div>
+</div>
+</section>
+<!-- START Blogs w/ 3 images & quote & text -->
+<section class="py-5">
+  <div class="container">
+    <div class="row">
+        <div class="col-md-6 position-relative">
+          <div class="position-relative ms-md-5 me-md-n5">
+            <div class="blur-shadow-image">
+              <img class="image-left border-radius-lg img-fluid position-relative top-0 end-0 bg-cover" src="../../assets/img/Toyota_Yorus.png" alt="merc">
+            </div>
+          </div>
+          <!-- Second image on the left side of the article -->
+          <div class="position-absolute bottom-0 ms-n2 me-3 start-0 end-2 d-md-block d-none">
+            <div class="blur-shadow-image">
+              <img class="image-container border-radius-lg img-fluid position-relative bg-cover" src="https://cdn.pixabay.com/photo/2016/12/02/14/24/landscape-1877878_640.jpg" alt="steer">
+            </div>
+          </div>
+
+        </div>
+        <div class="col-md-5">
+            <!-- First image on the right side, above the article -->
+            <div class="position-relative ms-n4 mb-5 mt-8 d-md-block d-none">
+              <div class="blur-shadow-image">
+                <img class="image-right border-radius-lg img-fluid position-relative bg-cover" src="https://cdn.pixabay.com/photo/2022/11/08/21/24/generated-7579357_640.jpg" alt="biturbo">
+              </div>
+            </div>
+            <br><br><br><br>
+            <h3 class="mb-4">Citroën, la Yorën & Train Français</h3>
+            <p>Nous sommes le 31 décembre 2022,
+              Toyota ne vends plus en Europe, la Yaris n'est plus ce qu'elle était, supplantée par la Citroën C3 qui est plus aux goûts des Européens.
+              Malheureusement pour Toyota c'est le coup de grâce. Sans ce modèle phare, la marque nippone n'attire plus personne. Les véhicules sont jugés trop gros, pas réparables chez n'importe qui et à bas coup. Pour pouvoir fermer son usine de Valencienne où était produite la Yaris, Akio Toyoda doit trouver une marque pour reprendre l'usine et les employés. Diverses marques se proposent mais aucune n'apporte de dossier solide, Akio à peur que son scénario se reproduise avec le racheteur. Il ne souhaite pas mettre au chômage ses employés. Arrive la date fatidique de la clôture du dossier.
+              Vincent Cobée arrive avec un dossier un peu étrange. Il ne propose pas seulement le rachat de l'usine, il propose le rachat des plans de la Yaris. Il souhaite lancer un nouveau modèle qui prendrait le positif du modèle nippon et celui de ses meilleures ventes sur le continent, la C3. Il espère ainsi proposer quelque chose de nouveau sur le sol Européen en ayant en tête l'Asie avec des symboles et des codes forts dans la région du soleil levant. 
+            </p>
+            <p>
+              Citroën remporte le contrat et deviens le nouveau propriétaire de l'usine de Valencienne. Les nouveaux plans sortent mais un problème de taille arrive, le transport. Pas question de le faire par camion, cela entacherait l'image de la voiture électrique et ses 0 émissions de carbone sur la route. La marque aux chevrons se tourne vers son lion de cœur qui lui conseille de regarder vers la ville de Clermont-Ferrand, une société dans le ferroviaire l'accompagne déjà pour Alpsa et il est très satisfait du travail. Un beau matin, arrive avec un contrat sous le bras, le représentant de PSA déboule dans le bureau de la direction de Train Français Marchandise. Ils souhaitent transporter des voitures par le rail. Aucun soucis ils savent faire chez TFM. On lui propose même de poser des rails dans son usine pour aller encore plus vite ! Chez Citroën on est ravis et le contrat est signé. Les voitures iront donc de Valencienne jusqu'à la plateforme de tri de Lyon pour le sud-est et l'international, et à la plateforme de Bordeaux pour le sud-ouest. Le matériel prévu étant le même sur Lyon, on proposera de regrouper les livraisons Alpsa/Yorën.
+Oui pour marquer le passé de Toyota sur le modèle, on a dérogé à la règle, le nouveau véhicule s'appelle la Citroën Yorën. C'est donc parti pour des nouveaux travaux dans le nord de la France avec de voir passer une nouvelle voiture, aux allures étranges j'ai pas trouvé d'images désolé. TFM remporte à nouveau un contrat sans avoir bougé de Clermont, son nom commence à être connu dans le milieu du fret. Akio Toyoda devant ce nouvel avenir pour son modèle phare, est venu en personne pour voir la première voiture (on dit que Train Français à géré le trajet depuis Innsbruck) et à été admiratif devant le travail tant chez Citroën que chez TFM pour répandre son ancien protégé dans toute l'Europe de façon "propre"
+</p>
+        </div>
+    </div>
+</div>
+</section>
+<!-- END Blogs w/ 3 images & quote & text -->
+
+ <!-- -------- START FOOTER 5 w/ DARK BACKGROUND ------- -->
+<footer class="footer py-5 my-9 bg-gradient-dark position-relative overflow-hidden">
+  <img src="https://cdn.pixabay.com/photo/2016/02/13/12/26/aurora-1197753_960_720.jpg" alt="pattern-lines" class="position-absolute start-0 top-0 w-100 opacity-6">
+  <div class="container position-relative z-index-1">
+    <div class="row">
+      <div class="col-lg-4 me-auto mb-lg-0 mb-4 text-lg-start text-center">
+        <h6 class="text-white font-weight-bolder text-uppercase mb-lg-4 mb-3">France Avenir</h6>
+        <ul class="nav flex-row ms-n3 align-items-center mb-4 mt-sm-0">
+          <li class="nav-item">
+            <a class="nav-link text-white opacity-8" href="fgv.html" target="_blank">
+              FGV
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white opacity-8" href="tel.html" target="_blank">
+              TEL
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-white opacity-8" href="ice.html" target="_blank">
+              ICEurope
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white opacity-8" href="départs.html" target="_blank">
+              Au départ de nos Gares
+            </a>
+          </li>
+        </ul>
+        <p class="text-sm text-white opacity-8 mb-0">
+          Copyright © <script>document.write(new Date().getFullYear())</script> France Avenir par Thibaut.
+        </p>
+      </div>
+      <div class="col-lg-6 ms-auto text-lg-end text-center">
+        <p class="mb-5 text-lg text-white font-weight-bold">
+          Le voyage en train est une métaphore de la vie elle-même, avec ses hauts et ses bas, ses détours et ses arrêts, mais toujours avec la possibilité de découvrir de nouveaux horizons
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- -------- END FOOTER 5 w/ DARK BACKGROUND ------- -->
+</body>
+
+</html>
