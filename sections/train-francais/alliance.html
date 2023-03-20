@@ -21,7 +21,11 @@
   <!-- CSS Files -->
   <link id="pagestyle" href="../../assets/css/material-kit.css?v=3.0.4" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css"/>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
   <style>
     .tag-important {
     background-color: #f44336; /* rouge */
@@ -45,8 +49,9 @@
 
 <body class="modals-sections">
   <!-- Navbar Light -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-    <div class="container">
+  <div class="container position-sticky z-index-sticky top-0"><div class="row"><div class="col-12">
+    <nav class="navbar navbar-expand-lg  blur border-radius-xl top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
+      <div class="container-fluid px-0">
       <a class="navbar-brand" href="../../index.html">
         France Avenir
       </a>
@@ -226,65 +231,51 @@
         </ul>
       </div>
     </div>
-  </nav>
+  </nav></div></div></div>
   <!-- -------- START HEADER 5 w/ text and illustration ------- -->
-<header>
-  <div class="page-header min-vh-80">
+<!-- -------- START HEADER 2 w/ waves and typed text ------- -->
+<header class="position-relative">
+  <div class="page-header min-vh-100" style="background-image: url(https://cdn.pixabay.com/photo/2017/10/29/15/25/stormtrooper-2899982_960_720.jpg);" loading="lazy">
+    <span class="mask bg-gradient-info opacity-4"></span>
     <div class="container">
       <div class="row">
-        <div class="col-lg-4 my-auto">
-          <h1 class="mb-4">La France à Grande Vitesse</h1>
-          <p class="lead">Parcourez la France avec intensité : des aventures inoubliables vous attendent à chaque arrêt.</p>
-        </div>
-        <div class="col-lg-8 ps-5 pe-0">
-          <div class="row mt-3">
-            <div class="col-lg-3 col-6">
-              <img class="w-100 border-radius-lg shadow mt-0 mt-lg-7" src="../../assets/img/fgv1.jpg" alt="flower-1" loading="lazy">
-            </div>
-            <div class="col-lg-3 col-6">
-              <img class="w-100 border-radius-lg shadow" src="../../assets/img/fgv2.jpg" alt="flower-2" loading="lazy">
-              <img class="w-100 border-radius-lg shadow mt-4" src="../../assets/img/fgv3.jpg" alt="flower-3" loading="lazy">
-            </div>
-            <div class="col-lg-3 col-6 mb-3">
-              <img class="w-100 border-radius-lg shadow mt-0 mt-lg-5" src="../../assets/img/fgv4.jpg" alt="flower-4" loading="lazy">
-              <img class="w-100 border-radius-lg shadow mt-4" src="../../assets/img/logos/FGV.png" alt="flower-5" loading="lazy">
-            </div>
-            <div class="col-lg-3 col-6">
-              <img class="w-100 border-radius-lg shadow mt-3" src="../../assets/img/fgv5.jpg" alt="flower-6" loading="lazy">
-              <img class="w-100 border-radius-lg shadow mt-4" src="../../assets/img/fgv6.jpg" alt="flower-7" loading="lazy">
-            </div>
-          </div>
+        <div class="col-lg-8 text-center mx-auto">
+          <h1 class="text-white">Rejoignez l'alliance France Avenir</h1>
+          <img class="img-responsive" src='..\..\assets\img\logos\logofma.png' alt='logo' width="10%" height="35%">
+          <p class="lead text-white text-center pe-5 mt-4">L'alliance ferroviaire FranceAvenir est née de la volonté de deux grandes sociétés ferroviaires : FloTransport et Train Français.</p>
         </div>
       </div>
     </div>
   </div>
 </header>
-<!-- -------- END HEADER 5 w/ text and illustration ------- -->
-<section class="py-7 position-relative" style="background-image: url(https://media.istockphoto.com/id/180958861/fr/photo/int%C3%A9rieur-de-train.jpg?s=612x612&w=0&k=20&c=UZ1ff9MW05QO-M1fqGVKBs9PbivAAfMg-igFA6869c4=); background-size:cover;">
+<!-- -------- END HEADER 2 w/ waves and typed text ------- -->
+
+<section class="py-7 position-relative" style="background-image: url(&#39;../../assets/img/examples/city.jpg&#39;); background-size:cover;">
   <span class="mask bg-gradient-dark"></span>
   <div class="container position-relative mb-4">
+    <div class="row">
+      <div class="col-md-6 mb-5">
         <div class="icon icon-shape icon-md bg-gradient-info shadow-info mb-3 text-center">
-          <i class="material-icons opacity-10">room_service</i>
+          <i class="material-icons opacity-10">people</i>
         </div>
-        <h3 class="text-white z-index-1 position-relative">Les services à bord</h3>
-        <p class="text-white opacity-8">Train Français offre un service de transport à grande vitesse à travers la France. Notre service FGV offre des trajets rapides et sûrs à des tarifs abordables pour vous permettre de vous rendre facilement à votre destination. Notre flotte de trains modernes et à la pointe de la technologie vous permet de voyager dans le confort et la sécurité. Nous travaillons en étroite collaboration avec nos partenaires pour vous offrir un service optimal et une sécurité optimale. Notre service offre également des tarifs préférentiels, des réservations flexibles et des billets sans frais de changement. Avec Train Français, vous êtes assuré d'arriver à votre destination à temps tout en économisant du temps et de l'argent. </p>
-    
+        <h3 class="text-white z-index-1 position-relative">L'équipe de direction</h3>
+      </div>
+    </div>
     <div class="row">
       <div class="col-lg-6 col-12">
         <div class="card card-profile mt-4">
           <div class="row">
             <div class="col-lg-4 col-md-6 col-12 mt-n5">
-              <a>
+              <a href="https://mylines.fr/home?company=FloTransport">
                 <div class="p-3 pe-md-0">
-                  <img class="w-100 border-radius-md shadow-lg" src="https://train-empire.com/fr/images/serv4.png" alt="image">
+                  <img class="w-100 border-radius-md shadow-lg" src="https://seal.transport-manager.net/flosouris_yt/wp-content/uploads/sites/6/2021/10/cropped-Flo3.png" alt="image">
                 </div>
               </a>
             </div>
             <div class="col-lg-8 col-md-6 col-12 my-auto">
               <div class="card-body ps-lg-0">
-                <h5 class="mb-0">Un accès wi-fi</h5>
-                <h6 class="text-info">Gratuit en première, supplément en seconde</h6>
-                <p class="mb-0">Connectez-vous et restez connecté grâce à notre wifi à bord des trains</p>
+                <h5 class="mb-0">FloTransport</h5>
+                <h6 class="text-info">Co-Directeur & Co-Fondateur</h6>
               </div>
             </div>
           </div>
@@ -294,81 +285,16 @@
         <div class="card card-profile mt-lg-4 mt-5">
           <div class="row">
             <div class="col-lg-4 col-md-6 col-12 mt-n5">
-              <a>
+              <a href="../../index.html">
                 <div class="p-3 pe-md-0">
-                  <img class="w-100 border-radius-md shadow-lg" src="https://train-empire.com/fr/images/serv5.png" alt="image">
+                  <img class="w-100 border-radius-md shadow-lg" src="../../assets/img/logo.png" alt="image">
                 </div>
               </a>
             </div>
             <div class="col-lg-8 col-md-6 col-12 my-auto">
               <div class="card-body ps-lg-0">
-                <h5 class="mb-0">Écrans d'information</h5>
-                <h6 class="text-info">A bord de tous nos trains</h6>
-                <p class="mb-0">Restez informé tout au long de votre voyage grâce à nos écrans d'information en temps réel.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row mt-4">
-      <div class="col-lg-6 col-12">
-        <div class="card card-profile mt-4 z-index-2">
-          <div class="row">
-            <div class="col-lg-4 col-md-6 col-12 mt-n5">
-              <a>
-                <div class="p-3 pe-md-0">
-                  <img class="w-100 border-radius-md shadow-lg" src="https://train-empire.com/fr/images/serv1.png" alt="image">
-                </div>
-              </a>
-            </div>
-            <div class="col-lg-8 col-md-6 col-12 my-auto">
-              <div class="card-body ps-lg-0">
-                <h5 class="mb-0">Restauration à la place</h5>
-                <h6 class="text-info">Le menu varie entre nos rames ^^</h6>
-                <p class="mb-0">Profitez d'un service de restauration pratique et rapide directement à votre place</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6 col-12">
-        <div class="card card-profile mt-lg-4 mt-5 z-index-2">
-          <div class="row">
-            <div class="col-lg-4 col-md-6 col-12 mt-n5">
-              <a>
-                <div class="p-3 pe-md-0">
-                  <img class="w-100 border-radius-md shadow-lg" src="https://train-empire.com/fr/images/serv2.png" alt="image">
-                </div>
-              </a>
-            </div>
-            <div class="col-lg-8 col-md-6 col-12 my-auto">
-              <div class="card-body ps-lg-0">
-                <h5 class="mb-0">Prêt de journaux et magazines</h5>
-                <h6 class="text-info">Service première ou voiture bar</h6>
-                <p class="mb-0">Détendez-vous avec nos journaux et magazines gratuits, disponibles à bord de chaque train français</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      </div>
-      <div class="row mt-4">
-        <div class="col-lg-6 col-12">
-        <div class="card card-profile mt-lg-4 mt-5 z-index-2">
-          <div class="row">
-            <div class="col-lg-4 col-md-6 col-12 mt-n5">
-              <a>
-                <div class="p-3 pe-md-0">
-                  <img class="w-100 border-radius-md shadow-lg" src="https://train-empire.com/fr/images/resto14.png" alt="image">
-                </div>
-              </a>
-            </div>
-            <div class="col-lg-8 col-md-6 col-12 my-auto">
-              <div class="card-body ps-lg-0">
-                <h5 class="mb-0">Restauration Gastronomique</h5>
-                <h6 class="text-info">Pour tous !</h6>
-                <p class="mb-0">Découvrez notre menu gastronomique préparé avec soin à bord de nos trains. Une expérience culinaire unique.</p>
+                <h5 class="mb-0">Train Français</h5>
+                <h6 class="text-info">Co-Directeur & Co-Fondateur</h6>
               </div>
             </div>
           </div>
@@ -377,6 +303,95 @@
     </div>
   </div>
 </section>
+
+<!-- START Teams w/ 4 cards in a row w/ avatar on bottom end-->
+<section class="py-8">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 mx-auto text-center">
+        <h4 class="text-gradient text-primary">Les entreprises membres</h4>
+
+      </div>
+    </div>
+    <div class="row mt-lg-5 mt-4">
+      <div class="col-lg-4 col-sm-6 mb-4">
+        <a href="https://mylines.fr/trafic?company=SNCV"><div class="card card-body">
+          <div class="row">
+            <div class="col-lg-5 text-end my-auto">
+              <img class="avatar avatar-xxl border-radius-lg mt-n5" src="https://mylines.fr/image?serv=Logo_lite&company=SNCV&v=20230320">
+            </div>
+            <div class="col-lg-7">
+              <h5 class="mb-2">SNCV</h5>
+              <span class="badge badge-sm rounded-pill text-dark">Membre</span>
+            </div>
+          </div>
+        </div></a>
+      </div>
+
+      <div class="col-lg-4 col-sm-6 mb-4">
+        <a href="https://mylines.fr/home?company=Trans%20Nat"><div class="card card-body">
+          <div class="row">
+            <div class="col-lg-5 text-end my-auto">
+              <img class="avatar avatar-xxl border-radius-lg mt-n5" src="https://cdn.discordapp.com/attachments/1070036635955253309/1074766259004133407/image.png">
+            </div>
+            <div class="col-lg-7">
+              <h5 class="mb-2">Trans Nat</h5>
+              <span class="badge badge-sm rounded-pill text-dark">Membre</span>
+            </div>
+          </div>
+        </div></a>
+      </div>
+
+      <div class="col-lg-4 col-sm-6 mb-4">
+        <a href="https://mylines.fr/home?company=ethanthansport"><div class="card card-body">
+          <div class="row">
+            <div class="col-lg-5 text-end my-auto">
+              <img class="avatar avatar-xxl border-radius-lg mt-n5" src="https://mylines.fr/image?serv=Logo_lite&company=Eurotrain&v=20230320">
+            </div>
+            <div class="col-lg-7">
+              <h5 class="mb-2">Eurotrain</h5>
+              <span class="badge badge-sm rounded-pill text-dark">Membre</span>
+            </div>
+          </div>
+        </div></a>
+      </div>
+    </div>
+    <div class="row mt-lg-5 mt-4">
+      <div class="col-lg-4 col-sm-6 mb-4">
+        <a href="https://mylines.fr/home?company=R%20Mobilit%C3%A9"><div class="card card-body">
+          <div class="row">
+            <div class="col-lg-5 text-end my-auto">
+              <img class="avatar avatar-xxl border-radius-lg mt-n5" src="https://mylines.fr/image?serv=Logo_lite&company=R%20Mobilit%C3%A9&v=20230214">
+            </div>
+            <div class="col-lg-7">
+              <h5 class="mb-2">R Mobilité</h5>
+              <span class="badge badge-sm rounded-pill text-dark">Membre</span>
+            </div>
+          </div>
+        </div></a>
+      </div>
+
+      <div class="col-lg-4 col-sm-6 mb-4">
+        <div class="card card-body">
+          <div class="row">
+            <div class="col-lg-5 text-end my-auto">
+              <img class="avatar avatar-xxl border-radius-lg mt-n5" src="https://mylines.fr/image?serv=HelloRail&company=Train%20Fran%C3%A7ais">
+            </div>
+            <div class="col-lg-7">
+              <h5 class="mb-2">HelloRail</h5>
+              <span class="badge badge-sm rounded-pill text-dark">Membre</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END Teams w/ 4 cards in a row w/ avatar on bottom end-->
+
+
+
+
 
 
  <!-- -------- START FOOTER 5 w/ DARK BACKGROUND ------- -->
