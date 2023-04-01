@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+  <link rel="icoan" type="image/png" href="./assets/img/favicon.png">
+  <title>
+    Votre Inventaire
+  </title>
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+  <!-- Nucleo Icons -->
+  <link href="assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <!-- CSS Files -->
+  <link id="pagestyle" href="./assets/css/material-kit.css?v=3.0.4" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.7.1/css/buttons.dataTables.min.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.7.1/js/dataTables.buttons.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.html5.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+  <style>
+    .img-cell {
+      height: 100%;
+    }
+    .img-cell img {
+      object-fit: cover;
+      object-position: top left;
+      height: 100%;
+    }
+    .scroll-x {
+      overflow-x: auto;
+    }
+    .tag-important {
+    background-color: #f44336; /* rouge */
+    color: #fff; /* blanc */
+    border-radius: 3px;
+    padding: 2px 4px;
+    font-size: 12px;
+    margin-left: 10px;
+    }
+  
+    .tag-info {
+    background-color: #2196f3; /* bleu */
+    color: #fff; /* blanc */
+    border-radius: 3px;
+    padding: 2px 4px;
+    font-size: 12px;
+    margin-left: 10px;
+    }
+  </style>
+</head>
+
+<body class="modals-sections">
+  <div class="page-header min-vh-80" style="background-image: url('assets/img/intro-bg3.jpg');">
+    <span class="mask bg-gradient-dark opacity-6"></span>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <div class="text-center">
+            <h1 class="text-white">Inventaire</h1>
+            <h3 class="text-white">de VOTRE Société ;)</h3>
+            <a href="plancreateur.html"><button type="button" class="btn bg-gradient-primary w-100 mb-0">Accéder au créateur de plan</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6">
+    <div class="container">
+      <div class="row border-radius-md pb-4 p-3 mx-sm-0 mx-1 position-relative">
+        <div class="col-lg-3 mt-lg-n2 mt-2">
+          <label class="ms-0">Entrez votre clé API :</label>
+          <div class="input-group input-group-outline mb-4">
+            <input class="form-control" type="text" id="api-key-input">
+          </div>
+          </div>
+        <div class="col-lg-3 mt-lg-n2 mt-2">
+          <label>&nbsp;</label>
+          <button type="button" id="load-inventory-btn" class="btn bg-gradient-primary w-100 mb-0">Charger l'inventaire</button>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col">
+          <table id="example" class="display" style="width:100%">
+            <thead>
+              <tr style="height: 100px">
+                <th scope=col style="width: 20%;">Nom</th>
+                <th scope=col>Quantité</th>
+                <th scope=col style="width: 80%;">Image</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<script>
+  $(document).ready(() => {
+    let dataTable;
+  
+    $('#load-inventory-btn').click(() => {
+      let apiKey = $('#api-key-input').val();
+      if (!apiKey) {
+        alert('Veuillez saisir une clé API.');
+        return;
+      }
+      dataTable = $('#example').DataTable({
+        dom: 'Bfrtip',
+        buttons: [
+            {
+                extend: 'copyHtml5',
+                exportOptions: {
+                    columns: [ 0, ':visible' ]
+                }
+            },
+            {
+                extend: 'excelHtml5',
+                exportOptions: {
+                    columns: ':visible'
+                }
+            },
+            {
+                extend: 'pdfHtml5',
+                exportOptions: {
+                    columns: [ 0, 1 ]
+                }
+            },
+            'colvis'
+        ],
+        "language": {
+          "url": "https://cdn.datatables.net/plug-ins/1.11.3/i18n/fr_fr.json",
+        },
+        ajax: {
+          url: `https://train-empire.com/api/getCompanyEngines.php?auth=${apiKey}`,
+          dataSrc: ""
+        },
+        scrollX: true,
+        columns: [
+          { data: "name" },
+          { data: "quant" },
+          {
+            data: "img",
+            render: (data) => {
+              return `<div class="img-cell scroll-x" style="object-fit: cover; object-position: top left; height: 100%"> 
+                <img src="${data}" 
+                ></div>`;
+            }
+          }
+        ],
+        dom: 'Bfrtip',
+            buttons: [
+              'copyHtml5',
+              'csvHtml5',
+              'pdfHtml5'
+            ]
+      });
+    });
+  });
+  </script>
+  
+  
+  <footer class="footer py-5 my-9 bg-gradient-dark position-relative overflow-hidden">
+    <img src="https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2013/04/aurora_over_norway/12618886-1-eng-GB/Aurora_over_Norway_pillars.jpg" alt="pattern-lines" class="position-absolute start-0 top-0 w-100 opacity-6">
+    <div class="container position-relative z-index-1">
+      <div class="row">
+        <div class="col-lg-4 me-auto mb-lg-0 mb-4 text-lg-start text-center">
+          <h6 class="text-white font-weight-bolder text-uppercase mb-lg-4 mb-3">France Avenir</h6>
+          <ul class="nav flex-row ms-n3 align-items-center mb-4 mt-sm-0">
+          <li class="nav-item">
+            <a class="nav-link text-white opacity-8" href="fgv.html" target="_blank">
+              FGV
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white opacity-8" href="tel.html" target="_blank">
+              TEL
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-white opacity-8" href="ice.html" target="_blank">
+              ICEurope
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white opacity-8" href="départs.html" target="_blank">
+              Au départ de nos Gares
+            </a>
+          </li>
+        </ul>
+          <p class="text-sm text-white opacity-8 mb-0">
+            Copyright © <script>document.write(new Date().getFullYear())</script> France Avenir par Thibaut.
+          </p>
+        </div>
+        <div class="col-lg-6 ms-auto text-lg-end text-center">
+          <p class="mb-5 text-lg text-white font-weight-bold">
+            Le voyage en train est une métaphore de la vie elle-même, avec ses hauts et ses bas, ses détours et ses arrêts, mais toujours avec la possibilité de découvrir de nouveaux horizons
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
