@@ -43,7 +43,7 @@
 		
 		function update() {
 			const data = document.getElementById('text-user').value;
-			const dataLines = data.split('\n');
+			const dataLines = data.split('/n');
 			let dataLinesSplitTemp = [];
 			let dataLinesSplit = [];
 			dataLines.forEach(x =>  dataLinesSplitTemp.push(x.split('#')));
@@ -60,19 +60,19 @@
 			let stations = '';
 			
 			dataLinesSplit.forEach(x => {
-				let tempHTML = '<li><div class=\'station-text station-text-' + x[1] + '\'>' + x[0] + '</div><svg xmlns = \'http://www.w3.org/2000/svg\' viewBox=\'0 0 10 10\'><rect class=\'svg-track-up\' x=-4 y=3 width=9 height=4 /><rect class=\'svg-track-down\' x=5 y=3 width=9 height=4 />';
+				let tempHTML = '<li><div class=/'station-text station-text-' + x[1] + '/'>' + x[0] + '</div><svg xmlns = /'http://www.w3.org/2000/svg/' viewBox=/'0 0 10 10/'><rect class=/'svg-track-up/' x=-4 y=3 width=9 height=4 /><rect class=/'svg-track-down/' x=5 y=3 width=9 height=4 />';
 				switch(x[1]) {
 					case '1':
-						tempHTML += '<rect class=\'svg-station-1\' x = 0.5 y = 0.5 rx = 4.5 ry = 4.5 width = 9 height = 9 />'
+						tempHTML += '<rect class=/'svg-station-1/' x = 0.5 y = 0.5 rx = 4.5 ry = 4.5 width = 9 height = 9 />'
 						break;
 					case '2':
-						tempHTML += '<rect class=\'svg-station-2\' x = 1.5 y = 1.5 rx = 3.5 ry = 3.5 width = 7 height = 7 />'
+						tempHTML += '<rect class=/'svg-station-2/' x = 1.5 y = 1.5 rx = 3.5 ry = 3.5 width = 7 height = 7 />'
 						break;
 					case '3':
-						tempHTML += '<rect class=\'svg-station-3\' x = 2.5 y = 2.5 rx = 2.5 ry = 2.5 width = 5 height = 5 />'
+						tempHTML += '<rect class=/'svg-station-3/' x = 2.5 y = 2.5 rx = 2.5 ry = 2.5 width = 5 height = 5 />'
 						break;
 					case '4':
-						tempHTML += '<rect class=\'svg-station-4\' x = 2.5 y = 2.5 rx = 2.5 ry = 2.5 width = 5 height = 5 />'
+						tempHTML += '<rect class=/'svg-station-4/' x = 2.5 y = 2.5 rx = 2.5 ry = 2.5 width = 5 height = 5 />'
 						break;
 				}
 				tempHTML += '</svg></li>';

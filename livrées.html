@@ -29,25 +29,35 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <style>
     .tag-important {
-    background-color: #f44336; /* rouge */
-    color: #fff; /* blanc */
-    border-radius: 3px;
-    padding: 2px 4px;
-    font-size: 12px;
-    margin-left: 10px;
+      background-color: #f44336; /* rouge */
+      color: #fff; /* blanc */
+      border-radius: 3px;
+      padding: 2px 4px;
+      font-size: 12px;
+      margin-left: 10px;
     }
   
     .tag-info {
-    background-color: #2196f3; /* bleu */
-    color: #fff; /* blanc */
-    border-radius: 3px;
-    padding: 2px 4px;
-    font-size: 12px;
-    margin-left: 10px;
+      background-color: #2196f3; /* bleu */
+      color: #fff; /* blanc */
+      border-radius: 3px;
+      padding: 2px 4px;
+      font-size: 12px;
+      margin-left: 10px;
     }
-    .modal-body img {
-    max-width: 100%;
-    max-height: 80vh;
+    .modal-body {
+      min-height: 90px;
+      background-image: url("Voie_25kV.png");
+      background-size: contain;
+      min-height: 90px;
+      position: relative;
+    }
+    .modal-body > img {
+      align-content: end;
+      overflow: hidden;
+      position: absolute;
+      bottom: 6px;
+      max-width: 1700px;
     }
 
   </style>
@@ -57,8 +67,8 @@
   <div class="container position-sticky z-index-sticky top-0"><div class="row"><div class="col-12">
   <!-- Navbar Light -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-    <div class="container-fluid px-0">
-      <a class="navbar-brand font-weight-bolder ms-sm-3" href="index.html">
+    <div class="container">
+      <a class="navbar-brand" href="/index.html">
         France Avenir
       </a>
       <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
@@ -74,17 +84,17 @@
             <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
               <i class="material-icons opacity-6 me-2 text-md">house</i>
               France Avenir
-              <img src="assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-auto ms-md-2">
+              <img src="/assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-auto ms-md-2">
             </a>
             <div class="dropdown-menu ms-n3 dropdown-menu-animation dropdown-md p-3 border-radius-lg mt-0 mt-lg-3" aria-labelledby="dropdownMenuPages5">
-              <a href="about.html" class="dropdown-item border-radius-md">About</a>
-              <a href="livrées.html" class="dropdown-item border-radius-md">Nos livrées</a>
-              <a href="sections\train-francais\infotrafic.html" class="dropdown-item border-radius-md">Information Trafic</a>
-              <a href="terms.html" class="dropdown-item border-radius-md">CGU</a>
+              <a href="/about.html" class="dropdown-item border-radius-md">About</a>
+              <a href="/livrées.html" class="dropdown-item border-radius-md">Nos livrées</a>
+              <a href="/terms.html" class="dropdown-item border-radius-md">CGU</a>
+              <a href="/sections/train-francais/infotrafic.html" class="dropdown-item border-radius-md">Information Trafic</a>
             </div>
           </li>
           <li class="nav-item px-3">
-            <a class="nav-link" href="ski.html"><i class="material-icons opacity-6 me-2 text-md">downhill_skiing</i>
+            <a class="nav-link" href="/ski.html"><i class="material-icons opacity-6 me-2 text-md">downhill_skiing</i>
               Ski Français
             </a>
           </li>
@@ -92,67 +102,67 @@
             <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuBlocks" data-bs-toggle="dropdown" aria-expanded="false">
               <i class="material-icons opacity-6 me-2 text-md">train</i>
               Train Français
-              <img src="assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-auto ms-md-2">
+              <img src="/assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-auto ms-md-2">
             </a>
             <ul class="dropdown-menu dropdown-menu-end dropdown-menu-animation dropdown-md dropdown-md-responsive p-3 border-radius-lg mt-0 mt-lg-3" aria-labelledby="dropdownMenuBlocks">
               <div class="d-none d-lg-block">
                 <li class="nav-item dropdown dropdown-hover dropdown-subitem">
-                  <a class="dropdown-item py-2 ps-3 border-radius-md" href="../presentation.html">
+                  <a class="dropdown-item py-2 ps-3 border-radius-md" href="#">
                     <div class="w-100 d-flex align-items-center justify-content-between">
                       <div>
                         <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Information Pratique</h6>
                         <span class="text-sm">Retrouvez toutes nos infos</span>
                       </div>
-                      <img src="assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow">
+                      <img src="/assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow">
                     </div>
                   </a>
                   <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
-                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="sections\train-francais\inventaire.html">
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/train-francais/inventaire.html">
                       Notre Inventaires
                     </a>
-                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="sections\train-francais\infotrafic.html">
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/train-francais/infotrafic.html">
                       info Trafic
                     </a>
-                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="sections\train-francais\résa.html">
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/train-francais/résa.html">
                       Réserver un billet
                     </a>
                   </div>
                 </li>
                 <li class="nav-item dropdown dropdown-hover dropdown-subitem">
-                  <a class="dropdown-item py-2 ps-3 border-radius-md" href="../presentation.html">
+                  <a class="dropdown-item py-2 ps-3 border-radius-md" href="#">
                     <div class="w-100 d-flex align-items-center justify-content-between">
                       <div>
                         <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Sur nos lignes</h6>
                         <span class="text-sm">En direct de nos trains, toutes les infos</span>
                       </div>
-                      <img src="assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow">
+                      <img src="/assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow">
                     </div>
                   </a>
                   <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
-                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="sections\train-francais\fgv.html"><i class="material-icons opacity-6 me-2 text-md">train</i>
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/train-francais/fgv.html"><i class="material-icons opacity-6 me-2 text-md">train</i>
                       France à Grande Vitesse
                     </a>
-                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="sections\train-francais\ice.html"><i class="material-icons opacity-6 me-2 text-md">train</i>
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/train-francais/ice.html"><i class="material-icons opacity-6 me-2 text-md">train</i>
                       ICEurope
                     </a>
-                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="sections\train-francais\ics.html"><i class="material-icons opacity-6 me-2 text-md">train</i>
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/train-francais/ics.html"><i class="material-icons opacity-6 me-2 text-md">train</i>
                       ICSuisse
                     </a>
-                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="sections\train-francais\région.html"><i class="material-icons opacity-6 me-2 text-md">train</i>
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/train-francais/région.html"><i class="material-icons opacity-6 me-2 text-md">train</i>
                       France Région
                     </a>
-                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="sections\train-francais\tel.html"><i class="material-icons opacity-6 me-2 text-md">directions_railway_filled</i>
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/train-francais/tel.html"><i class="material-icons opacity-6 me-2 text-md">directions_railway_filled</i>
                       Train Express Lyonnais
                     </a>
-                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="sections\train-francais\tfm.html"><i class="material-icons opacity-6 me-2 text-md">local_shipping</i>
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/train-francais/tfm.html"><i class="material-icons opacity-6 me-2 text-md">local_shipping</i>
                       Train Français Marchandise
                     </a>
                   </div>
                 </li>
-                <a href="sections\train-francais\départs.html" class="dropdown-item border-radius-md"><i class="material-icons opacity-6 me-2 text-md">train</i>
+                <a href="/sections/train-francais/départs.html" class="dropdown-item border-radius-md"><i class="material-icons opacity-6 me-2 text-md">train</i>
                   Au départ de nos gares
                 </a>
-                <a href="sections\train-francais\alliance.html" class="dropdown-item border-radius-md"><i class="material-icons opacity-6 me-2 text-md">groups_2</i>
+                <a href="/sections/train-francais/alliance.html" class="dropdown-item border-radius-md"><i class="material-icons opacity-6 me-2 text-md">groups_2</i>
                   France Avenir, l'alliance <span class="tag tag-info">NOUVEAU !</span>
                 </a>
               </div>
@@ -162,73 +172,48 @@
             <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuBlocks" data-bs-toggle="dropdown" aria-expanded="false">
               <i class="material-icons opacity-6 me-2 text-md">directions_bus_filled</i>
             Transport Clermont Métropole
-              <img src="assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-auto ms-md-2">
+              <img src="/assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-auto ms-md-2">
             </a>
             <ul class="dropdown-menu dropdown-menu-end dropdown-menu-animation dropdown-md dropdown-md-responsive p-3 border-radius-lg mt-0 mt-lg-3" aria-labelledby="dropdownMenuBlocks">
               <div class="d-none d-lg-block">
                 <li class="nav-item dropdown dropdown-hover dropdown-subitem">
-                  <a class="dropdown-item py-2 ps-3 border-radius-md" href="../presentation.html">
+                  <a class="dropdown-item py-2 ps-3 border-radius-md" href="#">
                     <div class="w-100 d-flex align-items-center justify-content-between">
                       <div>
-                        <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Information Pratique</h6>
+                        <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Se déplacer</h6>
                         <span class="text-sm">Retrouvez toutes nos infos</span>
                       </div>
-                      <img src="assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow">
+                      <img src="/assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow">
                     </div>
                   </a>
                 <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
-                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="sections/train-francais/infotrafic.html">
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/train-francais/infotrafic.html">
                       ℹ️nfo Trafic
                     </a>
-                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="sections/bus français/tarifsbus.html">
-                      Nos Tarifs
-                    </a>
-                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="sections/bus français/agences.html">
-                      Nos Agences
-                    </a>
-                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="sections\cartes réducs\mensuel.html">
-                      Prendre son Abonnement
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/bus français/lignes.html">
+                      Toutes nos lignes
                     </a>
                   </div>
                 </li>
               <li class="nav-item dropdown dropdown-hover dropdown-subitem">
-                <a class="dropdown-item py-2 ps-3 border-radius-md" href="./presentation.html">
+                <a class="dropdown-item py-2 ps-3 border-radius-md" href="#">
                   <div class="w-100 d-flex align-items-center justify-content-between">
                     <div>
-                      <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Nos Lignes</h6>
-                      <span class="text-sm">En direct de nos bus, toutes les infos</span>
+                      <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Tickets & Abonnements</h6>
+                      <span class="text-sm">Pour voyager en toute sécurité</span>
                     </div>
-                    <img src="./assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow">
+                    <img src="/assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow">
                   </div>
                 </a>
                 <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
-                  <a class="dropdown-item ps-3 border-radius-md mb-1" href="sections\bus français\lignes\1.html">
-                    <img src="sections\bus français\1.png" width="10%" max-height="10%">
-                    Gare Centrale <> Campus Cézeaux
+                  <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/bus français/tarifsbus.html">
+                    Nos Tarifs
                   </a>
-                  <a class="dropdown-item ps-3 border-radius-md mb-1" href="sections/bus français/lignes/2.html">
-                    <img src="sections/bus français/2.png"  width="10%" height="10%">
-                    Gare Centrale <> Aéroport
+                  <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/bus français/agences.html">
+                    Nos Agences
                   </a>
-                  <a class="dropdown-item ps-3 border-radius-md mb-1" href="sections/bus français/lignes/3.html">
-                    <img src="sections/bus français/3.png"  width="10%" height="10%">
-                    Gare Centrale <> Campus Marthe Gautier
-                  </a>
-                  <a class="dropdown-item ps-3 border-radius-md mb-1" href="sections/bus français/lignes/4.html">
-                    <img src="sections/bus français/4.png"  width="10%" height="10%">
-                    Gare Centrale <> Gare de l'Est
-                  </a>
-                  <a class="dropdown-item ps-3 border-radius-md mb-1" href="sections/bus français/lignes/5.html">
-                    <img src="sections/bus français/5.png"  width="10%" height="10%">
-                    Musée d'Art Moderne <> Pôle Luca Pacioli
-                  </a>
-                  <a class="dropdown-item ps-3 border-radius-md mb-1" href="sections/bus français/lignes/6.html">
-                    <img src="sections/bus français/6.png"  width="10%" height="10%">
-                    Grand Palais <> Campus Maryse Esterle
-                  </a>
-                  <a class="dropdown-item ps-3 border-radius-md mb-1" href="sections/bus français/lignes/7.html">
-                    <img src="sections/bus français/7.png"  width="10%" height="10%">
-                    Port fluvial <> Grand Palais
+                  <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/cartes réducs/mensuel.html">
+                    Prendre son Abonnement
                   </a>
                 </div>
               </li>
@@ -241,7 +226,7 @@
   <!-- End Navbar -->
   </div></div></div>
 
-  <div class="page-header min-vh-80" style="background-image: url('https://cdn.pixabay.com/photo/2018/08/09/17/23/locomotive-3595011_960_720.jpg');">
+  <div class="page-header min-vh-80" style="background-image: url('/assets/img/livréesperso.JPG');">
     <span class="mask bg-gradient-dark opacity-6"></span>
     <div class="container">
       <div class="row">
@@ -280,119 +265,131 @@
         <tbody>
             <tr>
                 <td>ETR 610 Franco-Italien</td>
-                <td><img src="livréesperso/ETR610 PAris - Venise avec fond.png" alt="ETR 610 Franco-Italien" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
+                <td><img src="livréesperso/ETR610 Paris - Venise.png" alt="ETR 610 Franco-Italien" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
             </tr>
             <tr>
+              <td>ETR 610 Franco-Allemand</td>
+              <td><img src="livréesperso/ETR 610 FRALL.png" alt="ETR 610 Franco-Allemand" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
+          </tr>
+            <tr>
                 <td>SNCF Z 56300 liO</td>
-                <td><img src="livréesperso\SNCF Z 56300 liO.png" alt="SNCF Z 56300 liO" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
+                <td><img src="livréesperso/SNCF Z 56300 liO.png" alt="SNCF Z 56300 liO" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
             </tr>
             <tr>
                 <td>Régio2N LiO</td>
-                <td><img src="livréesperso\Regio2N 8c LiO.png" alt="Régio2N LiO" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
+                <td><img src="livréesperso/Regio2N 8c LiO.png" alt="Régio2N LiO" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
             </tr>
             <tr>
                 <td>VB2N AuRA 6c</td>
-                <td><img src="livréesperso\VB2n6c.png" alt="VB2N AuRA 6c" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
+                <td><img src="livréesperso/VB2n6c.png" alt="VB2N AuRA 6c" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
             </tr>
             <tr>
                 <td>VB2N AuRA 8c</td>
-                <td><img src="livréesperso\VB2n8c.png" alt="VB2N AuRA 8c" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
+                <td><img src="livréesperso/VB2n8c.png" alt="VB2N AuRA 8c" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
             </tr>
             <tr>
                 <td>Régio2N AuRA</td>
-                <td><img src="livréesperso\Régio2N - AuRA.png" alt="Régio2N AuRA" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
+                <td><img src="livréesperso/Régio2N - AuRA.png" alt="Régio2N AuRA" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
             </tr>
             <tr>
                 <td>Régio2N Bretagne</td>
-                <td><img src="livréesperso\Regio2N 8c Bretagne.png" alt="Régio2N Bretagne" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
+                <td><img src="livréesperso/Regio2N 8c Bretagne.png" alt="Régio2N Bretagne" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
             </tr>
             <tr>
                 <td>BB+BB26000 Spéciale Bordeaux - Lyon</td>
-                <td><img src="livréesperso\BB_BB26000_Bordeaux_Lyon.png" alt="BB+BB26000 Spéciale Bordeaux - Lyon" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
+                <td><img src="livréesperso/BB_BB26000_Bordeaux_Lyon.png" alt="BB+BB26000 Spéciale Bordeaux - Lyon" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
             </tr>
             <tr>
                 <td>B 84500</td>
-                <td><img src="livréesperso\B 84500.png" alt="B 84500" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
+                <td><img src="livréesperso/B 84500.png" alt="B 84500" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
             </tr>
             <tr>
                 <td>TGV FRET</td>
-                <td><img src="livréesperso\TGV Fret.png" alt="TGV FRET" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
+                <td><img src="livréesperso/TGV Fret.png" alt="TGV FRET" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
             </tr>
             <tr>
                 <td>TGV Ouigo</td>
-                <td><img src="livréesperso\Ouigo.png" alt="TGV Ouigo" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
+                <td><img src="livréesperso/Ouigo.png" alt="TGV Ouigo" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
             </tr>
             <tr>
                 <td>TGV Réseau Duplex</td>
-                <td><img src="livréesperso\TGV Réseau Duplex.png" alt="TGV Réseau Duplex" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
+                <td><img src="livréesperso/TGV Réseau Duplex.png" alt="TGV Réseau Duplex" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
             </tr>
             <tr>
                 <td>TGV Euroduplex</td>
-                <td><img src="livréesperso\TGV EuroDuplex2.png" alt="TGV Euroduplex" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
+                <td><img src="livréesperso/TGV EuroDuplex2.png" alt="TGV Euroduplex" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
             </tr>
             <tr>
                 <td>BB26000</td>
-                <td><img src="livréesperso\BB26000_Fant_R.png" alt="BB26000" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
+                <td><img src="livréesperso/BB26000_Fant_R.png" alt="BB26000" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
             </tr>
             <tr>
                 <td>DB BR 147</td>
-                <td><img src="livréesperso\1798.png" alt="DB BR 147" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
+                <td><img src="livréesperso/1798.png" alt="DB BR 147" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
             </tr>
             <tr>
                 <td>CFF Re 460</td>
-                <td><img src="livréesperso\1242.png" alt="CFF Re 460" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
+                <td><img src="livréesperso/1242.png" alt="CFF Re 460" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
             </tr>
             <tr>
                 <td>Corail NG88 B11 (f)</td>
-                <td><img src="livréesperso\972.png" alt="Corail NG88 B11 (f)" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
+                <td><img src="livréesperso/972.png" alt="Corail NG88 B11 (f)" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
             </tr>
             <tr>
                 <td>Corail NG88 B7Dx (f)</td>
-                <td><img src="livréesperso\1632.png" alt="Corail NG88 B7Dx (f)" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
+                <td><img src="livréesperso/1632.png" alt="Corail NG88 B7Dx (f)" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
             </tr>
             <tr>
                 <td>SNCF U 53600 - SNCF U 53700</td>
-                <td><img src="livréesperso\847.png" alt="SNCF U 53600 - SNCF U 53700" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
+                <td><img src="livréesperso/847.png" alt="SNCF U 53600 - SNCF U 53700" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
             </tr>
             <tr>
                 <td>DB Metropolitan</td>
-                <td><img src="livréesperso\1812.png" alt="DB Metropolitan" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
+                <td><img src="livréesperso/1812.png" alt="DB Metropolitan" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
             </tr>
             <tr>
                 <td>MPL16</td>
-                <td><img src="livréesperso\MPL16.png" alt="MPL16" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
+                <td><img src="livréesperso/MPL16.png" alt="MPL16" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
             </tr>
             <tr>
                 <td>SNCF B 85000 Coradia Liner</td>
-                <td><img src="livréesperso\SNCF B 85000 Coradia Liner.png" alt="SNCF B 85000 Coradia Liner" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
+                <td><img src="livréesperso/SNCF B 85000 Coradia Liner.png" alt="SNCF B 85000 Coradia Liner" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
             </tr>
             <tr>
                 <td>TEL A</td>
-                <td><img src="livréesperso\SNCF B 84500 TEL A.png" alt="TEL A" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
+                <td><img src="livréesperso/SNCF B 84500 TEL A.png" alt="TEL A" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
             </tr>
             <tr>
                 <td>TEL B/C</td>
-                <td><img src="livréesperso\TEL B train.png" alt="TEL B/C" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
+                <td><img src="livréesperso/TEL B train.png" alt="TEL B/C" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
             </tr>
             <tr>
-                <td>FS ETR 421</td>
-                <td><img src="livréesperso\ETR 421.png" alt="FS ETR 421" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
+                <td>FS ETR 421 Livrée spéciale</td>
+                <td><img src="livréesperso/ETR 421.png" alt="FS ETR 421 Livrée spéciale" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
             </tr>
+            <tr>
+              <td>FS ETR 421</td>
+              <td><img src="livréesperso/ETR 421 v2.png" alt="FS ETR 421" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
+          </tr>
             <tr>
                 <td>FS ETR 521</td>
-                <td><img src="livréesperso\ETR 521.png" alt="FS ETR 521" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
+                <td><img src="livréesperso/ETR 521.png" alt="FS ETR 521" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
             </tr>
             <tr>
+              <td>FS 104</td>
+              <td><img src="livréesperso/FS 104.png" alt="FS 104" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
+          </tr>
+            <tr>
                 <td>SNCF BB 22200 TVM</td>
-                <td><img src="livréesperso\SNCF BB 22200 TVM.png" alt="SNCF BB 22200 TVM" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
+                <td><img src="livréesperso/SNCF BB 22200 TVM.png" alt="SNCF BB 22200 TVM" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
             </tr>
             <tr>
               <td>DB BR 1462 pour le S-Bahn Berlinois</td>
-              <td><img src="livréesperso\S-Bahn Berlin.png" alt="DB BR 1462 S-Bahn Berlinois" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
+              <td><img src="livréesperso/S-Bahn Berlin.png" alt="DB BR 1462 S-Bahn Berlinois" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
             </tr>
             <tr>
               <td>Wartung des Netzwerks von Berlin</td>
-              <td><img src="livréesperso\ICE TD S-Bahn Berlin Wartung des Netzwerks.png" alt="ICE TD S-Bahn Berlin Wartung des Netzwerks" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
+              <td><img src="livréesperso/ICE TD S-Bahn Berlin Wartung des Netzwerks.png" alt="ICE TD S-Bahn Berlin Wartung des Netzwerks" class="img-modal" style="object-fit: cover; object-position: top left; height: 100%;"></td>
             </tr>
 
         </tbody>
@@ -425,19 +422,19 @@
     $(document).ready(function() {
       // Écouter l'événement de clic sur une image avec la classe img-modal
       $('.img-modal').click(function() {
-        // Récupérer l'attribut src de l'image cliquée
-        var src = $(this).attr('src');
-        // Récupérer l'attribut alt de l'image cliquée
-        var alt = $(this).attr('alt');
-        // Créer une nouvelle image en mémoire pour calculer sa taille
-        var img = new Image();
-        img.src = src;
-        img.onload = function() {
-          // Récupérer la taille de l'image chargée
-          var width = this.width;
-          var height = this.height;
+          // Récupérer l'attribut src de l'image cliquée
+          var src = $(this).attr('src');
+          // Récupérer l'attribut alt de l'image cliquée
+          var alt = $(this).attr('alt');
+          // Créer une nouvelle image en mémoire pour calculer sa taille
+          var img = new Image();
+          img.src = src;
+          img.onload = function() {
+            // Récupérer la taille de l'image chargée
+            var height = this.height;
+            var width = this.width < 500 ? 600 : this.width + 100;
           // Calculer la taille maximale du modal en fonction de la taille de l'image
-          var maxWidth = $(window).width() * 0.9;
+          var maxWidth = ($(window).width() * 0.9) + 20;
           var maxHeight = $(window).height() * 0.8;
           var modalWidth = Math.min(width, maxWidth);
           var modalHeight = Math.min(height, maxHeight);
