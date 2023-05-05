@@ -164,7 +164,7 @@
                     </div>
                   </a>
                 <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
-                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/train-francais/infotrafic.html">
+                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/bus français/infotrafic.html">
                       ℹ️nfo Trafic
                     </a>
                     <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/bus français/lignes.html">
@@ -230,24 +230,94 @@
       </div>
     </div>
   </div>
-  <section class="py-3">
-  
+  <div class="container">
+    <h1 class="text-center">Info trafic TCM</h1>
+    <div id="lignes"></div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+// url du fichier JSON sur GitHub
+const url = "https://raw.githubusercontent.com/Cyber-Thibaut/infotrafic/main/info.json";
+
+    function afficherInfoTraficLigne(ligne) {
+  $.getJSON(url, function(data) {
+    const infosLigne = data.lignes.find((l) => l.ligne === ligne);
+
+    if (!infosLigne) {
+      $("#lignes").append(
+        $("<div>").addClass("alert alert-success").text("Tout va bien sur la ligne " + ligne)
+      );
+      return;
+    }
+
+    const card = $("<div>").addClass("card mb-3");
+    const cardHeader = $("<div>").addClass("card-header");
+    const cardBody = $("<div>").addClass("card-body");
+    card.append(cardHeader, cardBody);
+
+        // récupération de la date actuelle
+        const dateActuelle = new Date();
+        $.each(infosLigne.infos_trafic, function(j, info) {
+          const divInfo = $("<div>").attr("role", "alert");
+             // récupération des dates de début et de fin de l'information
+             const dateDebut = new Date(Date.parse(info.annonce));
+                const dateFin = new Date(Date.parse(info.fin));
+                dateFin.setDate(dateFin.getDate() + 1);
+    
+          // comparaison avec la date actuelle
+          if (dateActuelle >= dateDebut && dateActuelle <= dateFin) {
+                  // création de la div qui affiche les informations
+                  const divInfo = $("<div>").attr("role", "alert");
+    
+                  // changement de la couleur de la carte en fonction de l'info trafic
+                  if (info.titre.includes("Travaux")) {
+                    card.addClass("border-danger");
+                    divInfo.addClass("alert alert-warning text-white font-weight-bold");
+                    divInfo.append($("<img src='/assets/img/panneaux/work.png' style='float:right;width:110px;height:auto;'>"));
+                  } else if (info.titre.includes("Manifestation")) {
+                    card.addClass("border-danger");
+                    divInfo.addClass("alert alert-danger text-white font-weight-bold");
+                    divInfo.append($("<img src='/assets/img/panneaux/warning.png' style='float:right;width:110px;height:auto;'>"));
+                  } else {
+                    card.addClass("border-info");
+                    divInfo.addClass("alert alert-info text-white font-weight-bold");
+                    divInfo.append($("<img src='/assets/img/panneaux/information.png' style='float:right;width:110px;height:auto;'>"));
+                  }
+    
+                  // affichage des informations
+                  divInfo.append($("<h6>").addClass("alert-heading").text(info.titre));
+                  divInfo.append($("<p>").text(info.description));
+                  divInfo.append($("<hr>"));
+                  divInfo.append($("<p>").addClass("mb-0").text("Du " + info.debut + " au " + info.fin));
+    
+                  cardBody.append(divInfo);
+                  $("#lignes").append(card);
+                  }
+              });
+    
+              // ajout de la carte à la page
+              
+            });
+        }
+
+afficherInfoTraficLigne("6");
+</script>
   <!-- -------- START FOOTER 3 w/ COMPANY DESCRIPTION WITH LINKS & SOCIAL ICONS & COPYRIGHT ------- -->
   <footer class="footer py-5">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mb-4 mx-auto text-center">
-          <a href="1.html" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">Ligne 1 <i class="fa fa-bus"></i></a>
-          <a href="2.html" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">Ligne 2 <i class="fa fa-bus"></i></a>
-          <a href="3.html" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">Ligne 3 <i class="fa fa-bus"></i></a>
-          <a href="4.html" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">Ligne 4 <i class="fa fa-bus"></i></a>
-          <a href="5.html" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">Ligne 5 <i class="fa fa-bus"></i></a>
-          <a href="6.html" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">Ligne 6 <i class="fa fa-bus"></i></a>
-          <br><a href="7.html" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">Ligne 7 <i class="fa fa-bus"></i></a>
-          <a href="8.html" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">Ligne 8 <i class="fa fa-bus"></i></a>
-          <a href="9.html" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">Ligne 9 <i class="fa fa-bus"></i></a>
-          <a href="10.html" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">Ligne 10 <i class="fa fa-bus"></i></a>
-          <a href="11.html" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">Ligne 11 <i class="fa fa-bus"></i></a>
+          <a href="/sections/bus français/lignes/1.html" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">Ligne 1 <i class="fa fa-bus"></i></a>
+          <a href="/sections/bus français/lignes/2.html" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">Ligne 2 <i class="fa fa-bus"></i></a>
+          <a href="/sections/bus français/lignes/3.html" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">Ligne 3 <i class="fa fa-bus"></i></a>
+          <a href="/sections/bus français/lignes/4.html" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">Ligne 4 <i class="fa fa-bus"></i></a>
+          <a href="/sections/bus français/lignes/5.html" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">Ligne 5 <i class="fa fa-bus"></i></a>
+          <a href="/sections/bus français/lignes/6.html" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">Ligne 6 <i class="fa fa-bus"></i></a>
+          <br><a href="/sections/bus français/lignes/7.html" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">Ligne 7 <i class="fa fa-bus"></i></a>
+          <a href="/sections/bus français/lignes/8.html" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">Ligne 8 <i class="fa fa-bus"></i></a>
+          <a href="/sections/bus français/lignes/9.html" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">Ligne 9 <i class="fa fa-bus"></i></a>
+          <a href="/sections/bus français/lignes/10.html" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">Ligne 10 <i class="fa fa-bus"></i></a>
+          <a href="/sections/bus français/lignes/11.html" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">Ligne 11 <i class="fa fa-bus"></i></a>
         </div>
       </div>
       <div class="row">
