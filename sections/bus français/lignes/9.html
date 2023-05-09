@@ -98,7 +98,7 @@
                       Notre Inventaires
                     </a>
                     <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/train-francais/infotrafic.html">
-                      info Trafic
+                      ℹ️nfo Trafic
                     </a>
                     <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/train-francais/résa.html">
                       Réserver un billet
@@ -165,7 +165,7 @@
                   </a>
                 <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
                     <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/bus français/infotrafic.html">
-                      ℹ️nfo Trafic
+                      <img src="/assets/img/logos/info.png" alt="Infos trafic TCM" style='width:20px;height:auto;'>nfo Trafic
                     </a>
                     <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/bus français/lignes.html">
                       Toutes nos lignes
@@ -212,7 +212,7 @@
             </ol>
           </nav>
         </div>
-        <h3>Ligne <img src="/sections/bus français/images/9.png" height="5%" width="5%"> - Port fluvial <> Grand Palais</h3>
+        <h3>Ligne <img src="/sections/bus français/images/9.png" height="5%" width="5%"> - Haute-Ville <> Campus des Cézeaux</h3>
         <div class="position-relative border-radius-xl overflow-hidden shadow-lg mb-7">
           <div class="container border-bottom">
             <div class="row justify-space-between py-2">
@@ -220,8 +220,18 @@
                 <img src="https://transport-manager.net/assets/img/lignes/N3_L9_trans2.png" alt="image" style="width: 100%;" />
 
               </div>
-              <h2>Facile, Pratique, Opportunité.</h2>
-              <p>La ligne 7 de bus de Transport Clermont Métropole relie le Port fluvial et le Grand Palais à travers 10 km et 36 minutes. Avec 30 arrêts pour permettre aux passagers de monter et descendre à volonté, cette ligne de bus offre aux habitants de Clermont l'opportunité de découvrir la ville. La ligne 7 est un moyen facile et pratique de voyager entre le port et le centre-ville, sans devoir se soucier des embouteillages.</p>
+              <h2>Rapide, Connectée, Étudiante.</h2>
+              <p>La ligne 9 du réseau urbain de Clermont-Ferrand est une liaison essentielle entre Haute-Ville et le Campus des Cézeaux, offrant une solution de transport pratique pour les étudiants, les résidents et les visiteurs.
+                <br><br>
+                Ce trajet débute à Haute-Ville, un quartier historique animé de Clermont-Ferrand, où les passagers peuvent monter à bord d'un bus moderne et confortable. Les sièges sont doux et accueillants, offrant aux passagers un voyage agréable dès le départ. Les grandes fenêtres permettent d'admirer les rues pavées et les bâtiments historiques de la ville.
+                <br><br>
+                En chemin vers le Campus des Cézeaux, la ligne 9 traverse plusieurs quartiers dynamiques de Clermont-Ferrand. Les passagers peuvent observer la vie quotidienne de la ville, avec ses commerces locaux, ses cafés animés et ses espaces verts accueillants.
+                <br><br>
+                Le bus s'arrête ensuite au Campus des Cézeaux, une plaque tournante de l'enseignement supérieur à Clermont-Ferrand. Le campus abrite de nombreuses universités, écoles et centres de recherche, attirant de nombreux étudiants et chercheurs. La ligne 9 offre une connectivité directe au campus, facilitant les déplacements pour les étudiants et le personnel académique.
+                <br><br>
+                La ligne 9 est connue pour sa fréquence élevée et ses horaires réguliers, assurant ainsi une disponibilité constante pour les utilisateurs. Que ce soit pour se rendre en cours, accéder aux installations du campus ou explorer les environs, la ligne 9 offre une solution de transport pratique et fiable.
+                <br><br>
+                En résumé, la ligne 9 du réseau urbain de Clermont-Ferrand relie Haute-Ville au Campus des Cézeaux, offrant une connexion rapide et pratique pour les étudiants et les résidents. Avec son confort, sa connectivité et son engagement envers la communauté étudiante, la ligne 9 est un choix idéal pour se déplacer entre ces deux destinations clés de la ville.</p>
               <a href="/sections/bus français/tarifsbus.html" class="font-weight-bold text-xs text-uppercase font-weight-bolder text-primary icon-move-right">
                 Nos Tarifs
                 <i class="fas fa-arrow-right text-xs ms-1"></i>
@@ -232,16 +242,16 @@
   </div>
   <section class="py-3">
     <div class="container">
-      <h1 class="text-center">Info trafic TCM</h1>
+      <h1 class="text-center"><img src="/assets/img/logos/info.png" alt="Infos trafic TCM" style='width:110px;height:auto;'>nfo trafic TCM</h1>
       <div id="lignes"></div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-  // url du fichier JSON sur GitHub
-  const url = "https://raw.githubusercontent.com/Cyber-Thibaut/infotrafic/main/info.json";
+    // url du fichier JSON sur GitHub
+    const url = "https://raw.githubusercontent.com/Cyber-Thibaut/infotrafic/main/info.json";
   
       function afficherInfoTraficLigne(ligne) {
-    $.getJSON(url, function(data) {
+      $.getJSON(url, function(data) {
       const infosLigne = data.lignes.find((l) => l.ligne === ligne);
   
       if (!infosLigne) {
@@ -251,56 +261,93 @@
       );
       return;
     }
-  
+      lignevide = 0;
       const card = $("<div>").addClass("card mb-3");
       const cardHeader = $("<div>").addClass("card-header");
       const cardBody = $("<div>").addClass("card-body");
       card.append(cardHeader, cardBody);
+      // récupération de la date actuelle
+      const dateActuelle = new Date();
+      $.each(infosLigne.infos_trafic, function(j, info) {
+        const divInfo = $("<div>").attr("role", "alert");
+           // récupération des dates de début et de fin de l'information
+           const dateDebut = new Date(Date.parse(info.annonce));
+            const dateDd = new Date(Date.parse(info.debut));
+            const dateFin = new Date(Date.parse(info.fin));
+              dateFin.setDate(dateFin.getDate() + 1);
   
-        // récupération de la date actuelle
-        const dateActuelle = new Date();
-        $.each(infosLigne.infos_trafic, function(j, info) {
-          const divInfo = $("<div>").attr("role", "alert");
-             // récupération des dates de début et de fin de l'information
-             const dateDebut = new Date(Date.parse(info.annonce));
-                const dateFin = new Date(Date.parse(info.fin));
-                dateFin.setDate(dateFin.getDate() + 1);
-    
-          // comparaison avec la date actuelle
-          if (dateActuelle >= dateDebut && dateActuelle <= dateFin) {
-                  // création de la div qui affiche les informations
-                  const divInfo = $("<div>").attr("role", "alert");
-    
-                  // changement de la couleur de la carte en fonction de l'info trafic
-                  if (info.titre.includes("Travaux")) {
-                    card.addClass("border-danger");
-                    divInfo.addClass("alert alert-warning text-white font-weight-bold");
-                    divInfo.append($("<img src='/assets/img/panneaux/work.png' style='float:right;width:110px;height:auto;'>"));
-                  } else if (info.titre.includes("Manifestation")) {
-                    card.addClass("border-danger");
-                    divInfo.addClass("alert alert-danger text-white font-weight-bold");
-                    divInfo.append($("<img src='/assets/img/panneaux/warning.png' style='float:right;width:110px;height:auto;'>"));
-                  } else {
-                    card.addClass("border-info");
-                    divInfo.addClass("alert alert-info text-white font-weight-bold");
-                    divInfo.append($("<img src='/assets/img/panneaux/information.png' style='float:right;width:110px;height:auto;'>"));
-                  }
-    
-                  // affichage des informations
-                  divInfo.append($("<h6>").addClass("alert-heading").text(info.titre));
-                  divInfo.append($("<p>").text(info.description));
-                  divInfo.append($("<hr>"));
-                  divInfo.append($("<p>").addClass("mb-0").text("Du " + info.debut + " au " + info.fin));
-    
-                  cardBody.append(divInfo);
-                  $("#lignes").append(card);
-                  }
-              });
-    
-              // ajout de la carte à la page
-              
-            });
+        // comparaison avec la date actuelle
+        if (dateActuelle >= dateDebut && dateActuelle <= dateFin) {
+                // création de la div qui affiche les informations
+                const divInfo = $("<div>").attr("role", "alert");
+  
+                // changement de la couleur de la carte en fonction de l'info trafic
+                if (info.titre.toLowerCase().includes("travaux")) {
+                if (dateActuelle >= dateDebut && dateActuelle <= dateDd) {
+                  card.addClass("border-danger");
+                  divInfo.addClass("alert alert-light text-black font-weight-bold");
+                  divInfo.append($("<img src='/assets/img/panneaux/futur_work.png' style='float:right;width:110px;height:auto;'>"));
+                } else {
+                  card.addClass("border-warning");
+                  divInfo.addClass("alert alert-warning text-white font-weight-bold");
+                  divInfo.append($("<img src='/assets/img/panneaux/work.png' style='float:right;width:110px;height:auto;'>"));
+                }
+              } else if (info.titre.toLowerCase().includes("manifestation")) {
+                card.addClass("border-danger");
+                divInfo.addClass("alert alert-danger text-white font-weight-bold");
+                divInfo.append($("<img src='/assets/img/panneaux/warning.png' style='float:right;width:110px;height:auto;'>"));
+              } else if (info.titre.toLowerCase().includes("grève")) {
+                card.addClass("border-danger");
+                divInfo.addClass("alert alert-danger text-white font-weight-bold");
+                divInfo.append($("<img src='/assets/img/panneaux/warning.png' style='float:right;width:110px;height:auto;'>"));
+              } else if (info.titre.toLowerCase().includes("information")) {
+                card.addClass("border-info");
+                divInfo.addClass("alert alert-info text-white font-weight-bold");
+                divInfo.append($("<img src='/assets/img/panneaux/information_white.png' style='float:right;width:110px;height:auto;'>"));
+              } else if (info.titre.toLowerCase().includes("fermé")) {
+                card.addClass("border-danger");
+                divInfo.addClass("alert alert-danger text-white font-weight-bold");
+                divInfo.append($("<img src='/assets/img/panneaux/error.png' style='float:right;width:110px;height:auto;'>"));
+              } else if (info.titre.toLowerCase().includes("attention")) {
+                card.addClass("border-danger");
+                divInfo.addClass("alert alert-warning text-white font-weight-bold");
+                divInfo.append($("<img src='/assets/img/panneaux/alert_white.png' style='float:right;width:110px;height:auto;'>"));
+              } else if (info.titre.toLowerCase().includes("perturbation")) {
+                card.addClass("border-danger");
+                divInfo.addClass("alert alert-warning text-white font-weight-bold");
+                divInfo.append($("<img src='/assets/img/panneaux/alert.png' style='float:right;width:110px;height:auto;'>"));
+              } else {
+                card.addClass("border-info");
+                divInfo.addClass("alert alert-info text-white font-weight-bold");
+                divInfo.append($("<img src='/assets/img/panneaux/information.png' style='float:right;width:110px;height:auto;'>"));
+              }
+  
+                // affichage des informations
+                divInfo.append($("<h6>").addClass("alert-heading").text(info.titre));
+                divInfo.append($("<p>").text(info.description));
+                divInfo.append($("<hr>"));
+                divInfo.append($("<p>").addClass("mb-0").text("Du " + info.debut + " au " + info.fin));
+  
+                cardBody.append(divInfo);
+                $("#lignes").append(card);
+        } else {
+            lignevide++;
         }
+        return;
+      });
+  
+            // ajout de la carte à la page
+            if (infosLigne.infos_trafic.length === lignevide) {
+            $("#lignes").append(
+              $("<div>").addClass("alert alert-success text-white").text("Tout va bien sur la ligne " + ligne)
+                .append($("<img>").attr("src", "/assets/img/panneaux/valid.png").css({"float": "right", "width": "60px", "height": "auto"}))
+            );
+            return;
+          }
+            $("#lignes").append(card);
+            
+          });
+      }
   
   afficherInfoTraficLigne("9");
   </script>

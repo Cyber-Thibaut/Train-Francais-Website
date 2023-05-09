@@ -98,7 +98,7 @@
                       Notre Inventaires
                     </a>
                     <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/train-francais/infotrafic.html">
-                      info Trafic
+                      ℹ️nfo Trafic
                     </a>
                     <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/train-francais/résa.html">
                       Réserver un billet
@@ -165,7 +165,7 @@
                   </a>
                 <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
                     <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/bus français/infotrafic.html">
-                      ℹ️nfo Trafic
+                      <img src="/assets/img/logos/info.png" alt="Infos trafic TCM" style='width:20px;height:auto;'>nfo Trafic
                     </a>
                     <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/bus français/lignes.html">
                       Toutes nos lignes
@@ -233,73 +233,112 @@
   <section class="py-3">
 
     <div class="container">
-      <h1 class="text-center">Info trafic TCM</h1>
+      <h1 class="text-center"><img src="/assets/img/logos/info.png" alt="Infos trafic TCM" style='width:110px;height:auto;'>nfo trafic TCM</h1>
       <div id="lignes"></div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-      // url du fichier JSON sur GitHub
-      const url = "https://raw.githubusercontent.com/Cyber-Thibaut/infotrafic/main/info.json";
-    
-        function afficherInfoTraficLigne(ligne) {
-        $.getJSON(url, function(data) {
-        const infosLigne = data.lignes.find((l) => l.ligne === ligne);
-    
-        if (!infosLigne) {
-          $("#lignes").append(
-            $("<div>").addClass("alert alert-success").text("Tout va bien sur la ligne " + ligne)
-          );
-          return;
-        }
-    
-        const card = $("<div>").addClass("card mb-3");
-        const cardHeader = $("<div>").addClass("card-header");
-        const cardBody = $("<div>").addClass("card-body");
-        card.append(cardHeader, cardBody);
-        // récupération de la date actuelle
-        const dateActuelle = new Date();
-        $.each(infosLigne.infos_trafic, function(j, info) {
-          const divInfo = $("<div>").attr("role", "alert");
-             // récupération des dates de début et de fin de l'information
-             const dateDebut = new Date(Date.parse(info.annonce));
-                const dateFin = new Date(Date.parse(info.fin));
-                dateFin.setDate(dateFin.getDate() + 1);
-    
-          // comparaison avec la date actuelle
-          if (dateActuelle >= dateDebut && dateActuelle <= dateFin) {
-                  // création de la div qui affiche les informations
-                  const divInfo = $("<div>").attr("role", "alert");
-    
-                  // changement de la couleur de la carte en fonction de l'info trafic
-                  if (info.titre.includes("Travaux")) {
-                    card.addClass("border-danger");
-                    divInfo.addClass("alert alert-warning text-white font-weight-bold");
-                    divInfo.append($("<img src='/assets/img/panneaux/work.png' style='float:right;width:110px;height:auto;'>"));
-                  } else if (info.titre.includes("Manifestation")) {
-                    card.addClass("border-danger");
-                    divInfo.addClass("alert alert-danger text-white font-weight-bold");
-                    divInfo.append($("<img src='/assets/img/panneaux/warning.png' style='float:right;width:110px;height:auto;'>"));
-                  } else {
-                    card.addClass("border-info");
-                    divInfo.addClass("alert alert-info text-white font-weight-bold");
-                    divInfo.append($("<img src='/assets/img/panneaux/information.png' style='float:right;width:110px;height:auto;'>"));
-                  }
-    
-                  // affichage des informations
-                  divInfo.append($("<h6>").addClass("alert-heading").text(info.titre));
-                  divInfo.append($("<p>").text(info.description));
-                  divInfo.append($("<hr>"));
-                  divInfo.append($("<p>").addClass("mb-0").text("Du " + info.debut + " au " + info.fin));
-    
-                  cardBody.append(divInfo);
-                  $("#lignes").append(card);
-                  }
-              });
-    
-              // ajout de la carte à la page
-              
-            });
-        }
+          // url du fichier JSON sur GitHub
+    const url = "https://raw.githubusercontent.com/Cyber-Thibaut/infotrafic/main/info.json";
+  
+  function afficherInfoTraficLigne(ligne) {
+  $.getJSON(url, function(data) {
+  const infosLigne = data.lignes.find((l) => l.ligne === ligne);
+
+  if (!infosLigne) {
+  $("#lignes").append(
+    $("<div>").addClass("alert alert-success text-white").text("Tout va bien sur la ligne " + ligne)
+      .append($("<img>").attr("src", "/assets/img/panneaux/valid.png").css({"float": "right", "width": "60px", "height": "auto"}))
+  );
+  return;
+}
+  lignevide = 0;
+  const card = $("<div>").addClass("card mb-3");
+  const cardHeader = $("<div>").addClass("card-header");
+  const cardBody = $("<div>").addClass("card-body");
+  card.append(cardHeader, cardBody);
+  // récupération de la date actuelle
+  const dateActuelle = new Date();
+  $.each(infosLigne.infos_trafic, function(j, info) {
+    const divInfo = $("<div>").attr("role", "alert");
+       // récupération des dates de début et de fin de l'information
+       const dateDebut = new Date(Date.parse(info.annonce));
+            const dateDd = new Date(Date.parse(info.debut));
+            const dateFin = new Date(Date.parse(info.fin));
+          dateFin.setDate(dateFin.getDate() + 1);
+
+    // comparaison avec la date actuelle
+    if (dateActuelle >= dateDebut && dateActuelle <= dateFin) {
+            // création de la div qui affiche les informations
+            const divInfo = $("<div>").attr("role", "alert");
+
+            if (info.titre.toLowerCase().includes("travaux")) {
+                if (dateActuelle >= dateDebut && dateActuelle <= dateDd) {
+                  card.addClass("border-danger");
+                  divInfo.addClass("alert alert-light text-black font-weight-bold");
+                  divInfo.append($("<img src='/assets/img/panneaux/futur_work.png' style='float:right;width:110px;height:auto;'>"));
+                } else {
+                  card.addClass("border-warning");
+                  divInfo.addClass("alert alert-warning text-white font-weight-bold");
+                  divInfo.append($("<img src='/assets/img/panneaux/work.png' style='float:right;width:110px;height:auto;'>"));
+                }
+              } else if (info.titre.toLowerCase().includes("manifestation")) {
+                card.addClass("border-danger");
+                divInfo.addClass("alert alert-danger text-white font-weight-bold");
+                divInfo.append($("<img src='/assets/img/panneaux/warning.png' style='float:right;width:110px;height:auto;'>"));
+              } else if (info.titre.toLowerCase().includes("grève")) {
+                card.addClass("border-danger");
+                divInfo.addClass("alert alert-danger text-white font-weight-bold");
+                divInfo.append($("<img src='/assets/img/panneaux/warning.png' style='float:right;width:110px;height:auto;'>"));
+              } else if (info.titre.toLowerCase().includes("information")) {
+                card.addClass("border-info");
+                divInfo.addClass("alert alert-info text-white font-weight-bold");
+                divInfo.append($("<img src='/assets/img/panneaux/information_white.png' style='float:right;width:110px;height:auto;'>"));
+              } else if (info.titre.toLowerCase().includes("fermé")) {
+                card.addClass("border-danger");
+                divInfo.addClass("alert alert-danger text-white font-weight-bold");
+                divInfo.append($("<img src='/assets/img/panneaux/error.png' style='float:right;width:110px;height:auto;'>"));
+              } else if (info.titre.toLowerCase().includes("attention")) {
+                card.addClass("border-danger");
+                divInfo.addClass("alert alert-warning text-white font-weight-bold");
+                divInfo.append($("<img src='/assets/img/panneaux/alert_white.png' style='float:right;width:110px;height:auto;'>"));
+              } else if (info.titre.toLowerCase().includes("perturbation")) {
+                card.addClass("border-danger");
+                divInfo.addClass("alert alert-warning text-white font-weight-bold");
+                divInfo.append($("<img src='/assets/img/panneaux/alert.png' style='float:right;width:110px;height:auto;'>"));
+              } else {
+                card.addClass("border-info");
+                divInfo.addClass("alert alert-info text-white font-weight-bold");
+                divInfo.append($("<img src='/assets/img/panneaux/information.png' style='float:right;width:110px;height:auto;'>"));
+              }
+
+            // affichage des informations
+            divInfo.append($("<h6>").addClass("alert-heading").text(info.titre));
+            divInfo.append($("<p>").text(info.description));
+            divInfo.append($("<hr>"));
+            divInfo.append($("<p>").addClass("mb-0").text("Du " + info.debut + " au " + info.fin));
+
+            cardBody.append(divInfo);
+            $("#lignes").append(card);
+    } else {
+        lignevide++;
+    }
+    return;
+  });
+
+        // ajout de la carte à la page
+        if (infosLigne.infos_trafic.length === lignevide) {
+        $("#lignes").append(
+          $("<div>").addClass("alert alert-success text-white").text("Tout va bien sur la ligne " + ligne)
+            .append($("<img>").attr("src", "/assets/img/panneaux/valid.png").css({"float": "right", "width": "60px", "height": "auto"}))
+        );
+        return;
+      }
+        $("#lignes").append(card);
+        
+      });
+  }
+
     
     afficherInfoTraficLigne("5");
     </script>

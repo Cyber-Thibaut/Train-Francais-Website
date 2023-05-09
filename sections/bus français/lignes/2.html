@@ -99,7 +99,7 @@
                       Notre Inventaires
                     </a>
                     <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/train-francais/infotrafic.html">
-                      info Trafic
+                      ℹ️nfo Trafic
                     </a>
                     <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/train-francais/résa.html">
                       Réserver un billet
@@ -166,7 +166,7 @@
                   </a>
                 <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
                     <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/bus français/infotrafic.html">
-                      ℹ️nfo Trafic
+                      <img src="/assets/img/logos/info.png" alt="Infos trafic TCM" style='width:20px;height:auto;'>nfo Trafic
                     </a>
                     <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/bus français/lignes.html">
                       Toutes nos lignes
@@ -221,8 +221,18 @@
                 <img src="https://transport-manager.net/assets/img/lignes/N3_L2_trans2.png" alt="image" style="width: 100%;" />
 
               </div>
-              <h2>Rapide, Pratique, Abordable</h2>
-									<p>La ligne de bus 2 relie la gare centrale de Clermont-Ferrand à son Aéroport en seulement 40 minutes. Elle offre aux passagers un voyage rapide, pratique et abordable entre le centre-ville de Clermont-Ferrand et l'aéroport. La ligne de bus 2 s'arrête à tous les arrêts importants, dont la gare centrale, le centre commercial et le centre ville. Avec une fréquence de passage régulière, vous pouvez planifier votre voyage avec facilité et confiance. Lors de votre voyage, vous aurez la possibilité de profiter de l'ambiance de la ville et de la campagne environnante tout en voyageant dans le confort et le style. La ligne de bus 2 est le moyen le plus rapide et pratique pour voyager entre Clermont-Ferrand et son aéroport.</p>
+              <h2>Rapide, Pratique, Connecté.</h2>
+									<p>La ligne 2 du réseau urbain de Clermont-Ferrand est une ligne à haut niveau de service qui relie la Gare Centrale à l'Aéroport, offrant aux passagers un moyen rapide et pratique de se déplacer entre ces deux points clés de la ville.
+                    <br><br>
+                    Cette ligne spéciale est conçue pour offrir une expérience de voyage confortable et efficace. Les bus sont modernes, équipés de sièges spacieux et confortables, ainsi que de systèmes de climatisation pour assurer le confort des passagers tout au long du trajet. De plus, la ligne 2 bénéficie d'un service fréquent, garantissant des temps d'attente réduits pour les voyageurs.
+                    <br><br>
+                    Le trajet de la ligne 2 passe par différents quartiers de Clermont-Ferrand, offrant aux passagers un aperçu de la diversité de la ville. Ils peuvent admirer les sites historiques, les rues animées et les espaces verts qui jalonnent le parcours.
+                    <br><br>
+                    Le terminus de la ligne 2 est situé à l'Aéroport, offrant aux passagers un accès direct et pratique aux vols nationaux et internationaux. Que ce soit pour les voyageurs arrivant ou partant de Clermont-Ferrand, cette ligne à haut niveau de service facilite les déplacements vers et depuis l'aéroport.
+                    <br><br>
+                    Les horaires de la ligne 2 sont adaptés aux besoins des passagers, en tenant compte des horaires des vols. Cela permet aux voyageurs d'organiser facilement leurs trajets en fonction de leur horaire de vol, en minimisant les contraintes de temps et en offrant une tranquillité d'esprit lors des déplacements.
+                    <br><br>
+                    En résumé, la ligne 2 du réseau urbain de Clermont-Ferrand est une ligne à haut niveau de service reliant la Gare Centrale à l'Aéroport. Avec son confort, sa rapidité et sa fréquence de service, la ligne 2 offre une solution pratique et efficace pour les voyageurs, qu'ils soient en partance ou en arrivée à Clermont-Ferrand.</p>
               <a href="/sections/bus français/tarifsbus.html" class="font-weight-bold text-xs text-uppercase font-weight-bolder text-primary icon-move-right">
                 Nos Tarifs
                 <i class="fas fa-arrow-right text-xs ms-1"></i>
@@ -233,74 +243,112 @@
   </div>
 
   <div class="container">
-    <h1 class="text-center">Info trafic TCM</h1>
+    <h1 class="text-center"><img src="/assets/img/logos/info.png" alt="Infos trafic TCM" style='width:110px;height:auto;'>nfo trafic TCM</h1>
     <div id="lignes"></div>
   </div>
 
   <script>
-  // url du fichier JSON sur GitHub
-  const url = "https://raw.githubusercontent.com/Cyber-Thibaut/infotrafic/main/info.json";
-
-    function afficherInfoTraficLigne(ligne) {
-    $.getJSON(url, function(data) {
-    const infosLigne = data.lignes.find((l) => l.ligne === ligne);
-
-    if (!infosLigne) {
+    // url du fichier JSON sur GitHub
+    const url = "https://raw.githubusercontent.com/Cyber-Thibaut/infotrafic/main/info.json";
+  
+      function afficherInfoTraficLigne(ligne) {
+      $.getJSON(url, function(data) {
+      const infosLigne = data.lignes.find((l) => l.ligne === ligne);
+  
+      if (!infosLigne) {
       $("#lignes").append(
         $("<div>").addClass("alert alert-success text-white").text("Tout va bien sur la ligne " + ligne)
           .append($("<img>").attr("src", "/assets/img/panneaux/valid.png").css({"float": "right", "width": "60px", "height": "auto"}))
       );
       return;
     }
-
-    const card = $("<div>").addClass("card mb-3");
-    const cardHeader = $("<div>").addClass("card-header");
-    const cardBody = $("<div>").addClass("card-body");
-    card.append(cardHeader, cardBody);
-    // récupération de la date actuelle
-    const dateActuelle = new Date();
-    $.each(infosLigne.infos_trafic, function(j, info) {
-      const divInfo = $("<div>").attr("role", "alert");
-         // récupération des dates de début et de fin de l'information
-         const dateDebut = new Date(Date.parse(info.annonce));
+      lignevide = 0;
+      const card = $("<div>").addClass("card mb-3");
+      const cardHeader = $("<div>").addClass("card-header");
+      const cardBody = $("<div>").addClass("card-body");
+      card.append(cardHeader, cardBody);
+      // récupération de la date actuelle
+      const dateActuelle = new Date();
+      $.each(infosLigne.infos_trafic, function(j, info) {
+        const divInfo = $("<div>").attr("role", "alert");
+           // récupération des dates de début et de fin de l'information
+           const dateDebut = new Date(Date.parse(info.annonce));
+            const dateDd = new Date(Date.parse(info.debut));
             const dateFin = new Date(Date.parse(info.fin));
-            dateFin.setDate(dateFin.getDate() + 1);
-
-      // comparaison avec la date actuelle
-      if (dateActuelle >= dateDebut && dateActuelle <= dateFin) {
-              // création de la div qui affiche les informations
-              const divInfo = $("<div>").attr("role", "alert");
-
-              // changement de la couleur de la carte en fonction de l'info trafic
-              if (info.titre.includes("Travaux")) {
-                card.addClass("border-danger");
-                divInfo.addClass("alert alert-warning text-white font-weight-bold");
-                divInfo.append($("<img src='/assets/img/panneaux/work.png' style='float:right;width:110px;height:auto;'>"));
-              } else if (info.titre.includes("Manifestation")) {
+              dateFin.setDate(dateFin.getDate() + 1);
+  
+        // comparaison avec la date actuelle
+        if (dateActuelle >= dateDebut && dateActuelle <= dateFin) {
+                // création de la div qui affiche les informations
+                const divInfo = $("<div>").attr("role", "alert");
+  
+                // changement de la couleur de la carte en fonction de l'info trafic
+                if (info.titre.toLowerCase().includes("travaux")) {
+                if (dateActuelle >= dateDebut && dateActuelle <= dateDd) {
+                  card.addClass("border-danger");
+                  divInfo.addClass("alert alert-light text-black font-weight-bold");
+                  divInfo.append($("<img src='/assets/img/panneaux/futur_work.png' style='float:right;width:110px;height:auto;'>"));
+                } else {
+                  card.addClass("border-warning");
+                  divInfo.addClass("alert alert-warning text-white font-weight-bold");
+                  divInfo.append($("<img src='/assets/img/panneaux/work.png' style='float:right;width:110px;height:auto;'>"));
+                }
+              } else if (info.titre.toLowerCase().includes("manifestation")) {
                 card.addClass("border-danger");
                 divInfo.addClass("alert alert-danger text-white font-weight-bold");
                 divInfo.append($("<img src='/assets/img/panneaux/warning.png' style='float:right;width:110px;height:auto;'>"));
+              } else if (info.titre.toLowerCase().includes("grève")) {
+                card.addClass("border-danger");
+                divInfo.addClass("alert alert-danger text-white font-weight-bold");
+                divInfo.append($("<img src='/assets/img/panneaux/warning.png' style='float:right;width:110px;height:auto;'>"));
+              } else if (info.titre.toLowerCase().includes("information")) {
+                card.addClass("border-info");
+                divInfo.addClass("alert alert-info text-white font-weight-bold");
+                divInfo.append($("<img src='/assets/img/panneaux/information_white.png' style='float:right;width:110px;height:auto;'>"));
+              } else if (info.titre.toLowerCase().includes("fermé")) {
+                card.addClass("border-danger");
+                divInfo.addClass("alert alert-danger text-white font-weight-bold");
+                divInfo.append($("<img src='/assets/img/panneaux/error.png' style='float:right;width:110px;height:auto;'>"));
+              } else if (info.titre.toLowerCase().includes("attention")) {
+                card.addClass("border-danger");
+                divInfo.addClass("alert alert-warning text-white font-weight-bold");
+                divInfo.append($("<img src='/assets/img/panneaux/alert_white.png' style='float:right;width:110px;height:auto;'>"));
+              } else if (info.titre.toLowerCase().includes("perturbation")) {
+                card.addClass("border-danger");
+                divInfo.addClass("alert alert-warning text-white font-weight-bold");
+                divInfo.append($("<img src='/assets/img/panneaux/alert.png' style='float:right;width:110px;height:auto;'>"));
               } else {
                 card.addClass("border-info");
                 divInfo.addClass("alert alert-info text-white font-weight-bold");
                 divInfo.append($("<img src='/assets/img/panneaux/information.png' style='float:right;width:110px;height:auto;'>"));
               }
-
-              // affichage des informations
-              divInfo.append($("<h6>").addClass("alert-heading").text(info.titre));
-              divInfo.append($("<p>").text(info.description));
-              divInfo.append($("<hr>"));
-              divInfo.append($("<p>").addClass("mb-0").text("Du " + info.debut + " au " + info.fin));
-
-              cardBody.append(divInfo);
-              $("#lignes").append(card);
-              }
+  
+                // affichage des informations
+                divInfo.append($("<h6>").addClass("alert-heading").text(info.titre));
+                divInfo.append($("<p>").text(info.description));
+                divInfo.append($("<hr>"));
+                divInfo.append($("<p>").addClass("mb-0").text("Du " + info.debut + " au " + info.fin));
+  
+                cardBody.append(divInfo);
+                $("#lignes").append(card);
+        } else {
+            lignevide++;
+        }
+        return;
+      });
+  
+            // ajout de la carte à la page
+            if (infosLigne.infos_trafic.length === lignevide) {
+            $("#lignes").append(
+              $("<div>").addClass("alert alert-success text-white").text("Tout va bien sur la ligne " + ligne)
+                .append($("<img>").attr("src", "/assets/img/panneaux/valid.png").css({"float": "right", "width": "60px", "height": "auto"}))
+            );
+            return;
+          }
+            $("#lignes").append(card);
+            
           });
-
-          // ajout de la carte à la page
-          
-        });
-    }
+      }
 
 afficherInfoTraficLigne("2");
 </script>

@@ -1,0 +1,215 @@
+{
+  "lignes": [
+    {
+      "ligne": "TCM",
+      "infos_trafic": [
+        {
+          "annonce": "05/05/2023",
+          "debut": "05/08/2023",
+          "fin": "05/09/2023",
+          "titre": "fermé",
+          "description": "En raison du 8 mai, aucun bus ne circulera"
+        },
+        {
+          "annonce": "05/05/2023",
+          "debut": "05/08/2023",
+          "fin": "05/09/2023",
+          "titre": "Attention",
+          "description": "En raison du 8 mai, aucun bus ne circulera"
+        },
+        {
+          "annonce": "05/05/2023",
+          "debut": "05/08/2023",
+          "fin": "05/09/2023",
+          "titre": "manifestation",
+          "description": "En raison du 8 mai, aucun bus ne circulera"
+        },
+        {
+          "annonce": "05/05/2023",
+          "debut": "05/08/2023",
+          "fin": "05/09/2023",
+          "titre": "perturbation",
+          "description": "En raison du 8 mai, aucun bus ne circulera"
+        },
+        {
+          "annonce": "05/05/2023",
+          "debut": "05/08/2023",
+          "fin": "05/09/2023",
+          "titre": "information réseau",
+          "description": "En raison du 8 mai, aucun bus ne circulera"
+        },
+        {
+          "annonce": "05/05/2023",
+          "debut": "05/08/2023",
+          "fin": "05/09/2023",
+          "titre": "test",
+          "description": "En raison du 8 mai, aucun bus ne circulera"
+        },
+        {
+          "annonce": "05/06/2023",
+          "debut": "05/08/2023",
+          "fin": "05/11/2023",
+          "titre": "Travaux en ce moment",
+          "description": "En raison de travaux sur l'avenue, des arrêts ne sont pas desservis"
+        },
+        {
+          "annonce": "05/08/2023",
+          "debut": "05/27/2023",
+          "fin": "06/20/2023",
+          "titre": "Travaux à venir",
+          "description": "En raison de travaux sur le tracé de la ligne en vue de son passage en site propre"
+        }
+      ]
+    },
+    {
+      "ligne": "2",
+      "infos_trafic": [
+        {
+          "annonce": "05/24/2023",
+          "debut": "05/27/2023",
+          "fin": "06/20/2023",
+          "titre": "Travaux mise en place site propre",
+          "description": "En raison de travaux sur le tracé de la ligne en vue de son passage en site propre"
+        }
+      ]
+    },
+    {
+      "ligne": "9",
+      "infos_trafic": [
+        {
+          "annonce": "05/04/2023",
+          "debut": "05/07/2023",
+          "fin": "06/20/2023",
+          "titre": "Ligne fermée",
+          "description": "Fin des préparations pour l'ouverture de la ligne"
+        }
+      ]
+    },
+    {
+      "ligne": "10",
+      "infos_trafic": [
+        {
+          "annonce": "05/04/2023",
+          "debut": "05/07/2023",
+          "fin": "06/20/2023",
+          "titre": "Ligne fermée",
+          "description": "Fin des préparations pour l'ouverture de la ligne"
+        }
+      ]
+    },
+    {
+      "ligne": "11",
+      "infos_trafic": [
+        {
+          "annonce": "05/04/2023",
+          "debut": "05/07/2023",
+          "fin": "06/20/2023",
+          "titre": "Ligne fermée",
+          "description": "Fin des préparations pour l'ouverture de la ligne"
+        }
+      ]
+    },
+    {
+      "ligne": "60",
+      "infos_trafic": [
+        {
+          "annonce": "05/04/2023",
+          "debut": "05/07/2023",
+          "fin": "06/20/2023",
+          "titre": "Ligne fermée",
+          "description": "Fin des préparations pour l'ouverture de la ligne"
+        }
+      ]
+    },
+    {
+      "ligne": "61",
+      "infos_trafic": [
+        {
+          "annonce": "05/04/2023",
+          "debut": "05/07/2023",
+          "fin": "06/20/2023",
+          "titre": "Ligne fermée",
+          "description": "Fin des préparations pour l'ouverture de la ligne"
+        }
+      ]
+    },
+    {
+      "ligne": "901",
+      "infos_trafic": [
+        {
+          "annonce": "05/04/2023",
+          "debut": "05/07/2023",
+          "fin": "06/20/2023",
+          "titre": "Ligne fermée",
+          "description": "Fin des préparations pour l'ouverture de la ligne"
+        }
+      ]
+    },
+    {
+      "ligne": "902",
+      "infos_trafic": [
+        {
+          "annonce": "05/04/2023",
+          "debut": "05/07/2023",
+          "fin": "06/20/2023",
+          "titre": "Ligne fermée",
+          "description": "Fin des préparations pour l'ouverture de la ligne"
+        }
+      ]
+    },
+    {
+      "ligne": "3",
+      "infos_trafic": [
+        {
+          "annonce": "05/24/2023",
+          "debut": "05/27/2023",
+          "fin": "06/20/2023",
+          "titre": "Travaux mise en place site propre",
+          "description": "En raison de travaux sur le tracé de la ligne en vue de son passage en site propre"
+        },
+        {
+          "annonce": "05/08/2023",
+          "debut": "05/27/2023",
+          "fin": "06/20/2023",
+          "titre": "Travaux mise en place site propre",
+          "description": "En raison de travaux sur le tracé de la ligne en vue de son passage en site propre"
+        },
+        {
+          "annonce": "05/06/2023",
+          "debut": "05/08/2023",
+          "fin": "05/11/2023",
+          "titre": "Travaux avenue Carnot",
+          "description": "En raison de travaux sur l'avenue, des arrêts ne sont pas desservis"
+        },
+        {
+          "annonce": "05/06/2023",
+          "debut": "05/08/2023",
+          "fin": "05/11/2023",
+          "titre": "Travaux avenue Carnot",
+          "description": "En raison de travaux sur l'avenue, des arrêts ne sont pas desservis"
+        },
+        {
+          "annonce": "05/06/2023",
+          "debut": "05/08/2023",
+          "fin": "05/11/2023",
+          "titre": "Travaux avenue Carnot",
+          "description": "En raison de travaux sur l'avenue, des arrêts ne sont pas desservis"
+        },
+        {
+          "annonce": "05/06/2023",
+          "debut": "05/08/2023",
+          "fin": "05/11/2023",
+          "titre": "Travaux avenue Carnot",
+          "description": "En raison de travaux sur l'avenue, des arrêts ne sont pas desservis"
+        },
+        {
+          "annonce": "05/03/2023",
+          "debut": "05/07/2023",
+          "fin": "06/21/2023",
+          "titre": "Test infos",
+          "description": "En raison de travaux sur le tracé de la ligne en vue de son passage en site propre"
+        }
+      ]
+    }
+  ]
+}

@@ -100,7 +100,7 @@
                       Notre Inventaires
                     </a>
                     <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/train-francais/infotrafic.html">
-                      info Trafic
+                      ℹ️nfo Trafic
                     </a>
                     <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/train-francais/résa.html">
                       Réserver un billet
@@ -167,7 +167,7 @@
                   </a>
                 <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
                     <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/bus français/infotrafic.html">
-                      ℹ️nfo Trafic
+                      <img src="/assets/img/logos/info.png" alt="Infos trafic TCM" style='width:20px;height:auto;'>nfo Trafic
                     </a>
                     <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/bus français/lignes.html">
                       Toutes nos lignes
@@ -224,8 +224,18 @@
                 <img src="https://transport-manager.net/assets/img/lignes/N3_L1_trans2.png" alt="image" style="width: 100%;" />
 
               </div>
-              <h2>Pratique, fiable, abordable.</h2>
-									<p>La ligne de bus 1 relie la gare centrale de Clermont-Ferrand au campus des Cézeaux, offrant ainsi aux usagers un moyen pratique et fiable de se déplacer entre les deux points. Le trajet dure environ 25 minutes, avec des arrêts à des points stratégiques tels que le hôtel de région et le CHU. La ligne de bus 1 est un service fiable et sûr et propose des tarifs abordables pour tous les types de voyageurs.</p>
+              <h2>Pratique, Universitaire, Efficace.</h2>
+									<p>La ligne 1 du réseau urbain de Clermont-Ferrand assure la liaison essentielle entre la Gare Centrale et le Campus Cézeaux, offrant aux passagers un moyen pratique et efficace de se déplacer entre ces deux points clés de la ville.
+                    <br><br>
+                    Le trajet débute à la Gare Centrale, un hub de transport majeur où convergent les lignes de train, de bus et de tramway. Les passagers peuvent facilement rejoindre la ligne 1 et monter à bord d'un bus moderne et confortable. Les sièges sont ergonomiques et l'intérieur est climatisé, garantissant un voyage agréable à tout moment de l'année.
+                    <br><br>
+                    La ligne 1 traverse ensuite différents quartiers de Clermont-Ferrand, offrant aux passagers un aperçu de la vie urbaine de la ville. Ils peuvent admirer l'architecture historique, les rues animées et les commerces locaux qui bordent l'itinéraire.
+                    <br><br>
+                    Le terminus de la ligne 1 est situé au Campus Cézeaux, un important pôle universitaire et scientifique de Clermont-Ferrand. Les étudiants, les enseignants et le personnel administratif peuvent se rendre facilement au campus grâce à cette ligne. Cela facilite les déplacements quotidiens des étudiants vers leurs cours, leurs laboratoires et leurs activités universitaires.
+                    <br><br>
+                    Les horaires de la ligne 1 sont réguliers et adaptés aux besoins des passagers. Que ce soit en semaine ou le week-end, les bus circulent à des intervalles fréquents, minimisant ainsi les temps d'attente et offrant une flexibilité de déplacement.
+                    <br><br>
+                    En résumé, la ligne 1 du réseau urbain de Clermont-Ferrand relie la Gare Centrale au Campus Cézeaux, fournissant aux passagers un moyen pratique et efficace de se déplacer entre ces deux points clés de la ville. Avec son confort, ses trajets pittoresques et ses horaires réguliers, la ligne 1 est un choix idéal pour les étudiants, les travailleurs et les résidents de Clermont-Ferrand.</p>
               <a href="/sections/bus français/tarifsbus.html" class="font-weight-bold text-xs text-uppercase font-weight-bolder text-primary icon-move-right">
                 Nos Tarifs
                 <i class="fas fa-arrow-right text-xs ms-1"></i>
@@ -236,7 +246,7 @@
   </div>
 
   <div class="container">
-    <h1 class="text-center">Info trafic TCM</h1>
+    <h1 class="text-center">ℹ️nfo Trafic TCM</h1>
     <div id="lignes"></div>
   </div>
 
@@ -255,7 +265,7 @@
       );
       return;
     }
-  
+      lignevide = 0;
       const card = $("<div>").addClass("card mb-3");
       const cardHeader = $("<div>").addClass("card-header");
       const cardBody = $("<div>").addClass("card-body");
@@ -266,7 +276,8 @@
         const divInfo = $("<div>").attr("role", "alert");
            // récupération des dates de début et de fin de l'information
            const dateDebut = new Date(Date.parse(info.annonce));
-              const dateFin = new Date(Date.parse(info.fin));
+            const dateDd = new Date(Date.parse(info.debut));
+            const dateFin = new Date(Date.parse(info.fin));
               dateFin.setDate(dateFin.getDate() + 1);
   
         // comparaison avec la date actuelle
@@ -274,20 +285,46 @@
                 // création de la div qui affiche les informations
                 const divInfo = $("<div>").attr("role", "alert");
   
-                // changement de la couleur de la carte en fonction de l'info trafic
-                if (info.titre.includes("Travaux")) {
+                // changement de la couleur de la carte en fonction de l'ℹ️nfo Trafic
+                if (info.titre.toLowerCase().includes("travaux")) {
+                if (dateActuelle >= dateDebut && dateActuelle <= dateDd) {
                   card.addClass("border-danger");
+                  divInfo.addClass("alert alert-light text-black font-weight-bold");
+                  divInfo.append($("<img src='/assets/img/panneaux/futur_work.png' style='float:right;width:110px;height:auto;'>"));
+                } else {
+                  card.addClass("border-warning");
                   divInfo.addClass("alert alert-warning text-white font-weight-bold");
                   divInfo.append($("<img src='/assets/img/panneaux/work.png' style='float:right;width:110px;height:auto;'>"));
-                } else if (info.titre.includes("Manifestation")) {
-                  card.addClass("border-danger");
-                  divInfo.addClass("alert alert-danger text-white font-weight-bold");
-                  divInfo.append($("<img src='/assets/img/panneaux/warning.png' style='float:right;width:110px;height:auto;'>"));
-                } else {
-                  card.addClass("border-info");
-                  divInfo.addClass("alert alert-info text-white font-weight-bold");
-                  divInfo.append($("<img src='/assets/img/panneaux/information.png' style='float:right;width:110px;height:auto;'>"));
                 }
+              } else if (info.titre.toLowerCase().includes("manifestation")) {
+                card.addClass("border-danger");
+                divInfo.addClass("alert alert-danger text-white font-weight-bold");
+                divInfo.append($("<img src='/assets/img/panneaux/warning.png' style='float:right;width:110px;height:auto;'>"));
+              } else if (info.titre.toLowerCase().includes("grève")) {
+                card.addClass("border-danger");
+                divInfo.addClass("alert alert-danger text-white font-weight-bold");
+                divInfo.append($("<img src='/assets/img/panneaux/warning.png' style='float:right;width:110px;height:auto;'>"));
+              } else if (info.titre.toLowerCase().includes("information")) {
+                card.addClass("border-info");
+                divInfo.addClass("alert alert-info text-white font-weight-bold");
+                divInfo.append($("<img src='/assets/img/panneaux/information_white.png' style='float:right;width:110px;height:auto;'>"));
+              } else if (info.titre.toLowerCase().includes("fermé")) {
+                card.addClass("border-danger");
+                divInfo.addClass("alert alert-danger text-white font-weight-bold");
+                divInfo.append($("<img src='/assets/img/panneaux/error.png' style='float:right;width:110px;height:auto;'>"));
+              } else if (info.titre.toLowerCase().includes("attention")) {
+                card.addClass("border-danger");
+                divInfo.addClass("alert alert-warning text-white font-weight-bold");
+                divInfo.append($("<img src='/assets/img/panneaux/alert_white.png' style='float:right;width:110px;height:auto;'>"));
+              } else if (info.titre.toLowerCase().includes("perturbation")) {
+                card.addClass("border-danger");
+                divInfo.addClass("alert alert-warning text-white font-weight-bold");
+                divInfo.append($("<img src='/assets/img/panneaux/alert.png' style='float:right;width:110px;height:auto;'>"));
+              } else {
+                card.addClass("border-info");
+                divInfo.addClass("alert alert-info text-white font-weight-bold");
+                divInfo.append($("<img src='/assets/img/panneaux/information.png' style='float:right;width:110px;height:auto;'>"));
+              }
   
                 // affichage des informations
                 divInfo.append($("<h6>").addClass("alert-heading").text(info.titre));
@@ -297,14 +334,25 @@
   
                 cardBody.append(divInfo);
                 $("#lignes").append(card);
-                }
-            });
+        } else {
+            lignevide++;
+        }
+        return;
+      });
   
             // ajout de la carte à la page
+            if (infosLigne.infos_trafic.length === lignevide) {
+            $("#lignes").append(
+              $("<div>").addClass("alert alert-success text-white").text("Tout va bien sur la ligne " + ligne)
+                .append($("<img>").attr("src", "/assets/img/panneaux/valid.png").css({"float": "right", "width": "60px", "height": "auto"}))
+            );
+            return;
+          }
+            $("#lignes").append(card);
             
           });
       }
-  
+
   afficherInfoTraficLigne("1");
   </script>
   <section class="py-3">
