@@ -322,7 +322,7 @@
                 divInfo.append($("<h6>").addClass("alert-heading").text(info.titre));
                 divInfo.append($("<p>").text(info.description));
                 divInfo.append($("<hr>"));
-                divInfo.append($("<p>").addClass("mb-0").text("Du " + info.debut + " au " + info.fin));
+                divInfo.append($("<p>").addClass("mb-0").text("Du " + dateDd.toLocaleDateString('fr-FR') + " au " + dateFin.toLocaleDateString('fr-FR')));
   
                 cardBody.append(divInfo);
                 $("#lignes").append(card);
