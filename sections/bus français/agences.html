@@ -447,12 +447,14 @@
       var date = date.replace(/(^\w{1})|(\s+\w{1})/g, lettre => lettre.toUpperCase());
       var heure = cejour.getHours();
       var day = cejour.getDay();
-      if ((day>=1) && (day <= 5) && (heure >=7) && (heure <20)){var texte = "L'agence est ouverte"; var couleur = "94e2d5";}
-      else if ((day>=1) && (day <= 5) && (heure >=20) && (heure <21)){var texte = "L'agence ferme dans 1h"; var couleur = "f9e2af";}
-      else if ((day == 6) && (heure >=8) && (heure <19)){var texte = "L'agence est ouverte"; var couleur = "94e2d5";}
-      else if ((day == 6) && (heure >=19) && (heure <20)){var texte = "L'agence ferme dans 1h"; var couleur = "f9e2af";}
-      else if ((day == 0) && (heure >=10) && (heure <16)){var texte = "L'agence est ouverte"; var couleur = "94e2d5";}
-      else if ((day == 0) && (heure >=16) && (heure <17)){var texte = "L'agence ferme dans 1h"; var couleur = "f9e2af";}
+      var jour = cejour.getDate();
+      if ((jour == 1) && (heure >=7) && (heure <19)){var texte = "L'agence est ouverte"; var couleur = "94e2d5";}
+      else if ((jour == 1) && (heure >=19) && (heure <20)){var texte = "L'agence ferme dans 1h"; var couleur = "f9e2af";}
+      else if ((day>=1) && (day <= 5) && (heure >=9) && (heure <18)){var texte = "L'agence est ouverte"; var couleur = "94e2d5";}
+      else if ((day>=1) && (day <= 5) && (heure >=18) && (heure <19)){var texte = "L'agence ferme dans 1h"; var couleur = "f9e2af";}
+      else if ((day == 6) && (heure >=10) && (heure <17)){var texte = "L'agence est ouverte"; var couleur = "94e2d5";}
+      else if ((day == 6) && (heure >=17) && (heure <18)){var texte = "L'agence ferme dans 1h"; var couleur = "f9e2af";}
+      else if ((day == 0) && (heure >=10) && (heure <17)){var texte = "L'agence est fermée, reportez vous sur une autre agence de notre réseau"; var couleur = "e9a296";}
       else {var texte = "L'agence est fermée"; var couleur = "f38ba8";}
 
       var aficher_heure = date + " " + ("0" + cejour.getHours()).slice(-2) + ":" + ("0" + cejour.getMinutes()).slice(-2) + ":" + ("0" + cejour.getSeconds()).slice(-2);
