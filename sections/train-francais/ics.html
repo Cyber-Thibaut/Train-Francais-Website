@@ -390,15 +390,17 @@
           const dateDebut = new Date(Date.parse(info.annonce));
             const dateDd = new Date(Date.parse(info.debut));
             const dateFin = new Date(Date.parse(info.fin));
-              dateFin.setDate(dateFin.getDate() + 1);
+            const dateFinAffichee = new Date(Date.parse(info.fin));
+            dateFin.setDate(dateFin.getDate() + 1);
 
         // comparaison avec la date actuelle
-        if (dateActuelle >= dateDebut && dateActuelle <= dateFin) {
-        // création de la div qui affiche les informations
-        const divInfo = $("<div>").attr("role", "alert");
+        // comparaison avec la date actuelle
+            if (dateActuelle >= dateDebut && dateActuelle <= dateFin) {
+              // création de la div qui affiche les informations
+              const divInfo = $("<div>").attr("role", "alert");
 
-        // changement de la couleur de la carte en fonction de l'info trafic
-        if (info.titre.toLowerCase().includes("fin")) {
+              // changement de la couleur de la carte en fonction de l'info trafic
+              if (info.titre.toLowerCase().includes("fin")) {
                 card.addClass("border-info");
                 divInfo.addClass("alert alert-success text-white font-weight-bold");
                 divInfo.append($("<img src='/assets/img/panneaux/valid_white.png' style='float:right;width:110px;height:auto;'>"));
@@ -429,9 +431,15 @@
                 divInfo.addClass("alert alert-danger text-white font-weight-bold");
                 divInfo.append($("<img src='/assets/img/panneaux/error.png' style='float:right;width:110px;height:auto;'>"));
               } else if (info.titre.toLowerCase().includes("attention")) {
-                card.addClass("border-danger");
-                divInfo.addClass("alert alert-warning text-white font-weight-bold");
-                divInfo.append($("<img src='/assets/img/panneaux/alert_white.png' style='float:right;width:110px;height:auto;'>"));
+                if (dateActuelle >= dateDebut && dateActuelle <= dateDd) {
+                  card.addClass("border-danger");
+                  divInfo.addClass("alert alert-light text-black font-weight-bold");
+                  divInfo.append($("<img src='/assets/img/panneaux/alert_white.png' style='float:right;width:110px;height:auto;'>"));
+                } else {
+                  card.addClass("border-danger");
+                  divInfo.addClass("alert alert-warning text-white font-weight-bold");
+                  divInfo.append($("<img src='/assets/img/panneaux/alert.png' style='float:right;width:110px;height:auto;'>"));
+                }
               } else if (info.titre.toLowerCase().includes("perturbation")) {
                 card.addClass("border-danger");
                 divInfo.addClass("alert alert-warning text-white font-weight-bold");
@@ -446,7 +454,7 @@
         divInfo.append($("<h6>").addClass("alert-heading").text(info.titre));
         divInfo.append($("<p>").text(info.description));
         divInfo.append($("<hr>"));
-        divInfo.append($("<p>").addClass("mb-0").text("Du " + dateDd.toLocaleDateString('fr-FR') + " au " + dateFin.toLocaleDateString('fr-FR')));
+        divInfo.append($("<p>").addClass("mb-0").text("Du " + dateDd.toLocaleDateString('fr-FR') + " au " + dateFinAffichee.toLocaleDateString('fr-FR')));
 
         cardBody.append(divInfo);
         $("#lignes").append(card);
