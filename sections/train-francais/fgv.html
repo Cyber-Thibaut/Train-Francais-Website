@@ -387,13 +387,12 @@
             const dateFin = new Date(Date.parse(info.fin));
                   dateFin.setDate(dateFin.getDate() + 1);
         
-            // comparaison avec la date actuelle
-            if (dateActuelle >= dateDebut && dateActuelle <= dateFin) {
-                    // création de la div qui affiche les informations
-                    const divInfo = $("<div>").attr("role", "alert");
-        
-                    // changement de la couleur de la carte en fonction de l'info trafic
-                    if (info.titre.toLowerCase().includes("fin")) {
+                  if (dateActuelle >= dateDebut && dateActuelle <= dateFin) {
+                // création de la div qui affiche les informations
+                const divInfo = $("<div>").attr("role", "alert");
+  
+                // changement de la couleur de la carte en fonction de l'info trafic
+              if (info.titre.toLowerCase().includes("fin")) {
                 card.addClass("border-info");
                 divInfo.addClass("alert alert-success text-white font-weight-bold");
                 divInfo.append($("<img src='/assets/img/panneaux/valid_white.png' style='float:right;width:110px;height:auto;'>"));
