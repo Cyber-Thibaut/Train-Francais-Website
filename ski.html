@@ -8,7 +8,8 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <!--     Fonts and icons     -->
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
@@ -18,169 +19,214 @@
 
 <body>
   <!-- Navbar Transparent -->
-  <div class="container position-sticky z-index-sticky top-0"><div class="row"><div class="col-12">
-    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-      <div class="container">
-        <a class="navbar-brand" href="/index.html">
-          France Avenir
-        </a>
-        <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon mt-2">
-            <span class="navbar-toggler-bar bar1"></span>
-            <span class="navbar-toggler-bar bar2"></span>
-            <span class="navbar-toggler-bar bar3"></span>
-          </span>
-        </button>
-        <div class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0 ms-lg-12 ps-lg-5" id="navigation">
-          <ul class="navbar-nav navbar-nav-hover ms-auto">
-            <li class="nav-item dropdown dropdown-hover mx-2 ms-lg-5">
-              <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="material-icons opacity-6 me-2 text-md">house</i>
-                France Avenir
-                <img src="/assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-auto ms-md-2">
-              </a>
-              <div class="dropdown-menu ms-n3 dropdown-menu-animation dropdown-md p-3 border-radius-lg mt-0 mt-lg-3" aria-labelledby="dropdownMenuPages5">
-                <a href="/about.html" class="dropdown-item border-radius-md">About</a>
-                <a href="/livrées.html" class="dropdown-item border-radius-md">Nos livrées</a>
-                <a href="/terms.html" class="dropdown-item border-radius-md">CGU</a>
-                <a href="/sections/train-francais/infotrafic.html" class="dropdown-item border-radius-md">Information Trafic</a>
-              </div>
-            </li>
-            <li class="nav-item px-3">
-              <a class="nav-link" href="/ski.html"><i class="material-icons opacity-6 me-2 text-md">downhill_skiing</i>
-                Ski Français
-              </a>
-            </li>
-            <li class="nav-item dropdown dropdown-hover mx-2">
-              <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuBlocks" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="material-icons opacity-6 me-2 text-md">train</i>
-                Train Français
-                <img src="/assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-auto ms-md-2">
-              </a>
-              <ul class="dropdown-menu dropdown-menu-end dropdown-menu-animation dropdown-md dropdown-md-responsive p-3 border-radius-lg mt-0 mt-lg-3" aria-labelledby="dropdownMenuBlocks">
-                <div class="d-none d-lg-block">
-                  <li class="nav-item dropdown dropdown-hover dropdown-subitem">
-                    <a class="dropdown-item py-2 ps-3 border-radius-md" href="#">
-                      <div class="w-100 d-flex align-items-center justify-content-between">
-                        <div>
-                          <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Information Pratique</h6>
-                          <span class="text-sm">Retrouvez toutes nos infos</span>
-                        </div>
-                        <img src="/assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow">
-                      </div>
-                    </a>
-                    <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
-                      <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/train-francais/inventaire.html">
-                        Notre Inventaires
-                      </a>
-                      <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/train-francais/infotrafic.html">
-                        ℹ️nfo Trafic
-                      </a>
-                      <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/train-francais/résa.html">
-                        Réserver un billet
-                      </a>
-                    </div>
-                  </li>
-                  <li class="nav-item dropdown dropdown-hover dropdown-subitem">
-                    <a class="dropdown-item py-2 ps-3 border-radius-md" href="#">
-                      <div class="w-100 d-flex align-items-center justify-content-between">
-                        <div>
-                          <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Sur nos lignes</h6>
-                          <span class="text-sm">En direct de nos trains, toutes les infos</span>
-                        </div>
-                        <img src="/assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow">
-                      </div>
-                    </a>
-                    <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
-                      <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/train-francais/fgv.html"><i class="material-icons opacity-6 me-2 text-md">train</i>
-                        France à Grande Vitesse
-                      </a>
-                      <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/train-francais/ice.html"><i class="material-icons opacity-6 me-2 text-md">train</i>
-                        ICEurope
-                      </a>
-                      <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/train-francais/ics.html"><i class="material-icons opacity-6 me-2 text-md">train</i>
-                        ICSuisse
-                      </a>
-                      <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/train-francais/région.html"><i class="material-icons opacity-6 me-2 text-md">train</i>
-                        France Région
-                      </a>
-                      <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/train-francais/tel.html"><i class="material-icons opacity-6 me-2 text-md">directions_railway_filled</i>
-                        Train Express Lyonnais
-                      </a>
-                      <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/train-francais/tfm.html"><i class="material-icons opacity-6 me-2 text-md">local_shipping</i>
-                        Train Français Marchandise
-                      </a>
-                    </div>
-                  </li>
-                  <a href="/sections/train-francais/départs.html" class="dropdown-item border-radius-md"><i class="material-icons opacity-6 me-2 text-md">train</i>
-                    Au départ de nos gares
+  <div class="container position-sticky z-index-sticky top-0">
+    <div class="row">
+      <div class="col-12">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+          <div class="container">
+            <a class="navbar-brand" href="/index.html">
+              France Avenir
+            </a>
+            <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon mt-2">
+                <span class="navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+              </span>
+            </button>
+            <div class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0 ms-lg-12 ps-lg-5" id="navigation">
+              <ul class="navbar-nav navbar-nav-hover ms-auto">
+                <li class="nav-item dropdown dropdown-hover mx-2 ms-lg-5">
+                  <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuPages"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="material-icons opacity-6 me-2 text-md">house</i>
+                    France Avenir
+                    <img src="/assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-auto ms-md-2">
                   </a>
-                  <a href="/sections/train-francais/alliance.html" class="dropdown-item border-radius-md"><i class="material-icons opacity-6 me-2 text-md">groups_2</i>
-                    France Avenir, l'alliance <span class="tag tag-info">NOUVEAU !</span>
-                  </a>
-                </div>
-              </ul>
-            </li>
-            <li class="nav-item dropdown dropdown-hover mx-2">
-              <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuBlocks" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="material-icons opacity-6 me-2 text-md">directions_bus_filled</i>
-              Transport Clermont Métropole
-                <img src="/assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-auto ms-md-2">
-              </a>
-              <ul class="dropdown-menu dropdown-menu-end dropdown-menu-animation dropdown-md dropdown-md-responsive p-3 border-radius-lg mt-0 mt-lg-3" aria-labelledby="dropdownMenuBlocks">
-                <div class="d-none d-lg-block">
-                  <li class="nav-item dropdown dropdown-hover dropdown-subitem">
-                    <a class="dropdown-item py-2 ps-3 border-radius-md" href="#">
-                      <div class="w-100 d-flex align-items-center justify-content-between">
-                        <div>
-                          <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Se déplacer</h6>
-                          <span class="text-sm">Retrouvez toutes nos infos</span>
-                        </div>
-                        <img src="/assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow">
-                      </div>
-                    </a>
-                  <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
-                      <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/train-francais/infotrafic.html">
-                        ℹ️nfo Trafic
-                      </a>
-                      <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/bus français/lignes.html">
-                        Toutes nos lignes
-                      </a>
-                    </div>
-                  </li>
-                <li class="nav-item dropdown dropdown-hover dropdown-subitem">
-                  <a class="dropdown-item py-2 ps-3 border-radius-md" href="#">
-                    <div class="w-100 d-flex align-items-center justify-content-between">
-                      <div>
-                        <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Tickets & Abonnements</h6>
-                        <span class="text-sm">Pour voyager en toute sécurité</span>
-                      </div>
-                      <img src="/assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow">
-                    </div>
-                  </a>
-                  <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
-                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/bus français/tarifsbus.html">
-                      Nos Tarifs
-                    </a>
-                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/bus français/agences.html">
-                      Nos Agences
-                    </a>
-                    <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/cartes réducs/mensuel.html">
-                      Prendre son Abonnement
-                    </a>
+                  <div class="dropdown-menu ms-n3 dropdown-menu-animation dropdown-md p-3 border-radius-lg mt-0 mt-lg-3"
+                    aria-labelledby="dropdownMenuPages5">
+                    <a href="/about.html" class="dropdown-item border-radius-md">About</a>
+                    <a href="/livrées.html" class="dropdown-item border-radius-md">Nos livrées</a>
+                    <a href="/terms.html" class="dropdown-item border-radius-md">CGU</a>
+                    <a href="/sections/train-francais/infotrafic.html"
+                      class="dropdown-item border-radius-md">Information Trafic</a>
                   </div>
                 </li>
+                <li class="nav-item px-3">
+                  <a class="nav-link" href="/ski.html"><i
+                      class="material-icons opacity-6 me-2 text-md">downhill_skiing</i>
+                    Ski Français
+                  </a>
+                </li>
+                <li class="nav-item dropdown dropdown-hover mx-2">
+                  <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuBlocks"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="material-icons opacity-6 me-2 text-md">train</i>
+                    Train Français
+                    <img src="/assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-auto ms-md-2">
+                  </a>
+                  <ul
+                    class="dropdown-menu dropdown-menu-end dropdown-menu-animation dropdown-md dropdown-md-responsive p-3 border-radius-lg mt-0 mt-lg-3"
+                    aria-labelledby="dropdownMenuBlocks">
+                    <div class="d-none d-lg-block">
+                      <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                        <a class="dropdown-item py-2 ps-3 border-radius-md" href="#">
+                          <div class="w-100 d-flex align-items-center justify-content-between">
+                            <div>
+                              <h6
+                                class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                Information Pratique</h6>
+                              <span class="text-sm">Retrouvez toutes nos infos</span>
+                            </div>
+                            <img src="/assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow">
+                          </div>
+                        </a>
+                        <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
+                          <a class="dropdown-item ps-3 border-radius-md mb-1"
+                            href="/sections/train-francais/inventaire.html">
+                            Notre Inventaires
+                          </a>
+                          <a class="dropdown-item ps-3 border-radius-md mb-1"
+                            href="/sections/train-francais/infotrafic.html">
+                            ℹ️nfo Trafic
+                          </a>
+                          <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/train-francais/résa.html">
+                            Réserver un billet
+                          </a>
+                        </div>
+                      </li>
+                      <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                        <a class="dropdown-item py-2 ps-3 border-radius-md" href="#">
+                          <div class="w-100 d-flex align-items-center justify-content-between">
+                            <div>
+                              <h6
+                                class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                Sur nos lignes</h6>
+                              <span class="text-sm">En direct de nos trains, toutes les infos</span>
+                            </div>
+                            <img src="/assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow">
+                          </div>
+                        </a>
+                        <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
+                          <a class="dropdown-item ps-3 border-radius-md mb-1"
+                            href="/sections/train-francais/fgv.html"><i
+                              class="material-icons opacity-6 me-2 text-md">train</i>
+                            France à Grande Vitesse
+                          </a>
+                          <a class="dropdown-item ps-3 border-radius-md mb-1"
+                            href="/sections/train-francais/ice.html"><i
+                              class="material-icons opacity-6 me-2 text-md">train</i>
+                            ICEurope
+                          </a>
+                          <a class="dropdown-item ps-3 border-radius-md mb-1"
+                            href="/sections/train-francais/ics.html"><i
+                              class="material-icons opacity-6 me-2 text-md">train</i>
+                            ICSuisse
+                          </a>
+                          <a class="dropdown-item ps-3 border-radius-md mb-1"
+                            href="/sections/train-francais/région.html"><i
+                              class="material-icons opacity-6 me-2 text-md">train</i>
+                            France Région
+                          </a>
+                          <a class="dropdown-item ps-3 border-radius-md mb-1"
+                            href="/sections/train-francais/tel.html"><i
+                              class="material-icons opacity-6 me-2 text-md">directions_railway_filled</i>
+                            Train Express Lyonnais
+                          </a>
+                          <a class="dropdown-item ps-3 border-radius-md mb-1"
+                            href="/sections/train-francais/tfm.html"><i
+                              class="material-icons opacity-6 me-2 text-md">local_shipping</i>
+                            Train Français Marchandise
+                          </a>
+                        </div>
+                      </li>
+                      <a href="/sections/train-francais/départs.html" class="dropdown-item border-radius-md"><i
+                          class="material-icons opacity-6 me-2 text-md">train</i>
+                        Au départ de nos gares
+                      </a>
+                      <a href="/sections/train-francais/alliance.html" class="dropdown-item border-radius-md"><i
+                          class="material-icons opacity-6 me-2 text-md">groups_2</i>
+                        France Avenir, l'alliance <span class="tag tag-info">NOUVEAU !</span>
+                      </a>
+                    </div>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown dropdown-hover mx-2">
+                  <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuBlocks"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="material-icons opacity-6 me-2 text-md">directions_bus_filled</i>
+                    Transport Clermont Métropole
+                    <img src="/assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-auto ms-md-2">
+                  </a>
+                  <ul
+                    class="dropdown-menu dropdown-menu-end dropdown-menu-animation dropdown-md dropdown-md-responsive p-3 border-radius-lg mt-0 mt-lg-3"
+                    aria-labelledby="dropdownMenuBlocks">
+                    <div class="d-none d-lg-block">
+                      <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                        <a class="dropdown-item py-2 ps-3 border-radius-md" href="#">
+                          <div class="w-100 d-flex align-items-center justify-content-between">
+                            <div>
+                              <h6
+                                class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                Se déplacer</h6>
+                              <span class="text-sm">Retrouvez toutes nos infos</span>
+                            </div>
+                            <img src="/assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow">
+                          </div>
+                        </a>
+                        <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
+                          <a class="dropdown-item ps-3 border-radius-md mb-1"
+                            href="/sections/train-francais/infotrafic.html">
+                            ℹ️nfo Trafic
+                          </a>
+                          <a class="dropdown-item ps-3 border-radius-md mb-1" href="/sections/bus français/lignes.html">
+                            Toutes nos lignes
+                          </a>
+                        </div>
+                      </li>
+                      <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                        <a class="dropdown-item py-2 ps-3 border-radius-md" href="#">
+                          <div class="w-100 d-flex align-items-center justify-content-between">
+                            <div>
+                              <h6
+                                class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                Tickets & Abonnements</h6>
+                              <span class="text-sm">Pour voyager en toute sécurité</span>
+                            </div>
+                            <img src="/assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow">
+                          </div>
+                        </a>
+                        <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
+                          <a class="dropdown-item ps-3 border-radius-md mb-1"
+                            href="/sections/bus français/tarifsbus.html">
+                            Nos Tarifs
+                          </a>
+                          <a class="dropdown-item ps-3 border-radius-md mb-1"
+                            href="/sections/bus français/agences.html">
+                            Nos Agences
+                          </a>
+                          <a class="dropdown-item ps-3 border-radius-md mb-1"
+                            href="/sections/cartes réducs/mensuel.html">
+                            Prendre son Abonnement
+                          </a>
+                        </div>
+                      </li>
+                  </ul>
+                </li>
               </ul>
-            </li>
-          </ul>
-        </div>
+            </div>
+          </div>
+        </nav>
       </div>
-    </nav>
-    </div></div></div>
+    </div>
+  </div>
   <!-- End Navbar -->
 
 
-  <div class="page-header min-vh-80" style="background-image: url('https://cdn.pixabay.com/photo/2019/12/15/18/24/winter-4697776_960_720.jpg')">
+  <div class="page-header min-vh-80"
+    style="background-image: url('https://cdn.pixabay.com/photo/2019/12/15/18/24/winter-4697776_960_720.jpg')">
     <span class="mask bg-gradient-dark opacity-6"></span>
     <div class="container">
       <div class="row">
@@ -194,68 +240,82 @@
     </div>
   </div>
   <!-- -------- START Features w/ title, device and stats -------- -->
-<section class="py-3">
-  <div class="container">
-    <div class="row align-items-center justify-content-center">
-      <div class="col-lg-4 mx-auto">
-        <div class="position-relative">
-          <img class="w-100 mt-5" src="https://cdn.pixabay.com/photo/2017/02/25/18/18/trees-2098408_960_720.jpg">
+  <section class="py-3">
+    <div class="container">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-lg-4 mx-auto">
+          <div class="position-relative">
+            <img class="w-100 mt-5" src="https://cdn.pixabay.com/photo/2017/02/25/18/18/trees-2098408_960_720.jpg">
+          </div>
         </div>
-      </div>
-      <div class="col-lg-6 mx-auto mt-5">
-        <h3>Une station à la pointe de la technologie</h3>
-        <p class="lead mb-5">Nous développons chaque saison de nouvelles technologies pour que vous profitiez au maximum de la glisse.</p>
-        <div class="row">
-          <div class="col-lg-6 col-6 mb-lg-3">
-            <h2 class="text-gradient text-primary">8</h2>
-            <p>Remontées mécaniques à la pointe de la technologie</p>
-          </div>
-          <div class="col-lg-6 col-6 mb-lg-3">
-            <h2 class="text-gradient text-primary">10+</h2>
-            <p>Pistes de ski de toutes les difficultés pour votre plus grand plaisir</p>
-          </div>
-          <div class="col-lg-6 col-6">
-            <h2 class="text-gradient text-primary">9h-17h</h2>
-            <p>Nos remontées sont ouvertes en continu toute la journée de 9h à 17h.</p>
-          </div>
-          <div class="col-lg-6 col-6">
-            <h2 class="text-gradient text-primary">50+</h2>
-            <p>Employés sur motivés prêts à tout donner pour que vous passiez vos meilleures vacances !</p>
+        <div class="col-lg-6 mx-auto mt-5">
+          <h3>Une station à la pointe de la technologie</h3>
+          <p class="lead mb-5">Nous développons chaque saison de nouvelles technologies pour que vous profitiez au
+            maximum de la glisse.</p>
+          <div class="row">
+            <div class="col-lg-6 col-6 mb-lg-3">
+              <h2 class="text-gradient text-primary">8</h2>
+              <p>Remontées mécaniques à la pointe de la technologie</p>
+            </div>
+            <div class="col-lg-6 col-6 mb-lg-3">
+              <h2 class="text-gradient text-primary">10+</h2>
+              <p>Pistes de ski de toutes les difficultés pour votre plus grand plaisir</p>
+            </div>
+            <div class="col-lg-6 col-6">
+              <h2 class="text-gradient text-primary">9h-17h</h2>
+              <p>Nos remontées sont ouvertes en continu toute la journée de 9h à 17h.</p>
+            </div>
+            <div class="col-lg-6 col-6">
+              <h2 class="text-gradient text-primary">50+</h2>
+              <p>Employés sur motivés prêts à tout donner pour que vous passiez vos meilleures vacances !</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<section class="py-5">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-5 col-10 d-flex justify-content-center flex-column mx-auto text-lg-start text-center">
-        <h2 class="mb-3">Une station de ski pour tous</h2>
-        <i class="material-icons text-5xl">format_quote</i>
-            <p class="text-lg">
-              Il y a plus de 100 ans, un jeune homme passionné de ski nommé Thibaut, décida de partir à l'aventure et de s'installer dans les Alpes du Sud.
-              Décidé à créer une station de ski, il choisit un endroit magnifique, situé entre deux immenses pics, que l'on a appelé la vallée des Deux Pics. Thibaut a construit un petit village de montagne, avec une station de ski, qu'il a nommée "Les 2 Chèvres".
-              La station était très populaire auprès des amateurs de ski, qui venaient de toute la France pour profiter des pentes et des paysages magnifiques. Avec le temps, la station est devenue de plus en plus populaire et Thibaut a décidé de la confier à une société spécialisée dans le ski, la Société Ski Français.</p>
-          <p>La société a investi beaucoup d'argent et de temps pour améliorer la station et lui donner une nouvelle dimension. Aujourd'hui, la station des Deux Chèvres est considérée comme l'une des meilleures stations de ski des Alpes du Sud. Elle propose des pistes de ski pour tous les niveaux, des équipements modernes et des activités pour tous les âges.
-          La station est entretenue par Ski Français et le village regorge de restaurants, bars, hôtels et magasins. Les Deux Chèvres sont devenues une destination très prisée des amateurs de ski et des touristes en quête de montagnes et d'aventure. La station offre des paysages à couper le souffle, des pistes de ski de classe mondiale et des activités pour toute la famille. </p>
+  </section>
+  <section class="py-5">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-5 col-10 d-flex justify-content-center flex-column mx-auto text-lg-start text-center">
+          <h2 class="mb-3">Une station de ski pour tous</h2>
+          <i class="material-icons text-5xl">format_quote</i>
+          <p class="text-lg">
+            Il y a plus de 100 ans, un jeune homme passionné de ski nommé Thibaut, décida de partir à l'aventure et de
+            s'installer dans les Alpes du Sud.
+            Décidé à créer une station de ski, il choisit un endroit magnifique, situé entre deux immenses pics, que
+            l'on a appelé la vallée des Deux Pics. Thibaut a construit un petit village de montagne, avec une station de
+            ski, qu'il a nommée "Les 2 Chèvres".
+            La station était très populaire auprès des amateurs de ski, qui venaient de toute la France pour profiter
+            des pentes et des paysages magnifiques. Avec le temps, la station est devenue de plus en plus populaire et
+            Thibaut a décidé de la confier à une société spécialisée dans le ski, la Société Ski Français.</p>
+          <p>La société a investi beaucoup d'argent et de temps pour améliorer la station et lui donner une nouvelle
+            dimension. Aujourd'hui, la station des Deux Chèvres est considérée comme l'une des meilleures stations de
+            ski des Alpes du Sud. Elle propose des pistes de ski pour tous les niveaux, des équipements modernes et des
+            activités pour tous les âges.
+            La station est entretenue par Ski Français et le village regorge de restaurants, bars, hôtels et magasins.
+            Les Deux Chèvres sont devenues une destination très prisée des amateurs de ski et des touristes en quête de
+            montagnes et d'aventure. La station offre des paysages à couper le souffle, des pistes de ski de classe
+            mondiale et des activités pour toute la famille. </p>
         </div>
-      <div class="col-md-5 col-6 mx-lg-0 mx-auto px-lg-0 px-md-0 my-auto">
-        <img class="max-width-400 border-radius-lg shadow-lg" src="https://cdn.pixabay.com/photo/2021/01/01/14/29/skiing-5878729_960_720.jpg">
+        <div class="col-md-5 col-6 mx-lg-0 mx-auto px-lg-0 px-md-0 my-auto">
+          <img class="max-width-400 border-radius-lg shadow-lg"
+            src="https://cdn.pixabay.com/photo/2021/01/01/14/29/skiing-5878729_960_720.jpg">
+        </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- START Pricing w/ 2 cards & nav tabs -->
-<section class="py-2 bg-gray-200">
-  <div class="container pt-5">
-    <div class="row">
-      <div class="col-lg-4 col-md-10 d-flex justify-content-center flex-column">
-        <h3 class="mt-3">Choisissez votre forfait pour votre prochain séjour au ski</h3>
-        <p class="lead">Vous bénéficiez d'un accès illimité aux pistes de ski, de l'équipement de ski de qualité et d'une assistance sur place. Vous avez également 20 jours pour demander un remboursement.</p>  
-      </div>
-      <div class="col-lg-7 col-md-12 ms-lg-auto me-lg-auto">
-        <div class="tab-content tab-space">
+  </section>
+  <!-- START Pricing w/ 2 cards & nav tabs -->
+  <section class="py-2 bg-gray-200">
+    <div class="container pt-5">
+      <div class="row">
+        <div class="col-lg-4 col-md-10 d-flex justify-content-center flex-column">
+          <h3 class="mt-3">Choisissez votre forfait pour votre prochain séjour au ski</h3>
+          <p class="lead">Vous bénéficiez d'un accès illimité aux pistes de ski, de l'équipement de ski de qualité et
+            d'une assistance sur place. Vous avez également 20 jours pour demander un remboursement.</p>
+        </div>
+        <div class="col-lg-7 col-md-12 ms-lg-auto me-lg-auto">
+          <div class="tab-content tab-space">
             <div class="row">
               <div class="col-md-6">
                 <div class="card card-pricing bg-white border-0 text-center mb-4">
@@ -305,35 +365,36 @@
                 </div>
               </div>
             </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- END Pricing w/ 2 cards & nav tabs -->
+  </section>
+  <!-- END Pricing w/ 2 cards & nav tabs -->
 
 
-<footer class="footer pt-5 mt-5">
-  <div class="container">
-    <div class=" row">
-      <div class="col-12">
-        <div class="text-center">
-        <div>
-            <img src="assets/img/logos/skifrancais.png"  alt="main_logo">
-          <h6 class="font-weight-bolder mb-4">France Avenir</h6>
+  <footer class="footer pt-5 mt-5">
+    <div class="container">
+      <div class=" row">
+        <div class="col-12">
+          <div class="text-center">
+            <div>
+              <img src="assets/img/logos/skifrancais.png" alt="main_logo">
+              <h6 class="font-weight-bolder mb-4">France Avenir</h6>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <div class="text-center">
+              <p class="text-dark my-4 text-sm font-weight-normal">
+                All rights reserved. Copyright ©
+                <script>document.write(new Date().getFullYear())</script> France Avenir par Thibaut</a>.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div class="col-12">
-        <div class="text-center">
-          <p class="text-dark my-4 text-sm font-weight-normal">
-            All rights reserved. Copyright © <script>document.write(new Date().getFullYear())</script> France Avenir par Thibaut</a>.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
+  </footer>
 
 </body>
 

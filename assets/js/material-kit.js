@@ -17,32 +17,32 @@
 
 // initialization of Popovers
 var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-var popoverList = popoverTriggerList.map(function(popoverTriggerEl) {
+var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
   return new bootstrap.Popover(popoverTriggerEl)
 })
 
 // initialization of Tooltips
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
   return new bootstrap.Tooltip(tooltipTriggerEl)
 })
 
 // helper for adding on all elements multiple attributes
 function setAttributes(el, options) {
-  Object.keys(options).forEach(function(attr) {
+  Object.keys(options).forEach(function (attr) {
     el.setAttribute(attr, options[attr]);
   })
 }
 
 // activate popovers
 var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-toggle="popover"]'))
-var popoverList = popoverTriggerList.map(function(popoverTriggerEl) {
+var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
   return new bootstrap.Popover(popoverTriggerEl)
 })
 
 // activate tooltips
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-toggle="tooltip"]'))
-var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
   return new bootstrap.Tooltip(tooltipTriggerEl)
 })
 
@@ -50,7 +50,7 @@ var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
 
 var total = document.querySelectorAll('.nav-pills');
 
-total.forEach(function(item, i) {
+total.forEach(function (item, i) {
   var moving_div = document.createElement('div');
   var first_li = item.querySelector('li:first-child .nav-link');
   var tab = first_li.cloneNode();
@@ -67,13 +67,13 @@ total.forEach(function(item, i) {
   moving_div.style.transform = 'translate3d(0px, 0px, 0px)';
   moving_div.style.transition = '.5s ease';
 
-  item.onmouseover = function(event) {
+  item.onmouseover = function (event) {
     let target = getEventTarget(event);
     let li = target.closest('li'); // get reference
     if (li) {
       let nodes = Array.from(li.closest('ul').children); // get array
       let index = nodes.indexOf(li) + 1;
-      item.querySelector('li:nth-child(' + index + ') .nav-link').onclick = function() {
+      item.querySelector('li:nth-child(' + index + ') .nav-link').onclick = function () {
         moving_div = item.querySelector('.moving-tab');
         let sum = 0;
         if (item.classList.contains('flex-column')) {
@@ -97,8 +97,8 @@ total.forEach(function(item, i) {
 
 // Tabs navigation resize
 
-window.addEventListener('resize', function(event) {
-  total.forEach(function(item, i) {
+window.addEventListener('resize', function (event) {
+  total.forEach(function (item, i) {
     item.querySelector('.moving-tab').remove();
     var moving_div = document.createElement('div');
     var tab = item.querySelector(".nav-link.active").cloneNode();
@@ -138,13 +138,13 @@ window.addEventListener('resize', function(event) {
   });
 
   if (window.innerWidth < 991) {
-    total.forEach(function(item, i) {
+    total.forEach(function (item, i) {
       if (!item.classList.contains('flex-column')) {
         item.classList.add('flex-column', 'on-resize');
       }
     });
   } else {
-    total.forEach(function(item, i) {
+    total.forEach(function (item, i) {
       if (item.classList.contains('on-resize')) {
         item.classList.remove('flex-column', 'on-resize');
       }
@@ -177,17 +177,17 @@ function copyCode(el) {
     alert.style.transform = 'translate3d(0px, 0px, 0px)'
     alert.style.opacity = '0';
     alert.style.transition = '.35s ease';
-    setTimeout(function() {
+    setTimeout(function () {
       alert.style.transform = 'translate3d(0px, 20px, 0px)';
       alert.style.setProperty("opacity", "1", "important");
     }, 100);
     alert.innerHTML = "Code successfully copied!";
     el.parentElement.appendChild(alert);
-    setTimeout(function() {
+    setTimeout(function () {
       alert.style.transform = 'translate3d(0px, 0px, 0px)'
       alert.style.setProperty("opacity", "0", "important");
     }, 2000);
-    setTimeout(function() {
+    setTimeout(function () {
       el.parentElement.querySelector('.alert').remove();
     }, 2500);
   }
@@ -196,16 +196,16 @@ function copyCode(el) {
 // End copy code function
 
 
-window.onload = function() {
+window.onload = function () {
   // Material Design Input function
   var inputs = document.querySelectorAll('input');
 
   for (var i = 0; i < inputs.length; i++) {
-    inputs[i].addEventListener('focus', function(e) {
+    inputs[i].addEventListener('focus', function (e) {
       this.parentElement.classList.add('is-focused');
     }, false);
 
-    inputs[i].onkeyup = function(e) {
+    inputs[i].onkeyup = function (e) {
       if (this.value != "") {
         this.parentElement.classList.add('is-filled');
       } else {
@@ -213,7 +213,7 @@ window.onload = function() {
       }
     };
 
-    inputs[i].addEventListener('focusout', function(e) {
+    inputs[i].addEventListener('focusout', function (e) {
       if (this.value != "") {
         this.parentElement.classList.add('is-filled');
       }
@@ -225,7 +225,7 @@ window.onload = function() {
   var ripples = document.querySelectorAll('.btn');
 
   for (var i = 0; i < ripples.length; i++) {
-    ripples[i].addEventListener('click', function(e) {
+    ripples[i].addEventListener('click', function (e) {
       var targetEl = e.target;
       var rippleDiv = targetEl.querySelector('.ripple');
 
@@ -237,7 +237,7 @@ window.onload = function() {
       rippleDiv.style.left = (e.offsetX - rippleDiv.offsetWidth / 2) + 'px';
       rippleDiv.style.top = (e.offsetY - rippleDiv.offsetHeight / 2) + 'px';
       rippleDiv.classList.add('ripple');
-      setTimeout(function() {
+      setTimeout(function () {
         rippleDiv.parentElement.removeChild(rippleDiv);
       }, 600);
     }, false);
@@ -251,11 +251,11 @@ window.onload = function() {
 
 function debounce(func, wait, immediate) {
   var timeout;
-  return function() {
+  return function () {
     var context = this,
       args = arguments;
     clearTimeout(timeout);
-    timeout = setTimeout(function() {
+    timeout = setTimeout(function () {
       timeout = null;
       if (!immediate) func.apply(context, args);
     }, wait);
