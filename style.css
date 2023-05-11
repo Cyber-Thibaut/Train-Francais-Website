@@ -2,7 +2,7 @@ body {
 
 	font-family: 'Lexend Deca', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
 
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, 'Helvetica Neue', sans-serif;
+		Ubuntu, Cantarell, Fira Sans, Droid Sans, 'Helvetica Neue', sans-serif;
 }
 
 ul {
@@ -10,7 +10,7 @@ ul {
 	flex-direction: row;
 	margin-bottom: 20px;
 	height: 100%;
-	
+
 	white-space: nowrap;
 }
 
@@ -50,13 +50,15 @@ svg {
 	left: 35px;
 	font-size: 20px;
 	font-weight: 500;
-}		
+}
+
 .station-text-2 {
 	top: 28px;
 	left: 32.5px;
 	font-size: 20px;
 	font-weight: 400;
 }
+
 .station-text-3,
 .station-text-4 {
 	top: 32px;
@@ -70,17 +72,20 @@ svg {
 	stroke: black;
 	stroke-width: 1px;
 }
+
 .svg-station-2 {
 	fill: white;
 	stroke: black;
 	stroke-width: 1px;
 }
+
 .svg-station-3 {
 	fill: white;
 	stroke: black;
 	stroke-width: 1px;
-	
+
 }
+
 .svg-station-4 {
 	fill: black;
 	stroke-width: 0px;

@@ -10,7 +10,8 @@
     Votre Inventaire
   </title>
   <!--     Fonts and icons     -->
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+  <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
   <!-- Nucleo Icons -->
   <link href="assets/css/nucleo-icons.css" rel="stylesheet" />
   <link href="assets/css/nucleo-svg.css" rel="stylesheet" />
@@ -32,30 +33,37 @@
     .img-cell {
       height: 100%;
     }
+
     .img-cell img {
       object-fit: cover;
       object-position: top left;
       height: 100%;
     }
+
     .scroll-x {
       overflow-x: auto;
     }
+
     .tag-important {
-    background-color: #f44336; /* rouge */
-    color: #fff; /* blanc */
-    border-radius: 3px;
-    padding: 2px 4px;
-    font-size: 12px;
-    margin-left: 10px;
+      background-color: #f44336;
+      /* rouge */
+      color: #fff;
+      /* blanc */
+      border-radius: 3px;
+      padding: 2px 4px;
+      font-size: 12px;
+      margin-left: 10px;
     }
-  
+
     .tag-info {
-    background-color: #2196f3; /* bleu */
-    color: #fff; /* blanc */
-    border-radius: 3px;
-    padding: 2px 4px;
-    font-size: 12px;
-    margin-left: 10px;
+      background-color: #2196f3;
+      /* bleu */
+      color: #fff;
+      /* blanc */
+      border-radius: 3px;
+      padding: 2px 4px;
+      font-size: 12px;
+      margin-left: 10px;
     }
   </style>
 </head>
@@ -69,7 +77,8 @@
           <div class="text-center">
             <h1 class="text-white">Inventaire</h1>
             <h3 class="text-white">de VOTRE Société ;)</h3>
-            <a href="plancreateur.html"><button type="button" class="btn bg-gradient-primary w-100 mb-0">Accéder au créateur de plan</button></a>
+            <a href="plancreateur.html"><button type="button" class="btn bg-gradient-primary w-100 mb-0">Accéder au
+                créateur de plan</button></a>
           </div>
         </div>
       </div>
@@ -83,10 +92,11 @@
           <div class="input-group input-group-outline mb-4">
             <input class="form-control" type="text" id="api-key-input">
           </div>
-          </div>
+        </div>
         <div class="col-lg-3 mt-lg-n2 mt-2">
           <label>&nbsp;</label>
-          <button type="button" id="load-inventory-btn" class="btn bg-gradient-primary w-100 mb-0">Charger l'inventaire</button>
+          <button type="button" id="load-inventory-btn" class="btn bg-gradient-primary w-100 mb-0">Charger
+            l'inventaire</button>
         </div>
       </div>
       <div class="row mt-3">
@@ -104,108 +114,112 @@
       </div>
     </div>
   </div>
-  
-<script>
-  $(document).ready(() => {
-    let dataTable;
-  
-    $('#load-inventory-btn').click(() => {
-      let apiKey = $('#api-key-input').val();
-      if (!apiKey) {
-        alert('Veuillez saisir une clé API.');
-        return;
-      }
-      dataTable = $('#example').DataTable({
-        dom: 'Bfrtip',
-        buttons: [
+
+  <script>
+    $(document).ready(() => {
+      let dataTable;
+
+      $('#load-inventory-btn').click(() => {
+        let apiKey = $('#api-key-input').val();
+        if (!apiKey) {
+          alert('Veuillez saisir une clé API.');
+          return;
+        }
+        dataTable = $('#example').DataTable({
+          dom: 'Bfrtip',
+          buttons: [
             {
-                extend: 'copyHtml5',
-                exportOptions: {
-                    columns: [ 0, ':visible' ]
-                }
+              extend: 'copyHtml5',
+              exportOptions: {
+                columns: [0, ':visible']
+              }
             },
             {
-                extend: 'excelHtml5',
-                exportOptions: {
-                    columns: ':visible'
-                }
+              extend: 'excelHtml5',
+              exportOptions: {
+                columns: ':visible'
+              }
             },
             {
-                extend: 'pdfHtml5',
-                exportOptions: {
-                    columns: [ 0, 1 ]
-                }
+              extend: 'pdfHtml5',
+              exportOptions: {
+                columns: [0, 1]
+              }
             },
             'colvis'
-        ],
-        "language": {
-          "url": "https://cdn.datatables.net/plug-ins/1.11.3/i18n/fr_fr.json",
-        },
-        ajax: {
-          url: `https://train-empire.com/api/getCompanyEngines.php?auth=${apiKey}`,
-          dataSrc: ""
-        },
-        scrollX: true,
-        columns: [
-          { data: "name" },
-          { data: "quant" },
-          {
-            data: "img",
-            render: (data) => {
-              return `<div class="img-cell scroll-x" style="object-fit: cover; object-position: top left; height: 100%"> 
+          ],
+          "language": {
+            "url": "https://cdn.datatables.net/plug-ins/1.11.3/i18n/fr_fr.json",
+          },
+          ajax: {
+            url: `https://train-empire.com/api/getCompanyEngines.php?auth=${apiKey}`,
+            dataSrc: ""
+          },
+          scrollX: true,
+          columns: [
+            { data: "name" },
+            { data: "quant" },
+            {
+              data: "img",
+              render: (data) => {
+                return `<div class="img-cell scroll-x" style="object-fit: cover; object-position: top left; height: 100%"> 
                 <img src="${data}" 
                 ></div>`;
+              }
             }
-          }
-        ],
-        dom: 'Bfrtip',
-            buttons: [
-              'copyHtml5',
-              'csvHtml5',
-              'pdfHtml5'
-            ]
+          ],
+          dom: 'Bfrtip',
+          buttons: [
+            'copyHtml5',
+            'csvHtml5',
+            'pdfHtml5'
+          ]
+        });
       });
     });
-  });
   </script>
-  
-  
+
+
   <footer class="footer py-5 my-9 bg-gradient-dark position-relative overflow-hidden">
-    <img src="https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2013/04/aurora_over_norway/12618886-1-eng-GB/Aurora_over_Norway_pillars.jpg" alt="pattern-lines" class="position-absolute start-0 top-0 w-100 opacity-6">
+    <img
+      src="https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2013/04/aurora_over_norway/12618886-1-eng-GB/Aurora_over_Norway_pillars.jpg"
+      alt="pattern-lines" class="position-absolute start-0 top-0 w-100 opacity-6">
     <div class="container position-relative z-index-1">
       <div class="row">
         <div class="col-lg-4 me-auto mb-lg-0 mb-4 text-lg-start text-center">
           <h6 class="text-white font-weight-bolder text-uppercase mb-lg-4 mb-3">France Avenir</h6>
           <ul class="nav flex-row ms-n3 align-items-center mb-4 mt-sm-0">
-          <li class="nav-item">
-            <a class="nav-link text-white opacity-8" href="fgv.html" target="_blank">
-              FGV
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white opacity-8" href="tel.html" target="_blank">
-              TEL
-            </a>
-          </li>
+            <li class="nav-item">
+              <a class="nav-link text-white opacity-8" href="fgv.html" target="_blank">
+                FGV
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white opacity-8" href="tel.html" target="_blank">
+                TEL
+              </a>
+            </li>
 
-          <li class="nav-item">
-            <a class="nav-link text-white opacity-8" href="ice.html" target="_blank">
-              ICEurope
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white opacity-8" href="départs.html" target="_blank">
-              Au départ de nos Gares
-            </a>
-          </li>
-        </ul>
+            <li class="nav-item">
+              <a class="nav-link text-white opacity-8" href="ice.html" target="_blank">
+                ICEurope
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white opacity-8" href="départs.html" target="_blank">
+                Au départ de nos Gares
+              </a>
+            </li>
+          </ul>
           <p class="text-sm text-white opacity-8 mb-0">
-            Copyright © <script>document.write(new Date().getFullYear())</script> France Avenir par Thibaut.
+            Copyright ©
+            <script>document.write(new Date().getFullYear())</script> France Avenir par Thibaut.
           </p>
         </div>
         <div class="col-lg-6 ms-auto text-lg-end text-center">
           <p class="mb-5 text-lg text-white font-weight-bold">
-            Le voyage en train est une métaphore de la vie elle-même, avec ses hauts et ses bas, ses détours et ses arrêts, mais toujours avec la possibilité de découvrir de nouveaux horizons
+            Le voyage en train est une métaphore de la vie elle-même, avec ses hauts et ses bas, ses détours et ses
+            arrêts, mais toujours avec la possibilité de découvrir de nouveaux horizons
           </p>
         </div>
       </div>
