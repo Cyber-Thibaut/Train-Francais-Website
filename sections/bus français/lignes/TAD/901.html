@@ -316,59 +316,59 @@
                   const divInfo = $("<div>").attr("role", "alert");
 
                   // changement de la couleur de la carte en fonction de l'info trafic
-                  if (info.titre.toLowerCase().includes("fin")) {
+                  if (info.type.includes("fin")) {
                     card.addClass("border-info");
-                    divInfo.addClass("alert alert-success text-white font-weight-bold");
+                    divInfo.addClass("alert alert-success text-white");
                     divInfo.append($("<img src='/assets/img/panneaux/valid_white.png' style='float:right;width:110px;height:auto;'>"));
-                  } else if (info.titre.toLowerCase().includes("travaux")) {
+                  } else if (info.type.includes("travaux")) {
                     if (dateActuelle >= dateDebut && dateActuelle <= dateDd) {
                       card.addClass("border-danger");
-                      divInfo.addClass("alert alert-light text-black font-weight-bold");
+                      divInfo.addClass("alert alert-light text-black");
                       divInfo.append($("<img src='/assets/img/panneaux/futur_work.png' style='float:right;width:110px;height:auto;'>"));
                     } else {
                       card.addClass("border-warning");
-                      divInfo.addClass("alert alert-warning text-white font-weight-bold");
+                      divInfo.addClass("alert alert-warning text-white");
                       divInfo.append($("<img src='/assets/img/panneaux/work.png' style='float:right;width:110px;height:auto;'>"));
                     }
-                  } else if (info.titre.toLowerCase().includes("manifestation")) {
+                  } else if (info.type.includes("manifestation")) {
                     card.addClass("border-danger");
-                    divInfo.addClass("alert alert-danger text-white font-weight-bold");
+                    divInfo.addClass("alert alert-danger text-white");
                     divInfo.append($("<img src='/assets/img/panneaux/warning.png' style='float:right;width:110px;height:auto;'>"));
-                  } else if (info.titre.toLowerCase().includes("grève")) {
+                  } else if (info.type.includes("grève")) {
                     card.addClass("border-danger");
-                    divInfo.addClass("alert alert-danger text-white font-weight-bold");
+                    divInfo.addClass("alert alert-danger text-white");
                     divInfo.append($("<img src='/assets/img/panneaux/warning.png' style='float:right;width:110px;height:auto;'>"));
-                  } else if (info.titre.toLowerCase().includes("information")) {
+                  } else if (info.type.includes("information")) {
                     card.addClass("border-info");
-                    divInfo.addClass("alert alert-info text-white font-weight-bold");
+                    divInfo.addClass("alert alert-info text-light");
                     divInfo.append($("<img src='/assets/img/panneaux/information_white.png' style='float:right;width:110px;height:auto;'>"));
-                  } else if (info.titre.toLowerCase().includes("fermé")) {
+                  } else if (info.type.includes("fermeture")) {
                     card.addClass("border-danger");
-                    divInfo.addClass("alert alert-danger text-white font-weight-bold");
+                    divInfo.addClass("alert alert-danger text-white");
                     divInfo.append($("<img src='/assets/img/panneaux/error.png' style='float:right;width:110px;height:auto;'>"));
-                  } else if (info.titre.toLowerCase().includes("attention")) {
+                  } else if (info.type.includes("attention")) {
                     if (dateActuelle >= dateDebut && dateActuelle <= dateDd) {
                       card.addClass("border-danger");
-                      divInfo.addClass("alert alert-light text-black font-weight-bold");
+                      divInfo.addClass("alert alert-light text-black");
                       divInfo.append($("<img src='/assets/img/panneaux/alert_white.png' style='float:right;width:110px;height:auto;'>"));
                     } else {
                       card.addClass("border-danger");
-                      divInfo.addClass("alert alert-warning text-white font-weight-bold");
+                      divInfo.addClass("alert alert-warning text-black");
                       divInfo.append($("<img src='/assets/img/panneaux/alert.png' style='float:right;width:110px;height:auto;'>"));
                     }
-                  } else if (info.titre.toLowerCase().includes("perturbation")) {
+                  } else if (info.type.includes("perturbation")) {
                     card.addClass("border-danger");
-                    divInfo.addClass("alert alert-warning text-white font-weight-bold");
+                    divInfo.addClass("alert alert-warning text-white");
                     divInfo.append($("<img src='/assets/img/panneaux/alert.png' style='float:right;width:110px;height:auto;'>"));
-                  } else {
+                  } else if (info.type.includes("info_generale")) {
                     card.addClass("border-info");
-                    divInfo.addClass("alert alert-info text-white font-weight-bold");
+                    divInfo.addClass("alert alert-info text-white");
                     divInfo.append($("<img src='/assets/img/panneaux/information.png' style='float:right;width:110px;height:auto;'>"));
                   }
 
                   // affichage des informations
-                  divInfo.append($("<h6>").addClass("alert-heading").text(info.titre));
-                  divInfo.append($("<p>").text(info.description));
+                  divInfo.append($("<h3>").addClass("alert-heading").text(info.titre));
+                  divInfo.append($("<h6>").html(info.description.replace(/\n/g, "<br><br>")));
                   divInfo.append($("<hr>"));
                   divInfo.append($("<p>").addClass("mb-0").text("Du " + dateDd.toLocaleDateString('fr-FR') + " au " + dateFinAffichee.toLocaleDateString('fr-FR')));
 
