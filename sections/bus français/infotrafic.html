@@ -55,6 +55,31 @@
       border-radius: 10px;
       background-repeat: no-repeat;
     }
+
+    .image-container {
+      float: left;
+      margin-right: 10px;
+    }
+
+    .image-container img {
+      display: flex;
+      width: 70px;
+      height: auto;
+    }
+
+    .text-container {
+      overflow: hidden;
+      margin-left: 130px;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .text-container h3,
+    .text-container h6,
+    .text-container hr,
+    .text-container p {
+      text-align: left;
+    }
   </style>
 </head>
 
@@ -263,7 +288,7 @@
   <script>
     // url du fichier JSON sur GitHub
     // const url = "/info.json"
-    const url = "https://raw.githubusercontent.com/Cyber-Thibaut/infotrafic/main/info.json";
+     const url = "https://raw.githubusercontent.com/Cyber-Thibaut/infotrafic/main/info.json";
     // fonction qui récupère les données JSON et les affiche dans des cartes Bootstrap
     function afficherInfoTrafic() {
       $.getJSON(url, function (data) {
@@ -271,13 +296,27 @@
         $.each(data.lignes, function (i, ligne) {
           // création de la carte Bootstrap
           const card = $("<div>").addClass("card mb-3");
-          const cardHeader = $("<div>")
-            .addClass("card-header")
-            .append(
+          const cardHeader = $("<div>").addClass("card-header alert alert-light");
+
+          // condition if pour vérifier la valeur de ligne.ligne
+          if (ligne.ligne == "TCM") {
+            cardHeader.append(
               $("<img>")
                 .attr("src", "/sections/bus français/images/" + ligne.ligne + ".png")
-                .css("width", "110px")
+                .css("width", "50px")
             );
+          } else {
+            cardHeader.append(
+              $("<h3>").addClass("text-left")
+                .append(
+                  "Ligne",
+                  $("<img>")
+                    .attr("src", "/sections/bus français/images/" + ligne.ligne + ".png")
+                    .css("width", "50px")
+                    .css("height", "auto"),
+                )
+            );
+          }
 
           const cardBody = $("<div>").addClass("card-body");
           card.append(cardHeader, cardBody);
@@ -294,72 +333,56 @@
             const dateFinAffichee = new Date(Date.parse(info.fin));
             dateFin.setDate(dateFin.getDate() + 1);
 
-
             // comparaison avec la date actuelle
             if (dateActuelle >= dateDebut && dateActuelle <= dateFin) {
               // création de la div qui affiche les informations
-              const divInfo = $("<div>").attr("role", "alert");
+              const divInfo = $("<div>").attr("role", "alert").addClass("d-flex");
 
               // changement de la couleur de la carte en fonction de l'info trafic
-              if (info.type.includes("fin")) {
-                card.addClass("border-info");
-                divInfo.addClass("alert alert-success text-white");
-                divInfo.append($("<img src='/assets/img/panneaux/valid_white.png' style='float:right;width:110px;height:auto;'>"));
-              } else if (info.type.includes("travaux")) {
+              if (info.type.includes("travaux")) {
                 if (dateActuelle >= dateDebut && dateActuelle <= dateDd) {
-                  card.addClass("border-danger");
-                  divInfo.addClass("alert alert-light text-black");
-                  divInfo.append($("<img src='/assets/img/panneaux/futur_work.png' style='float:right;width:110px;height:auto;'>"));
+                  card.addClass("border-danger alert alert-light");
+                  divInfo.addClass("image-container").append($("<img src='/assets/img/panneaux/futur_work.png'>"));
                 } else {
-                  card.addClass("border-warning");
-                  divInfo.addClass("alert alert-warning text-white");
-                  divInfo.append($("<img src='/assets/img/panneaux/work.png' style='float:right;width:110px;height:auto;'>"));
+                  card.addClass("border-danger alert alert-light");
+                  divInfo.addClass("image-container").append($("<img src='/assets/img/panneaux/work.png'>"));
+                  const tag = $("<p>").addClass("tag tag-important").text("Travaux en cours");
                 }
-              } else if (info.type.includes("manifestation")) {
-                card.addClass("border-danger");
-                divInfo.addClass("alert alert-danger text-white");
-                divInfo.append($("<img src='/assets/img/panneaux/warning.png' style='float:right;width:110px;height:auto;'>"));
-              } else if (info.type.includes("grève")) {
-                card.addClass("border-danger");
-                divInfo.addClass("alert alert-danger text-white");
-                divInfo.append($("<img src='/assets/img/panneaux/warning.png' style='float:right;width:110px;height:auto;'>"));
               } else if (info.type.includes("information")) {
-                card.addClass("border-info");
-                divInfo.addClass("alert alert-info text-light");
-                divInfo.append($("<img src='/assets/img/panneaux/information_white.png' style='float:right;width:110px;height:auto;'>"));
+                card.addClass("border-danger alert alert-light");
+                divInfo.addClass("image-container").append($("<img src='/assets/img/panneaux/information_white.png'>"));
               } else if (info.type.includes("fermeture")) {
-                card.addClass("border-danger");
-                divInfo.addClass("alert alert-danger text-white");
-                divInfo.append($("<img src='/assets/img/panneaux/error.png' style='float:right;width:110px;height:auto;'>"));
+                card.addClass("border-danger alert alert-light");
+                divInfo.addClass("image-container").append($("<img src='/assets/img/panneaux/error.png'>"));
               } else if (info.type.includes("attention")) {
                 if (dateActuelle >= dateDebut && dateActuelle <= dateDd) {
-                  card.addClass("border-danger");
-                  divInfo.addClass("alert alert-light text-black");
-                  divInfo.append($("<img src='/assets/img/panneaux/alert_white.png' style='float:right;width:110px;height:auto;'>"));
+                  card.addClass("border-danger alert alert-light");
+                  divInfo.addClass("image-container").append($("<img src='/assets/img/panneaux/warning.png'>"));
                 } else {
-                  card.addClass("border-danger");
-                  divInfo.addClass("alert alert-warning text-black");
-                  divInfo.append($("<img src='/assets/img/panneaux/alert.png' style='float:right;width:110px;height:auto;'>"));
+                  card.addClass("border-danger alert alert-light");
+                  divInfo.addClass("image-container").append($("<img src='/assets/img/panneaux/alert.png'>"));
                 }
               } else if (info.type.includes("perturbation")) {
-                card.addClass("border-danger");
-                divInfo.addClass("alert alert-warning text-white");
-                divInfo.append($("<img src='/assets/img/panneaux/alert.png' style='float:right;width:110px;height:auto;'>"));
-              } else if (info.type.includes("info_generale")) {
-                card.addClass("border-info");
-                divInfo.addClass("alert alert-info text-white");
-                divInfo.append($("<img src='/assets/img/panneaux/information.png' style='float:right;width:110px;height:auto;'>"));
+                card.addClass("border-danger alert alert-light");
+                divInfo.addClass("image-container").append($("<img src='/assets/img/panneaux/alert.png'>"));
               }
 
               // affichage des informations
-              divInfo.append($("<h3>").addClass("alert-heading").text(info.titre));
-              divInfo.append($("<h6>").html(info.description.replace(/\n/g, "<br><br>")));
-              divInfo.append($("<hr>"));
-              divInfo.append($("<p>").addClass("mb-0").text("Du " + dateDd.toLocaleDateString('fr-FR') + " au " + dateFinAffichee.toLocaleDateString('fr-FR')));
+              const imageColumn = $("<div>").addClass("col-1").append(divInfo);
+              const textColumn = $("<div>").addClass("col-11");
 
-              cardBody.append(divInfo);
+              const titre = $("<h3>").addClass("alert-heading").text(info.titre);
+              const dateInfo = $("<p>").addClass("mb-0").text(dateDd.toLocaleDateString('fr-FR') + " → " + dateFinAffichee.toLocaleDateString('fr-FR'));
+              const description = $("<h5>").html(info.description.replace(/\n/g, "<br><br>"));
+              
+              textColumn.append(titre, dateInfo, description);
+
+              const row = $("<div>").addClass("row").append(imageColumn, textColumn);
+
+              cardBody.append(row);
               $("#lignes").append(card);
             }
+
           });
 
           // ajout de la carte à la page
