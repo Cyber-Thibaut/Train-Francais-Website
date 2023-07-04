@@ -1,5 +1,7 @@
 # France Avenir
 
+#### Ce site est fictif et n'a aucun lien avec une compagnie de transport réelle. Il a été créé uniquement à des fins de divertissement.
+
 France Avenir est un site web qui regroupe trois sociétés différentes : Train Français, Ski Français et Transport Clermont Métropole. Chacune de ces sociétés offre des services différents, mais toutes sont centrées sur le transport et la mobilité en France.
 
 ## Train Français
@@ -20,6 +22,6 @@ Nous sommes ravis d'accueillir les contributions de la communauté GitHub. Si vo
     Fork ce dépôt
     Créez une nouvelle branche pour vos modifications (`git checkout -b ma-nouvelle-fonctionnalité`)
     Faites vos modifications et testez-les
-    Envoyez une demande de fusion vers la branche de test (`dev`)
+    Envoyez une demande de fusion vers la branche de test (`beta`)
 
 Nous examinerons votre demande de fusion dès que possible et nous vous remercions de votre contribution à France Avenir !
