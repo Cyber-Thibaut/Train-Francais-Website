@@ -295,12 +295,12 @@ function updateBusTimes() {
 
     const followingBusFreq = calculateFollowingBusTime(weekday, hour, minute, nextBusFreq);
 
+
   const sign = `<img src="/assets/img/sign.svg" alt="">`;
 
     const nextBus = nextBusFreq === 0 ? `<span style='color: #9364cc;'>A quai  ${sign}</span>` : nextBusFreq === 1 ? `<span style='color: #9364cc;'>A l’approche ${sign}</span>` : `<span style='font-size: 40px; color: #9364cc;'>${nextBusFreq} min ${sign}</span>`;
 
     const followingBus = followingBusFreq === 0 ? `<span style='color: #9364cc;'>Arrivé  ${sign}</span>` : followingBusFreq === 1 ? `<span style='color: #9364cc;'>1 min ${sign}</span>` : `<span style='font-size: 40px; color: #9364cc;'>${followingBusFreq} min ${sign}</span>`;
-
 
     document.getElementById("nextBusTime").innerHTML = nextBus + followingBus;
 
@@ -370,6 +370,7 @@ function afficherInfoTraficLigne(ligne) {
                 return;
             } else {
                 $("#lignes").append(
+
                         $("<div>")
                             .addClass("alert alert-warning text-white text-bold")
                             .html("<img id='logo' src='/sections/bus français/images/2.png' alt='Logo de la ligne'> modif <img src='/assets/img/panneaux/warning.png' style='position: relative; width: 30px; transform: translate(-25px, 35px);'> Le trafic est perturbé <a href='/sections/bus français/infotrafic.html'; class='font-weight-bold text-xs text-uppercase font-weight-bolder text-primary icon-move-right'><i class='fas fa-arrow-right text-xs ms-1'></i></a>")
