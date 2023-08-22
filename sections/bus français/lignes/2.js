@@ -295,10 +295,12 @@ function updateBusTimes() {
 
     const followingBusFreq = calculateFollowingBusTime(weekday, hour, minute, nextBusFreq);
 
-    const nextBus = nextBusFreq === 0 ? "A quais" : nextBusFreq === 1 ? "A l'Approche | " : `Prochain bus : <span style='font-size: 48px; color: #9364cc;'>${nextBusFreq} min</span> | `;
+  const sign = `<img src="/assets/img/sign.svg" alt="">`;
 
+    const nextBus = nextBusFreq === 0 ? `<span style='color: #9364cc;'>A quai  ${sign}</span>` : nextBusFreq === 1 ? `<span style='color: #9364cc;'>A l’approche ${sign}</span>` : `<span style='font-size: 40px; color: #9364cc;'>${nextBusFreq} min ${sign}</span>`;
 
-    const followingBus = followingBusFreq === 0 ? "Arrivé" : followingBusFreq === 1 ? "1 min" : `Suivant : <span style='font-size: 48px; color: #9364cc;'>${followingBusFreq} min</span>`;
+    const followingBus = followingBusFreq === 0 ? `<span style='color: #9364cc;'>Arrivé  ${sign}</span>` : followingBusFreq === 1 ? `<span style='color: #9364cc;'>1 min ${sign}</span>` : `<span style='font-size: 40px; color: #9364cc;'>${followingBusFreq} min ${sign}</span>`;
+
 
     document.getElementById("nextBusTime").innerHTML = nextBus + followingBus;
 
@@ -315,7 +317,7 @@ function updateCurrentTime() {
     const now = new Date();
     const hours = now.getHours().toString().padStart(2, '0');
     const minutes = now.getMinutes().toString().padStart(2, '0');
-    currentTimeElement.textContent = `Il est ${hours}:${minutes}`;
+    currentTimeElement.textContent = `Mis à jour à : ${hours}:${minutes}`;
 }
 setInterval(updateCurrentTime, 1000);
 updateCurrentTime(); // Update initially
@@ -363,18 +365,17 @@ function afficherInfoTraficLigne(ligne) {
                     $("<div>")
                         .addClass("alert alert-success text-white")
                         .text("Tout va bien sur la ligne " + ligne)
-                        .append($("<img>").attr("src", "/assets/img/panneaux/valid.png").css({ "float": "right", "width": "60px", "height": "auto" }))
+                        .append($("<img>").attr("src", "/assets/img/panneaux/valid.png").css({ "float": "right", "width": "30px", "transform": "translate(-25px, 35px)" }))
                 );
                 return;
             } else {
                 $("#lignes").append(
-                    $("<div>")
-                        .addClass("alert alert-warning text-white")
-                        .html("Le trafic est perturbé <a href='/sections/bus français/infotrafic.html'; class='font-weight-bold text-xs text-uppercase font-weight-bolder text-primary icon-move-right'><i class='fas fa-arrow-right text-xs ms-1'></i></a>")
-                        .append($("<img>").attr("src", "/assets/img/panneaux/warning.png").css({ "float": "right", "width": "60px", "height": "auto" }))
-                );
-                return;
-            }
+                        $("<div>")
+                            .addClass("alert alert-warning text-white text-bold")
+                            .html("<img id='logo' src='/sections/bus français/images/2.png' alt='Logo de la ligne'> modif <img src='/assets/img/panneaux/warning.png' style='position: relative; width: 30px; transform: translate(-25px, 35px);'> Le trafic est perturbé <a href='/sections/bus français/infotrafic.html'; class='font-weight-bold text-xs text-uppercase font-weight-bolder text-primary icon-move-right'><i class='fas fa-arrow-right text-xs ms-1'></i></a>")
+                    );
+                    return;
+                }
             $("#lignes").append(card);
 
 
