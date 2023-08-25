@@ -279,24 +279,24 @@ function updateBusTimes() {
         { icon: '/sections/bus français/images/icone-moyen.png', color: "yellow" },     // Places disponibles (Jaune)
         { icon: '/sections/bus français/images/icone-vide.png', color: "green" }         // Vide (Vert)
     ];
-    
+
     // Génération d'une valeur aléatoire entre 0 et 2 pour représenter la fréquentation
     const randomFrequentation1 = Math.floor(Math.random() * 3);
-    
+
     // Sélection de l'icône et de la couleur en fonction de la fréquentation
     const selectedIcon1 = frequentationIcons[randomFrequentation1].icon;
-    
+
     // Affichage de l'icône et de la couleur
     const frequentation1 = `<img src="${selectedIcon1}" style="width: 50px; height: auto; margin-top: 25px">`;
     // Génération d'une valeur aléatoire entre 0 et 2 pour représenter la fréquentation
     const randomFrequentation2 = Math.floor(Math.random() * 3);
-    
+
     // Sélection de l'icône et de la couleur en fonction de la fréquentation
     const selectedIcon2 = frequentationIcons[randomFrequentation2].icon;
-    
+
     // Affichage de l'icône et de la couleur
     const frequentation2 = `<img src="${selectedIcon2}"   style="width: 50px; height: auto; margin-top: 25px">`;
-    
+
     if (nextBusFreq === -1) {
         if ((hour === 0 && minute >= 0) || (hour >= 1 && hour < 4)) {
             nextBus = "Le réseau est temporairement fermé. Le prochain départ est prévu à 4h du matin.";
@@ -321,11 +321,10 @@ function updateBusTimes() {
         alertMessage.textContent = "⚠️ Remarque : Le réseau est fermé en ce 1er Mai.";
     } else {
         alertMessage.textContent = "";
-    }  
+    }
 
 }
-
-setInterval(updateBusTimes, 1000); // Mettez 30000 pour actualiser toutes les 30 secondes
+setInterval(updateBusTimes, 30000); // Mettez 30000 pour actualiser toutes les 30 secondes
 updateBusTimes(); // Appel initial pour mettre à jour les données immédiatement
 
 // Update current time every second
@@ -389,7 +388,7 @@ function afficherInfoTraficLigne(ligne) {
             $("#lignes").append(
                 $("<div>")
                     .addClass("alert alert-warning text-white text-bold")
-                    .html("<img id='logo' src='/sections/bus français/images/2.png' alt='Logo de la ligne'><img src='/assets/img/panneaux/warning.png' style='position: relative; width: 30px; transform: translate(-25px, 35px);'> Le trafic est perturbé <a href='/sections/bus français/infotrafic.html'; class='font-weight-bold text-xs text-uppercase font-weight-bolder text-primary icon-move-right'><i class='fas fa-arrow-right text-xs ms-1'></i></a>")
+                    .html("<img id='logo' src='/sections/bus français/images/7.png' alt='Logo de la ligne'><img src='/assets/img/panneaux/warning.png' style='position: relative; width: 30px; transform: translate(-25px, 35px);'> Le trafic est perturbé <a href='/sections/bus français/infotrafic.html'; class='font-weight-bold text-xs text-uppercase font-weight-bolder text-primary icon-move-right'><i class='fas fa-arrow-right text-xs ms-1'></i></a>")
             );
             return;
         }

@@ -324,8 +324,7 @@ function updateBusTimes() {
     }     
 
 }
-
-setInterval(updateBusTimes, 1000); // Mettez 30000 pour actualiser toutes les 30 secondes
+setInterval(updateBusTimes, 30000); // Mettez 30000 pour actualiser toutes les 30 secondes
 updateBusTimes(); // Appel initial pour mettre à jour les données immédiatement
 
 // Update current time every second
@@ -389,7 +388,7 @@ function afficherInfoTraficLigne(ligne) {
             $("#lignes").append(
                 $("<div>")
                     .addClass("alert alert-warning text-white text-bold")
-                    .html("<img id='logo' src='/sections/bus français/images/2.png' alt='Logo de la ligne'><img src='/assets/img/panneaux/warning.png' style='position: relative; width: 30px; transform: translate(-25px, 35px);'> Le trafic est perturbé <a href='/sections/bus français/infotrafic.html'; class='font-weight-bold text-xs text-uppercase font-weight-bolder text-primary icon-move-right'><i class='fas fa-arrow-right text-xs ms-1'></i></a>")
+                    .html("<img id='logo' src='/sections/bus français/images/5.png' alt='Logo de la ligne'><img src='/assets/img/panneaux/warning.png' style='position: relative; width: 30px; transform: translate(-25px, 35px);'> Le trafic est perturbé <a href='/sections/bus français/infotrafic.html'; class='font-weight-bold text-xs text-uppercase font-weight-bolder text-primary icon-move-right'><i class='fas fa-arrow-right text-xs ms-1'></i></a>")
             );
             return;
         }

@@ -377,7 +377,7 @@ function afficherInfoTraficLigne(ligne) {
                 $("<div>")
                     .addClass("alert alert-success text-white")
                     .text("Tout va bien sur la ligne " + ligne)
-                    .append($("<img>").attr("src", "/assets/img/panneaux/valid.png").css({ "float": "right", "width": "30px", "transform": "translate(-25px, 35px)" }))
+                    .append($("<img>").attr("src", "/assets/img/panneaux/valid.png").css({ "float": "right", "width": "60px", "height": "auto" }))
             );
             return;
         } else {
