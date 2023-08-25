@@ -12,6 +12,7 @@
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css"
     href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <!-- Nucleo Icons -->
   <link href="/assets/css/nucleo-icons.css" rel="stylesheet" />
   <link href="/assets/css/nucleo-svg.css" rel="stylesheet" />
@@ -43,6 +44,73 @@
       padding: 2px 4px;
       font-size: 12px;
       margin-left: 10px;
+    }
+
+    #bus-panel {
+      background-color: #E6F7FF;
+      color: #003366;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px;
+      border-radius: 25px;
+    }
+
+    #logo {
+      width: 60px;
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    .destination {
+      font-size: 18px;
+      color: #ffce00;
+    }
+
+    .time {
+      text-align: right;
+    }
+
+    #divider {
+      border: 1px solid #BFD9FF;
+      margin: 20px 0;
+      width: 100%;
+    }
+
+    .bus-info {
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      text-align: center
+    }
+
+    .bus-number {
+      font-weight: bold;
+      margin-right: 10px;
+      font-size: 32px;
+    }
+
+    #traffic-info {
+      margin-top: auto;
+      padding: 20px;
+      background-color: #f0f0f0;
+      font-size: 14px;
+    }
+
+    .bus-number {
+      font-size: 38px;
+      /* Ajuster la taille de la police */
+      margin-bottom: 10px;
+      /* Ajouter un petit espace en bas */
+    }
+
+    .bus-divider {
+      margin: 20px 0;
+      /* Espacement au-dessus et en dessous du trait */
+      border: none;
+      /* Supprimer le style de bordure par défaut */
+      border-top: 2px solid blue;
+      /* Ajouter le trait horizontal bleu */
     }
   </style>
 </head>
@@ -292,129 +360,39 @@
           </div>
         </div>
       </div>
-      <section class="py-3">
-        <div class="container">
-          <h1 class="text-center"><img src="/assets/img/logos/info.png" alt="Infos trafic TCM"
-              style='width:110px;height:auto;'>nfo trafic TCM</h1>
-          <div id="lignes"></div>
+      <div id="bus-panel">
+        <div class="bus-info">
+          <img id="logo" src="\sections\bus français\images\10.png" alt="Logo de la ligne">
+
+          <div class="time" id="current-time" style="text-align: right;"></div>
         </div>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script>
-          // url du fichier JSON sur GitHub
-          const url = "https://raw.githubusercontent.com/Cyber-Thibaut/infotrafic/main/info.json";
 
-          function afficherInfoTraficLigne(ligne) {
-            $.getJSON(url, function (data) {
-              const infosLigne = data.lignes.find((l) => l.ligne === ligne);
+        <div id="divider"></div>
+        <div class="bus-info" style="text-align:center; font: size 48px; color:ffce00;">
+          <div class="destination">
+            <h2><i class="fas fa-arrow-right text-xl ms-1"></i> Direction CRT Est </h2>
+          </div>
+        </div>
+        <div class="bus-info" style="text-align:center; font: size 48px; color:ffce00;">
+          <div class="bus-number" id="nextBusTime"></div>
+        </div>
 
-              if (!infosLigne) {
-                $("#lignes").append(
-                  $("<div>").addClass("alert alert-success text-white").text("Tout va bien sur la ligne " + ligne)
-                    .append($("<img>").attr("src", "/assets/img/panneaux/valid.png").css({ "float": "right", "width": "60px", "height": "auto" }))
-                );
-                return;
-              }
-              lignevide = 0;
-              const card = $("<div>").addClass("card mb-3");
-              const cardHeader = $("<div>").addClass("card-header");
-              const cardBody = $("<div>").addClass("card-body");
-              card.append(cardHeader, cardBody);
-              // récupération de la date actuelle
-              const dateActuelle = new Date();
-              $.each(infosLigne.infos_trafic, function (j, info) {
-                const divInfo = $("<div>").attr("role", "alert");
-                // récupération des dates de début et de fin de l'information
-                const dateDebut = new Date(Date.parse(info.annonce));
-                const dateDd = new Date(Date.parse(info.debut));
-                const dateFin = new Date(Date.parse(info.fin));
-                const dateFinAffichee = new Date(Date.parse(info.fin));
-                dateFin.setDate(dateFin.getDate() + 1);
 
-                // comparaison avec la date actuelle
-                if (dateActuelle >= dateDebut && dateActuelle <= dateFin) {
-                  // création de la div qui affiche les informations
-                  const divInfo = $("<div>").attr("role", "alert");
+        <div class="bus-info">
 
-                  // changement de la couleur de la carte en fonction de l'info trafic
-                  if (info.type.includes("fin")) {
-                    card.addClass("border-info");
-                    divInfo.addClass("alert alert-success text-white");
-                    divInfo.append($("<img src='/assets/img/panneaux/valid_white.png' style='float:right;width:110px;height:auto;'>"));
-                  } else if (info.type.includes("travaux")) {
-                    if (dateActuelle >= dateDebut && dateActuelle <= dateDd) {
-                      card.addClass("border-danger");
-                      divInfo.addClass("alert alert-light text-black");
-                      divInfo.append($("<img src='/assets/img/panneaux/futur_work.png' style='float:right;width:110px;height:auto;'>"));
-                    } else {
-                      card.addClass("border-warning");
-                      divInfo.addClass("alert alert-warning text-white");
-                      divInfo.append($("<img src='/assets/img/panneaux/work.png' style='float:right;width:110px;height:auto;'>"));
-                    }
-                  } else if (info.type.includes("manifestation")) {
-                    card.addClass("border-danger");
-                    divInfo.addClass("alert alert-danger text-white");
-                    divInfo.append($("<img src='/assets/img/panneaux/warning.png' style='float:right;width:110px;height:auto;'>"));
-                  } else if (info.type.includes("grève")) {
-                    card.addClass("border-danger");
-                    divInfo.addClass("alert alert-danger text-white");
-                    divInfo.append($("<img src='/assets/img/panneaux/warning.png' style='float:right;width:110px;height:auto;'>"));
-                  } else if (info.type.includes("information")) {
-                    card.addClass("border-info");
-                    divInfo.addClass("alert alert-info text-light");
-                    divInfo.append($("<img src='/assets/img/panneaux/information_white.png' style='float:right;width:110px;height:auto;'>"));
-                  } else if (info.type.includes("fermeture")) {
-                    card.addClass("border-danger");
-                    divInfo.addClass("alert alert-danger text-white");
-                    divInfo.append($("<img src='/assets/img/panneaux/error.png' style='float:right;width:110px;height:auto;'>"));
-                  } else if (info.type.includes("attention")) {
-                    if (dateActuelle >= dateDebut && dateActuelle <= dateDd) {
-                      card.addClass("border-danger");
-                      divInfo.addClass("alert alert-light text-black");
-                      divInfo.append($("<img src='/assets/img/panneaux/alert_white.png' style='float:right;width:110px;height:auto;'>"));
-                    } else {
-                      card.addClass("border-danger");
-                      divInfo.addClass("alert alert-warning text-black");
-                      divInfo.append($("<img src='/assets/img/panneaux/alert.png' style='float:right;width:110px;height:auto;'>"));
-                    }
-                  } else if (info.type.includes("perturbation")) {
-                    card.addClass("border-danger");
-                    divInfo.addClass("alert alert-warning text-white");
-                    divInfo.append($("<img src='/assets/img/panneaux/alert.png' style='float:right;width:110px;height:auto;'>"));
-                  } else if (info.type.includes("info_generale")) {
-                    card.addClass("border-info");
-                    divInfo.addClass("alert alert-info text-white");
-                    divInfo.append($("<img src='/assets/img/panneaux/information.png' style='float:right;width:110px;height:auto;'>"));
-                  }
+        </div>
+        <div class="alert-message" id="alertMessage"></div>
+        <br>
+        <div id="divider"></div>
+        <div class="container">
+          <div id="lignes" style="background-color: #fff;border-radius: 0.375rem;">
+          </div>
+        </div>
+        <br>
 
-                  // affichage des informations
-                  divInfo.append($("<h3>").addClass("alert-heading").text(info.titre));
-                  divInfo.append($("<h6>").html(info.description.replace(/\n/g, "<br><br>")));
-                  divInfo.append($("<hr>"));
-                  divInfo.append($("<p>").addClass("mb-0").text("Du " + dateDd.toLocaleDateString('fr-FR') + " au " + dateFinAffichee.toLocaleDateString('fr-FR')));
-
-                  cardBody.append(divInfo);
-                  $("#lignes").append(card);
-                } else {
-                  lignevide++;
-                }
-                return;
-              });
-
-              // ajout de la carte à la page
-              if (infosLigne.infos_trafic.length === lignevide) {
-                $("#lignes").append(
-                  $("<div>").addClass("alert alert-success text-white").text("Tout va bien sur la ligne " + ligne)
-                    .append($("<img>").attr("src", "/assets/img/panneaux/valid.png").css({ "float": "right", "width": "60px", "height": "auto" }))
-                );
-                return;
-              }
-              $("#lignes").append(card);
-
-            });
-          }
-
-          afficherInfoTraficLigne("10");
-        </script>
+      </div>
+      <script src="\sections\bus français\lignes\10.js"></script>
+      <section class="py-3">
 
 
         <!-- -------- START FOOTER 3 w/ COMPANY DESCRIPTION WITH LINKS & SOCIAL ICONS & COPYRIGHT ------- -->

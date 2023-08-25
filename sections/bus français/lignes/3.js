@@ -69,15 +69,15 @@ function calculateNextBusTime(weekday, hour, minute) {
             }
             // Fréquences pour Samedi
             if (hour >= 4 && hour < 7) {
-                frequency = 8; // Creuse
+                frequency = 13; // Creuse
             } else if (hour >= 7 && hour < 9) {
-                frequency = 7; // Pointe
+                frequency = 9; // Pointe
             } else if (hour >= 9 && hour < 16) {
-                frequency = 8; // Creuse
+                frequency = 13; // Creuse
             } else if (hour >= 16 && hour < 20) {
-                frequency = 7; // Pointe
+                frequency = 9; // Pointe
             } else {
-                frequency = 11; // Soir
+                frequency = 13; // Soir
             }
         } else if (weekday === 0) { // Dimanche
             if ((hour === 1 && minute >= 0) || (hour >= 2 && hour < 4)) {
@@ -87,7 +87,7 @@ function calculateNextBusTime(weekday, hour, minute) {
             if (hour >= 4 && hour < 7) {
                 frequency = 16; // Creuse
             } else if (hour >= 7 && hour < 9) {
-                frequency = 11; // Pointe
+                frequency = 13; // Pointe
             } else {
                 frequency = 16; // Creuse
             }
@@ -97,11 +97,11 @@ function calculateNextBusTime(weekday, hour, minute) {
             }
             // Fréquences pour Semaine
             if (hour >= 4 && hour < 7) {
-                frequency = 7; // Creuse
+                frequency = 9; // Creuse
             } else if (hour >= 7 && hour < 9) {
                 frequency = 6; // Pointe
             } else if (hour >= 9 && hour < 16) {
-                frequency = 7; // Creuse
+                frequency = 9; // Creuse
             } else if (hour >= 16 && hour < 20) {
                 frequency = 6; // Pointe
             } else {
@@ -115,15 +115,15 @@ function calculateNextBusTime(weekday, hour, minute) {
             }
             // Fréquences pour Samedi
             if (hour >= 4 && hour < 7) {
-                frequency = 9; // Creuse
+                frequency = 13; // Creuse
             } else if (hour >= 7 && hour < 9) {
-                frequency = 7; // Pointe
+                frequency = 8; // Pointe
             } else if (hour >= 9 && hour < 16) {
-                frequency = 9; // Creuse
+                frequency = 13; // Creuse
             } else if (hour >= 16 && hour < 20) {
-                frequency = 7; // Pointe
+                frequency = 8; // Pointe
             } else {
-                frequency = 13; // Soir
+                frequency = 16; // Soir
             }
         } else if (weekday === 0) { // Dimanche
             if ((hour === 1 && minute >= 0) || (hour >= 2 && hour < 4)) {
@@ -133,7 +133,7 @@ function calculateNextBusTime(weekday, hour, minute) {
             if (hour >= 4 && hour < 7) {
                 frequency = 16; // Creuse
             } else if (hour >= 7 && hour < 9) {
-                frequency = 10; // Pointe
+                frequency = 13; // Pointe
             } else {
                 frequency = 16; // Creuse
             }
@@ -143,15 +143,15 @@ function calculateNextBusTime(weekday, hour, minute) {
             }
             // Fréquences pour Semaine
             if (hour >= 4 && hour < 7) {
-                frequency = 7; // Creuse
+                frequency = 8; // Creuse
             } else if (hour >= 7 && hour < 9) {
                 frequency = 5; // Pointe
             } else if (hour >= 9 && hour < 16) {
-                frequency = 7; // Creuse
+                frequency = 8; // Creuse
             } else if (hour >= 16 && hour < 20) {
                 frequency = 5; // Pointe
             } else {
-                frequency = 13; // Soir
+                frequency = 16; // Soir
             }
         }
     }
@@ -174,15 +174,15 @@ function calculateFollowingBusTime(weekday, hour, minute, frequency) {
             }
             // Fréquences pour Samedi
             if (hour >= 4 && hour < 7) {
-                followingFrequency = 8; // Creuse
+                followingFrequency = 13; // Creuse
             } else if (hour >= 7 && hour < 9) {
-                followingFrequency = 7; // Pointe
+                followingFrequency = 9; // Pointe
             } else if (hour >= 9 && hour < 16) {
-                followingFrequency = 8; // Creuse
+                followingFrequency = 13; // Creuse
             } else if (hour >= 16 && hour < 20) {
-                followingFrequency = 7; // Pointe
+                followingFrequency = 9; // Pointe
             } else {
-                followingFrequency = 11; // Soir
+                followingFrequency = 13; // Soir
             }
         } else if (weekday === 0) { // Dimanche
             if ((hour === 1 && minute >= 0) || (hour >= 2 && hour < 4)) {
@@ -192,7 +192,7 @@ function calculateFollowingBusTime(weekday, hour, minute, frequency) {
             if (hour >= 4 && hour < 7) {
                 followingFrequency = 16; // Creuse
             } else if (hour >= 7 && hour < 9) {
-                followingFrequency = 11; // Pointe
+                followingFrequency = 13; // Pointe
             } else {
                 followingFrequency = 16; // Creuse
             }
@@ -202,11 +202,11 @@ function calculateFollowingBusTime(weekday, hour, minute, frequency) {
             }
             // Fréquences pour Semaine
             if (hour >= 4 && hour < 7) {
-                followingFrequency = 7; // Creuse
+                followingFrequency = 9; // Creuse
             } else if (hour >= 7 && hour < 9) {
                 followingFrequency = 6; // Pointe
             } else if (hour >= 9 && hour < 16) {
-                followingFrequency = 7; // Creuse
+                followingFrequency = 9; // Creuse
             } else if (hour >= 16 && hour < 20) {
                 followingFrequency = 6; // Pointe
             } else {
@@ -220,15 +220,15 @@ function calculateFollowingBusTime(weekday, hour, minute, frequency) {
             }
             // Fréquences pour Samedi
             if (hour >= 4 && hour < 7) {
-                followingFrequency = 9; // Creuse
+                followingFrequency = 13; // Creuse
             } else if (hour >= 7 && hour < 9) {
-                followingFrequency = 7; // Pointe
+                followingFrequency = 8; // Pointe
             } else if (hour >= 9 && hour < 16) {
-                followingFrequency = 9; // Creuse
+                followingFrequency = 13; // Creuse
             } else if (hour >= 16 && hour < 20) {
-                followingFrequency = 7; // Pointe
+                followingFrequency = 8; // Pointe
             } else {
-                followingFrequency = 13; // Soir
+                followingFrequency = 16; // Soir
             }
         } else if (weekday === 0) { // Dimanche
             if ((hour === 1 && minute >= 0) || (hour >= 2 && hour < 4)) {
@@ -238,7 +238,7 @@ function calculateFollowingBusTime(weekday, hour, minute, frequency) {
             if (hour >= 4 && hour < 7) {
                 followingFrequency = 16; // Creuse
             } else if (hour >= 7 && hour < 9) {
-                followingFrequency = 10; // Pointe
+                followingFrequency = 13; // Pointe
             } else {
                 followingFrequency = 16; // Creuse
             }
@@ -248,15 +248,15 @@ function calculateFollowingBusTime(weekday, hour, minute, frequency) {
             }
             // Fréquences pour Semaine
             if (hour >= 4 && hour < 7) {
-                followingFrequency = 7; // Creuse
+                followingFrequency = 8; // Creuse
             } else if (hour >= 7 && hour < 9) {
                 followingFrequency = 5; // Pointe
             } else if (hour >= 9 && hour < 16) {
-                followingFrequency = 7; // Creuse
+                followingFrequency = 8; // Creuse
             } else if (hour >= 16 && hour < 20) {
                 followingFrequency = 5; // Pointe
             } else {
-                followingFrequency = 13; // Soir
+                followingFrequency = 16; // Soir
             }
         }
     }
@@ -307,9 +307,9 @@ function updateBusTimes() {
         const followingBus = "";
         document.getElementById("nextBusTime").innerHTML = nextBus + followingBus;
     } else {
-        const nextBus = nextBusFreq === 1 ? `<span style='color: #9364cc;'>A quai  ${sign} ${frequentation1}</span>` : nextBusFreq === 2 ? `<span style='color: #9364cc;'>A l’approche ${sign} ${frequentation1}</span>` : `<span style='font-size: 40px; color: #9364cc;'>${nextBusFreq} min ${sign} ${frequentation1}</span>`;
+        const nextBus = nextBusFreq === 1 ? `<span style='color: #f1ab00;'>A quai  ${sign} ${frequentation1}</span>` : nextBusFreq === 2 ? `<span style='color: #f1ab00;'>A l’approche ${sign} ${frequentation1}</span>` : `<span style='font-size: 40px; color: #f1ab00;'>${nextBusFreq} min ${sign} ${frequentation1}</span>`;
 
-        const followingBus = followingBusFreq === 0 ? `<span style='color: #9364cc;'>Arrivé  ${sign}</span>` : followingBusFreq === 1 ? `<span style='color: #9364cc;'>1 min ${sign}</span>` : `<span style='font-size: 40px; color: #9364cc;'>${followingBusFreq} min ${sign} ${frequentation2}</span>`;
+        const followingBus = followingBusFreq === 0 ? `<span style='color: #f1ab00;'>Arrivé  ${sign}</span>` : followingBusFreq === 1 ? `<span style='color: #f1ab00;'>1 min ${sign}</span>` : `<span style='font-size: 40px; color: #f1ab00;'>${followingBusFreq} min ${sign} ${frequentation2}</span>`;
         document.getElementById("nextBusTime").innerHTML = nextBus + followingBus;
     }
 
@@ -325,7 +325,7 @@ function updateBusTimes() {
 
 }
 
-setInterval(updateBusTimes, 30000); // Mettez 30000 pour actualiser toutes les 30 secondes
+setInterval(updateBusTimes, 1000); // Mettez 30000 pour actualiser toutes les 30 secondes
 updateBusTimes(); // Appel initial pour mettre à jour les données immédiatement
 
 // Update current time every second
@@ -389,7 +389,7 @@ function afficherInfoTraficLigne(ligne) {
             $("#lignes").append(
                 $("<div>")
                     .addClass("alert alert-warning text-white text-bold")
-                    .html("<img id='logo' src='/sections/bus français/images/2.png' alt='Logo de la ligne'><img src='/assets/img/panneaux/warning.png' style='position: relative; width: 30px; transform: translate(-25px, 35px);'> Le trafic est perturbé <a href='/sections/bus français/infotrafic.html'; class='font-weight-bold text-xs text-uppercase font-weight-bolder text-primary icon-move-right'><i class='fas fa-arrow-right text-xs ms-1'></i></a>")
+                    .html("<img id='logo' src='/sections/bus français/images/1.png' alt='Logo de la ligne'><img src='/assets/img/panneaux/warning.png' style='position: relative; width: 30px; transform: translate(-25px, 35px);'> Le trafic est perturbé <a href='/sections/bus français/infotrafic.html'; class='font-weight-bold text-xs text-uppercase font-weight-bolder text-primary icon-move-right'><i class='fas fa-arrow-right text-xs ms-1'></i></a>")
             );
             return;
         }
@@ -399,4 +399,4 @@ function afficherInfoTraficLigne(ligne) {
     });
 }
 
-afficherInfoTraficLigne("2");
+afficherInfoTraficLigne("3");

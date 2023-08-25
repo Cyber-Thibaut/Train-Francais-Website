@@ -307,9 +307,9 @@ function updateBusTimes() {
         const followingBus = "";
         document.getElementById("nextBusTime").innerHTML = nextBus + followingBus;
     } else {
-        const nextBus = nextBusFreq === 1 ? `<span style='color: #9364cc;'>A quai  ${sign} ${frequentation1}</span>` : nextBusFreq === 2 ? `<span style='color: #9364cc;'>A l’approche ${sign} ${frequentation1}</span>` : `<span style='font-size: 40px; color: #9364cc;'>${nextBusFreq} min ${sign} ${frequentation1}</span>`;
+        const nextBus = nextBusFreq === 1 ? `<span style='color: #d799af;'>A quai  ${sign} ${frequentation1}</span>` : nextBusFreq === 2 ? `<span style='color: #d799af;'>A l’approche ${sign} ${frequentation1}</span>` : `<span style='font-size: 40px; color: #d799af;'>${nextBusFreq} min ${sign} ${frequentation1}</span>`;
 
-        const followingBus = followingBusFreq === 0 ? `<span style='color: #9364cc;'>Arrivé  ${sign}</span>` : followingBusFreq === 1 ? `<span style='color: #9364cc;'>1 min ${sign}</span>` : `<span style='font-size: 40px; color: #9364cc;'>${followingBusFreq} min ${sign} ${frequentation2}</span>`;
+        const followingBus = followingBusFreq === 0 ? `<span style='color: #d799af;'>Arrivé  ${sign}</span>` : followingBusFreq === 1 ? `<span style='color: #d799af;'>1 min ${sign}</span>` : `<span style='font-size: 40px; color: #d799af;'>${followingBusFreq} min ${sign} ${frequentation2}</span>`;
         document.getElementById("nextBusTime").innerHTML = nextBus + followingBus;
     }
 
@@ -321,11 +321,11 @@ function updateBusTimes() {
         alertMessage.textContent = "⚠️ Remarque : Le réseau est fermé en ce 1er Mai.";
     } else {
         alertMessage.textContent = "";
-    }     
+    }  
 
 }
 
-setInterval(updateBusTimes, 30000); // Mettez 30000 pour actualiser toutes les 30 secondes
+setInterval(updateBusTimes, 1000); // Mettez 30000 pour actualiser toutes les 30 secondes
 updateBusTimes(); // Appel initial pour mettre à jour les données immédiatement
 
 // Update current time every second
@@ -399,4 +399,4 @@ function afficherInfoTraficLigne(ligne) {
     });
 }
 
-afficherInfoTraficLigne("2");
+afficherInfoTraficLigne("8");

@@ -45,60 +45,73 @@
       font-size: 12px;
       margin-left: 10px;
     }
-  #bus-panel {
-    background-color: #E6F7FF;
-    color: #003366;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
-    border-radius: 25px;
-  }
-  #logo {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-  }
-  .destination {
-    font-size: 18px;
-    color: #9364cc;
-  }
-  .time {
-    text-align: right;
-  }
-  #divider {
-    border: 1px solid #BFD9FF;
-    margin: 20px 0;
-    width: 100%;
-  }
-  .bus-info {
-    display: flex;
-    align-items: center;
-    font-size: 18px;
-    text-align: center
-  }
-  .bus-number {
-    font-weight: bold;
-    margin-right: 10px;
-    font-size: 32px;
-  }
-  #traffic-info {
-    margin-top: auto;
-    padding: 20px;
-    background-color: #f0f0f0;
-    font-size: 14px;
-  }
 
-.bus-number {
-  font-size: 38px; /* Ajuster la taille de la police */
-  margin-bottom: 10px; /* Ajouter un petit espace en bas */
-}
+    #bus-panel {
+      background-color: #E6F7FF;
+      color: #003366;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px;
+      border-radius: 25px;
+    }
 
-.bus-divider {
-  margin: 20px 0; /* Espacement au-dessus et en dessous du trait */
-  border: none; /* Supprimer le style de bordure par défaut */
-  border-top: 2px solid blue; /* Ajouter le trait horizontal bleu */
-}
+    #logo {
+      width: 60px;
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    .destination {
+      font-size: 18px;
+      color: #9364cc;
+    }
+
+    .time {
+      text-align: right;
+    }
+
+    #divider {
+      border: 1px solid #BFD9FF;
+      margin: 20px 0;
+      width: 100%;
+    }
+
+    .bus-info {
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      text-align: center
+    }
+
+    .bus-number {
+      font-weight: bold;
+      margin-right: 10px;
+      font-size: 32px;
+    }
+
+    #traffic-info {
+      margin-top: auto;
+      padding: 20px;
+      background-color: #f0f0f0;
+      font-size: 14px;
+    }
+
+    .bus-number {
+      font-size: 38px;
+      /* Ajuster la taille de la police */
+      margin-bottom: 10px;
+      /* Ajouter un petit espace en bas */
+    }
+
+    .bus-divider {
+      margin: 20px 0;
+      /* Espacement au-dessus et en dessous du trait */
+      border: none;
+      /* Supprimer le style de bordure par défaut */
+      border-top: 2px solid blue;
+      /* Ajouter le trait horizontal bleu */
+    }
   </style>
 </head>
 
@@ -351,21 +364,23 @@
       <div id="bus-panel">
         <div class="bus-info">
           <img id="logo" src="\sections\bus français\images\2.png" alt="Logo de la ligne">
-          
+
           <div class="time" id="current-time" style="text-align: right;"></div>
         </div>
-        
+
         <div id="divider"></div>
         <div class="bus-info" style="text-align:center; font: size 48px; color:9364cc;">
-          <div class="destination"><h2><i class="fas fa-arrow-right text-xl ms-1"></i> Direction Aéroport </h2></div>
+          <div class="destination">
+            <h2><i class="fas fa-arrow-right text-xl ms-1"></i> Direction Aéroport </h2>
           </div>
-          <div class="bus-info" style="text-align:center; font: size 48px; color:9364cc;">
+        </div>
+        <div class="bus-info" style="text-align:center; font: size 48px; color:9364cc;">
           <div class="bus-number" id="nextBusTime"></div>
         </div>
-        
-        
+
+
         <div class="bus-info">
-          
+
         </div>
         <div class="alert-message" id="alertMessage"></div>
         <br>
@@ -375,7 +390,7 @@
           </div>
         </div>
         <br>
-      
+
       </div>
       <script src="\sections\bus français\lignes\2.js"></script>
       <section class="py-3">
