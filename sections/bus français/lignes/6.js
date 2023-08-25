@@ -240,13 +240,37 @@ function shouldBlink(nextBusFreq) {
 }
 
 function updateBusTimes() {
-    const nextBusFreq = calculateNextBusTime(weekday, hour, minute);
-    const followingBusFreq = calculateFollowingBusTime(weekday, hour, minute, nextBusFreq);
+    const now = new Date();
+    const nextBusFreq = calculateNextBusTime(now.getDay(), now.getHours(), now.getMinutes());
+    const followingBusFreq = calculateFollowingBusTime(now.getDay(), now.getHours(), now.getMinutes(), nextBusFreq);
     const sign = `<img src="/assets/img/sign.svg" alt="">`;
-
+    // Liste des icônes et couleurs correspondantes
+    const frequentationIcons = [
+        { icon: '/sections/bus français/images/icone-complet.png', color: "red" },      // Complet / Plein (Rouge)
+        { icon: '/sections/bus français/images/icone-moyen.png', color: "yellow" },     // Places disponibles (Jaune)
+        { icon: '/sections/bus français/images/icone-vide.png', color: "green" }         // Vide (Vert)
+    ];
+    
+    // Génération d'une valeur aléatoire entre 0 et 2 pour représenter la fréquentation
+    const randomFrequentation1 = Math.floor(Math.random() * 3);
+    
+    // Sélection de l'icône et de la couleur en fonction de la fréquentation
+    const selectedIcon1 = frequentationIcons[randomFrequentation1].icon;
+    
+    // Affichage de l'icône et de la couleur
+    const frequentation1 = `<img src="${selectedIcon1}" style="width: 50px; height: auto; margin-top: 25px">`;
+    // Génération d'une valeur aléatoire entre 0 et 2 pour représenter la fréquentation
+    const randomFrequentation2 = Math.floor(Math.random() * 3);
+    
+    // Sélection de l'icône et de la couleur en fonction de la fréquentation
+    const selectedIcon2 = frequentationIcons[randomFrequentation2].icon;
+    
+    // Affichage de l'icône et de la couleur
+    const frequentation2 = `<img src="${selectedIcon2}"   style="width: 50px; height: auto; margin-top: 25px">`;
+ 
     if (nextBusFreq === -1) {
         if ((hour === 1 && minute >= 0) || (hour >= 1 && hour < 4)) {
-            nextBus = "Le réseau est temporairement inactif. Le prochain départ est prévu à 4h du matin."
+            nextBus = "Le réseau est temporairement fermé. Le prochain départ est prévu à 4h du matin."
         } else if (weekday === 0) {
             nextBus = "Aucun bus n'est en service le dimanche sur la ligne 6."
         } else {

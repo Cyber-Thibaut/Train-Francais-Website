@@ -276,7 +276,7 @@ function updateBusTimes() {
     
     // if (nextBusFreq === -1) {
     //     if ((hour === 1 && minute >= 0) || (hour >= 1 && hour < 4)) {
-    //         nextBus = "Le réseau est temporairement inactif. Le prochain départ est prévu à 4h du matin."
+    //         nextBus = "Le réseau est temporairement fermé. Le prochain départ est prévu à 4h du matin."
     //     } else {
     //         nextBus = "Aucun bus n'est actuellement en circulation.";
     //     }
