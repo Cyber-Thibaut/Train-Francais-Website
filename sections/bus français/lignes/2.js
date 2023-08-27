@@ -73,7 +73,7 @@ function calculateNextBusTime(weekday, hour, minute) {
             } else if (hour >= 7 && hour < 9) {
                 frequency = 7; // Pointe
             } else if (hour >= 9 && hour < 16) {
-                frequency = 2; // Creuse
+                frequency = 8; // Creuse
             } else if (hour >= 16 && hour < 20) {
                 frequency = 7; // Pointe
             } else {
@@ -103,9 +103,9 @@ function calculateNextBusTime(weekday, hour, minute) {
             } else if (hour >= 9 && hour < 16) {
                 frequency = 7; // Creuse
             } else if (hour >= 16 && hour < 20) {
-                frequency = 2; // Pointe
+                frequency = 6; // Pointe
             } else {
-                frequency = 2; // Soir
+                frequency = 16; // Soir
             }
         }
     } else {
@@ -115,15 +115,15 @@ function calculateNextBusTime(weekday, hour, minute) {
             }
             // Fréquences pour Samedi
             if (hour >= 4 && hour < 7) {
-                frequency = 8; // Creuse
+                frequency = 9; // Creuse
             } else if (hour >= 7 && hour < 9) {
                 frequency = 7; // Pointe
             } else if (hour >= 9 && hour < 16) {
-                frequency = 13; // Creuse
+                frequency = 9; // Creuse
             } else if (hour >= 16 && hour < 20) {
                 frequency = 7; // Pointe
             } else {
-                frequency = 11; // Soir
+                frequency = 13; // Soir
             }
         } else if (weekday === 0) { // Dimanche
             if ((hour === 1 && minute >= 0) || (hour >= 2 && hour < 4)) {
@@ -133,7 +133,7 @@ function calculateNextBusTime(weekday, hour, minute) {
             if (hour >= 4 && hour < 7) {
                 frequency = 16; // Creuse
             } else if (hour >= 7 && hour < 9) {
-                frequency = 11; // Pointe
+                frequency = 10; // Pointe
             } else {
                 frequency = 16; // Creuse
             }
@@ -145,13 +145,13 @@ function calculateNextBusTime(weekday, hour, minute) {
             if (hour >= 4 && hour < 7) {
                 frequency = 7; // Creuse
             } else if (hour >= 7 && hour < 9) {
-                frequency = 6; // Pointe
+                frequency = 5; // Pointe
             } else if (hour >= 9 && hour < 16) {
                 frequency = 7; // Creuse
             } else if (hour >= 16 && hour < 20) {
-                frequency = 6; // Pointe
+                frequency = 5; // Pointe
             } else {
-                frequency = 2; // Soir
+                frequency = 13; // Soir
             }
         }
     }
@@ -161,7 +161,9 @@ function calculateNextBusTime(weekday, hour, minute) {
 
 function calculateFollowingBusTime(weekday, hour, minute, frequency) {
     let followingFrequency;
-
+    if (estPremierMai) {
+        return -1; // Créneau fermé
+    }
     if (estFerie) {
         weekday = 0; // Dimanche
     }
@@ -176,7 +178,7 @@ function calculateFollowingBusTime(weekday, hour, minute, frequency) {
             } else if (hour >= 7 && hour < 9) {
                 followingFrequency = 7; // Pointe
             } else if (hour >= 9 && hour < 16) {
-                followingFrequency = 2; // Creuse
+                followingFrequency = 8; // Creuse
             } else if (hour >= 16 && hour < 20) {
                 followingFrequency = 7; // Pointe
             } else {
@@ -206,9 +208,9 @@ function calculateFollowingBusTime(weekday, hour, minute, frequency) {
             } else if (hour >= 9 && hour < 16) {
                 followingFrequency = 7; // Creuse
             } else if (hour >= 16 && hour < 20) {
-                followingFrequency = 2; // Pointe
+                followingFrequency = 6; // Pointe
             } else {
-                followingFrequency = 2; // Soir
+                followingFrequency = 16; // Soir
             }
         }
     } else {
@@ -218,15 +220,15 @@ function calculateFollowingBusTime(weekday, hour, minute, frequency) {
             }
             // Fréquences pour Samedi
             if (hour >= 4 && hour < 7) {
-                followingFrequency = 8; // Creuse
+                followingFrequency = 9; // Creuse
             } else if (hour >= 7 && hour < 9) {
                 followingFrequency = 7; // Pointe
             } else if (hour >= 9 && hour < 16) {
-                followingFrequency = 13; // Creuse
+                followingFrequency = 9; // Creuse
             } else if (hour >= 16 && hour < 20) {
                 followingFrequency = 7; // Pointe
             } else {
-                followingFrequency = 11; // Soir
+                followingFrequency = 13; // Soir
             }
         } else if (weekday === 0) { // Dimanche
             if ((hour === 1 && minute >= 0) || (hour >= 2 && hour < 4)) {
@@ -236,7 +238,7 @@ function calculateFollowingBusTime(weekday, hour, minute, frequency) {
             if (hour >= 4 && hour < 7) {
                 followingFrequency = 16; // Creuse
             } else if (hour >= 7 && hour < 9) {
-                followingFrequency = 11; // Pointe
+                followingFrequency = 10; // Pointe
             } else {
                 followingFrequency = 16; // Creuse
             }
@@ -248,13 +250,13 @@ function calculateFollowingBusTime(weekday, hour, minute, frequency) {
             if (hour >= 4 && hour < 7) {
                 followingFrequency = 7; // Creuse
             } else if (hour >= 7 && hour < 9) {
-                followingFrequency = 6; // Pointe
+                followingFrequency = 5; // Pointe
             } else if (hour >= 9 && hour < 16) {
                 followingFrequency = 7; // Creuse
             } else if (hour >= 16 && hour < 20) {
-                followingFrequency = 6; // Pointe
+                followingFrequency = 5; // Pointe
             } else {
-                followingFrequency = 2; // Soir
+                followingFrequency = 13; // Soir
             }
         }
     }
@@ -267,48 +269,63 @@ function shouldBlink(nextBusFreq) {
 }
 
 function updateBusTimes() {
-
-
-    const nextBusFreq = calculateNextBusTime(weekday, hour, minute);
-
+    const now = new Date();
+    const nextBusFreq = calculateNextBusTime(now.getDay(), now.getHours(), now.getMinutes());
+    const followingBusFreq = calculateFollowingBusTime(now.getDay(), now.getHours(), now.getMinutes(), nextBusFreq);
+    const sign = `<img src="/assets/img/sign.svg" alt="">`;
+    // Liste des icônes et couleurs correspondantes
+    const frequentationIcons = [
+        { icon: '/sections/bus français/images/icone-complet.png', color: "red" },      // Complet / Plein (Rouge)
+        { icon: '/sections/bus français/images/icone-moyen.png', color: "yellow" },     // Places disponibles (Jaune)
+        { icon: '/sections/bus français/images/icone-vide.png', color: "green" }         // Vide (Vert)
+    ];
+    
+    // Génération d'une valeur aléatoire entre 0 et 2 pour représenter la fréquentation
+    const randomFrequentation1 = Math.floor(Math.random() * 3);
+    
+    // Sélection de l'icône et de la couleur en fonction de la fréquentation
+    const selectedIcon1 = frequentationIcons[randomFrequentation1].icon;
+    
+    // Affichage de l'icône et de la couleur
+    const frequentation1 = `<img src="${selectedIcon1}" style="width: 50px; height: auto; margin-top: 25px">`;
+    // Génération d'une valeur aléatoire entre 0 et 2 pour représenter la fréquentation
+    const randomFrequentation2 = Math.floor(Math.random() * 3);
+    
+    // Sélection de l'icône et de la couleur en fonction de la fréquentation
+    const selectedIcon2 = frequentationIcons[randomFrequentation2].icon;
+    
+    // Affichage de l'icône et de la couleur
+    const frequentation2 = `<img src="${selectedIcon2}"   style="width: 50px; height: auto; margin-top: 25px">`;
+    
     if (nextBusFreq === -1) {
         if ((hour === 0 && minute >= 0) || (hour >= 1 && hour < 4)) {
-            nextBusTime.textContent = "Réseau Fermé. Prochain départ à 4h"
+            nextBus = "Le réseau est temporairement fermé. Le prochain départ est prévu à 4h du matin.";
         } else {
-            nextBusTime.textContent = "Créneau fermé";
+            nextBus = "Aucun bus n'est actuellement en circulation.";
         }
-        followingBusTime.textContent = "";
-        return;
+
+        const followingBus = "";
+        document.getElementById("nextBusTime").innerHTML = nextBus + followingBus;
+    } else {
+        const nextBus = nextBusFreq === 1 ? `<span style='color: #9364cc;'>A quai  ${sign} ${frequentation1}</span>` : nextBusFreq === 2 ? `<span style='color: #9364cc;'>A l’approche ${sign} ${frequentation1}</span>` : `<span style='font-size: 40px; color: #9364cc;'>${nextBusFreq} min ${sign} ${frequentation1}</span>`;
+
+        const followingBus = followingBusFreq === 0 ? `<span style='color: #9364cc;'>Arrivé  ${sign}</span>` : followingBusFreq === 1 ? `<span style='color: #9364cc;'>1 min ${sign}</span>` : `<span style='font-size: 40px; color: #9364cc;'>${followingBusFreq} min ${sign} ${frequentation2}</span>`;
+        document.getElementById("nextBusTime").innerHTML = nextBus + followingBus;
     }
 
     if (estFerie) {
-        alertMessage.textContent = "⚠️ Attention, horaires modifiés ce jour pour jour férié";
+        alertMessage.textContent = "⚠️ Remarque : Horaires ajustés aujourd'hui en raison d'un jour férié.";
     } else if (isVacation) {
-        alertMessage.textContent = "⚠️ Attention, horaires modifiés ce jour pour cause de vacances";
+        alertMessage.textContent = "⚠️ Remarque : Horaires modifiés aujourd'hui en raison de période de vacances.";
     } else if (estPremierMai) {
-        alertMessage.textContent = "⚠️ Attention, réseau fermé en ce 1er Mai";
-    } else if (nextBusFreq < 0) {
-        alertMessage.textContent = "⚠️ Aucun bus ne circule avant le prochain créneau horaire";
+        alertMessage.textContent = "⚠️ Remarque : Le réseau est fermé en ce 1er Mai.";
     } else {
         alertMessage.textContent = "";
-    }
+    }     
 
-    const followingBusFreq = calculateFollowingBusTime(weekday, hour, minute, nextBusFreq);
-
-
-  const sign = `<img src="/assets/img/sign.svg" alt="">`;
-
-    const nextBus = nextBusFreq === 0 ? `<span style='color: #9364cc;'>A quai  ${sign}</span>` : nextBusFreq === 1 ? `<span style='color: #9364cc;'>A l’approche ${sign}</span>` : `<span style='font-size: 40px; color: #9364cc;'>${nextBusFreq} min ${sign}</span>`;
-
-    const followingBus = followingBusFreq === 0 ? `<span style='color: #9364cc;'>Arrivé  ${sign}</span>` : followingBusFreq === 1 ? `<span style='color: #9364cc;'>1 min ${sign}</span>` : `<span style='font-size: 40px; color: #9364cc;'>${followingBusFreq} min ${sign}</span>`;
-
-    document.getElementById("nextBusTime").innerHTML = nextBus + followingBus;
-
-    if (followingBusFreq === -1) {
-        followingBusTime.textContent = "Dernier bus de la journée";} 
 }
 
-setInterval(updateBusTimes, 1000); // Mettez 30000 pour actualiser toutes les 30 secondes
+setInterval(updateBusTimes, 30000); // Mettez 30000 pour actualiser toutes les 30 secondes
 updateBusTimes(); // Appel initial pour mettre à jour les données immédiatement
 
 // Update current time every second
@@ -359,28 +376,27 @@ function afficherInfoTraficLigne(ligne) {
             return;
         });
 
-            // ajout de la carte à la page
-            if (infosLigne.infos_trafic.length === lignevide) {
-                $("#lignes").append(
-                    $("<div>")
-                        .addClass("alert alert-success text-white")
-                        .text("Tout va bien sur la ligne " + ligne)
-                        .append($("<img>").attr("src", "/assets/img/panneaux/valid.png").css({ "float": "right", "width": "30px", "transform": "translate(-25px, 35px)" }))
-                );
-                return;
-            } else {
-                $("#lignes").append(
-
-                        $("<div>")
-                            .addClass("alert alert-warning text-white text-bold")
-                            .html("<img id='logo' src='/sections/bus français/images/2.png' alt='Logo de la ligne'> modif <img src='/assets/img/panneaux/warning.png' style='position: relative; width: 30px; transform: translate(-25px, 35px);'> Le trafic est perturbé <a href='/sections/bus français/infotrafic.html'; class='font-weight-bold text-xs text-uppercase font-weight-bolder text-primary icon-move-right'><i class='fas fa-arrow-right text-xs ms-1'></i></a>")
-                    );
-                    return;
-                }
-            $("#lignes").append(card);
+        // ajout de la carte à la page
+        if (infosLigne.infos_trafic.length === lignevide) {
+            $("#lignes").append(
+                $("<div>")
+                    .addClass("alert alert-success text-white")
+                    .text("Tout va bien sur la ligne " + ligne)
+                    .append($("<img>").attr("src", "/assets/img/panneaux/valid.png").css({ "float": "right", "width": "60px", "height": "auto" }))
+            );
+            return;
+        } else {
+            $("#lignes").append(
+                $("<div>")
+                    .addClass("alert alert-warning text-white text-bold")
+                    .html("<img id='logo' src='/sections/bus français/images/2.png' alt='Logo de la ligne'><img src='/assets/img/panneaux/warning.png' style='position: relative; width: 30px; transform: translate(-25px, 35px);'> Le trafic est perturbé <a href='/sections/bus français/infotrafic.html'; class='font-weight-bold text-xs text-uppercase font-weight-bolder text-primary icon-move-right'><i class='fas fa-arrow-right text-xs ms-1'></i></a>")
+            );
+            return;
+        }
+        $("#lignes").append(card);
 
 
     });
 }
 
-afficherInfoTraficLigne("11");
+afficherInfoTraficLigne("2");
