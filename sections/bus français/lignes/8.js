@@ -69,43 +69,36 @@ function calculateNextBusTime(weekday, hour, minute) {
             }
             // Fréquences pour Samedi
             if (hour >= 4 && hour < 7) {
-                frequency = 8; // Creuse
+                frequency = 21; // Creuse
             } else if (hour >= 7 && hour < 9) {
-                frequency = 7; // Pointe
+                frequency = 16; // Pointe
             } else if (hour >= 9 && hour < 16) {
-                frequency = 8; // Creuse
+                frequency = 21; // Creuse
             } else if (hour >= 16 && hour < 20) {
-                frequency = 7; // Pointe
+                frequency = 16; // Pointe
             } else {
-                frequency = 11; // Soir
+                frequency = 32; // Soir
             }
         } else if (weekday === 0) { // Dimanche
             if ((hour === 1 && minute >= 0) || (hour >= 2 && hour < 4)) {
                 return -1; // Créneau fermé
             }
-            // Fréquences pour Dimanche
-            if (hour >= 4 && hour < 7) {
-                frequency = 16; // Creuse
-            } else if (hour >= 7 && hour < 9) {
-                frequency = 11; // Pointe
-            } else {
-                frequency = 16; // Creuse
-            }
+            return -1; // Aucun bus ne circule le dimanche
         } else { // Semaine (Lundi - Vendredi)
             if ((hour === 0 && minute >= 0) || (hour >= 1 && hour < 4)) {
                 return -1; // Créneau fermé
             }
             // Fréquences pour Semaine
             if (hour >= 4 && hour < 7) {
-                frequency = 7; // Creuse
+                frequency = 16; // Creuse
             } else if (hour >= 7 && hour < 9) {
-                frequency = 6; // Pointe
+                frequency = 11; // Pointe
             } else if (hour >= 9 && hour < 16) {
-                frequency = 7; // Creuse
+                frequency = 16; // Creuse
             } else if (hour >= 16 && hour < 20) {
-                frequency = 6; // Pointe
+                frequency = 11; // Pointe
             } else {
-                frequency = 16; // Soir
+                frequency = 32; // Soir
             }
         }
     } else {
@@ -115,43 +108,36 @@ function calculateNextBusTime(weekday, hour, minute) {
             }
             // Fréquences pour Samedi
             if (hour >= 4 && hour < 7) {
-                frequency = 9; // Creuse
+                frequency = 21; // Creuse
             } else if (hour >= 7 && hour < 9) {
-                frequency = 7; // Pointe
+                frequency = 16; // Pointe
             } else if (hour >= 9 && hour < 16) {
-                frequency = 9; // Creuse
+                frequency = 21; // Creuse
             } else if (hour >= 16 && hour < 20) {
-                frequency = 7; // Pointe
+                frequency = 16; // Pointe
             } else {
-                frequency = 13; // Soir
+                frequency = 21; // Soir
             }
         } else if (weekday === 0) { // Dimanche
             if ((hour === 1 && minute >= 0) || (hour >= 2 && hour < 4)) {
                 return -1; // Créneau fermé
             }
-            // Fréquences pour Dimanche
-            if (hour >= 4 && hour < 7) {
-                frequency = 16; // Creuse
-            } else if (hour >= 7 && hour < 9) {
-                frequency = 10; // Pointe
-            } else {
-                frequency = 16; // Creuse
-            }
+            return -1; // Aucun bus ne circule le dimanche
         } else { // Semaine (Lundi - Vendredi)
             if ((hour === 0 && minute >= 0) || (hour >= 1 && hour < 4)) {
                 return -1; // Créneau fermé
             }
             // Fréquences pour Semaine
             if (hour >= 4 && hour < 7) {
-                frequency = 7; // Creuse
+                frequency = 16; // Creuse
             } else if (hour >= 7 && hour < 9) {
-                frequency = 5; // Pointe
+                frequency = 9; // Pointe
             } else if (hour >= 9 && hour < 16) {
-                frequency = 7; // Creuse
+                frequency = 16; // Creuse
             } else if (hour >= 16 && hour < 20) {
-                frequency = 5; // Pointe
+                frequency = 9; // Pointe
             } else {
-                frequency = 13; // Soir
+                frequency = 32; // Soir
             }
         }
     }
@@ -174,43 +160,36 @@ function calculateFollowingBusTime(weekday, hour, minute, frequency) {
             }
             // Fréquences pour Samedi
             if (hour >= 4 && hour < 7) {
-                followingFrequency = 8; // Creuse
+                followingFrequency = 21; // Creuse
             } else if (hour >= 7 && hour < 9) {
-                followingFrequency = 7; // Pointe
+                followingFrequency = 16; // Pointe
             } else if (hour >= 9 && hour < 16) {
-                followingFrequency = 8; // Creuse
+                followingFrequency = 21; // Creuse
             } else if (hour >= 16 && hour < 20) {
-                followingFrequency = 7; // Pointe
+                followingFrequency = 16; // Pointe
             } else {
-                followingFrequency = 11; // Soir
+                followingFrequency = 32; // Soir
             }
         } else if (weekday === 0) { // Dimanche
             if ((hour === 1 && minute >= 0) || (hour >= 2 && hour < 4)) {
                 return -1; // Créneau fermé
             }
-            // Fréquences pour Dimanche
-            if (hour >= 4 && hour < 7) {
-                followingFrequency = 16; // Creuse
-            } else if (hour >= 7 && hour < 9) {
-                followingFrequency = 11; // Pointe
-            } else {
-                followingFrequency = 16; // Creuse
-            }
+            return -1; // Aucun bus ne circule le dimanche
         } else { // Semaine (Lundi - Vendredi)
             if ((hour === 0 && minute >= 0) || (hour >= 1 && hour < 4)) {
                 return -1; // Créneau fermé
             }
             // Fréquences pour Semaine
             if (hour >= 4 && hour < 7) {
-                followingFrequency = 7; // Creuse
+                followingFrequency = 16; // Creuse
             } else if (hour >= 7 && hour < 9) {
-                followingFrequency = 6; // Pointe
+                followingFrequency = 11; // Pointe
             } else if (hour >= 9 && hour < 16) {
-                followingFrequency = 7; // Creuse
+                followingFrequency = 16; // Creuse
             } else if (hour >= 16 && hour < 20) {
-                followingFrequency = 6; // Pointe
+                followingFrequency = 11; // Pointe
             } else {
-                followingFrequency = 16; // Soir
+                followingFrequency = 32; // Soir
             }
         }
     } else {
@@ -220,43 +199,36 @@ function calculateFollowingBusTime(weekday, hour, minute, frequency) {
             }
             // Fréquences pour Samedi
             if (hour >= 4 && hour < 7) {
-                followingFrequency = 9; // Creuse
+                followingFrequency = 21; // Creuse
             } else if (hour >= 7 && hour < 9) {
-                followingFrequency = 7; // Pointe
+                followingFrequency = 16; // Pointe
             } else if (hour >= 9 && hour < 16) {
-                followingFrequency = 9; // Creuse
+                followingFrequency = 21; // Creuse
             } else if (hour >= 16 && hour < 20) {
-                followingFrequency = 7; // Pointe
+                followingFrequency = 16; // Pointe
             } else {
-                followingFrequency = 13; // Soir
+                followingFrequency = 21; // Soir
             }
         } else if (weekday === 0) { // Dimanche
             if ((hour === 1 && minute >= 0) || (hour >= 2 && hour < 4)) {
                 return -1; // Créneau fermé
             }
-            // Fréquences pour Dimanche
-            if (hour >= 4 && hour < 7) {
-                followingFrequency = 16; // Creuse
-            } else if (hour >= 7 && hour < 9) {
-                followingFrequency = 10; // Pointe
-            } else {
-                followingFrequency = 16; // Creuse
-            }
+            return -1; // Aucun bus ne circule le dimanche
         } else { // Semaine (Lundi - Vendredi)
             if ((hour === 0 && minute >= 0) || (hour >= 1 && hour < 4)) {
                 return -1; // Créneau fermé
             }
             // Fréquences pour Semaine
             if (hour >= 4 && hour < 7) {
-                followingFrequency = 7; // Creuse
+                followingFrequency = 16; // Creuse
             } else if (hour >= 7 && hour < 9) {
-                followingFrequency = 5; // Pointe
+                followingFrequency = 9; // Pointe
             } else if (hour >= 9 && hour < 16) {
-                followingFrequency = 7; // Creuse
+                followingFrequency = 16; // Creuse
             } else if (hour >= 16 && hour < 20) {
-                followingFrequency = 5; // Pointe
+                followingFrequency = 9; // Pointe
             } else {
-                followingFrequency = 13; // Soir
+                followingFrequency = 32; // Soir
             }
         }
     }
