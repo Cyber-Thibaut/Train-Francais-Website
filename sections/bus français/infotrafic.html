@@ -81,6 +81,11 @@
     .text-container p {
       text-align: left;
     }
+
+    .space {
+      height: 20px; /* Ajustez la hauteur selon vos besoins */
+    }
+
   </style>
 </head>
 
@@ -377,11 +382,12 @@
               const description = $("<h5>").html(info.description.replace(/\n/g, "<br><br>"));
               
               textColumn.append(titre, dateInfo, description);
-
+              textColumn.append('<div class="space"></div>'); // Ajoute un espace
               const row = $("<div>").addClass("row").append(imageColumn, textColumn);
 
-              cardBody.append(row);
-              $("#lignes").append(card);
+                cardBody.append(row);
+                $("#lignes").append(card);
+                
             }
 
           });
