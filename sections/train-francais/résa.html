@@ -501,7 +501,7 @@
 
 
           function init() {
-            fetch('https://train-empire.com/api/getCompanyStations.php?auth=4ef1191fcad3fd8fca595469626f5f6c796f6e')
+            fetch('https://train-empire.com/api/getCompanyStations.php?auth=4b1ac66a3e8c064754686962617574')
               .then(response => response.json())
               .then(data => {
                 var selectBox1 = document.getElementById("selectBox1");
@@ -524,7 +524,7 @@
             selectBox1.addEventListener("change", function () {
               selectBox2.innerHTML = "";
               var from = this.value;
-              fetch('https://train-empire.com/api/getCompanyDestinations.php?auth=4ef1191fcad3fd8fca595469626f5f6c796f6e&from=' + from)
+              fetch('https://train-empire.com/api/getCompanyDestinations.php?auth=4b1ac66a3e8c064754686962617574&from=' + from)
                 .then(response => response.json())
                 .then(data => {
                   var optgroup = null;
